@@ -58,25 +58,45 @@ function renderHtml(f) {
   `;
 }
 
+/**
+ * Bare Vercel functions do not reliably pre-parse the body: depending on the
+ * runtime it arrives parsed, as a string, as a Buffer, or not at all. Read
+ * the stream ourselves when it is missing so a submission is never lost to
+ * a runtime detail.
+ */
+async function readBody(req) {
+  const b = req.body;
+  if (b && typeof b === "object" && !Buffer.isBuffer(b)) return b;
+  let text = "";
+  if (typeof b === "string") text = b;
+  else if (Buffer.isBuffer(b)) text = b.toString("utf8");
+  else {
+    const chunks = [];
+    for await (const c of req) chunks.push(c);
+    text = Buffer.concat(chunks).toString("utf8");
+  }
+  if (!text) return {};
+  try {
+    return JSON.parse(text);
+  } catch {
+    return Object.fromEntries(new URLSearchParams(text));   // form-encoded
+  }
+}
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method Not Allowed" });
   }
 
-  // Bare Vercel functions do not always hand back a parsed body — depending
-  // on the runtime it can arrive as a string or a Buffer — so normalise it
-  // before reading. The landing page posts a flat object; {form:{…}} is
-  // accepted too, so this route stays swappable with the other client sites.
-  let raw = req.body;
-  if (Buffer.isBuffer(raw)) raw = raw.toString("utf8");
-  if (typeof raw === "string") {
-    try { raw = JSON.parse(raw); } catch { raw = {}; }
-  }
+  const raw = await readBody(req);
   const f = raw?.form || raw || {};
   const name = `${f.first_name || ""} ${f.last_name || ""}`.trim() || f.name;
 
   if (!name || !f.email || !f.phone) {
-    return res.status(400).json({ error: "Missing required fields." });
+    return res.status(400).json({
+      error: "Missing required fields.",
+      received: Object.keys(f || {}),
+    });
   }
 
   let leadId = null;
