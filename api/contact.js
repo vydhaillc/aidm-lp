@@ -95,7 +95,17 @@ export default async function handler(req, res) {
   if (!name || !f.email || !f.phone) {
     return res.status(400).json({
       error: "Missing required fields.",
-      received: Object.keys(f || {}),
+      received: Object.keys(f || {}).slice(0, 20),
+      _diag: {
+        bodyType: typeof req.body,
+        ctor: req.body && req.body.constructor && req.body.constructor.name,
+        isBuffer: Buffer.isBuffer(req.body),
+        rawType: typeof raw,
+        rawCtor: raw && raw.constructor && raw.constructor.name,
+        preview: String(
+          Buffer.isBuffer(req.body) ? req.body.toString("utf8") : JSON.stringify(req.body)
+        ).slice(0, 120),
+      },
     });
   }
 
