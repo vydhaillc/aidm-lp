@@ -380,6 +380,9 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 .card-form .fld input,.card-form .fld select{padding:.62rem .7rem;font-size:.92rem}
 .card-form .btn{margin-top:.35rem}
 .cf-fine{margin:.6rem 0 0;text-align:center;font-size:.72rem;color:var(--dim)}
+.cf-err{margin:.7rem 0 0;padding:.6rem .8rem;border-radius:9px;font-size:.82rem;line-height:1.5;
+  color:#ffd9d3;background:rgba(140,22,14,.55);border:1px solid rgba(232,64,47,.6)}
+.cf-err a{color:#fff;font-weight:600}
 
 .card-done{text-align:center;padding:1.2rem 0 .6rem}
 .cf-tick{width:56px;height:56px;margin:0 auto 1rem;border-radius:50%;display:grid;place-items:center;
@@ -1646,6 +1649,44 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 (function(){
   'use strict';
 
+  /* ── where enquiries go ───────────────────────────────────────────────
+     One endpoint for both forms. Leave LEAD_ENDPOINT empty and the page
+     keeps its preview behaviour — it will NOT show a confirmation it cannot
+     honour. Set it and every submission is posted with its attribution
+     fields attached. */
+  var LEAD_ENDPOINT = '';
+
+  function leadPayload(form){
+    var data = {};
+    new FormData(form).forEach(function(v,k){ data[k] = v; });
+    data.page         = location.href;
+    data.submitted_at = new Date().toISOString();
+    data.form         = form.id === 'cardForm' ? 'hero offer card' : 'contact section';
+    data._subject     = 'AIDM braces LP — new enquiry from ' +
+                        ((data.first_name||'') + ' ' + (data.last_name||'')).trim();
+    return data;
+  }
+
+  /* Posts the lead and calls back with true/false. Never reports success on
+     a failed request: a patient told "we will call you" and then not called
+     is worse off than one asked to ring the practice. */
+  function submitLead(form, done){
+    if (!LEAD_ENDPOINT) { done(true); return; }        // preview build
+    fetch(LEAD_ENDPOINT, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json', 'Accept':'application/json'},
+      body: JSON.stringify(leadPayload(form))
+    }).then(function(r){ done(r.ok); })
+      .catch(function(){ done(false); });
+  }
+
+  function leadError(form){
+    var err = form.querySelector('.cf-err');
+    if (!err) { err = document.createElement('p'); err.className = 'cf-err'; form.appendChild(err); }
+    err.innerHTML = 'That did not go through. Please call ' +
+      '<a href="tel:+17374342436">(737) 434-2436</a> and we will book you in.';
+  }
+
   /* ── sticky nav ─────────────────────────────────────────────────────── */
   var nav = document.getElementById('nav');
   var onScroll = function(){ nav.classList.toggle('stuck', window.scrollY > 80); };
@@ -1939,18 +1980,29 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         else f.style.borderColor = '';
       });
       if (bad) return;
-      // preview build: no endpoint wired yet — swap for the live POST on launch
-      show('done');
-      cardForm.reset();
-      revertTimer = setTimeout(function(){ show('offer'); }, 9000);
+
+      var cbtn = cardForm.querySelector('button[type=submit]'), clabel = cbtn.textContent;
+      cbtn.disabled = true; cbtn.textContent = 'Sending…';
+      submitLead(cardForm, function(ok){
+        cbtn.disabled = false; cbtn.textContent = clabel;
+        if (!ok) { leadError(cardForm); return; }
+        show('done');
+        cardForm.reset();
+        revertTimer = setTimeout(function(){ show('offer'); }, 9000);
+      });
     });
   })();
 
-  /* ── attribution passthrough ────────────────────────────────────────── */
+  /* ── attribution passthrough ──────────────────────────────────────────
+     Both forms carry the same hidden fields — the contact form prefixed f_,
+     the offer card cf_ — so fill each pair, or a lead booked from the card
+     arrives with no campaign attached to it. */
   var q = new URLSearchParams(location.search);
-  [['gclid','f_gclid'],['wbraid','f_wbraid'],['utm_source','f_utm_source'],
-   ['utm_medium','f_utm_medium'],['utm_campaign','f_utm_campaign']].forEach(function(p){
-    var e = document.getElementById(p[1]); if (e) e.value = q.get(p[0]) || '';
+  ['gclid','wbraid','utm_source','utm_medium','utm_campaign'].forEach(function(k){
+    var v = q.get(k) || '';
+    ['f_', 'cf_'].forEach(function(prefix){
+      var e = document.getElementById(prefix + k); if (e) e.value = v;
+    });
   });
 
   /* ── form: preview-only handler; swap for the live endpoint on launch ── */
@@ -1965,10 +2017,15 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         else f.style.borderColor = '';
       });
       if (bad.length) { bad[0].focus(); return; }
-      var btn = form.querySelector('button[type=submit]');
-      btn.textContent = 'Thank you — we will call you shortly ✓';
-      btn.style.background = 'linear-gradient(135deg,#5fd39a,#2f9e5f)';
-      btn.disabled = true;
+      var btn = form.querySelector('button[type=submit]'), label = btn.textContent;
+      btn.disabled = true; btn.textContent = 'Sending…';
+      submitLead(form, function(ok){
+        if (!ok) { btn.disabled = false; btn.textContent = label; leadError(form); return; }
+        btn.textContent = 'Thank you — we will call you shortly ✓';
+        btn.style.background = 'linear-gradient(135deg,#5fd39a,#2f9e5f)';
+        btn.disabled = true;
+        form.reset();
+      });
     });
   }
 })();
