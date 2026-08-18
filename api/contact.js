@@ -63,9 +63,16 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method Not Allowed" });
   }
 
-  // the landing page posts a flat body; accept {form:{…}} too so this route
-  // stays swappable with the other client sites
-  const f = req.body?.form || req.body || {};
+  // Bare Vercel functions do not always hand back a parsed body — depending
+  // on the runtime it can arrive as a string or a Buffer — so normalise it
+  // before reading. The landing page posts a flat object; {form:{…}} is
+  // accepted too, so this route stays swappable with the other client sites.
+  let raw = req.body;
+  if (Buffer.isBuffer(raw)) raw = raw.toString("utf8");
+  if (typeof raw === "string") {
+    try { raw = JSON.parse(raw); } catch { raw = {}; }
+  }
+  const f = raw?.form || raw || {};
   const name = `${f.first_name || ""} ${f.last_name || ""}`.trim() || f.name;
 
   if (!name || !f.email || !f.phone) {
