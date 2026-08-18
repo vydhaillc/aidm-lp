@@ -89,23 +89,18 @@ export default async function handler(req, res) {
   }
 
   const raw = await readBody(req);
-  const f = raw?.form || raw || {};
+  // The other client sites post {form:{…}}; this page posts a flat object and
+  // carries its own `form` field naming which of the two forms was used. Only
+  // treat `form` as the envelope when it is actually an object, or the string
+  // gets unwrapped into a lookalike and every field reads as undefined.
+  const f =
+    raw && typeof raw.form === "object" && raw.form !== null ? raw.form : raw || {};
   const name = `${f.first_name || ""} ${f.last_name || ""}`.trim() || f.name;
 
   if (!name || !f.email || !f.phone) {
     return res.status(400).json({
       error: "Missing required fields.",
       received: Object.keys(f || {}).slice(0, 20),
-      _diag: {
-        bodyType: typeof req.body,
-        ctor: req.body && req.body.constructor && req.body.constructor.name,
-        isBuffer: Buffer.isBuffer(req.body),
-        rawType: typeof raw,
-        rawCtor: raw && raw.constructor && raw.constructor.name,
-        preview: String(
-          Buffer.isBuffer(req.body) ? req.body.toString("utf8") : JSON.stringify(req.body)
-        ).slice(0, 120),
-      },
     });
   }
 
