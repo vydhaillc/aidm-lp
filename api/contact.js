@@ -83,7 +83,30 @@ async function readBody(req) {
   }
 }
 
+/* The page is served from GitHub Pages until DNS moves to Vercel, so the
+   POST is cross-origin for now. Allowlist the hosts it can legitimately come
+   from rather than opening this up with a wildcard. */
+const ALLOWED_ORIGINS = [
+  "https://aidm.vydhai.com",
+  "https://aidm-lp.vercel.app",
+  "http://localhost:8901",
+  "http://localhost:8904",
+];
+
+function cors(req, res) {
+  const origin = req.headers.origin;
+  if (origin && ALLOWED_ORIGINS.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+    res.setHeader("Vary", "Origin");
+  }
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.setHeader("Access-Control-Max-Age", "86400");
+}
+
 export default async function handler(req, res) {
+  cors(req, res);
+  if (req.method === "OPTIONS") return res.status(204).end();
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method Not Allowed" });
   }
