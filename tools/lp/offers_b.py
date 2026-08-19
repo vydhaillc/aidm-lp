@@ -43,6 +43,7 @@ def implant_cards(feature):
 
 # ══════════════════════════════════════════════════════════════════════════
 IMPLANT = dict(
+  cta='Book Appointment',
   slug='dental-implant', id='single-implant-crown-from-3750', banner='SINGLE IMPLANT',
   title='One Missing Tooth. One Complete Solution. — Single Implant + Crown from $3,750 | AIDM Austin',
   desc='Single dental implant with a final ceramic crown from $3,750 at the Austin Institute of Dental Medicine in Mueller, Austin. 3D imaging, guided placement and the crown in one package.',
@@ -162,6 +163,7 @@ IMPLANT = dict(
 
 # ══════════════════════════════════════════════════════════════════════════
 FULLARCH = dict(
+  cta='Book Free Consult',
   slug='full-arch', id='full-arch-fixed-teeth-from-18000', banner='FULL-ARCH FIXED TEETH',
   title='A Full Smile. A Fresh Start. — Full-Arch Fixed Teeth from $18,000 an Arch | AIDM Austin',
   desc='Fixed full-arch teeth on four to six dental implants from $18,000 per arch at the Austin Institute of Dental Medicine in Mueller, Austin. Three published tiers: $18,000, $22,000 and $26,000.',
@@ -302,6 +304,7 @@ FULLARCH = dict(
 
 # ══════════════════════════════════════════════════════════════════════════
 SNAPIN = dict(
+  cta='Book Free Consult',
   slug='snap-in-dentures', id='snap-in-dentures-from-9500', banner='SNAP-IN DENTURES',
   title='More Stability. More Confidence. — Implant-Supported Dentures from $9,500 an Arch | AIDM Austin',
   desc='Snap-in, implant-supported dentures from $9,500 per arch at the Austin Institute of Dental Medicine in Mueller, Austin. Three published tiers: $9,500, $12,500 and $17,000.',
@@ -441,6 +444,7 @@ SNAPIN = dict(
 
 # ══════════════════════════════════════════════════════════════════════════
 ROOTCANAL = dict(
+  cta='Book Appointment',
   slug='root-canal', id='root-canal-from-995', banner='ROOT CANAL',
   title='Save Your Tooth. Restore Your Smile. — Root Canal from $995 | AIDM Austin',
   desc='Root canal treatment from $995 at the Austin Institute of Dental Medicine in Mueller, Austin, or bundled with a ceramic crown at $2,300 to $2,500. Limited-field 3D imaging included.',

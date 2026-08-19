@@ -47,6 +47,16 @@ def film(vid, label, tag=None):
 
 
 def build(o):
+    """`o['cta']` is the single label every booking button on the page wears —
+    the nav, the mobile bar, the offer card, the card's form face, all three
+    package cards and the footer form. The per-element labels in the offer
+    dicts are kept as the fallback for anything without one."""
+    o = dict(o)
+    cta = o.get('cta')
+    if cta:
+        for k in ('navcta', 'cardcta', 'cfsubmit', 'ctsubmit'):
+            o[k] = cta
+        o['opts'] = [dict(c, cta=cta) for c in o['opts']]
     s = io.open(TPL, encoding='utf-8').read()
 
     def cut(start, end, new, label):
@@ -79,8 +89,8 @@ def build(o):
         '  <ul class="nav-links">\n' +
         '\n'.join('    <li><a href="#' + h + '">' + t + '</a></li>' for h, t in o['nav']) +
         '\n  </ul>', 'nav')
-    sub('>Book Free Eval</a>\n</header>', '>' + o['navcta'] + '</a>\n</header>', 'navcta')
-    sub('  <a class="btn btn-sky" href="#contact" data-book>Book Free Eval</a>\n</div>',
+    sub('>Book Free Consult</a>\n</header>', '>' + o['navcta'] + '</a>\n</header>', 'navcta')
+    sub('  <a class="btn btn-sky" href="#contact" data-book>Book Free Consult</a>\n</div>',
         '  <a class="btn btn-sky" href="#contact" data-book>' + o['navcta'] + '</a>\n</div>', 'mbar')
     sub('<a class="btn btn-ghost" href="tel:+17374342436">Call</a>',
         '<a class="btn btn-ghost" href="tel:+17374342436">' + o.get('mcall', 'Call') + '</a>', 'mcall')
@@ -92,18 +102,20 @@ def build(o):
         '\n            <span class="l3">' + o['h1'][-1] + '</span>\n          </h1>', 'h1')
 
     # ── offer card ──────────────────────────────────────────────────────────
-    facts = '\n'.join(
-        '                <div class="cd-c' + (' cd-d' if i == 0 else '') + '"><b>' + b +
-        '</b><i>' + l + '</i></div>' for i, (b, l) in enumerate(o.get('facts', FACTS)))
     cut('           <div class="card-face card-offer">',
         '            <p class="card-fine">Evaluation complimentary &mdash; no obligation to start. <a href="#terms">*Fee&nbsp;terms</a></p>\n           </div>',
 '''           <div class="card-face card-offer">
-            <p class="card-lim">
-              <span class="star">&#9733;</span>''' + o['pill'] + '''
-              <i class="spk" style="--s:13px;top:14%;left:8%;animation-delay:.4s"></i>
-              <i class="spk" style="--s:10px;top:56%;left:31%;animation-delay:1.5s"></i>
-              <i class="spk" style="--s:12px;top:18%;right:14%;animation-delay:2.4s"></i>
-            </p>
+            <div class="rib">
+              <span class="rib-tail rib-l" aria-hidden="true"></span>
+              <span class="rib-tail rib-r" aria-hidden="true"></span>
+              <p class="rib-band">
+                <span class="star">&#9733;</span>''' + o['pill'] + '''
+                <i class="rib-shine" aria-hidden="true"></i>
+                <i class="spk" style="--s:12px;top:12%;left:9%;animation-delay:.4s"></i>
+                <i class="spk" style="--s:9px;top:60%;left:30%;animation-delay:1.5s"></i>
+                <i class="spk" style="--s:11px;top:16%;right:13%;animation-delay:2.4s"></i>
+              </p>
+            </div>
             <h2 class="card-t">''' + o['cardtitle'] + '''</h2>
 
             <div class="card-price">
@@ -118,13 +130,8 @@ def build(o):
 ''' + '\n'.join('              <li>' + TICK + x + '</li>' for x in o['included']) + '''
             </ul>
 
-            <!-- The braces card counts down to a stated expiry. This offer has
-                 none, so the same four cells carry the access facts instead. -->
             <div class="card-cd">
-              <p class="cd-cap">Open six days a week &middot; Mueller, Austin</p>
-              <div class="cd" aria-label="At a glance">
-''' + facts + '''
-              </div>
+              <p class="hours">Open 7am &ndash; 7pm<span class="sp"></span>Mon&ndash;Sat</p>
             </div>
 
             <button class="btn btn-sky" type="button" id="cardBook">''' + o['cardcta'] + '''</button>
@@ -135,7 +142,7 @@ def build(o):
     sub('<h2 class="cf-h">Book your free consult</h2>', '<h2 class="cf-h">' + o['cfh'] + '</h2>', 'cfh')
     sub('<input type="hidden" name="offer" value="ortho-2950-first-100">',
         '<input type="hidden" name="offer" value="' + o['id'] + '">', 'cfoffer')
-    sub('<button class="btn btn-sky" type="submit">Request my free consult</button>',
+    sub('<button class="btn btn-sky" type="submit">Book Free Consult</button>',
         '<button class="btn btn-sky" type="submit">' + o['cfsubmit'] + '</button>', 'cfsubmit')
     cut('                   <option>Myself</option>', '</select></div>',
         '                   ' + ''.join('<option>' + x + '</option>' for x in o['who']) +
@@ -393,7 +400,7 @@ def build(o):
         '<textarea id="msg" name="notes" placeholder="' + o['placeholder'] + '"></textarea>', 'ctmsg')
     sub('<input type="hidden" name="offer" value="ortho-comprehensive-braces-2950">',
         '<input type="hidden" name="offer" value="' + o['id'] + '">', 'ctoffer')
-    sub('<button class="btn btn-sky btn-lg" type="submit">Book my free evaluation</button>',
+    sub('<button class="btn btn-sky btn-lg" type="submit">Book Free Consult</button>',
         '<button class="btn btn-sky btn-lg" type="submit">' + o['ctsubmit'] + '</button>', 'ctsubmit')
 
     # ── footer terms + legal ────────────────────────────────────────────────

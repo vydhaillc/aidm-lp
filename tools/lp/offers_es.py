@@ -95,6 +95,8 @@ CHROME = [
  ('<a href="#terms">*Fee&nbsp;terms</a>', '<a href="#terms">*T&eacute;rminos</a>'),
  ('aria-label="See fee disclosures"', 'aria-label="Ver los t&eacute;rminos de honorarios"'),
  ('aria-label="At a glance"', 'aria-label="De un vistazo"'),
+ ('<p class="hours">Open 7am &ndash; 7pm<span class="sp"></span>Mon&ndash;Sat</p>',
+  '<p class="hours">Abierto 7am &ndash; 7pm<span class="sp"></span>Lun&ndash;S&aacute;b</p>'),
  ('<a href="#terms">Read the full offer terms</a>', '<a href="#terms">Lea los t&eacute;rminos completos de la oferta</a>'),
  ('aria-label="Media viewer"', 'aria-label="Visor de medios"'),
  ('<button class="lb-x" id="lbx" aria-label="Close">', '<button class="lb-x" id="lbx" aria-label="Cerrar">'),
@@ -147,6 +149,7 @@ NAV_ES = [('office','La Cl&iacute;nica'),('promo','La Oferta'),('visit','C&oacut
 
 # ══════════════════════════════════════════════════════════════════════════
 ES_NUEVO = dict(
+  cta='Agendar Cita',
   slug='es/paciente-nuevo', id='new-patient-special-100-es', banner='PACIENTE NUEVO (ES)', lang='es',
   title='Su Nuevo Hogar Dental en Mueller — Especial para Pacientes Nuevos $100 | AIDM Austin',
   desc='Especial para pacientes nuevos en Austin Institute of Dental Medicine, Mueller: examen dental completo y radiografías según sea necesario por $100. Abierto de lunes a sábado, 7 a.m. a 7 p.m.',
@@ -298,6 +301,7 @@ ES_NUEVO = dict(
 
 # ══════════════════════════════════════════════════════════════════════════
 ES_EMERGENCIA = dict(
+  cta='Agendar Cita',
   slug='es/emergencia', id='emergency-dental-same-day-es', banner='EMERGENCIA (ES)', lang='es',
   title='Atención Dental de Emergencia — 7AM a 7PM, Lun a Sáb | AIDM Austin',
   desc='Citas dentales de emergencia el mismo día en Austin Institute of Dental Medicine, Mueller. Abierto de lunes a sábado, 7 a.m. a 7 p.m., con centro quirúrgico en las instalaciones.',

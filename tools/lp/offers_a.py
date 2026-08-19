@@ -58,6 +58,7 @@ LEGAL_ALIGN = ' Invisalign&reg; is a registered trademark of Align Technology, I
 
 # ══════════════════════════════════════════════════════════════════════════
 EMERGENCY = dict(
+  cta='Book Appointment',
   slug='emergency', id='emergency-dental-same-day', banner='EMERGENCY DENTAL',
   title='Emergency Dental Care — 7am to 7pm, Monday to Saturday | AIDM Austin',
   desc='Same-day emergency dental appointments at the Austin Institute of Dental Medicine in Mueller. Open Monday to Saturday, 7:00 a.m. to 7:00 p.m., with an onsite surgical centre for urgent extractions.',
@@ -203,6 +204,7 @@ EMERGENCY = dict(
 
 # ══════════════════════════════════════════════════════════════════════════
 INVISALIGN = dict(
+  cta='Book Free Consult',
   slug='invisalign', id='invisalign-3900', banner='INVISALIGN',
   title='Clear Aligners. Confident Smile. — Invisalign® $3,900 | AIDM Austin',
   desc='Invisalign clear aligner treatment for $3,900 at the Austin Institute of Dental Medicine in Mueller, Austin. Complimentary orthodontic evaluation, no referral needed.',
@@ -308,6 +310,7 @@ INVISALIGN = dict(
 
 # ══════════════════════════════════════════════════════════════════════════
 EARLY = dict(
+  cta='Book Free Consult',
   slug='early-orthodontics', id='early-orthodontic-treatment-2500', banner='EARLY ORTHODONTICS',
   title='The Right Care at the Right Time — Early Orthodontic Treatment $2,500 | AIDM Austin',
   desc='Early orthodontic treatment for growing children, $2,500, at the Austin Institute of Dental Medicine in Mueller, Austin. Complimentary evaluation, no referral needed.',
@@ -415,6 +418,7 @@ EARLY = dict(
 
 # ══════════════════════════════════════════════════════════════════════════
 WISDOM = dict(
+  cta='Book Appointment',
   slug='wisdom-teeth', id='wisdom-teeth-removal-from-200', banner='WISDOM TEETH',
   title='Comfort-Focused Care with Clear Pricing — Wisdom Teeth from $200 a Tooth | AIDM Austin',
   desc='Wisdom teeth removal from $200 per tooth at the Austin Institute of Dental Medicine in Mueller, Austin. Published price per surgical complexity; four teeth $800 to $1,800.',

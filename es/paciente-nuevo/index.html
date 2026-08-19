@@ -1231,12 +1231,17 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <aside class="offer">
           <div class="card" id="offerCard">
            <div class="card-face card-offer">
-            <p class="card-lim">
-              <span class="star">&#9733;</span>Pacientes nuevos &ndash; seis d&iacute;as
-              <i class="spk" style="--s:13px;top:14%;left:8%;animation-delay:.4s"></i>
-              <i class="spk" style="--s:10px;top:56%;left:31%;animation-delay:1.5s"></i>
-              <i class="spk" style="--s:12px;top:18%;right:14%;animation-delay:2.4s"></i>
-            </p>
+            <div class="rib">
+              <span class="rib-tail rib-l" aria-hidden="true"></span>
+              <span class="rib-tail rib-r" aria-hidden="true"></span>
+              <p class="rib-band">
+                <span class="star">&#9733;</span>Pacientes nuevos &ndash; seis d&iacute;as
+                <i class="rib-shine" aria-hidden="true"></i>
+                <i class="spk" style="--s:12px;top:12%;left:9%;animation-delay:.4s"></i>
+                <i class="spk" style="--s:9px;top:60%;left:30%;animation-delay:1.5s"></i>
+                <i class="spk" style="--s:11px;top:16%;right:13%;animation-delay:2.4s"></i>
+              </p>
+            </div>
             <h2 class="card-t">Especial para Pacientes Nuevos</h2>
 
             <div class="card-price">
@@ -1254,19 +1259,11 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Plan de tratamiento personalizado</li>
             </ul>
 
-            <!-- The braces card counts down to a stated expiry. This offer has
-                 none, so the same four cells carry the access facts instead. -->
             <div class="card-cd">
-              <p class="cd-cap">Abierto seis d&iacute;as a la semana &middot; Mueller, Austin</p>
-              <div class="cd" aria-label="De un vistazo">
-                <div class="cd-c cd-d"><b>7<i class="u">am</i></b><i>Abre</i></div>
-                <div class="cd-c"><b>7<i class="u">pm</i></b><i>Cierra</i></div>
-                <div class="cd-c"><b>6</b><i>D&iacute;as/sem</i></div>
-                <div class="cd-c"><b>$0</b><i>Parqueo</i></div>
-              </div>
+              <p class="hours">Abierto 7am &ndash; 7pm<span class="sp"></span>Lun&ndash;S&aacute;b</p>
             </div>
 
-            <button class="btn btn-sky" type="button" id="cardBook">Agendar mi primera cita</button>
+            <button class="btn btn-sky" type="button" id="cardBook">Agendar Cita</button>
             <p class="card-fine">No se necesita referencia &mdash; ni seguro dental. <a href="#terms">*T&eacute;rminos</a></p>
            </div>
 
@@ -1295,7 +1292,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
                <input type="hidden" name="utm_source" id="cf_utm_source">
                <input type="hidden" name="utm_medium" id="cf_utm_medium">
                <input type="hidden" name="utm_campaign" id="cf_utm_campaign">
-               <button class="btn btn-sky" type="submit">Solicitar mi cita</button>
+               <button class="btn btn-sky" type="submit">Agendar Cita</button>
                <p class="cf-fine">Sin compromiso. Le devolvemos la llamada el mismo d&iacute;a h&aacute;bil.</p>
              </form>
            </div>
@@ -1639,7 +1636,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <p class="d">Una introducci&oacute;n completa a AIDM: c&oacute;mo est&aacute; realmente su boca, y un plan por escrito de qu&eacute; hacer al respecto.</p>
         <ul><li>Examen dental completo</li><li>Radiograf&iacute;as dentales seg&uacute;n sea necesario</li><li>Evaluaci&oacute;n del riesgo de caries e higiene oral</li><li>Plan de tratamiento personalizado</li></ul>
         <p class="optfine">*Aplica a un examen dental completo para pacientes nuevos y radiograf&iacute;as tomadas &uacute;nicamente cuando sea cl&iacute;nicamente indicado. La limpieza profesional y el fl&uacute;or no est&aacute;n incluidos y se cobran por separado.</p>
-        <a class="btn btn-gold" href="#contact">Agendar esta cita</a>
+        <a class="btn btn-gold" href="#contact">Agendar Cita</a>
       </div>
       <div class="opt rv">
         <p class="sub">Examen, radiograf&iacute;as y su limpieza</p>
@@ -1649,7 +1646,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <p class="d">La primera visita completa para quienes ya saben que tambi&eacute;n les toca limpieza: examen, radiograf&iacute;as de boca completa y la limpieza juntas.</p>
         <ul><li>Examen dental completo</li><li>Radiograf&iacute;as de boca completa</li><li>Limpieza dental de adulto cuando corresponde</li><li>Barniz de fl&uacute;or</li><li>Evaluaci&oacute;n del riesgo de caries e higiene oral</li></ul>
         <p class="optfine">*La limpieza incluida aplica cuando una limpieza preventiva de rutina es cl&iacute;nicamente apropiada. Los pacientes que requieran tratamiento periodontal recibir&aacute;n una recomendaci&oacute;n distinta.</p>
-        <a class="btn btn-ghost" href="#contact">Preguntar si me conviene</a>
+        <a class="btn btn-ghost" href="#contact">Agendar Cita</a>
       </div>
       <div class="opt rv">
         <p class="sub">Atenci&oacute;n el mismo d&iacute;a</p>
@@ -1659,7 +1656,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <p class="d">Si tiene dolor hoy, la cita de emergencia es la correcta &mdash; no el examen de paciente nuevo.</p>
         <ul><li>Atenci&oacute;n el mismo d&iacute;a</li><li>Abierto de lunes a s&aacute;bado, 7 a.m. a 7 p.m.</li><li>Evaluaci&oacute;n enfocada en el problema</li><li>Radiograf&iacute;as necesarias para el diagn&oacute;stico</li><li>Centro quir&uacute;rgico en las instalaciones</li></ul>
         <p class="optfine">*Las citas de emergencia se priorizan cl&iacute;nicamente y est&aacute;n sujetas a disponibilidad.</p>
-        <a class="btn btn-ghost" href="#contact">Ver atenci&oacute;n de emergencia</a>
+        <a class="btn btn-ghost" href="#contact">Agendar Cita</a>
       </div>
     </div>
   </div>
@@ -1739,7 +1736,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
           <input type="hidden" name="utm_source" id="f_utm_source">
           <input type="hidden" name="utm_medium" id="f_utm_medium">
           <input type="hidden" name="utm_campaign" id="f_utm_campaign">
-          <button class="btn btn-sky btn-lg" type="submit">Agendar mi cita de paciente nuevo</button>
+          <button class="btn btn-sky btn-lg" type="submit">Agendar Cita</button>
         </form>
         <p class="fnote">Al enviar este formulario, usted acepta que lo contactemos sobre su solicitud. Los precios
           promocionales est&aacute;n sujetos a la evaluaci&oacute;n cl&iacute;nica correspondiente.</p>
