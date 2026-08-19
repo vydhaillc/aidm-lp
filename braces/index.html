@@ -280,6 +280,78 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 @keyframes limshine{0%{transform:translateX(-130%)}45%,100%{transform:translateX(130%)}}
 @keyframes limstar{0%,100%{transform:scale(1)}50%{transform:scale(1.16)}}
 
+/* — the special-offer ribbon —
+   Replaces the flat pill. A darker tail runs out to each edge of the plate
+   with a chevron notched into its outer end, and the band sits over them
+   with the same gold rim and the same three motions the pill carried. The
+   tails are clipped by the card's own overflow, which is what makes the
+   ribbon read as wrapped around the plate rather than drawn on it. */
+.rib{position:relative;display:flex;justify-content:center;
+  margin:.1rem -1.35rem 1rem;
+  font-family:var(--head);font-size:clamp(.78rem,1.62vw,.92rem);
+  filter:drop-shadow(0 9px 14px -9px rgba(0,0,0,.85))}
+.rib-tail{position:absolute;top:54%;transform:translateY(-50%);z-index:0;
+  height:2.15em;width:2.6rem;
+  background:linear-gradient(180deg,#8b1308,#4f0902);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+.rib-l{left:0;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,30% 50%)}
+.rib-r{right:0;clip-path:polygon(0 0,100% 0,70% 50%,100% 100%,0 100%)}
+.rib-band{position:relative;z-index:2;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+  margin:0;padding:.52rem 1.35rem;min-width:min(100%,19rem);
+  font-size:1em;font-weight:800;letter-spacing:.085em;text-transform:uppercase;
+  color:#fff;text-shadow:0 1px 2px rgba(70,4,0,.75);
+  border-radius:4px;
+  background:linear-gradient(180deg,#e5462f 0%,#c72a1b 47%,#9c1408 100%);
+  border-top:2px solid rgba(248,233,189,.8);
+  border-bottom:2px solid rgba(140,102,19,.9)}
+/* the folds, where the band turns over the tails */
+.rib-band::before,.rib-band::after{content:'';position:absolute;top:100%;z-index:-1;
+  width:.9rem;height:.62rem;background:#3d0500}
+.rib-band::before{left:0;clip-path:polygon(0 0,100% 0,100% 100%)}
+.rib-band::after{right:0;clip-path:polygon(0 0,100% 0,0 100%)}
+/* the light sweep lives in its own clipped layer so the folds are not cut off */
+.rib-shine{position:absolute;inset:0;overflow:hidden;border-radius:inherit;pointer-events:none;z-index:3}
+.rib-shine::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.6) 50%,transparent 62%);
+  transform:translateX(-130%)}
+.rib .star{position:relative;z-index:4;flex:none;
+  display:grid;place-items:center;width:1.25em;height:1.25em;border-radius:50%;
+  background:radial-gradient(circle at 40% 34%,#fff3cd,#e9c46a 58%,#b8860b);
+  color:#7a1a06;font-size:.72em;line-height:1;
+  box-shadow:0 0 10px -2px rgba(255,224,150,.9)}
+@media(prefers-reduced-motion:no-preference){
+  .rib-band{animation:limglow 2.9s ease-in-out infinite}
+  .rib-shine::after{animation:limshine 3.8s ease-in-out infinite}
+  .rib .star{animation:limstar 2.9s ease-in-out infinite}
+}
+@media(max-width:460px){
+  /* the band has to give ground on a phone, or the tails disappear behind it
+     and the ribbon reads as the flat pill it replaced */
+  .rib{margin-inline:-1.15rem}
+  .rib-tail{width:2.1rem}
+  .rib-band{min-width:0;padding-inline:1.15rem;letter-spacing:.06em}
+}
+
+/* the qualifier that used to live on the flag */
+.card-sub{margin:.2rem 0 0;text-align:center;font-family:var(--head);font-size:.62rem;
+  font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:var(--gold)}
+
+/* — the hours band —
+   Stands where the countdown stood. One statement at one size, in the same
+   gold rim and yellow the counter cells used. */
+.hours{position:relative;margin:0;padding:.78rem .8rem;border-radius:12px;
+  text-align:center;white-space:nowrap;
+  font-family:var(--head);font-size:clamp(.88rem,2.05vw,1.08rem);font-weight:800;
+  line-height:1.15;letter-spacing:.035em;text-transform:uppercase;
+  color:#ffe14d;text-shadow:0 0 18px rgba(255,214,64,.55);
+  font-variant-numeric:tabular-nums;
+  background:linear-gradient(180deg,rgba(9,30,50,.95),rgba(3,14,26,.95));
+  border:1px solid rgba(233,196,106,.7);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 6px 16px -8px #000}
+.hours .sp{display:inline-block;width:.85em}
+@media(prefers-reduced-motion:no-preference){.hours{animation:cdpulse 2.6s ease-in-out infinite}}
+
 /* — sparkle glints —
    Four-point stars scattered over the plate and the figure. Pure clip-path
    and opacity, no images, and they hold still for reduced-motion readers. */
@@ -1053,12 +1125,17 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <aside class="offer">
           <div class="card" id="offerCard">
            <div class="card-face card-offer">
-            <p class="card-lim">
-              <span class="star">&#9733;</span>Limited &ndash; first 100 patients
-              <i class="spk" style="--s:13px;top:14%;left:8%;animation-delay:.4s"></i>
-              <i class="spk" style="--s:10px;top:56%;left:31%;animation-delay:1.5s"></i>
-              <i class="spk" style="--s:12px;top:18%;right:14%;animation-delay:2.4s"></i>
-            </p>
+            <div class="rib">
+              <span class="rib-tail rib-l" aria-hidden="true"></span>
+              <span class="rib-tail rib-r" aria-hidden="true"></span>
+              <p class="rib-band">
+                <span class="star">&#9733;</span>Special Offer
+                <i class="rib-shine" aria-hidden="true"></i>
+                <i class="spk" style="--s:12px;top:12%;left:9%;animation-delay:.4s"></i>
+                <i class="spk" style="--s:9px;top:60%;left:30%;animation-delay:1.5s"></i>
+                <i class="spk" style="--s:11px;top:16%;right:13%;animation-delay:2.4s"></i>
+              </p>
+            </div>
             <h2 class="card-t">Comprehensive Braces Treatment</h2>
 
             <div class="card-price">
@@ -1068,6 +1145,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
               <i class="spk" style="--s:26px;top:56%;right:1%;animation-delay:1.6s"></i>
               <i class="spk" style="--s:13px;bottom:6%;right:22%;animation-delay:3s"></i>
             </div>
+            <p class="card-sub">First 100 patients</p>
 
             <ul class="card-list">
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Comprehensive braces treatment</li>
@@ -1078,13 +1156,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
             </ul>
 
             <div class="card-cd">
-              <p class="cd-cap">Offer ends 1 October 2026</p>
-              <div class="cd" id="cd" role="timer" aria-label="Time remaining on the offer">
-                <div class="cd-c cd-d"><b id="cdD">--</b><i>Days left</i></div>
-                <div class="cd-c"><b id="cdH">--</b><i>Hrs</i></div>
-                <div class="cd-c"><b id="cdM">--</b><i>Min</i></div>
-                <div class="cd-c"><b id="cdS">--</b><i>Sec</i></div>
-              </div>
+              <p class="hours">Open 7am &ndash; 7pm<span class="sp"></span>Mon&ndash;Sat</p>
             </div>
 
             <button class="btn btn-sky" type="button" id="cardBook">Book free consult</button>
@@ -1750,35 +1822,10 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
     }
   }
 
-  /* ── live counter to the offer deadline ──────────────────────────────
-     1 Oct 2026, end of day Austin time — the last day of the validity window
-     stated in the offer terms. Written with an explicit -05:00 offset (Austin
-     is on CDT in October) so the deadline is the same instant for every
-     visitor regardless of their own timezone. */
-  var cdEnd = new Date('2026-10-01T23:59:59-05:00').getTime();
-  var cdD = document.getElementById('cdD'), cdH = document.getElementById('cdH'),
-      cdM = document.getElementById('cdM'), cdS = document.getElementById('cdS'),
-      cdBox = document.getElementById('cd');
-
-  if (cdD && cdH && cdM && cdS) {
-    var pad = function(n){ return n < 10 ? '0' + n : '' + n; };
-    var tick = function(){
-      var left = cdEnd - Date.now();
-      if (left <= 0) {
-        cdBox.classList.add('over');
-        cdD.textContent = cdH.textContent = cdM.textContent = cdS.textContent = '—';
-        clearInterval(cdTimer);
-        return;
-      }
-      var s = Math.floor(left / 1000);
-      cdD.textContent = Math.floor(s / 86400);
-      cdH.textContent = pad(Math.floor(s / 3600) % 24);
-      cdM.textContent = pad(Math.floor(s / 60) % 60);
-      cdS.textContent = pad(s % 60);
-    };
-    var cdTimer = setInterval(tick, 1000);
-    tick();
-  }
+  /* ── no countdown on this page ───────────────────────────────────────
+     The card carried a live counter to 1 Oct 2026 until 2026-08-19. It now
+     carries the opening hours instead, so there is nothing here to tick.
+     The validity window still stands in the offer terms in the footer. */
 
   /* ── marquees pause off-screen ──────────────────────────────────────── */
   if ('IntersectionObserver' in window) {

@@ -433,10 +433,7 @@ def build(o):
     # ── JS ──────────────────────────────────────────────────────────────────
     sub("""    data._subject     = 'AIDM braces LP — new enquiry from ' +""",
         "    data._subject     = 'AIDM " + o['slug'] + " LP — new enquiry from ' +", 'subject')
-    cut('  /* ── live counter to the offer deadline ──────────────────────────────', '    tick();\n  }',
-'''  /* ── no countdown on this page ───────────────────────────────────────
-     The braces offer expires; this one carries no stated end date, so the
-     four cells in the card are static facts and nothing here ticks. */''', 'countdown')
+    # (the template lost its countdown on 2026-08-19 — nothing to strip here)
     sub("""        'title="Orthodontics at AIDM" allow="accelerometer; autoplay; encrypted-media; ' +""",
         "        'title=\"" + o['videoled'].replace('&mdash;', '-') + "\" allow=\"accelerometer; autoplay; encrypted-media; ' +", 'promotitle')
 
