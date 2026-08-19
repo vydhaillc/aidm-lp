@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Offers 6, 7, 8 and 10 from the approved promotions sheet."""
 from offers_a import (U, NAV_STD, OPERATORY, RES_PATIENT, XRAY_TALK, DOC_RES,
-                      SMILE_M, PAIN, OG_OP, ILLUS, ALT)
+                      SMILE_M, PAIN, OG_OP, PIC, PALT)
 SENIOR_JOY = U + '2026/07/iStock-1296176774-1024x683.jpg'
 SENIOR_M   = U + '2026/08/istock_61-1024x1024.jpg'
 CAMPING    = U + '2026/05/iStock-52-1024x683.jpg'
@@ -12,7 +12,7 @@ IMPLANT_PERKS = [('cal','Book online'),('park','Free parking'),('clock','Monday&
 
 # The three implant packages as cards, reused across the implant pages.
 def implant_cards(feature, own_photo=None, own_alt=''):
-    single = dict(img=ILLUS['implant-single'], imgalt=ALT['implant-single'], imgpos='center 54%',
+    single = dict(img=PIC['implant'], imgalt=PALT['implant'], imgpos='center 48%',
         sub='One missing tooth. One complete solution.', h3='Single Implant + Crown',
         amt='from $3,750', strike='Range $3,750&ndash;$5,000',
         d='Replace one missing tooth with coordinated implant placement and a natural-looking ceramic crown.',
@@ -20,7 +20,7 @@ def implant_cards(feature, own_photo=None, own_alt=''):
             'Final ceramic crown','Bone grafting when in the selected pathway'],
         fine='The final package price depends on the restoration selected and whether bone grafting is needed.',
         cta='See single-implant pricing')
-    full = dict(img=ILLUS['full-arch-4'], imgalt=ALT['full-arch-4'], imgpos='center 52%',
+    full = dict(img=PIC['surgery'], imgalt=PALT['surgery'], imgpos='center 40%',
         sub='A full smile. A fresh start.', h3='Full-Arch Fixed Teeth',
         amt='from $18,000', strike='Per arch &middot; $18,000 &middot; $22,000 &middot; $26,000',
         d='Replace an entire arch of missing or failing teeth with a secure, fixed restoration on four to six implants.',
@@ -29,7 +29,7 @@ def implant_cards(feature, own_photo=None, own_alt=''):
         fine='Your treatment tier is based on extractions, grafting, bone condition and case complexity. Advanced '
              'reconstruction or services outside the standard package require a custom treatment plan.',
         cta='See full-arch pricing')
-    snap = dict(img=ILLUS['overdenture-2'], imgalt=ALT['overdenture-2'], imgpos='center 50%',
+    snap = dict(img=PIC['family'], imgalt=PALT['family'], imgpos='center 30%',
         sub='More stability. More confidence.', h3='Snap-In Dentures',
         amt='from $9,500', strike='Per arch &middot; $9,500 &middot; $12,500 &middot; $17,000',
         d='A secure, removable implant-supported solution with far more stability than a conventional denture.',
@@ -240,14 +240,14 @@ FULLARCH = dict(
   optsh2='Three tiers. <em>Same package.</em>',
   optssub='Every tier contains the same five things. What moves the price is the state of the arch it is going into '
     '&mdash; how many extractions, how much grafting, what the bone will carry, and how complex the case is.',
-  opts=[dict(img=ILLUS['full-arch-4'], imgalt=ALT['full-arch-4'], imgpos='center 52%',
+  opts=[dict(img=PIC['implant'], imgalt=PALT['implant'], imgpos='center 48%',
       sub='Straightforward arch', h3='Simple', amt='$18,000', strike='Per arch',
       d='An arch where the extractions are straightforward, the bone is sound and no significant grafting is required.',
       ul=['Comprehensive diagnostic work-up','Four to six conventional dental implants','Multi-unit abutments',
           'Interim complete and fixed teeth','Final fixed full-arch restoration'],
       fine='Tier is based on extractions, grafting, bone condition and case complexity, determined from imaging.',
       cta='Ask which tier I am in'),
-    dict(img=ILLUS['full-arch-4'], imgalt=ALT['full-arch-4'], imgpos='center 52%',
+    dict(img=PIC['surgery'], imgalt=PALT['surgery'], imgpos='center 40%',
       feat=True, flag='Most common', sub='Some grafting or extractions', h3='Moderate', amt='$22,000',
       strike='Per arch',
       d='An arch needing more extraction work, some grafting, or where bone condition makes placement more demanding.',
@@ -255,7 +255,7 @@ FULLARCH = dict(
           'Interim complete and fixed teeth','Final fixed full-arch restoration'],
       fine='Tier is based on extractions, grafting, bone condition and case complexity, determined from imaging.',
       cta='Book my consultation'),
-    dict(img=ILLUS['full-arch-6'], imgalt=ALT['full-arch-6'], imgpos='center 52%',
+    dict(img=PIC['tools'], imgalt=PALT['tools'], imgpos='center 42%',
       sub='Demanding reconstruction', h3='Complex', amt='$26,000', strike='Per arch',
       d='An arch where extensive extraction, grafting or compromised bone makes the reconstruction substantially more involved.',
       ul=['Comprehensive diagnostic work-up','Four to six conventional dental implants','Multi-unit abutments',
@@ -384,21 +384,21 @@ SNAPIN = dict(
   optsh2='Three tiers. <em>Same package.</em>',
   optssub='Every tier contains the same five things. What moves the price is how much bone there is to anchor to, and '
     'therefore whether the pathway uses two implants or four.',
-  opts=[dict(img=ILLUS['overdenture-2'], imgalt=ALT['overdenture-2'], imgpos='center 50%',
+  opts=[dict(img=PIC['implant'], imgalt=PALT['implant'], imgpos='center 48%',
       sub='Two implants', h3='Simple', amt='$9,500', strike='Per arch',
       d='The straightforward pathway: sound bone, a clean arch, and two implants carrying the denture.',
       ul=['Comprehensive evaluation and planning','Clinically appropriate imaging','Two implants',
           'Implant attachments','Interim and final removable dentures'],
       fine='Complete package pricing based on the selected clinical pathway, determined at your evaluation.',
       cta='Ask which tier I am in'),
-    dict(img=ILLUS['overdenture-2'], imgalt=ALT['overdenture-2'], imgpos='center 50%',
+    dict(img=PIC['family'], imgalt=PALT['family'], imgpos='center 30%',
       feat=True, flag='Most common', sub='More anchorage', h3='Moderate', amt='$12,500', strike='Per arch',
       d='A pathway using more implants or requiring more preparatory work to give the denture solid anchorage.',
       ul=['Comprehensive evaluation and planning','Clinically appropriate imaging','Two or four implants',
           'Implant attachments','Interim and final removable dentures'],
       fine='Complete package pricing based on the selected clinical pathway, determined at your evaluation.',
       cta='Book my consultation'),
-    dict(img=ILLUS['overdenture-4'], imgalt=ALT['overdenture-4'], imgpos='center 50%',
+    dict(img=PIC['surgery'], imgalt=PALT['surgery'], imgpos='center 40%',
       sub='Compromised bone', h3='Complex', amt='$17,000', strike='Per arch',
       d='An arch where bone condition makes placement substantially more demanding and four implants are required.',
       ul=['Comprehensive evaluation and planning','Clinically appropriate imaging','Four implants',
@@ -537,14 +537,14 @@ ROOTCANAL = dict(
       fine='Applies to standard root canal therapy. Complex cases, including highly calcified canals or retreatments, '
            'may require an adjusted fee. Retreatment and procedures not listed are additional.',
       cta='Book my consultation'),
-    dict(img=ILLUS['crown'], imgalt=ALT['crown'], imgpos='center 54%',
+    dict(img=PIC['smile'], imgalt=PALT['smile'], imgpos='center 44%',
       sub='Front tooth', h3='Root Canal + Crown', amt='$2,300', strike='Anterior tooth',
       d='The complete bundle for a front tooth: the root canal, a protective core buildup and a porcelain or ceramic crown.',
       ul=['Limited-field 3D imaging','Initial root canal treatment','Protective core buildup',
           'Porcelain or ceramic crown','Coordinated endodontic and restorative care'],
       fine='This package applies to initial root canal treatment. Retreatment and procedures not listed in the package '
            'are additional.', cta='Ask about the bundle'),
-    dict(img=ILLUS['crown'], imgalt=ALT['crown'], imgpos='center 54%',
+    dict(img=PIC['mirror'], imgalt=PALT['mirror'], imgpos='center 44%',
       sub='Back tooth', h3='Root Canal + Crown', amt='$2,400&ndash;$2,500', strike='Premolar $2,400 &middot; molar $2,500',
       d='The same complete bundle for a premolar or a molar &mdash; the teeth that do the chewing, and the ones that '
         'most need a crown afterwards.',

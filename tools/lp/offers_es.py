@@ -6,7 +6,7 @@ else is translated here and is flagged for AIDM review before launch — in
 particular the Texas 72-hour disclosure, which is statutory language.
 """
 from offers_a import (NAV_STD, OPERATORY, EXAM, XRAY_TALK, RES_PATIENT, PAIN,
-                      CHAIR_SMILE, OG_OP, OG_LOBBY, ILLUS, ALT)
+                      CHAIR_SMILE, OG_OP, OG_LOBBY, PIC, PALT)
 
 # Every standing string the template hard-codes, translated once.
 CHROME = [
@@ -233,7 +233,7 @@ ES_NUEVO = dict(
       fine='Aplica a un examen dental completo para pacientes nuevos y radiograf&iacute;as tomadas &uacute;nicamente '
            'cuando sea cl&iacute;nicamente indicado. La limpieza profesional y el fl&uacute;or no est&aacute;n '
            'incluidos y se cobran por separado.', cta='Agendar esta cita'),
-    dict(img=ILLUS['cleaning'], imgalt='Un ultrasonido retirando placa y sarro de los dientes en la l&iacute;nea de las enc&iacute;as', imgpos='center 54%',
+    dict(img=PIC['cleaning'], imgalt='Una higienista limpiando los dientes de un paciente', imgpos='center 40%',
       sub='Examen, radiograf&iacute;as y su limpieza', h3='Establecer Atenci&oacute;n', amt='$450',
       strike='Una sola cita, todo cubierto',
       d='La primera visita completa para quienes ya saben que tambi&eacute;n les toca limpieza: examen, radiograf&iacute;as de boca completa y la limpieza juntas.',
@@ -242,7 +242,7 @@ ES_NUEVO = dict(
       fine='La limpieza incluida aplica cuando una limpieza preventiva de rutina es cl&iacute;nicamente apropiada. '
            'Los pacientes que requieran tratamiento periodontal recibir&aacute;n una recomendaci&oacute;n distinta.',
       cta='Preguntar si me conviene'),
-    dict(img=ILLUS['emergency'], imgalt='Un molar fracturado con un absceso en la punta de la ra&iacute;z', imgpos='center 52%',
+    dict(img=PIC['pain'], imgalt='Un primer plano de una boca abierta, el paciente sujet&aacute;ndose la mejilla por dolor', imgpos='center 40%',
       sub='Atenci&oacute;n el mismo d&iacute;a', h3='Emergencia Dental', amt='El mismo d&iacute;a',
       strike='Sin precio publicado',
       d='Si tiene dolor hoy, la cita de emergencia es la correcta &mdash; no el examen de paciente nuevo.',
@@ -380,7 +380,7 @@ ES_EMERGENCIA = dict(
   optsh2='La cita es urgente. <em>El precio no es sorpresa.</em>',
   optssub='Una evaluaci&oacute;n de emergencia encuentra la causa; estos son los precios publicados de las tres cosas '
     'en las que m&aacute;s a menudo resulta. Usted conoce el costo antes de que se inicie cualquier tratamiento.',
-  opts=[dict(img=ILLUS['root-canal'], imgalt='Corte transversal de un molar durante el tratamiento de conducto', imgpos='center 55%',
+  opts=[dict(img=PIC['xray'], imgalt='Una radiograf&iacute;a panor&aacute;mica en una tableta junto al sill&oacute;n', imgpos='center 42%',
       sub='Salvar el diente', h3='Endodoncia', amt='desde $995',
       strike='Con corona cer&aacute;mica, $2,300&ndash;$2,500',
       d='Conserve un diente elegible con tratamiento de conducto, un mu&ntilde;&oacute;n de protecci&oacute;n y una corona cer&aacute;mica.',
@@ -398,7 +398,7 @@ ES_EMERGENCIA = dict(
           'Centro quir&uacute;rgico en las instalaciones'],
       fine='Las citas de emergencia se priorizan cl&iacute;nicamente y est&aacute;n sujetas a disponibilidad. Cualquier '
            'tratamiento que resulte se cotiza antes de iniciarse.', cta='Solicitar cita para hoy'),
-    dict(img=ILLUS['wisdom-erupted'], imgalt='Una muela del juicio siendo extra&iacute;da con f&oacute;rceps', imgpos='center 56%',
+    dict(img=PIC['surgery'], imgalt='Dos cl&iacute;nicos realizando un procedimiento en el consultorio', imgpos='center 40%',
       sub='Cuando el diente no se puede conservar', h3='Extracciones', amt='desde $200',
       strike='Por diente, seg&uacute;n complejidad quir&uacute;rgica',
       d='Precios claros de extracci&oacute;n seg&uacute;n la posici&oacute;n y la complejidad quir&uacute;rgica de cada diente.',
