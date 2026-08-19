@@ -16,9 +16,11 @@ TOOTHACHE   = U + '2025/10/a-dentist-examining-a-young-woman-with-toothache-in-a
 CHAIRSIDE   = U + '2025/09/close-up-of-a-dentist-examining-a-patients-teeth-using-dental-tools.-4269694-1024x683.jpg'
 # Card-top portraits, in the spirit of AIDM's printed flyers: a face on every
 # package rather than three identical slabs of navy.
-FACE_RELIEF = U + '2026/02/iStock-45-1024x683.jpg'          # smiling man — the tooth kept
-FACE_PAIN   = U + '2025/10/AIDM-Emergency-3.jpeg'           # AIDM's own emergency portrait
-FACE_YOUNG  = U + '2026/05/iStock-65-1024x683.jpg'          # wisdom teeth skew young
+# Card-top imagery: the treatment itself rather than a stock face — imaging
+# for the diagnosis, the mouth for the emergency, the operatory for surgery.
+IMG_XRAY    = U + '2025/09/dentist-displaying-dental-x-ray-on-tablet-in-a-modern-clinic.-5355695-683x1024.jpg'
+IMG_MOUTH   = U + '2026/01/close-up-of-a-man-holding-his-cheek-displaying-a-wide-open-mouth-against-a-yellow-background.-14624608-1024x683.jpg'
+IMG_SURGERY = U + '2025/09/two-dentists-performing-a-dental-procedure-on-1024x684.jpeg'
 SMILE_M     = U + '2026/02/iStock-45-1024x683.jpg'
 SMILE_Y     = U + '2026/05/iStock-65-1024x683.jpg'
 SMILE_W     = U + '2026/02/iStock-60-1024x683.jpg'
@@ -88,7 +90,7 @@ EMERGENCY = dict(
    wants to sit on the last line instead */
 /* .ast sets line-height:0 for its superscript trick, which leaves a
    zero-height flex item; give it a box back so flex-end means anything */
-.card-price .w-tight ~ .ast-lg{align-self:flex-end;line-height:1;margin-bottom:.55rem}
+.card-price .w-tight ~ .ast-lg{align-self:flex-end;line-height:1;margin-bottom:.15rem}
 .opt .amt.amt-words{font-family:var(--head);font-size:1.5rem;font-weight:700;
   line-height:1.16;letter-spacing:0;margin-bottom:.35rem}
 
@@ -114,8 +116,8 @@ EMERGENCY = dict(
   h1=['Emergency Dental Care', '7am to 7pm,', 'Mon&ndash;Sat.'],
   pill='In Pain Today?', cardtitle='Emergency Dental Care',
   cardprice='<span class="v w w-tight">Same Day Appointments</span>',
-  included=['Seen today &mdash; same-day emergency appointments',
-            'Fees agreed before any treatment starts',
+  included=['Seen today &mdash; same-day appointments',
+            'Every specialty under one roof',
             'Problem-focused emergency evaluation',
             'X-rays as needed to diagnose',
             'Onsite surgical centre for urgent extractions'],
@@ -177,7 +179,7 @@ EMERGENCY = dict(
   optsh2='The visit is urgent. <em>The price is not a surprise.</em>',
   optssub='An emergency evaluation finds the cause; these are the published package fees for the three things it '
     'most often turns out to need. You are told the fee before anything is started.',
-  opts=[dict(img=FACE_RELIEF, imgalt='A man smiling after treatment', imgpos='center 34%',
+  opts=[dict(img=IMG_XRAY, imgalt='A dental X-ray of the jaw displayed on a tablet chairside', imgpos='center 30%',
       sub='Save the tooth', h3='Root Canal', amt='from $995',
       strike='With a ceramic crown, $2,300&ndash;$2,500',
       d='Preserve an eligible tooth with root canal treatment, and rebuild it with a protective core and a ceramic crown.',
@@ -185,15 +187,15 @@ EMERGENCY = dict(
           'Porcelain or ceramic crown (crown bundle)','Coordinated endodontic and restorative care'],
       fine='Advertised price of $995 applies to standard root canal therapy. Complex cases, including highly '
            'calcified canals or retreatments, may require an adjusted fee.', cta='See root canal pricing'),
-    dict(img=FACE_PAIN, imgalt='A woman holding her cheek with toothache', imgpos='center 18%',
+    dict(img=IMG_MOUTH, imgalt='A close-up of an open mouth, the patient holding his cheek in pain', imgpos='center 46%',
       feat=True, flag='You are here', sub='Emergency dental care', h3='Emergency Evaluation',
       amt='Same Day Appointments', strike='Problem-focused evaluation', words=True,
       d='The appointment itself: find out what is causing the pain, and deal with what can safely be dealt with today.',
-      ul=['Same-day emergency appointments','Fees agreed before any treatment starts','Problem-focused emergency evaluation',
+      ul=['Same-day emergency appointments','Every specialty under one roof','Problem-focused emergency evaluation',
           'X-rays as needed to diagnose','Onsite surgical centre for urgent extractions'],
       fine='Emergency appointments are triaged clinically and subject to availability. Any treatment arising is '
            'quoted before it is started.', cta='Request a same-day slot'),
-    dict(img=FACE_YOUNG, imgalt='A young man smiling', imgpos='center 26%',
+    dict(img=IMG_SURGERY, imgalt='Two clinicians carrying out a dental procedure in the operatory', imgpos='center 40%',
       sub='When the tooth cannot be kept', h3='Wisdom Teeth &amp; Extractions', amt='from $200',
       strike='Per tooth, by surgical complexity',
       d='Straightforward extraction pricing based on the position and surgical complexity of each tooth.',
