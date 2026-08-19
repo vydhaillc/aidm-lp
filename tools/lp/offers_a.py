@@ -10,6 +10,15 @@ EXAM        = U + '2026/07/dentist-examining-a-patient-during-a-dental-1024x683.
 OPERATORY   = U + '2026/07/a-dentist-examines-a-patient-using-advanced-1024x684.jpeg'
 PROCEDURE   = OPERATORY
 PAIN        = U + '2026/02/iStock-2-1024x732.jpg'
+# AIDM's own emergency-page photography — a patient in the chair holding her jaw,
+# and the chairside close-up. Both landscape, both already on aidm.org.
+TOOTHACHE   = U + '2025/10/a-dentist-examining-a-young-woman-with-toothache-in-a-dental-clinic.-4971505-1024x683.jpg'
+CHAIRSIDE   = U + '2025/09/close-up-of-a-dentist-examining-a-patients-teeth-using-dental-tools.-4269694-1024x683.jpg'
+# Card-top portraits, in the spirit of AIDM's printed flyers: a face on every
+# package rather than three identical slabs of navy.
+FACE_RELIEF = U + '2026/02/iStock-45-1024x683.jpg'          # smiling man — the tooth kept
+FACE_PAIN   = U + '2025/10/AIDM-Emergency-3.jpeg'           # AIDM's own emergency portrait
+FACE_YOUNG  = U + '2026/05/iStock-65-1024x683.jpg'          # wisdom teeth skew young
 SMILE_M     = U + '2026/02/iStock-45-1024x683.jpg'
 SMILE_Y     = U + '2026/05/iStock-65-1024x683.jpg'
 SMILE_W     = U + '2026/02/iStock-60-1024x683.jpg'
@@ -66,11 +75,47 @@ EMERGENCY = dict(
   ogdesc='Seen today. Problem-focused emergency evaluation, X-rays as needed, onsite surgical centre. Mueller, Austin.',
   ogimg=OG_OP,
   nav=NAV_STD, navcta='Get Seen Today', mcall='Call now',
+  css='''/* "Same Day Appointments" where the other cards carry a figure — three
+   words need to wrap and to sit a size down from the single-word prices. */
+.card-price .v.w-tight{font-size:clamp(1.5rem,3.4vw,2.15rem);line-height:1.12;
+  max-width:11ch;margin-inline:auto}
+/* AIDM's own seven-item list of what counts as an emergency, two-up so it
+   does not run the copy column twice the height of the photo beside it. */
+.fcopy ul.g2{display:grid;grid-template-columns:1fr 1fr;gap:.55rem 1.4rem}
+.fcopy ul.g2 li{font-size:.95rem}
+@media(max-width:760px){.fcopy ul.g2{grid-template-columns:1fr}}
+/* the footnote marker rides the top of a figure; against wrapped words it
+   wants to sit on the last line instead */
+/* .ast sets line-height:0 for its superscript trick, which leaves a
+   zero-height flex item; give it a box back so flex-end means anything */
+.card-price .w-tight ~ .ast-lg{align-self:flex-end;line-height:1;margin-bottom:.55rem}
+.opt .amt.amt-words{font-family:var(--head);font-size:1.5rem;font-weight:700;
+  line-height:1.16;letter-spacing:0;margin-bottom:.35rem}
+
+/* — a face on every package card —
+   The printed flyers lead each package with a photograph; three identical
+   navy slabs do not. The band breaks out of the card padding to meet its
+   rounded top corners, and fades into the card so it reads as part of the
+   plate rather than pasted onto it. .opt keeps overflow visible, or the
+   "You are here" flag above it would be clipped. */
+.opt.has-ph{padding-top:0}
+.opt-ph{position:relative;margin:0 -1.7rem 1.3rem;overflow:hidden;
+  border-radius:var(--r) var(--r) 0 0;background:#07203a}
+/* the flag rides above the band, not under it */
+.opt .opt-flag{z-index:4}
+.opt-ph img{display:block;width:100%;height:clamp(150px,15vw,186px);object-fit:cover;
+  object-position:center 28%;transition:transform 1.1s var(--ease)}
+.opt:hover .opt-ph img{transform:scale(1.05)}
+.opt-ph::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(6,26,44,.16) 0%,rgba(6,26,44,0) 34%,rgba(10,37,64,.72) 88%,rgba(10,37,64,.96) 100%)}
+.opt.feat .opt-ph::after{background:linear-gradient(180deg,rgba(6,26,44,.16) 0%,rgba(6,26,44,0) 34%,rgba(20,68,111,.74) 88%,rgba(20,68,111,.97) 100%)}
+@media(max-width:880px){.opt-ph{margin-inline:-1.7rem}}
+''',
   h1=['Emergency Dental Care', '7am to 7pm,', 'Mon&ndash;Sat.'],
-  pill='Same-day appointments', cardtitle='Emergency Dental Care',
-  cardprice='<span class="v w">Seen today</span>', cardsub='No published price',
+  pill='In Pain Today?', cardtitle='Emergency Dental Care',
+  cardprice='<span class="v w w-tight">Same Day Appointments</span>',
   included=['Seen today &mdash; same-day emergency appointments',
-            'Open Monday to Saturday, 7:00 a.m. to 7:00 p.m.',
+            'Fees agreed before any treatment starts',
             'Problem-focused emergency evaluation',
             'X-rays as needed to diagnose',
             'Onsite surgical centre for urgent extractions'],
@@ -83,7 +128,7 @@ EMERGENCY = dict(
   promok='Emergency dental care', promoh2='In pain today? <em>Ask for today.</em>',
   video='NtubApnQFt0', videoalt='Emergency dental care at the Austin Institute of Dental Medicine',
   videoled='Emergency dental &mdash; seen today', badge=('7&ndash;7', 'Mon to Sat'),
-  promoimg=PAIN, promoalt='A man holding an ice pack against his jaw with toothache',
+  promoimg=TOOTHACHE, promoalt='A patient in the dental chair holding her jaw in pain, with a clinician beside her',
   promofine='Emergency appointments are triaged clinically and are subject to availability. A problem-focused '
     'emergency evaluation addresses the presenting problem; any further treatment is quoted before it is started, '
     'and X-rays are taken only where they are needed to diagnose.',
@@ -111,16 +156,15 @@ EMERGENCY = dict(
          ('2ooc1MlkmNM','What to expect at your first visit'),('CEgwotre0h8','Orthodontics'),
          ('7Ci0z84BpDI','Dental implants'),('cCUQyiHkJxg','Prosthodontics')],
   filmlane='More about AIDM', filmsub='The building, the clinicians and the treatments &mdash; in their own words.',
-  frows=[dict(img=PAIN, alt='A man holding an ice pack against his jaw with toothache',
-      cap='Pain that wakes you up is not pain that waits',
-      k='Why it matters', h2='Dental pain <em>does not settle itself.</em>',
-      p='A toothache that has reached the nerve, an abscess at a root tip or a cracked cusp will not resolve with '
-        'painkillers &mdash; they only mask it while the cause keeps going. Infection in a tooth can spread into the '
-        'jaw and the soft tissues of the face, and what could have been a root canal becomes an extraction.',
-      bullets=['Swelling that spreads to the eye or the floor of the mouth is an emergency-room problem, not a dental one',
-               'A knocked-out adult tooth can often be replanted &mdash; but the window is measured in hours',
-               'Painkillers and antibiotics manage symptoms; only treating the cause ends it']),
-    dict(img=OPERATORY, alt='An AIDM operatory with a patient in the chair being examined',
+  frows=[dict(img=TOOTHACHE, alt='A patient in the dental chair holding her jaw in pain, with a clinician beside her',
+      cap='If it causes pain or interrupts your day, call us',
+      k='Why it matters', h2='What counts as <em>a dental emergency.</em>',
+      p='A dental emergency is anything that causes pain or interrupts your daily life. If you are wondering whether '
+        'what you have counts, it is best to call. Here are some examples of things that constitute a dental emergency:',
+      two_up=True,
+      bullets=['Severe toothache or dental pain','Knocked-out or loosened tooth','Cracked or fractured tooth',
+               'Lost filling or crown','Abscess or swelling','Bleeding from the mouth','Trauma to the mouth or jaw']),
+    dict(img=CHAIRSIDE, alt='A close-up of an AIDM clinician examining a patient&rsquo;s teeth chairside',
       cap='An onsite surgical centre, in the same building',
       k='Why here', h2='Everything under <em>one roof.</em>',
       p='Most practices that see you urgently then refer you on for whatever you actually need. AIDM has '
@@ -133,21 +177,24 @@ EMERGENCY = dict(
   optsh2='The visit is urgent. <em>The price is not a surprise.</em>',
   optssub='An emergency evaluation finds the cause; these are the published package fees for the three things it '
     'most often turns out to need. You are told the fee before anything is started.',
-  opts=[dict(sub='Save the tooth', h3='Root Canal', amt='from $995',
+  opts=[dict(img=FACE_RELIEF, imgalt='A man smiling after treatment', imgpos='center 34%',
+      sub='Save the tooth', h3='Root Canal', amt='from $995',
       strike='With a ceramic crown, $2,300&ndash;$2,500',
       d='Preserve an eligible tooth with root canal treatment, and rebuild it with a protective core and a ceramic crown.',
       ul=['Limited-field 3D imaging','Initial root canal treatment','Protective core buildup (crown bundle)',
           'Porcelain or ceramic crown (crown bundle)','Coordinated endodontic and restorative care'],
       fine='Advertised price of $995 applies to standard root canal therapy. Complex cases, including highly '
            'calcified canals or retreatments, may require an adjusted fee.', cta='See root canal pricing'),
-    dict(feat=True, flag='You are here', sub='Emergency dental care', h3='Emergency Evaluation',
-      amt='Seen today', strike='Problem-focused &mdash; no published price',
+    dict(img=FACE_PAIN, imgalt='A woman holding her cheek with toothache', imgpos='center 18%',
+      feat=True, flag='You are here', sub='Emergency dental care', h3='Emergency Evaluation',
+      amt='Same Day Appointments', strike='Problem-focused evaluation', words=True,
       d='The appointment itself: find out what is causing the pain, and deal with what can safely be dealt with today.',
-      ul=['Same-day emergency appointments','Open Monday to Saturday, 7am to 7pm','Problem-focused emergency evaluation',
+      ul=['Same-day emergency appointments','Fees agreed before any treatment starts','Problem-focused emergency evaluation',
           'X-rays as needed to diagnose','Onsite surgical centre for urgent extractions'],
       fine='Emergency appointments are triaged clinically and subject to availability. Any treatment arising is '
            'quoted before it is started.', cta='Request a same-day slot'),
-    dict(sub='When the tooth cannot be kept', h3='Wisdom Teeth &amp; Extractions', amt='from $200',
+    dict(img=FACE_YOUNG, imgalt='A young man smiling', imgpos='center 26%',
+      sub='When the tooth cannot be kept', h3='Wisdom Teeth &amp; Extractions', amt='from $200',
       strike='Per tooth, by surgical complexity',
       d='Straightforward extraction pricing based on the position and surgical complexity of each tooth.',
       ul=['Simple erupted extraction &mdash; $200 per tooth','Surgical erupted extraction &mdash; $275 per tooth',

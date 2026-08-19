@@ -302,7 +302,7 @@ def build(o):
         <p class="k">''' + r['k'] + '''</p>
         <h2>''' + r['h2'] + '''</h2>
         <p>''' + r['p'] + '''</p>
-        <ul>
+        <ul''' + (' class="g2"' if r.get('two_up') else '') + '''>
 ''' + '\n'.join('          <li>' + TICK17 + b + '</li>' for b in r['bullets']) + '''
         </ul>
       </div>
@@ -324,11 +324,17 @@ def build(o):
     assert i > 0 and j > i
     cards = []
     for c in o['opts']:
-        cards.append('      <div class="opt' + (' feat' if c.get('feat') else '') + ' rv">\n' +
+        cards.append('      <div class="opt' + (' feat' if c.get('feat') else '') +
+            (' has-ph' if c.get('img') else '') + ' rv">\n' +
             ('        <span class="opt-flag">' + c['flag'] + '</span>\n' if c.get('flag') else '') +
+            ('        <figure class="opt-ph"><img loading="lazy" src="' + c['img'] +
+             '" alt="' + c.get('imgalt', '') + '"' +
+             (' style="object-position:' + c['imgpos'] + '"' if c.get('imgpos') else '') +
+             '></figure>\n' if c.get('img') else '') +
             '        <p class="sub">' + c['sub'] + '</p>\n'
             '        <h3>' + c['h3'] + '</h3>\n'
-            '        <p class="amt">' + c['amt'] + '<a class="ast" href="#terms" aria-label="See fee disclosures">*</a></p>\n'
+            '        <p class="amt' + (' amt-words' if c.get('words') else '') + '">' + c['amt'] +
+            '<a class="ast" href="#terms" aria-label="See fee disclosures">*</a></p>\n'
             '        <p class="strike">' + c.get('strike', '&nbsp;') + '</p>\n'
             '        <p class="d">' + c['d'] + '</p>\n'
             '        <ul>' + ''.join('<li>' + x + '</li>' for x in c['ul']) + '</ul>\n'
