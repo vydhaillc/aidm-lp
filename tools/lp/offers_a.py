@@ -20,6 +20,12 @@ SMILE_M     = U + '2026/02/iStock-45-1024x683.jpg'
 SMILE_Y     = U + '2026/05/iStock-65-1024x683.jpg'
 SMILE_W     = U + '2026/02/iStock-60-1024x683.jpg'
 CHAIR_SMILE = U + '2026/04/Pexels-5-1024x683.jpg'
+# Treatment photographs the offer itself is about, served from this repo:
+# the two clear-aligner shots are AIDM's own orthodontics-page images, and the
+# early-treatment boy is lifted from AIDM's Early Orthodontic Treatment flyer.
+ALIGNER_IN  = '../aidm-lp-assets/promo/clear-aligner.jpg'
+ALIGNER_FIT = '../aidm-lp-assets/promo/clear-aligner-wide.jpg'
+EARLY_BOY   = '../aidm-lp-assets/promo/early-ortho-boy.jpg'
 OG_LOBBY    = U + '2026/07/13-AIDM-Entrance-Desk-1536x1024.jpg'
 OG_OP       = U + '2026/07/16-AIDM-Operatory-01--1536x1024.jpg'
 
@@ -289,7 +295,7 @@ INVISALIGN = dict(
   promok='Invisalign clear aligners', promoh2='What $3,900 <em>actually covers.</em>',
   video='CEgwotre0h8', videoalt='Orthodontics at the Austin Institute of Dental Medicine',
   videoled='Orthodontics at AIDM', badge=('$3,900', 'Clear aligners'),
-  promoimg=SMILE_Y, promoalt='A young man smiling confidently',
+  promoimg=ALIGNER_IN, promoalt='A patient seating a clear aligner over the upper teeth',
   promofine='Advertised price of $3,900 applies to Invisalign&reg; clear aligner cases. Complex cases, retainers, or '
     'phase-one interceptive orthodontics may incur additional fees. A complete clinical evaluation is required to '
     'determine case complexity and final fee.',
@@ -304,7 +310,7 @@ INVISALIGN = dict(
          ('f7HHTbB-qe8','Comprehensive dental care'),('k9PavRdjiyc','Comfort, sedation &amp; anxiety care'),
          ('DV9t9dZJauA','Finding us &amp; where to park')],
   filmlane='More about AIDM', filmsub='The building, the clinicians and the treatments &mdash; in their own words.',
-  frows=[dict(img=SMILE_W, alt='A woman smiling confidently outdoors',
+  frows=[dict(img=ALIGNER_FIT, alt='A clear aligner tray held over the teeth, all but invisible in place',
       cap='Removable, and nearly invisible in ordinary conversation',
       k='Why it matters', h2='Straight teeth are the <em>visible part.</em>',
       p='Aligned teeth are easier to clean, which lowers plaque, cavity and gum-disease risk and protects enamel '
@@ -325,7 +331,7 @@ INVISALIGN = dict(
   optsk='Orthodontic options for every stage', optsh2='Aligners are one of <em>three routes.</em>',
   optssub='Which one is appropriate depends on your bite, not on your budget &mdash; including when the answer is '
     'the cheaper option.',
-  opts=ortho_cards('invis', SMILE_W, 'A woman smiling confidently outdoors'),
+  opts=ortho_cards('invis', ALIGNER_FIT, 'A clear aligner tray held over the teeth, all but invisible in place'),
   faq=[('Will Invisalign work for my bite, or do I need braces?',
         'That is exactly what the complimentary evaluation answers. Aligners handle a very wide range of cases, but '
         'severe rotations, large vertical movements and some bite corrections are still more predictable with fixed '
@@ -396,7 +402,7 @@ EARLY = dict(
   promok='Early orthodontic treatment', promoh2='What $2,500 <em>actually covers.</em>',
   video='CEgwotre0h8', videoalt='Orthodontics at the Austin Institute of Dental Medicine',
   videoled='Orthodontics at AIDM', badge=('$2,500', 'Early treatment'),
-  promoimg=ORTHO_CHAIR, promoalt='An AIDM clinician reviewing a young patient&rsquo;s records chairside',
+  promoimg=EARLY_BOY, promoalt='A smiling boy with a gap where a baby tooth has come out',
   promofine='Standalone appliances and services outside the approved early-treatment plan are priced separately. '
     'Eligibility, clinical recommendations and the final fee are confirmed after an appropriate evaluation, and '
     'package pricing cannot be combined with insurance benefits, membership pricing or other discounts.',
