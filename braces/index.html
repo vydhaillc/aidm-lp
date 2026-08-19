@@ -598,6 +598,29 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 .grev-t{font-family:var(--head);font-size:.66rem;font-weight:600;letter-spacing:.13em;
   text-transform:uppercase;color:var(--pale)}
 
+/* — the two hero chips —
+   They sit over a live film whose top half is bright sky, and at .62 alpha
+   the ghost button all but vanished into it. Both plates go near-opaque with
+   a sky rim and a dark halo outside it, so they hold their edge whatever
+   frame is behind them. Solid rgba only — no backdrop-filter over the video,
+   for the reason noted on .btn-ghost. */
+.hero-cta .grev,
+.hero-cta .btn-ghost{
+  background:linear-gradient(180deg,rgba(5,22,39,.97),rgba(2,11,21,.97));
+  border:1px solid rgba(79,195,247,.55);
+  box-shadow:0 0 0 1px rgba(3,16,29,.85),0 22px 46px -18px #000,
+             inset 0 1px 0 rgba(255,255,255,.1)}
+.hero-cta .grev:hover,
+.hero-cta .btn-ghost:hover{
+  background:linear-gradient(180deg,rgba(12,44,75,.98),rgba(4,18,32,.98));
+  border-color:rgba(79,195,247,.92);
+  box-shadow:0 0 0 1px rgba(3,16,29,.85),0 26px 54px -20px #000,
+             0 0 26px -10px rgba(79,195,247,.7),
+             inset 0 1px 0 rgba(255,255,255,.12);
+  transform:translateY(-2px)}
+.hero-cta .grev-t{color:#bfe4f7}
+
+
 /* ══ OFFICE TOUR ════════════════════════════════════════════════════════
    A 12-column mosaic that opens on the two photographs which actually sell
    the place — the building and the reception — and lets the remaining six
