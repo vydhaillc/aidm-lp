@@ -16,11 +16,13 @@ TOOTHACHE   = U + '2025/10/a-dentist-examining-a-young-woman-with-toothache-in-a
 CHAIRSIDE   = U + '2025/09/close-up-of-a-dentist-examining-a-patients-teeth-using-dental-tools.-4269694-1024x683.jpg'
 # Card-top portraits, in the spirit of AIDM's printed flyers: a face on every
 # package rather than three identical slabs of navy.
-# Card-top imagery: the treatment itself rather than a stock face — imaging
-# for the diagnosis, the mouth for the emergency, the operatory for surgery.
-IMG_XRAY    = U + '2025/09/dentist-displaying-dental-x-ray-on-tablet-in-a-modern-clinic.-5355695-683x1024.jpg'
-IMG_MOUTH   = U + '2026/01/close-up-of-a-man-holding-his-cheek-displaying-a-wide-open-mouth-against-a-yellow-background.-14624608-1024x683.jpg'
-IMG_SURGERY = U + '2025/09/two-dentists-performing-a-dental-procedure-on-1024x684.jpeg'
+# Card-top artwork. AIDM owns no procedure illustrations and the ones on the
+# reference sites are licensed medical art we cannot reuse, so these two are
+# drawn for AIDM — anatomical cross-sections in the same flat, clinical style.
+# The card for the page's own offer reuses the photo from "why it matters",
+# so the two are visibly the same offer.
+ILLUS_ROOTCANAL = '../assets/illus/root-canal.svg'
+ILLUS_EXTRACT   = '../assets/illus/wisdom-extraction.svg'
 SMILE_M     = U + '2026/02/iStock-45-1024x683.jpg'
 SMILE_Y     = U + '2026/05/iStock-65-1024x683.jpg'
 SMILE_W     = U + '2026/02/iStock-60-1024x683.jpg'
@@ -108,6 +110,11 @@ EMERGENCY = dict(
 .opt-ph img{display:block;width:100%;height:clamp(150px,15vw,186px);object-fit:cover;
   object-position:center 28%;transition:transform 1.1s var(--ease)}
 .opt:hover .opt-ph img{transform:scale(1.05)}
+/* the drawn panels are light artwork, not photographs — a dark scrim over
+   them just muddies the drawing, so the fade only applies to the photo */
+.opt-ph.is-art::after{display:none}
+.opt-ph.is-art{box-shadow:inset 0 -1px 0 rgba(120,190,235,.28)}
+.opt-ph.is-art img{object-fit:contain;background:#eef4f9}
 .opt-ph::after{content:'';position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(180deg,rgba(6,26,44,.16) 0%,rgba(6,26,44,0) 34%,rgba(10,37,64,.72) 88%,rgba(10,37,64,.96) 100%)}
 .opt.feat .opt-ph::after{background:linear-gradient(180deg,rgba(6,26,44,.16) 0%,rgba(6,26,44,0) 34%,rgba(20,68,111,.74) 88%,rgba(20,68,111,.97) 100%)}
@@ -179,7 +186,7 @@ EMERGENCY = dict(
   optsh2='The visit is urgent. <em>The price is not a surprise.</em>',
   optssub='An emergency evaluation finds the cause; these are the published package fees for the three things it '
     'most often turns out to need. You are told the fee before anything is started.',
-  opts=[dict(img=IMG_XRAY, imgalt='A dental X-ray of the jaw displayed on a tablet chairside', imgpos='center 30%',
+  opts=[dict(img=ILLUS_ROOTCANAL, imgalt='Cross-section of a molar during root canal treatment: the infected pulp is removed from the canals and the tooth is sealed', imgpos='center 55%',
       sub='Save the tooth', h3='Root Canal', amt='from $995',
       strike='With a ceramic crown, $2,300&ndash;$2,500',
       d='Preserve an eligible tooth with root canal treatment, and rebuild it with a protective core and a ceramic crown.',
@@ -187,7 +194,7 @@ EMERGENCY = dict(
           'Porcelain or ceramic crown (crown bundle)','Coordinated endodontic and restorative care'],
       fine='Advertised price of $995 applies to standard root canal therapy. Complex cases, including highly '
            'calcified canals or retreatments, may require an adjusted fee.', cta='See root canal pricing'),
-    dict(img=IMG_MOUTH, imgalt='A close-up of an open mouth, the patient holding his cheek in pain', imgpos='center 46%',
+    dict(img=TOOTHACHE, imgalt='A patient in the dental chair holding her jaw in pain, with a clinician beside her', imgpos='center 34%',
       feat=True, flag='You are here', sub='Emergency dental care', h3='Emergency Evaluation',
       amt='Same Day Appointments', strike='Problem-focused evaluation', words=True,
       d='The appointment itself: find out what is causing the pain, and deal with what can safely be dealt with today.',
@@ -195,7 +202,7 @@ EMERGENCY = dict(
           'X-rays as needed to diagnose','Onsite surgical centre for urgent extractions'],
       fine='Emergency appointments are triaged clinically and subject to availability. Any treatment arising is '
            'quoted before it is started.', cta='Request a same-day slot'),
-    dict(img=IMG_SURGERY, imgalt='Two clinicians carrying out a dental procedure in the operatory', imgpos='center 40%',
+    dict(img=ILLUS_EXTRACT, imgalt='A wisdom tooth being lifted from its socket at the back of the lower jaw with extraction forceps', imgpos='center 58%',
       sub='When the tooth cannot be kept', h3='Wisdom Teeth &amp; Extractions', amt='from $200',
       strike='Per tooth, by surgical complexity',
       d='Straightforward extraction pricing based on the position and surgical complexity of each tooth.',

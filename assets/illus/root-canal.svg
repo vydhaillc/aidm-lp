@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" role="img"
+     aria-label="Cross-section of a molar during root canal treatment: the infected pulp is removed from the canals and the tooth is sealed">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f4f8fb"/><stop offset="1" stop-color="#e2ecf3"/></linearGradient>
+  <linearGradient id="gum" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ef9aa4"/><stop offset="1" stop-color="#cf6b78"/></linearGradient>
+  <linearGradient id="bone" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f6e8d8"/><stop offset="1" stop-color="#e6d2ba"/></linearGradient>
+  <linearGradient id="enamel" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#f7f9f7"/><stop offset="1" stop-color="#e4e9e6"/></linearGradient>
+  <linearGradient id="dentin" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f7ecd6"/><stop offset="1" stop-color="#e8d6b4"/></linearGradient>
+  <linearGradient id="steel" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#9aa6b4"/><stop offset=".45" stop-color="#e6ecf2"/><stop offset="1" stop-color="#8d99a8"/></linearGradient>
+  <linearGradient id="handle" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#2f7fb5"/><stop offset=".5" stop-color="#59b6e8"/><stop offset="1" stop-color="#2b6f9f"/></linearGradient>
+</defs>
+
+<rect width="640" height="300" fill="url(#bg)"/>
+
+<!-- alveolar bone, then gum over it -->
+<path d="M0 176 Q 160 162 320 170 Q 480 178 640 166 L640 300 L0 300 Z" fill="url(#bone)"/>
+<path d="M0 190 Q 90 176 150 182 Q 190 186 216 200 Q 250 176 320 178 Q 384 180 420 202
+         Q 448 186 486 182 Q 560 176 640 188 L640 300 L0 300 Z" fill="url(#gum)"/>
+<path d="M0 190 Q 90 176 150 182 Q 190 186 216 200 Q 250 176 320 178 Q 384 180 420 202
+         Q 448 186 486 182 Q 560 176 640 188" fill="none" stroke="#b95766" stroke-width="2" opacity=".55"/>
+
+<!-- ── left molar, intact ─────────────────────────────────────────────── -->
+<g>
+  <path d="M92 190 L100 250 Q104 268 116 266 Q126 264 126 246 L130 192 Z" fill="url(#dentin)"/>
+  <path d="M168 190 L166 250 Q166 268 154 268 Q142 266 144 248 L142 192 Z" fill="url(#dentin)"/>
+  <path d="M86 104 Q90 84 112 80 Q130 76 142 86 Q156 76 172 84 Q188 94 186 116 L184 176
+           Q184 196 160 198 L110 198 Q86 196 86 176 Z" fill="url(#enamel)"/>
+  <path d="M92 104 Q102 92 116 96 Q128 100 136 92 Q148 100 162 96 Q176 94 180 108"
+        fill="none" stroke="#d7dee0" stroke-width="3" stroke-linecap="round"/>
+</g>
+
+<!-- ── right premolar and second molar, intact ─────────────────────── -->
+<g transform="translate(22,0)"><g>
+  <path d="M474 192 L480 254 Q484 272 496 270 Q508 268 506 250 L508 194 Z" fill="url(#dentin)"/>
+  <path d="M462 110 Q466 88 490 84 Q516 82 526 104 L528 178 Q528 198 502 200 L482 200
+           Q460 198 460 178 Z" fill="url(#enamel)"/>
+  <path d="M470 108 Q484 96 496 100 Q510 104 520 110"
+        fill="none" stroke="#d7dee0" stroke-width="3" stroke-linecap="round"/>
+</g></g>
+<g transform="translate(96,4)"><g>
+  <path d="M474 192 L480 254 Q484 272 496 270 Q508 268 506 250 L508 194 Z" fill="url(#dentin)"/>
+  <path d="M462 110 Q466 88 490 84 Q516 82 526 104 L528 178 Q528 198 502 200 L482 200
+           Q460 198 460 178 Z" fill="url(#enamel)"/>
+  <path d="M470 108 Q484 96 496 100 Q510 104 520 110"
+        fill="none" stroke="#d7dee0" stroke-width="3" stroke-linecap="round"/>
+</g></g>
+
+<!-- ── centre molar, cross-sectioned ──────────────────────────────────── -->
+<g>
+  <!-- roots -->
+  <path d="M258 188 L268 258 Q272 280 288 277 Q302 274 300 254 L302 190 Z" fill="url(#dentin)"/>
+  <path d="M382 188 L376 258 Q372 280 356 277 Q342 274 344 254 L342 190 Z" fill="url(#dentin)"/>
+  <!-- crown: dentin core under an enamel cap -->
+  <path d="M252 116 Q256 92 284 86 Q306 82 320 92 Q336 82 356 88 Q384 96 382 122
+           L382 186 Q382 200 356 200 L278 200 Q252 200 252 186 Z" fill="url(#dentin)"/>
+  <path d="M252 116 Q256 92 284 86 Q306 82 320 92 Q336 82 356 88 Q384 96 382 122
+           L382 140 Q320 150 252 140 Z" fill="url(#enamel)"/>
+  <!-- pulp chamber and the two canals, each tracking inside its own root -->
+  <path d="M294 126 Q320 115 346 126 L346 150 Q346 162 337 168
+           L354 246 Q355 257 349 257 Q343 257 343 246 L329 168
+           Q320 162 311 168 L297 246 Q296 257 290 257 Q284 257 285 246
+           L303 168 Q294 162 294 150 Z" fill="#e0596a"/>
+  <path d="M294 126 Q320 115 346 126" fill="none" stroke="#c33f52" stroke-width="2" opacity=".65"/>
+  <!-- occlusal shading -->
+  <path d="M258 112 Q276 98 292 104 Q308 110 320 100 Q334 110 350 104 Q368 100 376 114"
+        fill="none" stroke="#dfe5e4" stroke-width="3.5" stroke-linecap="round"/>
+</g>
+
+<!-- ── endodontic file, working down the mesial canal ──────────────── -->
+<g>
+  <g transform="rotate(-3 299 36)">
+    <rect x="286" y="8" width="26" height="52" rx="7" fill="url(#handle)"/>
+    <rect x="291" y="16" width="4" height="36" rx="2" fill="#ffffff" opacity=".45"/>
+    <rect x="295" y="58" width="8" height="13" rx="2" fill="#7d8895"/>
+  </g>
+  <path d="M297 70 L290 236" stroke="url(#steel)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M296 100 l-4 7 7 7 -7 7 7 7 -7 7 7 7 -7 7 7 7 -7 7 7 7 -7 7 7 7 -7 7 6 7"
+        fill="none" stroke="#8f9dab" stroke-width="1.4" opacity=".8"/>
+</g>
+
+</svg>

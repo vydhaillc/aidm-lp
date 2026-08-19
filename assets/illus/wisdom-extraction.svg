@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" role="img"
+     aria-label="A wisdom tooth being lifted from its socket at the back of the lower jaw with extraction forceps">
+<defs>
+  <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f4f8fb"/><stop offset="1" stop-color="#e2ecf3"/></linearGradient>
+  <linearGradient id="gum2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ef9aa4"/><stop offset="1" stop-color="#cf6b78"/></linearGradient>
+  <linearGradient id="bone2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f6e8d8"/><stop offset="1" stop-color="#e6d2ba"/></linearGradient>
+  <linearGradient id="ena2" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#f6f8f7"/><stop offset="1" stop-color="#e2e8e5"/></linearGradient>
+  <linearGradient id="root2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f4e7d0"/><stop offset="1" stop-color="#e2ceac"/></linearGradient>
+  <linearGradient id="steel2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#c8d2dc"/><stop offset=".4" stop-color="#8e9aa8"/>
+    <stop offset=".62" stop-color="#eef2f6"/><stop offset="1" stop-color="#798694"/></linearGradient>
+  <linearGradient id="steel3" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#aab5c2"/><stop offset=".38" stop-color="#f0f4f8"/>
+    <stop offset=".66" stop-color="#8d99a8"/><stop offset="1" stop-color="#c3ccd7"/></linearGradient>
+</defs>
+
+<rect width="640" height="300" fill="url(#bg2)"/>
+
+<!-- jaw bone, then the gum ridge over it -->
+<path d="M0 214 Q 150 200 320 206 Q 500 212 640 200 L640 300 L0 300 Z" fill="url(#bone2)"/>
+<path d="M0 200 Q 120 186 240 192 Q 360 198 452 196 L470 196 Q 560 194 640 186 L640 300 L0 300 Z" fill="url(#gum2)"/>
+<!-- the empty socket the wisdom tooth is coming out of -->
+<path d="M474 196 Q 470 236 486 252 Q 502 264 518 250 Q 534 234 530 196 Z" fill="#a94b58" opacity=".55"/>
+
+<g id="arch">
+  <!-- roots first, so the gum reads as covering their necks -->
+  <path d="M84 190 l4 44 q1 14 11 13 q10 -1 9 -14 l3 -43 z" fill="url(#root2)"/>
+  <path d="M130 190 l4 46 q1 14 11 13 q10 -1 9 -14 l3 -45 z" fill="url(#root2)"/>
+  <path d="M178 190 l4 52 q1 15 12 14 q11 -1 10 -15 l3 -51 z" fill="url(#root2)"/>
+  <path d="M228 190 l3 46 q1 14 11 13 q10 -1 9 -14 l4 -45 z" fill="url(#root2)"/>
+  <path d="M286 190 l2 44 q1 14 11 13 q10 -1 9 -14 l3 -43 z" fill="url(#root2)"/>
+  <path d="M322 190 l4 42 q1 14 11 13 q10 -1 9 -14 l2 -41 z" fill="url(#root2)"/>
+  <path d="M388 190 l3 42 q1 14 11 13 q10 -1 9 -14 l3 -41 z" fill="url(#root2)"/>
+  <path d="M424 190 l4 40 q1 14 11 13 q10 -1 9 -14 l2 -39 z" fill="url(#root2)"/>
+
+  <!-- crowns, front to back -->
+  <path d="M74 130 q2 -18 20 -18 q18 0 20 18 l2 56 q0 12 -14 12 h-16 q-14 0 -14 -12 z" fill="url(#ena2)"/>
+  <path d="M120 128 q2 -20 22 -20 q20 0 22 20 l2 58 q0 12 -15 12 h-18 q-15 0 -15 -12 z" fill="url(#ena2)"/>
+  <path d="M170 120 q3 -24 24 -24 q21 0 23 24 l2 66 q0 12 -16 12 h-19 q-16 0 -16 -12 z" fill="url(#ena2)"/>
+  <path d="M222 126 q3 -22 26 -22 q23 0 25 22 l2 60 q0 12 -17 12 h-22 q-17 0 -17 -12 z" fill="url(#ena2)"/>
+  <path d="M278 126 q4 -22 32 -22 q28 0 31 22 l2 60 q0 12 -20 12 h-27 q-20 0 -20 -12 z" fill="url(#ena2)"/>
+  <path d="M378 126 q4 -22 34 -22 q30 0 33 22 l2 60 q0 12 -21 12 h-29 q-21 0 -21 -12 z" fill="url(#ena2)"/>
+  <!-- cusp shading -->
+  <g fill="none" stroke="#dde4e3" stroke-width="3" stroke-linecap="round">
+    <path d="M80 126 q14 -8 28 0"/><path d="M126 124 q16 -9 32 0"/>
+    <path d="M176 116 q18 -10 36 0"/><path d="M230 122 q18 -9 36 0"/>
+    <path d="M286 122 q12 -8 24 -2 q12 6 24 -2"/>
+    <path d="M386 122 q13 -8 26 -2 q13 6 26 -2"/>
+  </g>
+</g>
+
+<!-- ── the wisdom tooth, gripped and lifted clear of its socket ─────── -->
+<g transform="translate(20,-42)">
+  <g transform="rotate(14 502 176)">
+    <path d="M478 168 l4 48 q1 16 13 15 q12 -1 11 -16 l3 -47 z" fill="url(#root2)"/>
+    <path d="M508 168 l4 46 q1 16 13 15 q12 -1 11 -16 l2 -45 z" fill="url(#root2)"/>
+    <path d="M470 104 q4 -24 34 -24 q30 0 33 24 l2 56 q0 13 -21 13 h-29 q-21 0 -21 -13 z" fill="url(#ena2)"/>
+    <path d="M478 100 q13 -8 26 -2 q13 6 26 -2" fill="none" stroke="#dde4e3" stroke-width="3" stroke-linecap="round"/>
+    <!-- beaks, running down either face of the crown and gripping it -->
+    <path d="M494 56 q-28 16 -26 50 q1 22 8 34" stroke="url(#steel3)" stroke-width="15"
+          stroke-linecap="round" fill="none"/>
+    <path d="M516 56 q28 16 26 50 q-1 22 -8 34" stroke="url(#steel3)" stroke-width="15"
+          stroke-linecap="round" fill="none"/>
+  </g>
+  <!-- hinge and handles -->
+  <path d="M460 58 q-22 -30 -12 -60 l-40 -60" stroke="url(#steel3)" stroke-width="18"
+        stroke-linecap="round" fill="none"/>
+  <path d="M548 58 q24 -28 16 -60 l14 -64" stroke="url(#steel3)" stroke-width="18"
+        stroke-linecap="round" fill="none"/>
+  <circle cx="504" cy="48" r="12" fill="#8e9aa8"/>
+  <circle cx="504" cy="48" r="5" fill="#e9eef3"/>
+</g>
+
+</svg>

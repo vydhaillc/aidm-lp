@@ -327,7 +327,8 @@ def build(o):
         cards.append('      <div class="opt' + (' feat' if c.get('feat') else '') +
             (' has-ph' if c.get('img') else '') + ' rv">\n' +
             ('        <span class="opt-flag">' + c['flag'] + '</span>\n' if c.get('flag') else '') +
-            ('        <figure class="opt-ph"><img loading="lazy" src="' + c['img'] +
+            ('        <figure class="opt-ph' + (' is-art' if c['img'].endswith('.svg') else '') +
+             '"><img loading="lazy" src="' + c['img'] +
              '" alt="' + c.get('imgalt', '') + '"' +
              (' style="object-position:' + c['imgpos'] + '"' if c.get('imgpos') else '') +
              '></figure>\n' if c.get('img') else '') +
