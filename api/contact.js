@@ -2,12 +2,46 @@ import { Resend } from "resend";
 import { createClient } from "@supabase/supabase-js";
 
 /**
- * AIDM braces landing page — lead endpoint.
+ * AIDM landing pages — lead endpoint, shared by all twelve offer pages.
  * Mirrors the De Anza Smiles route: insert into the shared Supabase `leads`
  * table AND email via Resend, succeeding if either one works, so a database
  * outage never costs the practice a lead.
  */
-const LEAD_SOURCE = "aidm-braces-lp";
+const LEAD_SOURCE = "aidm-lp";
+
+/**
+ * The `offer` hidden field on every page keys this table, which is what puts
+ * the offer — not the patient's name — in the subject line. Anything not
+ * listed still sends; it just falls back to the raw offer id.
+ */
+const OFFERS = {
+  "new-patient-special-100":          { label: "New Patient Special", price: "$100" },
+  "new-patient-special-100-es":       { label: "New Patient Special (ES)", price: "$100" },
+  "emergency-dental-same-day":        { label: "Emergency Dental Care" },
+  "emergency-dental-same-day-es":     { label: "Emergency Dental Care (ES)" },
+  "ortho-2950-first-100":             { label: "Braces", price: "$2,950" },
+  "ortho-comprehensive-braces-2950":  { label: "Braces", price: "$2,950" },
+  "invisalign-3900":                  { label: "Invisalign", price: "$3,900" },
+  "early-orthodontic-treatment-2500": { label: "Early Orthodontics", price: "$2,500" },
+  "single-implant-crown-from-3750":   { label: "Single Implant + Crown", price: "from $3,750" },
+  "full-arch-fixed-teeth-from-18000": { label: "Full-Arch Fixed Teeth", price: "from $18,000/arch" },
+  "snap-in-dentures-from-9500":       { label: "Snap-In Dentures", price: "from $9,500/arch" },
+  "wisdom-teeth-removal-from-200":    { label: "Wisdom Teeth", price: "from $200/tooth" },
+  "root-canal-from-995":              { label: "Root Canal", price: "from $995" },
+};
+
+function offerOf(f) {
+  const o = OFFERS[f.offer];
+  if (o) return o;
+  return { label: f.offer || "Enquiry" };          // an offer we have not mapped yet
+}
+
+/** "New Lead: Braces ($2,950) — via Vydhai" */
+function subjectFor(f) {
+  const o = offerOf(f);
+  const priced = o.price ? `${o.label} (${o.price})` : o.label;
+  return `New Lead: ${priced} — via Vydhai`;
+}
 
 function getEnv(name) {
   const v = process.env[name];
@@ -30,7 +64,7 @@ function esc(v) {
 const VYDHAI_FOOTER = `
   <hr style="margin-top:32px;border:none;border-top:1px solid #eee;" />
   <p style="font-size:12px;color:#999;margin-top:8px;">
-    This lead was captured by the braces landing page, built &amp; managed by
+    This lead was captured by an AIDM landing page, built &amp; managed by
     <a href="https://vydhai.com" style="color:#999;">Vydhai</a>.
   </p>
 `;
@@ -41,14 +75,14 @@ function renderHtml(f) {
   const campaign = [f.utm_source, f.utm_medium, f.utm_campaign]
     .filter(Boolean)
     .join(" / ");
+  const o = offerOf(f);
   return `
-    <h2 style="color:#0d3b66;">New Lead — AIDM Comprehensive Braces $2,950</h2>
+    <h2 style="color:#0d3b66;">New Lead &mdash; AIDM ${esc(o.label)}${o.price ? " " + esc(o.price) : ""}</h2>
     ${row("Name", `${f.first_name || ""} ${f.last_name || ""}`.trim())}
     ${row("Mobile", f.phone)}
     ${row("Email", f.email)}
     ${row("This is for", f.patient_type)}
-    ${row("Notes", f.notes)}
-    ${row("Filled in on", f.form)}
+    ${row("Message", f.notes)}
     ${row("Offer", f.offer)}
     ${row("Campaign", campaign)}
     ${row("gclid", f.gclid)}
@@ -140,7 +174,7 @@ export default async function handler(req, res) {
         .from("leads")
         .insert({
           source: LEAD_SOURCE,
-          form_type: f.form || "braces-lp",
+          form_type: f.form || "aidm-lp",
           name,
           email: f.email,
           phone: f.phone,
@@ -175,7 +209,7 @@ export default async function handler(req, res) {
       to: splitAddressList(getEnv("MAIL_TO")),
       cc: splitAddressList(process.env.MAIL_CC),
       bcc: splitAddressList(process.env.MAIL_BCC),
-      subject: `New Braces Lead ($2,950) — ${name} — via Vydhai`,
+      subject: subjectFor(f),
       html: renderHtml(f),
       reply_to: f.email,
     });
