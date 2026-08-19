@@ -990,24 +990,21 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 
 /* am/pm rider on the big figure in the card's fact cells */
 /* ── the hours band ────────────────────────────────────────────────────
-   Replaces the four fact cells on the new-patient card. One statement,
-   not four, so the eye lands on the opening hours and nothing competes
-   with them. Same gold rim, same yellow, same soft glow as the cells. */
-.hours{position:relative;overflow:hidden;margin:0;
-  display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:.1rem .7rem;
-  padding:.72rem .9rem;border-radius:12px;text-align:center;
+   Replaces the four fact cells on the new-patient card. One statement at
+   one size — no superscript riders, no second weight — so the whole line
+   reads as a single fact. Same gold rim, yellow and pulse as the cells it
+   replaced. */
+.hours{position:relative;margin:0;padding:.78rem .8rem;border-radius:12px;
+  text-align:center;white-space:nowrap;
+  font-family:var(--head);font-size:clamp(.88rem,2.05vw,1.08rem);font-weight:800;
+  line-height:1.15;letter-spacing:.035em;text-transform:uppercase;
+  color:#ffe14d;text-shadow:0 0 18px rgba(255,214,64,.55);
+  font-variant-numeric:tabular-nums;
   background:linear-gradient(180deg,rgba(9,30,50,.95),rgba(3,14,26,.95));
   border:1px solid rgba(233,196,106,.7);
   box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 6px 16px -8px #000}
-.hours-t{font-family:var(--head);font-size:clamp(1.18rem,2.8vw,1.5rem);font-weight:800;
-  line-height:1.05;letter-spacing:.01em;color:#ffe14d;
-  text-shadow:0 0 18px rgba(255,214,64,.55);font-variant-numeric:tabular-nums}
-.hours-t i{font-style:normal;font-size:.56em;font-weight:700;vertical-align:.32em;
-  margin-left:.04em;text-transform:uppercase}
-.hours-d{font-family:var(--head);font-size:.62rem;font-weight:700;letter-spacing:.18em;
-  text-transform:uppercase;color:#fff}
+.hours .sp{display:inline-block;width:.85em}
 @media(prefers-reduced-motion:no-preference){.hours{animation:cdpulse 2.6s ease-in-out infinite}}
-@media(max-width:420px){.hours-t{font-size:1.15rem}}
 
 .cd-c b .u{display:inline;font-style:normal;font-size:.42em;font-weight:700;
   letter-spacing:.02em;margin:0 0 0 .06em;vertical-align:.42em;
@@ -1185,7 +1182,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
                  stated end date, so the slot holds the one fact that actually
                  moves a new patient: when they can be seen. -->
             <div class="card-cd">
-              <p class="hours"><span class="hours-t">Open 7<i>am</i> &ndash; 7<i>pm</i></span><span class="hours-d">Mon &ndash; Sat</span></p>
+              <p class="hours">Open 7am &ndash; 7pm<span class="sp"></span>Mon&ndash;Sat</p>
             </div>
 
             <button class="btn btn-sky" type="button" id="cardBook">Book Appointment</button>
