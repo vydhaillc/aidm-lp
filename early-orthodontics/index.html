@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Straighten Your Smile with Confidence — $2,950 Comprehensive Braces | AIDM Austin</title>
+<title>The Right Care at the Right Time — Early Orthodontic Treatment $2,500 | AIDM Austin</title>
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Comprehensive braces treatment for $2,950 for the first 100 orthodontic patients at the Austin Institute of Dental Medicine. Complimentary evaluation, no referral needed.">
-<meta property="og:title" content="Straighten Your Smile with Confidence — $2,950 | AIDM Austin">
-<meta property="og:description" content="Comprehensive braces at Austin's teaching dental institute. First 100 orthodontic patients.">
+<meta name="description" content="Early orthodontic treatment for growing children, $2,500, at the Austin Institute of Dental Medicine in Mueller, Austin. Complimentary evaluation, no referral needed.">
+<meta property="og:title" content="The Right Care at the Right Time — Early Orthodontic Treatment $2,500 | AIDM">
+<meta property="og:description" content="Limited early orthodontic treatment, growth-appropriate planning and retention where the plan includes it, $2,500.">
 <meta property="og:image" content="https://aidm.org/wp-content/uploads/2026/07/16-AIDM-Operatory-01--1536x1024.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 <style>
 /* ═══════════════════════════════════════════════════════════════════════════
-   AIDM — ORTHODONTICS LP  ·  V3 "dark blue, picture-led"
+   AIDM — EARLY ORTHODONTICS LP  ·  on the V3 "dark blue, picture-led" theme
    Every surface is a blue; there is no white section anywhere, including the
    form fields and the map (which is filtered to match). Photography carries
    the page — alternating full-bleed feature rows, a gallery, a film wall.
@@ -980,6 +980,89 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
   .rv{opacity:1;transform:none}
   .swoosh path{stroke-dashoffset:0}
 }
+/* ══ OFFER-PAGE ADDITIONS ═════════════════════════════════════════
+   Three blocks the orthodontics page has no use for: the am/pm marker in
+   the offer card's fact strip (which replaces its countdown), the numbered
+   first-visit band that stands where the before/after rail stood, and the
+   quiet list of further published packages under the three package cards.
+   Everything is built from tokens already declared above. */
+
+/* am/pm rider on the big figure in the card's fact cells */
+.cd-c b .u{display:inline;font-style:normal;font-size:.42em;font-weight:700;
+  letter-spacing:.02em;margin:0 0 0 .06em;vertical-align:.42em;
+  text-transform:uppercase;color:inherit;text-shadow:none;opacity:.9}
+
+/* six films on this page rather than the ortho page's four — a 3-up rail
+   fills two complete rows instead of leaving two orphans on the second */
+#films .frail{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:940px){#films .frail{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){#films .frail{grid-template-columns:1fr}}
+
+/* ── your first visit, step by step ──────────────────────────────────── */
+.steps{list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1.15rem}
+.step{position:relative;border-radius:var(--r);padding:2.5rem 1.4rem 1.6rem;
+  background:linear-gradient(165deg,rgba(14,49,85,.62),rgba(6,26,44,.72));
+  border:1px solid var(--line);
+  box-shadow:0 18px 40px -28px #000}
+.step-n{position:absolute;top:-15px;left:1.3rem;
+  width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+  font-family:var(--price);font-size:1rem;font-weight:800;color:#08243c;
+  background:linear-gradient(135deg,#8fe3ff,var(--sky));
+  box-shadow:0 6px 16px -6px rgba(79,195,247,.8)}
+.step b{display:block;font-family:var(--head);font-size:1.04rem;font-weight:600;
+  color:#fff;margin-bottom:.5rem;line-height:1.3}
+.step p{margin:0;font-size:.93rem;line-height:1.6;color:var(--dim)}
+/* the connecting rule between the numbers, drawn only where there is a gap */
+.step+.step::before{content:'';position:absolute;top:2px;left:-1.15rem;width:1.15rem;
+  height:1px;background:linear-gradient(90deg,transparent,var(--line2))}
+.steps-fine{margin:1.7rem auto 0;max-width:70ch;text-align:center;
+  font-size:.86rem;line-height:1.65;color:var(--dim)}
+.steps-fine a{color:var(--sky);text-decoration:none;border-bottom:1px solid rgba(79,195,247,.4)}
+.steps-fine a:hover{border-bottom-color:var(--sky)}
+@media(max-width:980px){
+  .steps{grid-template-columns:repeat(2,1fr);gap:1.6rem 1.15rem}
+  .step+.step::before{display:none}
+}
+@media(max-width:560px){.steps{grid-template-columns:1fr;gap:1.7rem}}
+
+/* ── the rest of the published preventive ladder ─────────────────────── */
+.alsobox{margin-top:clamp(1.8rem,3.4vw,2.8rem);border-radius:var(--r);
+  padding:clamp(1.3rem,2.4vw,1.9rem) clamp(1.2rem,2.4vw,1.8rem);
+  background:linear-gradient(160deg,rgba(10,37,64,.62),rgba(3,16,29,.7));
+  border:1px solid var(--line)}
+.also-h{margin:0 0 1rem;font-family:var(--head);font-size:.66rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--sky)}
+.also{list-style:none;margin:0;padding:0;display:grid;gap:.1rem}
+.also li{display:grid;grid-template-columns:minmax(0,15rem) 1fr auto;
+  gap:.6rem 1.1rem;align-items:baseline;
+  padding:.72rem 0;border-top:1px solid var(--line)}
+.also li:first-child{border-top:0;padding-top:0}
+.also b{font-family:var(--head);font-size:.98rem;font-weight:600;color:#fff}
+.also span{font-size:.9rem;color:var(--dim);line-height:1.5}
+.also i{font-style:normal;font-family:var(--price);font-size:1.02rem;font-weight:700;
+  color:var(--ice);white-space:nowrap;text-align:right}
+@media(max-width:760px){
+  .also li{grid-template-columns:1fr auto;gap:.25rem .9rem}
+  .also span{grid-column:1/-1}
+}
+
+/* ── offer cards that are quoted as a range, a tier or no figure at all ──
+   The braces card carries one clean number. Several offers do not: they start
+   "from", they are priced per tooth or per arch, or (emergency) they have no
+   published figure. These three riders keep all of them on the same plate. */
+.card-price .fr{align-self:center;margin:.5em .5rem 0 0;
+  font-family:var(--head);font-size:.6rem;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--ice);opacity:.92;
+  -webkit-text-fill-color:currentColor}
+.card-price .v.w{font-size:clamp(1.95rem,4.3vw,2.9rem);line-height:1.1;text-align:center}
+/* $18,000 with a FROM rider in front of it does not fit at the braces size.
+   The rider is always the first child, so a sibling selector shrinks exactly
+   the cards that need it without touching the single-figure ones. */
+.card-price .fr ~ .c{font-size:clamp(1.85rem,4.2vw,2.5rem);margin-top:.06em}
+.card-price .fr ~ .v{font-size:clamp(2.55rem,6vw,3.5rem)}
+.card-sub{margin:.15rem 0 0;text-align:center;font-family:var(--head);font-size:.62rem;
+  font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--ice);opacity:.9}
 </style>
 </head>
 <body>
@@ -996,11 +1079,11 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
   <a href="#top"><img class="nav-logo" src="https://aidm.org/wp-content/uploads/2025/09/Full-Horizontal-Lock-up-Austin-Institute-of-Dental-Medicine-Main-Colorway-RGB-scaled.png" alt="Austin Institute of Dental Medicine"></a>
   <ul class="nav-links">
     <li><a href="#office">Our Office</a></li>
-    <li><a href="#promo">Promotion</a></li>
+    <li><a href="#promo">The Offer</a></li>
     <li><a href="#results">Results</a></li>
     <li><a href="#staff">Our Team</a></li>
     <li><a href="#films">Films</a></li>
-    <li><a href="#treatment">Treatment</a></li>
+    <li><a href="#packages">Options</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
   <a class="nav-tel" href="tel:+17374342436">(737) 434-2436</a>
@@ -1027,9 +1110,9 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <div class="lock">
           <span class="lock-rail"></span>
           <h1>
-            <span class="l1">Straighten</span>
-            <span class="l2">Your Smile with</span>
-            <span class="l3">Confidence.</span>
+            <span class="l1">The Right Care</span>
+
+            <span class="l3">at the Right Time.</span>
           </h1>
           <svg class="swoosh" viewBox="0 0 460 20" preserveAspectRatio="none" aria-hidden="true">
             <path d="M4 14 C 90 5, 200 3, 280 8 S 410 16, 456 6"/>
@@ -1054,15 +1137,15 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
           <div class="card" id="offerCard">
            <div class="card-face card-offer">
             <p class="card-lim">
-              <span class="star">&#9733;</span>Limited &ndash; first 100 patients
+              <span class="star">&#9733;</span>Complimentary consult
               <i class="spk" style="--s:13px;top:14%;left:8%;animation-delay:.4s"></i>
               <i class="spk" style="--s:10px;top:56%;left:31%;animation-delay:1.5s"></i>
               <i class="spk" style="--s:12px;top:18%;right:14%;animation-delay:2.4s"></i>
             </p>
-            <h2 class="card-t">Comprehensive Braces Treatment</h2>
+            <h2 class="card-t">Early Orthodontic Treatment</h2>
 
             <div class="card-price">
-              <span class="c">$</span><span class="v">2,950</span><a class="ast ast-lg" href="#terms" aria-label="See fee disclosures">*</a>
+              <span class="c">$</span><span class="v">2,500</span><a class="ast ast-lg" href="#terms" aria-label="See fee disclosures">*</a>
               <i class="spk" style="--s:24px;top:0%;left:3%;animation-delay:.9s"></i>
               <i class="spk" style="--s:17px;top:66%;left:16%;animation-delay:2.1s"></i>
               <i class="spk" style="--s:26px;top:56%;right:1%;animation-delay:1.6s"></i>
@@ -1070,25 +1153,27 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
             </div>
 
             <ul class="card-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Comprehensive braces treatment</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Routine orthodontic adjustment visits</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Appliance removal</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Standard orthodontic retention</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Care coordinated throughout treatment</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Limited early orthodontic treatment</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Routine treatment visits</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Growth-appropriate treatment planning</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Retention when included in the treatment plan</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Care based on the child&rsquo;s stage of development</li>
             </ul>
 
+            <!-- The braces card counts down to a stated expiry. This offer has
+                 none, so the same four cells carry the access facts instead. -->
             <div class="card-cd">
-              <p class="cd-cap">Offer ends 1 October 2026</p>
-              <div class="cd" id="cd" role="timer" aria-label="Time remaining on the offer">
-                <div class="cd-c cd-d"><b id="cdD">--</b><i>Days left</i></div>
-                <div class="cd-c"><b id="cdH">--</b><i>Hrs</i></div>
-                <div class="cd-c"><b id="cdM">--</b><i>Min</i></div>
-                <div class="cd-c"><b id="cdS">--</b><i>Sec</i></div>
+              <p class="cd-cap">Open six days a week &middot; Mueller, Austin</p>
+              <div class="cd" aria-label="At a glance">
+                <div class="cd-c cd-d"><b>7<i class="u">am</i></b><i>Opens</i></div>
+                <div class="cd-c"><b>7<i class="u">pm</i></b><i>Closes</i></div>
+                <div class="cd-c"><b>6</b><i>Days/wk</i></div>
+                <div class="cd-c"><b>$0</b><i>Parking</i></div>
               </div>
             </div>
 
-            <button class="btn btn-sky" type="button" id="cardBook">Book free consult</button>
-            <p class="card-fine">Evaluation complimentary &mdash; no obligation to start. <a href="#terms">*Fee&nbsp;terms</a></p>
+            <button class="btn btn-sky" type="button" id="cardBook">Book my child&rsquo;s free consult</button>
+            <p class="card-fine">Evaluation complimentary &mdash; and often the answer is &ldquo;not yet&rdquo;. <a href="#terms">*Fee&nbsp;terms</a></p>
            </div>
 
            <!-- ── the same card, flipped to a booking form ──────────────────
@@ -1098,7 +1183,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
            <div class="card-face card-form" hidden>
              <button class="cf-back" type="button" id="cardBack">&larr; Back to the offer</button>
              <p class="cf-k">Complimentary evaluation</p>
-             <h2 class="cf-h">Book your free consult</h2>
+             <h2 class="cf-h">Book your child&rsquo;s consult</h2>
              <form id="cardForm" novalidate>
                <div class="cf-row">
                  <div class="fld"><label for="cf_fn">First name</label><input id="cf_fn" name="first_name" type="text" autocomplete="given-name" required></div>
@@ -1108,15 +1193,15 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
                <div class="fld"><label for="cf_em">Email</label><input id="cf_em" name="email" type="email" autocomplete="email" required></div>
                <div class="fld"><label for="cf_who">This is for</label>
                  <select id="cf_who" name="patient_type">
-                   <option>Myself</option><option>My child</option><option>Someone else</option>
+                   <option>My child</option><option>My teenager</option><option>More than one child</option><option>Someone else</option>
                  </select></div>
-               <input type="hidden" name="offer" value="ortho-2950-first-100">
+               <input type="hidden" name="offer" value="early-orthodontic-treatment-2500">
                <input type="hidden" name="gclid" id="cf_gclid">
                <input type="hidden" name="wbraid" id="cf_wbraid">
                <input type="hidden" name="utm_source" id="cf_utm_source">
                <input type="hidden" name="utm_medium" id="cf_utm_medium">
                <input type="hidden" name="utm_campaign" id="cf_utm_campaign">
-               <button class="btn btn-sky" type="submit">Request my free consult</button>
+               <button class="btn btn-sky" type="submit">Request our free consult</button>
                <p class="cf-fine">No obligation. We call back the same working day.</p>
              </form>
            </div>
@@ -1127,8 +1212,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
                <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#0b2b18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
              </div>
              <h2 class="cf-h">Request received.</h2>
-             <p class="cf-p">Thank you &mdash; the orthodontic team will call you back to confirm your
-               complimentary evaluation. Your $2,950 first-100 place is held while we speak.</p>
+             <p class="cf-p">Thank you &mdash; the orthodontic team will call you back to confirm the complimentary evaluation and let you know what to bring for your child.</p>
              <p class="cf-p cf-tel">Need us sooner? <a href="tel:+17374342436">(737) 434-2436</a></p>
            </div>
           </div>
@@ -1192,7 +1276,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <img loading="lazy" src="../aidm-lp-assets/office/reception-02.jpg" alt="">
         <img loading="lazy" src="../aidm-lp-assets/office/lobby-03.jpg" alt="">
         <figcaption><em>Ground floor</em>Reception &amp; arrival</figcaption></figure>
-      <figure class="gt mo-3" data-src="../aidm-lp-assets/office/ortho-bay.jpg"><img loading="lazy" src="../aidm-lp-assets/office/ortho-bay.jpg" alt="The open orthodontic treatment bay, flooded with daylight"><figcaption><em>Treatment</em>Open orthodontic bay</figcaption></figure>
+      <figure class="gt mo-3" data-src="../aidm-lp-assets/office/ortho-bay.jpg"><img loading="lazy" src="../aidm-lp-assets/office/ortho-bay.jpg" alt="The open treatment bay, flooded with daylight"><figcaption><em>Treatment</em>Open treatment bay</figcaption></figure>
       <figure class="gt mo-4 kb d2" data-src="../aidm-lp-assets/office/lobby-ground.jpg"><img loading="lazy" src="../aidm-lp-assets/office/lobby-ground.jpg" alt="The double-height ground-floor lobby"><figcaption><em>Arrival</em>Two-storey lobby</figcaption></figure>
       <figure class="gt mo-5" data-src="../aidm-lp-assets/office/operatory-glass.jpg"><img loading="lazy" src="../aidm-lp-assets/office/operatory-glass.jpg" alt="A private operatory with corner glazing over the treetops"><figcaption><em>Treatment</em>Private operatory</figcaption></figure>
       <figure class="gt mo-6" data-src="../aidm-lp-assets/office/conference.jpg"><img loading="lazy" src="../aidm-lp-assets/office/conference.jpg" alt="The AIDM case-review and conference room"><figcaption><em>Planning</em>Case-review room</figcaption></figure>
@@ -1202,58 +1286,51 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
   </div>
 </section>
 
-<!-- ══════════════ SPECIAL PROMOTION ══════════════ -->
+<!-- ══════════════ THE OFFER + FILM ══════════════
+     The screen carries AIDM's own film for this treatment; the column beside
+     it is the offer itself, verbatim from the approved promotions sheet. -->
 <section class="promo pad tight-top bg-deep2 ph" id="promo" style="--ph:url('../aidm-lp-assets/bg/reception.jpg')">
   <div class="wrap">
     <div class="sh sh-tight rv">
-      <p class="promo-k"><span class="star">&#9733;</span>Special promotion</p>
-      <h2>The First-100 <em>orthodontic offer.</em></h2>
+      <p class="promo-k"><span class="star">&#9733;</span>Early orthodontic treatment</p>
+      <h2>What $2,500 <em>actually covers.</em></h2>
       <div class="bar"></div>
     </div>
-
     <div class="promo-grid rv">
 
-      <!-- the film, on a screen -->
       <div class="tv-wrap">
         <div class="tv">
           <div class="tv-scr" id="promoScr" data-yt="CEgwotre0h8">
             <img loading="lazy" src="https://i.ytimg.com/vi/CEgwotre0h8/maxresdefault.jpg"
                  alt="Orthodontics at the Austin Institute of Dental Medicine">
-            <span class="pl" role="button" tabindex="0" aria-label="Play: Orthodontics at AIDM"><i></i></span>
+            <span class="pl" role="button" tabindex="0" aria-label="Play: Orthodontics at the Austin Institute of Dental Medicine"><i></i></span>
           </div>
           <span class="tv-led">Orthodontics at AIDM</span>
         </div>
         <div class="tv-foot"></div>
         <div class="tv-base"></div>
         <div class="promo-badge">
-          <b>$2,950</b>
-          <i>First 100 patients</i>
+          <b>$2,500</b>
+          <i>Early treatment</i>
         </div>
       </div>
 
-      <!-- the offer, unboxed -->
-      <!-- The figure is carried by the medallion on the screen and by the
-           section heading, so this column is just the picture and the three
-           things the complimentary visit gives you. -->
       <div class="promo-copy">
         <figure class="promo-ph">
-          <img loading="lazy" src="../aidm-lp-assets/promo/braces-smile.jpg"
-               alt="A patient smiling with fixed braces">
+          <img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/07/Ortho-Resident-and-Patient-6-1024x683.jpg"
+               alt="An AIDM clinician reviewing a young patient&rsquo;s records chairside">
         </figure>
         <ul class="promo-hl">
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Meet with the orthodontic team</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Review appropriate treatment options</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Understand expected fees and payment options</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Limited early orthodontic treatment</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Routine treatment visits</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Growth-appropriate treatment planning</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Retention when included in the treatment plan</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Care based on the child&rsquo;s stage of development</li>
         </ul>
       </div>
     </div>
 
-    <p class="promo-fine"><span class="fs">*</span>Package eligibility, clinical recommendations, and final pricing are
-      confirmed after an appropriate evaluation. Package pricing applies only to the services specifically listed and
-      cannot be combined with insurance benefits, membership pricing, or other discounts. Additional treatment may be
-      recommended when clinically necessary. The advertised fee applies to standard, comprehensive traditional bracket
-      cases; complex cases, clear aligner therapy or phase-one interceptive orthodontics may incur additional fees, and
-      a complete clinical evaluation is required to determine case complexity and the final fee.
+    <p class="promo-fine"><span class="fs">*</span>Standalone appliances and services outside the approved early-treatment plan are priced separately. Eligibility, clinical recommendations and the final fee are confirmed after an appropriate evaluation, and package pricing cannot be combined with insurance benefits, membership pricing or other discounts.
       <a href="#terms">Read the full offer terms</a>.</p>
 
     <div class="perks rv">
@@ -1278,29 +1355,29 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
     </div>
     <div class="cmask rv">
       <div class="cmarq" id="cmarq">
-      <figure class="case" data-src="../assets/cases/IMG_3202.jpg"><img loading="lazy" src="../assets/cases/IMG_3202.jpg" alt="AIDM orthodontic case 01 — before and after"><figcaption class="cap"><b>Case 01</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3203.jpg"><img loading="lazy" src="../assets/cases/IMG_3203.jpg" alt="AIDM orthodontic case 02 — before and after"><figcaption class="cap"><b>Case 02</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3204.jpg"><img loading="lazy" src="../assets/cases/IMG_3204.jpg" alt="AIDM orthodontic case 03 — before and after"><figcaption class="cap"><b>Case 03</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3205.jpg"><img loading="lazy" src="../assets/cases/IMG_3205.jpg" alt="AIDM orthodontic case 04 — before and after"><figcaption class="cap"><b>Case 04</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3206.jpg"><img loading="lazy" src="../assets/cases/IMG_3206.jpg" alt="AIDM orthodontic case 05 — before and after"><figcaption class="cap"><b>Case 05</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3207.jpg"><img loading="lazy" src="../assets/cases/IMG_3207.jpg" alt="AIDM orthodontic case 06 — before and after"><figcaption class="cap"><b>Case 06</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3208.jpg"><img loading="lazy" src="../assets/cases/IMG_3208.jpg" alt="AIDM orthodontic case 07 — before and after"><figcaption class="cap"><b>Case 07</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3209.jpg"><img loading="lazy" src="../assets/cases/IMG_3209.jpg" alt="AIDM orthodontic case 08 — before and after"><figcaption class="cap"><b>Case 08</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3210.jpg"><img loading="lazy" src="../assets/cases/IMG_3210.jpg" alt="AIDM orthodontic case 09 — before and after"><figcaption class="cap"><b>Case 09</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3211.jpg"><img loading="lazy" src="../assets/cases/IMG_3211.jpg" alt="AIDM orthodontic case 10 — before and after"><figcaption class="cap"><b>Case 10</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3212.jpg"><img loading="lazy" src="../assets/cases/IMG_3212.jpg" alt="AIDM orthodontic case 11 — before and after"><figcaption class="cap"><b>Case 11</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" data-src="../assets/cases/IMG_3202.jpg"><img loading="lazy" src="../assets/cases/IMG_3202.jpg" alt="AIDM orthodontic case 01  — before and after"><figcaption class="cap"><b>Case 01</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" data-src="../assets/cases/IMG_3203.jpg"><img loading="lazy" src="../assets/cases/IMG_3203.jpg" alt="AIDM orthodontic case 02  — before and after"><figcaption class="cap"><b>Case 02</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" data-src="../assets/cases/IMG_3204.jpg"><img loading="lazy" src="../assets/cases/IMG_3204.jpg" alt="AIDM orthodontic case 03  — before and after"><figcaption class="cap"><b>Case 03</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" data-src="../assets/cases/IMG_3205.jpg"><img loading="lazy" src="../assets/cases/IMG_3205.jpg" alt="AIDM orthodontic case 04  — before and after"><figcaption class="cap"><b>Case 04</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" data-src="../assets/cases/IMG_3206.jpg"><img loading="lazy" src="../assets/cases/IMG_3206.jpg" alt="AIDM orthodontic case 05  — before and after"><figcaption class="cap"><b>Case 05</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" data-src="../assets/cases/IMG_3207.jpg"><img loading="lazy" src="../assets/cases/IMG_3207.jpg" alt="AIDM orthodontic case 06  — before and after"><figcaption class="cap"><b>Case 06</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" data-src="../assets/cases/IMG_3208.jpg"><img loading="lazy" src="../assets/cases/IMG_3208.jpg" alt="AIDM orthodontic case 07  — before and after"><figcaption class="cap"><b>Case 07</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" data-src="../assets/cases/IMG_3209.jpg"><img loading="lazy" src="../assets/cases/IMG_3209.jpg" alt="AIDM orthodontic case 08  — before and after"><figcaption class="cap"><b>Case 08</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" data-src="../assets/cases/IMG_3210.jpg"><img loading="lazy" src="../assets/cases/IMG_3210.jpg" alt="AIDM orthodontic case 09  — before and after"><figcaption class="cap"><b>Case 09</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" data-src="../assets/cases/IMG_3211.jpg"><img loading="lazy" src="../assets/cases/IMG_3211.jpg" alt="AIDM orthodontic case 10  — before and after"><figcaption class="cap"><b>Case 10</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" data-src="../assets/cases/IMG_3212.jpg"><img loading="lazy" src="../assets/cases/IMG_3212.jpg" alt="AIDM orthodontic case 11  — before and after"><figcaption class="cap"><b>Case 11</b><i>Orthodontic treatment</i></figcaption></figure>
         <!-- loop duplicate -->
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3202.jpg"><img loading="lazy" src="../assets/cases/IMG_3202.jpg" alt=""><figcaption class="cap"><b>Case 01</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3203.jpg"><img loading="lazy" src="../assets/cases/IMG_3203.jpg" alt=""><figcaption class="cap"><b>Case 02</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3204.jpg"><img loading="lazy" src="../assets/cases/IMG_3204.jpg" alt=""><figcaption class="cap"><b>Case 03</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3205.jpg"><img loading="lazy" src="../assets/cases/IMG_3205.jpg" alt=""><figcaption class="cap"><b>Case 04</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3206.jpg"><img loading="lazy" src="../assets/cases/IMG_3206.jpg" alt=""><figcaption class="cap"><b>Case 05</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3207.jpg"><img loading="lazy" src="../assets/cases/IMG_3207.jpg" alt=""><figcaption class="cap"><b>Case 06</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3208.jpg"><img loading="lazy" src="../assets/cases/IMG_3208.jpg" alt=""><figcaption class="cap"><b>Case 07</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3209.jpg"><img loading="lazy" src="../assets/cases/IMG_3209.jpg" alt=""><figcaption class="cap"><b>Case 08</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3210.jpg"><img loading="lazy" src="../assets/cases/IMG_3210.jpg" alt=""><figcaption class="cap"><b>Case 09</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3211.jpg"><img loading="lazy" src="../assets/cases/IMG_3211.jpg" alt=""><figcaption class="cap"><b>Case 10</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3212.jpg"><img loading="lazy" src="../assets/cases/IMG_3212.jpg" alt=""><figcaption class="cap"><b>Case 11</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3202.jpg"><img loading="lazy" src="../assets/cases/IMG_3202.jpg" alt=""><figcaption class="cap"><b>Case 01</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3203.jpg"><img loading="lazy" src="../assets/cases/IMG_3203.jpg" alt=""><figcaption class="cap"><b>Case 02</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3204.jpg"><img loading="lazy" src="../assets/cases/IMG_3204.jpg" alt=""><figcaption class="cap"><b>Case 03</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3205.jpg"><img loading="lazy" src="../assets/cases/IMG_3205.jpg" alt=""><figcaption class="cap"><b>Case 04</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3206.jpg"><img loading="lazy" src="../assets/cases/IMG_3206.jpg" alt=""><figcaption class="cap"><b>Case 05</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3207.jpg"><img loading="lazy" src="../assets/cases/IMG_3207.jpg" alt=""><figcaption class="cap"><b>Case 06</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3208.jpg"><img loading="lazy" src="../assets/cases/IMG_3208.jpg" alt=""><figcaption class="cap"><b>Case 07</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3209.jpg"><img loading="lazy" src="../assets/cases/IMG_3209.jpg" alt=""><figcaption class="cap"><b>Case 08</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3210.jpg"><img loading="lazy" src="../assets/cases/IMG_3210.jpg" alt=""><figcaption class="cap"><b>Case 09</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3211.jpg"><img loading="lazy" src="../assets/cases/IMG_3211.jpg" alt=""><figcaption class="cap"><b>Case 10</b><i>Orthodontic treatment</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3212.jpg"><img loading="lazy" src="../assets/cases/IMG_3212.jpg" alt=""><figcaption class="cap"><b>Case 11</b><i>Orthodontic treatment</i></figcaption></figure>
       </div>
     </div>
     <p style="margin:1.7rem 0 0;text-align:center;font-size:.78rem;color:#6d90aa;line-height:1.6">
@@ -1317,8 +1394,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
       <p class="k">Who you will meet</p>
       <h2>The people <em>behind the chair.</em></h2>
       <div class="bar"></div>
-      <p>Board-certified faculty, specialists and residents working side by side &mdash; every orthodontic
-        plan at AIDM is reviewed and signed off by faculty.</p>
+      <p>Board-certified faculty, specialists and residents working side by side &mdash; every orthodontic plan at AIDM is reviewed and signed off by faculty before a single appliance is fitted.</p>
     </div>
 
     <div class="gwall rv">
@@ -1328,8 +1404,8 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <figcaption><em>Faculty</em>The specialists who sign off every plan</figcaption></figure>
       <figure class="gt gw-b" data-src="../aidm-lp-assets/staff/ortho-team.jpg">
         <img loading="lazy" src="../aidm-lp-assets/staff/ortho-team.jpg"
-             alt="The AIDM orthodontic residents and clinical team in the treatment bay">
-        <figcaption><em>Orthodontics</em>The team in the bay</figcaption></figure>
+             alt="AIDM residents and the clinical team in the treatment bay">
+        <figcaption><em>Clinical team</em>The team in the bay</figcaption></figure>
       <figure class="gt gw-c" data-src="../aidm-lp-assets/staff/doc-resident.jpg">
         <img loading="lazy" src="../aidm-lp-assets/staff/doc-resident.jpg"
              alt="An AIDM resident and assistant treating a patient chairside">
@@ -1372,22 +1448,22 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
     </div>
 
     <div class="fstage rv">
-      <div class="film" data-yt="QNsMOG1B6G8">
+      <div class="film" data-yt="CEgwotre0h8">
         <span class="tag">Start here</span>
-        <img loading="lazy" src="https://i.ytimg.com/vi/QNsMOG1B6G8/maxresdefault.jpg" alt="">
-        <span class="pl"><i></i></span><b>Welcome to AIDM &mdash; the practice, the people, the teaching model</b></div>
+        <img loading="lazy" src="https://i.ytimg.com/vi/CEgwotre0h8/maxresdefault.jpg" alt="">
+        <span class="pl"><i></i></span><b>Orthodontics at AIDM &mdash; how cases are planned and treated</b></div>
       <div class="fside">
-        <div class="film" data-yt="CEgwotre0h8">
-          <img loading="lazy" src="https://i.ytimg.com/vi/CEgwotre0h8/maxresdefault.jpg" alt="">
-          <span class="pl"><i></i></span><b>Orthodontics at AIDM</b></div>
-        <div class="film" data-yt="DV9t9dZJauA">
-          <img loading="lazy" src="https://i.ytimg.com/vi/DV9t9dZJauA/maxresdefault.jpg" alt="">
-          <span class="pl"><i></i></span><b>Finding us &amp; where to park</b></div>
+        <div class="film" data-yt="2ooc1MlkmNM">
+          <img loading="lazy" src="https://i.ytimg.com/vi/2ooc1MlkmNM/maxresdefault.jpg" alt="">
+          <span class="pl"><i></i></span><b>What to expect at your first visit</b></div>
+        <div class="film" data-yt="QNsMOG1B6G8">
+          <img loading="lazy" src="https://i.ytimg.com/vi/QNsMOG1B6G8/maxresdefault.jpg" alt="">
+          <span class="pl"><i></i></span><b>Welcome to AIDM</b></div>
       </div>
     </div>
 
     <div class="flane rv">
-      <p class="flane-h">Treatments explained</p>
+      <p class="flane-h">More about AIDM</p>
       <div class="frail">
         <div class="film" data-yt="f7HHTbB-qe8">
           <img loading="lazy" src="https://i.ytimg.com/vi/f7HHTbB-qe8/maxresdefault.jpg" alt="">
@@ -1395,12 +1471,9 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <div class="film" data-yt="k9PavRdjiyc">
           <img loading="lazy" src="https://i.ytimg.com/vi/k9PavRdjiyc/maxresdefault.jpg" alt="">
           <span class="pl"><i></i></span><b>Comfort, sedation &amp; anxiety care</b></div>
-        <div class="film" data-yt="7Ci0z84BpDI">
-          <img loading="lazy" src="https://i.ytimg.com/vi/7Ci0z84BpDI/maxresdefault.jpg" alt="">
-          <span class="pl"><i></i></span><b>Dental implants</b></div>
-        <div class="film" data-yt="cCUQyiHkJxg">
-          <img loading="lazy" src="https://i.ytimg.com/vi/cCUQyiHkJxg/maxresdefault.jpg" alt="">
-          <span class="pl"><i></i></span><b>Prosthodontics</b></div>
+        <div class="film" data-yt="DV9t9dZJauA">
+          <img loading="lazy" src="https://i.ytimg.com/vi/DV9t9dZJauA/maxresdefault.jpg" alt="">
+          <span class="pl"><i></i></span><b>Finding us &amp; where to park</b></div>
       </div>
     </div>
   </div>
@@ -1412,19 +1485,17 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 
     <div class="frow flip rv">
       <div class="fimg-wrap"><figure class="fimg">
-        <img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/07/Ortho-Resident-and-Patient-6-1024x683.jpg" alt="An AIDM clinician reviewing a patient's digital X-rays on a chairside display">
-        <figcaption>Your records reviewed chairside, before anything is booked</figcaption>
+        <img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/07/Ortho-Resident-and-Patient-6-1024x683.jpg" alt="An AIDM clinician reviewing a young patient&rsquo;s digital records chairside">
+        <figcaption>Growth is the one thing you cannot go back for</figcaption>
       </figure></div>
       <div class="fcopy">
         <p class="k">Why it matters</p>
-        <h2>Straight teeth are the <em>visible part.</em></h2>
-        <p>Aligned teeth are easier to clean, which lowers plaque, cavity and gum-disease risk and protects
-          enamel from uneven wear. Correcting the bite spreads load evenly and reduces strain on the jaw
-          joints — often easing TMJ discomfort and headaches.</p>
+        <h2>Some problems are <em>easier while they grow.</em></h2>
+        <p>Early treatment is not braces brought forward. It is a short, limited intervention that uses a child&rsquo;s own growth to fix things that get much harder once growth stops &mdash; crossbites, severe crowding, a narrow upper jaw, a habit that is pushing the front teeth out. Done at the right moment it can shorten, simplify or occasionally avoid the comprehensive treatment that would otherwise follow.</p>
         <ul>
-          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Clearer speech, more efficient chewing, less muscle tension</li>
-          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Airway-focused options for sleep-related breathing concerns</li>
-          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Long-term retention strategies that hold the result</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>The American Association of Orthodontists suggests a first orthodontic check at around age seven</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Crossbites and narrow arches respond to growth in ways they will not later</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Protruding upper front teeth are considerably more prone to trauma</li>
         </ul>
       </div>
     </div>
@@ -1435,15 +1506,13 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <figcaption>The orthodontic team, in the bay they work in</figcaption>
       </figure></div>
       <div class="fcopy">
-        <p class="k">Who treats you</p>
+        <p class="k">Who treats your child</p>
         <h2>Two clinicians. <em>One fee.</em></h2>
-        <p>AIDM is a teaching institute. Orthodontic residents — already qualified dentists in advanced
-          postgraduate training — treat under the direct supervision of board-certified faculty. You get
-          more clinical attention, not less, and the economics reflect the teaching mission.</p>
+        <p>AIDM is a teaching institute. Orthodontic residents &mdash; already qualified dentists in advanced postgraduate training &mdash; treat under the direct supervision of board-certified faculty, and paediatric dentistry sits in the same building. Every early-treatment plan is reviewed by faculty before it starts.</p>
         <ul>
-          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>A second, board-certified opinion built into the plan</li>
-          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Periodontics, endodontics, surgery and paediatrics on site</li>
-          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Fees in writing before anything is scheduled</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>A second, board-certified opinion built into your child&rsquo;s plan</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Paediatric dentistry, orthodontics and surgery under one roof</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>An honest &ldquo;not yet&rdquo; when monitoring is the better answer</li>
         </ul>
       </div>
     </div>
@@ -1451,18 +1520,21 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
   </div>
 </section>
 
-<!-- ══════════════ OPTIONS ══════════════ -->
-<section class="pad bg-deep ph" style="--ph:url('../aidm-lp-assets/bg/lobby-lounge.jpg')">
+<!-- ══════════════ PRICE POINTS ══════════════
+     The braces page carries "Orthodontic options for every stage" here. On
+     this page the same band carries this offer's own tiers and the packages
+     next to it, so nobody has to leave to find the number that applies. -->
+<section class="pad bg-deep ph" id="packages" style="--ph:url('../aidm-lp-assets/bg/lobby-lounge.jpg')">
   <div class="wrap">
     <div class="sh rv">
       <p class="k">Orthodontic options for every stage</p>
-      <h2>Braces are one of <em>three routes.</em></h2>
+      <h2>Early treatment is one of <em>three routes.</em></h2>
       <div class="bar"></div>
-      <p>Which one is appropriate depends on your bite, not on your budget — including when the answer is
-        the cheaper option.</p>
+      <p>Which one is appropriate depends on your child&rsquo;s bite and stage of development, not on your budget &mdash; including when the answer is to wait and watch.</p>
     </div>
     <div class="opts">
-      <div class="opt rv">
+      <div class="opt feat rv">
+        <span class="opt-flag">This offer</span>
         <p class="sub">The right care at the right time</p>
         <h3>Early Orthodontic Treatment</h3>
         <p class="amt">$2,500<a class="ast" href="#terms" aria-label="See fee disclosures">*</a></p>
@@ -1470,32 +1542,27 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <p class="d">Focused orthodontic care for growing children, when early treatment may help guide dental development.</p>
         <ul><li>Limited early orthodontic treatment</li><li>Routine treatment visits</li><li>Growth-appropriate treatment planning</li><li>Retention when included in the treatment plan</li><li>Care based on the child&rsquo;s stage of dental development</li></ul>
         <p class="optfine">*Standalone appliances and services outside the approved early-treatment plan are priced separately.</p>
-        <a class="btn btn-ghost" href="#contact">Ask if this fits</a>
+        <a class="btn btn-gold" href="#contact">Claim this rate</a>
       </div>
-      <div class="opt feat rv d1">
-        <span class="opt-flag">First 100 patients</span>
+      <div class="opt rv">
         <p class="sub">Straighten your smile with confidence</p>
         <h3>Comprehensive Braces</h3>
         <p class="amt">$2,950<a class="ast" href="#terms" aria-label="See fee disclosures">*</a></p>
         <p class="strike">Promotional fee &mdash; first 100 patients</p>
         <p class="d">A complete fixed-braces package with coordinated orthodontic care from active treatment through standard retention.</p>
         <ul><li>Comprehensive braces treatment</li><li>Routine orthodontic adjustment visits</li><li>Appliance removal</li><li>Standard orthodontic retention</li><li>Care coordinated throughout treatment</li></ul>
-        <p class="optfine">*Applies to standard, comprehensive traditional bracket cases. Complex cases, clear aligner
-          therapy or phase-one interceptive orthodontics may incur additional fees. A complete clinical evaluation is
-          required to determine case complexity and the final fee.</p>
-        <a class="btn btn-gold" href="#contact">Claim this rate</a>
+        <p class="optfine">*Applies to standard, comprehensive traditional bracket cases. Complex cases, clear aligner therapy or phase-one interceptive orthodontics may incur additional fees. $2,950 is valid for the first 100 patients, uninsured and paid in full, and expires 31 October 2026.</p>
+        <a class="btn btn-ghost" href="#contact">See the braces offer</a>
       </div>
-      <div class="opt rv d2">
+      <div class="opt rv">
         <p class="sub">Clear aligners. Confident smile.</p>
-        <h3>Invisalign® Clear Aligners</h3>
+        <h3>Invisalign&reg; Clear Aligners</h3>
         <p class="amt">$3,900<a class="ast" href="#terms" aria-label="See fee disclosures">*</a></p>
         <p class="strike">&nbsp;</p>
         <p class="d">A discreet, removable option personalised to your smile and supported by routine professional monitoring.</p>
         <ul><li>Personalised clear-aligner treatment</li><li>Standard aligner laboratory materials</li><li>Routine orthodontic visits</li><li>Treatment completion and appliance removal</li><li>Standard orthodontic retention</li></ul>
-        <p class="optfine">*Applies to Invisalign&reg; clear-aligner cases. Complex cases, retainers or phase-one
-          interceptive orthodontics may incur additional fees. A complete clinical evaluation is required to
-          determine case complexity and the final fee.</p>
-        <a class="btn btn-ghost" href="#contact">Compare with braces</a>
+        <p class="optfine">*Applies to Invisalign&reg; clear-aligner cases. Complex cases, retainers or phase-one interceptive orthodontics may incur additional fees.</p>
+        <a class="btn btn-ghost" href="#contact">Ask if this fits</a>
       </div>
     </div>
   </div>
@@ -1529,13 +1596,13 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
   <div class="wrap">
     <div class="sh rv"><p class="k">Before you ask</p><h2>Frequently asked <em>questions.</em></h2><div class="bar"></div></div>
     <div class="faq rv">
-      <details open><summary>Will a student be treating me?</summary><div class="a">You will be treated by a licensed dentist. AIDM&rsquo;s orthodontic residents are qualified dentists undertaking advanced postgraduate training, and every plan is reviewed by board-certified faculty who teach the specialty. That two-clinician model is precisely why the fee is what it is.</div></details>
-      <details><summary>Why is the braces package $2,950?</summary><div class="a">$2,950 is a promotional fee for the first 100 eligible orthodontic patients, and it reflects AIDM&rsquo;s teaching model &mdash; residents in advanced postgraduate training treating under board-certified faculty supervision. It applies to patients who pay the treatment fee in full and cannot be combined with insurance benefits, membership discounts, financing promotions or other offers. Patients using a payment plan or financing are charged AIDM&rsquo;s standard treatment fees.</div></details>
-      <details><summary>What is included in the complimentary evaluation?</summary><div class="a">A personalised orthodontic evaluation with the team, plus the records needed to plan your case: panoramic imaging, cephalometric imaging and analysis, clinical photographs and a digital 3D intraoral scan, each when indicated. Diagnostic records are taken only when clinically appropriate and actually needed. There is no charge and no referral is required.</div></details>
-      <details><summary>Can I use insurance or a payment plan instead?</summary><div class="a">Yes — AIDM accepts many PPO plans, and financing and payment options may be available subject to approval. They just cannot be stacked on top of the $2,950 promotional rate. At your evaluation the team will show you both routes side by side so you can pick whichever leaves you better off.</div></details>
-      <details><summary>How long does treatment take?</summary><div class="a">Most cases run 12 to 24 months. Minor corrections can be shorter, and complex cases can take longer — you will be given a realistic range at your evaluation rather than an average.</div></details>
-      <details><summary>Am I too old for braces?</summary><div class="a">No. Orthodontics is effective for children, teens and adults alike. Treatment can also be combined with cosmetic, restorative or surgical work, which is coordinated across specialties in the same building.</div></details>
-      <details><summary>Is retention included, or is that extra later?</summary><div class="a">Standard orthodontic retention is included in the package, as is appliance removal. What is not included is a <em>replacement</em> appliance or retainer — if one is lost or broken, that is charged separately.</div></details>
+      <details open><summary>How young is too young for a first visit?</summary><div class="a">The usual guidance is a first orthodontic check at around age seven, when enough permanent teeth are through to see how the bite is developing. That check is not a commitment to treatment &mdash; in a lot of cases the right answer is to monitor and revisit in a year, and you will be told so plainly.</div></details>
+      <details><summary>What is the difference between this and braces?</summary><div class="a">Early treatment is a limited, targeted intervention that works with your child&rsquo;s growth &mdash; typically expanding a narrow arch, correcting a crossbite or creating room. Comprehensive braces align the full permanent dentition and usually come later, if they are needed at all. They are separate packages at separate fees.</div></details>
+      <details><summary>Will my child still need braces afterwards?</summary><div class="a">Often, yes &mdash; early treatment is not usually a substitute for comprehensive orthodontics. What it does is make the later phase shorter, simpler or less likely to need extractions or surgery. Any clinician who promises you it will remove the need for braces entirely is promising something they cannot know.</div></details>
+      <details><summary>Why is early treatment $2,500?</summary><div class="a">$2,500 is AIDM&rsquo;s published package fee for limited early orthodontic treatment, and it reflects the teaching model &mdash; residents in advanced postgraduate training treating under board-certified faculty supervision. Standalone appliances and services outside the approved early-treatment plan are priced separately.</div></details>
+      <details><summary>What is included, and what is not?</summary><div class="a">The package covers limited early orthodontic treatment, routine treatment visits, growth-appropriate planning, and retention where the treatment plan includes it. Standalone appliances and any service outside the approved plan are quoted separately, as are additional diagnostics and laboratory fees.</div></details>
+      <details><summary>What happens at the complimentary evaluation?</summary><div class="a">A personalised orthodontic evaluation with the team, plus records where clinically indicated: panoramic imaging, cephalometric imaging and analysis, clinical photographs and a digital 3D intraoral scan. There is no charge and no referral is required.</div></details>
+      <details><summary>My child is anxious about the dentist.</summary><div class="a">Say so when you book. Comfort and anxiety care is one of AIDM&rsquo;s named strengths, and paediatric dentistry is part of the same building. The first visit is a look and a conversation &mdash; nothing is fitted on the day.</div></details>
       <details><summary>Do I need a referral, and where do I park?</summary><div class="a">No referral is needed. There is a garage immediately next door at 1401 Philomena Street and parking is free. The building is in Mueller, minutes from I-35 and 51st Street.</div></details>
     </div>
   </div>
@@ -1545,11 +1612,10 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 <section class="pad bg-deep ph" id="contact" style="--ph:url('../aidm-lp-assets/bg/ext-04.jpg')">
   <div class="wrap">
     <div class="sh rv">
-      <p class="k">Limited to the first 100 orthodontic patients</p>
-      <h2>Ready for a radiant smile? <em>Let&rsquo;s start today.</em></h2>
+      <p class="k">Complimentary orthodontic evaluation</p>
+      <h2>Not sure if it is time? <em>Let&rsquo;s find out.</em></h2>
       <div class="bar"></div>
-      <p>The evaluation is complimentary and commits you to nothing. We will call you back to confirm a
-        time — usually the same working day.</p>
+      <p>The evaluation is complimentary and commits you to nothing &mdash; including when the honest answer is to wait a year. We will call you back to confirm a time, usually the same working day.</p>
     </div>
     <div class="cgrid">
       <div class="cbox rv">
@@ -1562,21 +1628,21 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
             <div class="fld full"><label for="who">Who is the treatment for?</label>
               <select id="who" name="patient_type">
                 <option value="">Please choose…</option>
-                <option>Myself — adult</option>
-                <option>My teenager</option>
                 <option>My child</option>
-                <option>More than one family member</option>
+                <option>My teenager</option>
+                <option>More than one child</option>
+                <option>Myself — adult</option>
               </select></div>
             <div class="fld full"><label for="msg">Message <span style="text-transform:none;letter-spacing:0;font-weight:400">(optional)</span></label>
-              <textarea id="msg" name="notes" placeholder="Preferred days, previous orthodontic treatment, concerns…"></textarea></div>
+              <textarea id="msg" name="notes" placeholder="Your child’s age, preferred days, anything a dentist has already flagged…"></textarea></div>
           </div>
-          <input type="hidden" name="offer" value="ortho-comprehensive-braces-2950">
+          <input type="hidden" name="offer" value="early-orthodontic-treatment-2500">
           <input type="hidden" name="gclid" id="f_gclid">
           <input type="hidden" name="wbraid" id="f_wbraid">
           <input type="hidden" name="utm_source" id="f_utm_source">
           <input type="hidden" name="utm_medium" id="f_utm_medium">
           <input type="hidden" name="utm_campaign" id="f_utm_campaign">
-          <button class="btn btn-sky btn-lg" type="submit">Book my free evaluation</button>
+          <button class="btn btn-sky btn-lg" type="submit">Book our free evaluation</button>
         </form>
         <p class="fnote">By submitting you agree to be contacted about your enquiry. Promotional pricing is
           subject to clinical qualification determined at your evaluation.</p>
@@ -1609,31 +1675,38 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
     </div>
 
     <div class="terms" id="terms">
-      <div><b>The offer</b>Comprehensive braces at $2,950 for the first 100 eligible orthodontic patients.</div>
-      <div><b>Who it is for</b>Adolescent and adult patients who need comprehensive orthodontic correction. Suitability is confirmed at your evaluation.</div>
-      <div><b>Eligibility</b>Applies only to qualifying patients who pay the treatment fee in full. Cannot be combined with financing, insurance benefits, membership discounts or other promotional offers.</div>
-      <div><b>Validity</b>Advertised package fees are minimum fees available to eligible self-pay patients from 1 July 2026 through 1 October 2026, unless an earlier stated limit applies.</div>
-      <div><b>Important to know</b>Replacement appliances or retainers, surgical procedures, and services outside standard comprehensive treatment are additional — as are additional diagnostics, laboratory fees, and sedation or anaesthesia.</div>
+      <div><b>The offer</b>Limited early orthodontic treatment for growing children at $2,500.</div>
+      <div><b>Who it is for</b>Children whose stage of dental development makes early, limited treatment appropriate. Suitability is confirmed at the evaluation.</div>
+      <div><b>Eligibility</b>Package pricing applies only to the services specifically listed and cannot be combined with insurance benefits, membership pricing, financing promotions or other discounts unless expressly stated.</div>
+      <div><b>What is not included</b>Standalone appliances and services outside the approved early-treatment plan are priced separately, as are additional diagnostics, laboratory fees, sedation and anaesthesia.</div>
+      <div><b>Important to know</b>Early treatment does not always remove the need for comprehensive orthodontics later. Individual treatment results vary.</div>
     </div>
 
     <div class="legal">
-      <p><b>Pricing.</b> Package eligibility, clinical recommendations and final pricing are confirmed after an
-        appropriate clinical evaluation. Fees may increase depending on the treatment required. Package pricing
-        applies only to the services specifically identified and may not be billed to or combined with dental
-        insurance benefits, membership pricing or other discounts unless expressly stated. Patients using payment
-        plans or financing are subject to AIDM&rsquo;s standard treatment fees. Financing may be available subject
-        to approval and applicable terms. Individual treatment results vary.</p>
-      <p><b>Who treats you.</b> AIDM is a premier educational institute. Treatment under this promotional offer may
-        be provided by licensed dental residents participating in advanced training programmes under the direct
+      <p><b>Pricing.</b> Promotional offers, package pricing and included services are subject to change,
+        modification or discontinuation at any time without prior notice. Offers are available for a limited time
+        and may be withdrawn at the sole discretion of Austin Institute of Dental Medicine. Promotions are valid
+        only for eligible patients who meet clinical criteria as determined by the treating dentist or specialist
+        following an appropriate examination. Package pricing applies only to the services specifically listed and
+        cannot be combined with insurance benefits, membership pricing, financing promotions or other discounts
+        unless expressly stated. Additional treatment, diagnostic procedures, specialty services, laboratory fees,
+        sedation or other clinically necessary procedures may result in additional charges. Final treatment
+        recommendations, eligibility and fees are determined following a comprehensive clinical evaluation. AIDM
+        reserves the right to modify pricing, eligibility requirements, package contents, promotional periods and
+        terms and conditions at any time without notice.</p>
+      <p><b>Your right to cancel (Texas).</b> The patient and any other person responsible for payment has a right
+        to refuse to pay, cancel payment, or be reimbursed for payment for any other service, examination, or
+        treatment that is performed as a result of and within 72 hours of responding to the advertisement for the
+        free, discounted fee, or reduced fee service, examination, or treatment.</p>
+      <p><b>Who treats you.</b> AIDM is a premier educational institute. Treatment under these promotional offers
+        may be provided by licensed dental residents participating in advanced training programmes under the direct
         supervision of our licensed clinical faculty. All promotional pricing is subject to clinical qualification
-        and medical clearance as determined by the attending doctor. AIDM reserves the right to withdraw or change
-        this offer at any time.</p>
+        and medical clearance as determined by the attending doctor.</p>
       <p><b>Provider.</b> Dental services are provided by Philomena Street PLLC, supported by AIDM. Services at the
         Austin Institute of Dental Medicine are provided by licensed General Dentists, Residents and Faculty Members.
         Terms such as &ldquo;Advanced,&rdquo; &ldquo;Complex&rdquo; or &ldquo;Institute&rdquo; refer to the scope of
         training and services offered and do not imply a specific specialisation unless the provider is explicitly
-        designated as a Specialist recognised by the American Dental Association (ADA). Invisalign® is a registered
-        trademark of Align Technology, Inc.</p>
+        designated as a Specialist recognised by the American Dental Association (ADA). Invisalign&reg; is a registered trademark of Align Technology, Inc.</p>
       <p style="color:#4a6d87">© 2026 Austin Institute of Dental Medicine. All rights reserved.</p>
     </div>
   </div>
@@ -1665,7 +1738,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
     data.page         = location.href;
     data.submitted_at = new Date().toISOString();
     data.form         = form.id === 'cardForm' ? 'hero offer card' : 'contact section';
-    data._subject     = 'AIDM braces LP — new enquiry from ' +
+    data._subject     = 'AIDM early-orthodontics LP — new enquiry from ' +
                         ((data.first_name||'') + ' ' + (data.last_name||'')).trim();
     return data;
   }
@@ -1750,35 +1823,9 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
     }
   }
 
-  /* ── live counter to the offer deadline ──────────────────────────────
-     1 Oct 2026, end of day Austin time — the last day of the validity window
-     stated in the offer terms. Written with an explicit -05:00 offset (Austin
-     is on CDT in October) so the deadline is the same instant for every
-     visitor regardless of their own timezone. */
-  var cdEnd = new Date('2026-10-01T23:59:59-05:00').getTime();
-  var cdD = document.getElementById('cdD'), cdH = document.getElementById('cdH'),
-      cdM = document.getElementById('cdM'), cdS = document.getElementById('cdS'),
-      cdBox = document.getElementById('cd');
-
-  if (cdD && cdH && cdM && cdS) {
-    var pad = function(n){ return n < 10 ? '0' + n : '' + n; };
-    var tick = function(){
-      var left = cdEnd - Date.now();
-      if (left <= 0) {
-        cdBox.classList.add('over');
-        cdD.textContent = cdH.textContent = cdM.textContent = cdS.textContent = '—';
-        clearInterval(cdTimer);
-        return;
-      }
-      var s = Math.floor(left / 1000);
-      cdD.textContent = Math.floor(s / 86400);
-      cdH.textContent = pad(Math.floor(s / 3600) % 24);
-      cdM.textContent = pad(Math.floor(s / 60) % 60);
-      cdS.textContent = pad(s % 60);
-    };
-    var cdTimer = setInterval(tick, 1000);
-    tick();
-  }
+  /* ── no countdown on this page ───────────────────────────────────────
+     The braces offer expires; this one carries no stated end date, so the
+     four cells in the card are static facts and nothing here ticks. */
 
   /* ── marquees pause off-screen ──────────────────────────────────────── */
   if ('IntersectionObserver' in window) {

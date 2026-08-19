@@ -1,0 +1,83 @@
+/* ══ NEW-PATIENT PAGE ADDITIONS ═════════════════════════════════════════
+   Three blocks the orthodontics page has no use for: the am/pm marker in
+   the offer card's fact strip (which replaces its countdown), the numbered
+   first-visit band that stands where the before/after rail stood, and the
+   quiet list of further published packages under the three package cards.
+   Everything is built from tokens already declared above. */
+
+/* am/pm rider on the big figure in the card's fact cells */
+.cd-c b .u{display:inline;font-style:normal;font-size:.42em;font-weight:700;
+  letter-spacing:.02em;margin:0 0 0 .06em;vertical-align:.42em;
+  text-transform:uppercase;color:inherit;text-shadow:none;opacity:.9}
+
+/* six films on this page rather than the ortho page's four — a 3-up rail
+   fills two complete rows instead of leaving two orphans on the second */
+#films .frail{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:940px){#films .frail{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){#films .frail{grid-template-columns:1fr}}
+
+/* ── your first visit, step by step ──────────────────────────────────── */
+.steps{list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1.15rem}
+.step{position:relative;border-radius:var(--r);padding:2.5rem 1.4rem 1.6rem;
+  background:linear-gradient(165deg,rgba(14,49,85,.62),rgba(6,26,44,.72));
+  border:1px solid var(--line);
+  box-shadow:0 18px 40px -28px #000}
+.step-n{position:absolute;top:-15px;left:1.3rem;
+  width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+  font-family:var(--price);font-size:1rem;font-weight:800;color:#08243c;
+  background:linear-gradient(135deg,#8fe3ff,var(--sky));
+  box-shadow:0 6px 16px -6px rgba(79,195,247,.8)}
+.step b{display:block;font-family:var(--head);font-size:1.04rem;font-weight:600;
+  color:#fff;margin-bottom:.5rem;line-height:1.3}
+.step p{margin:0;font-size:.93rem;line-height:1.6;color:var(--dim)}
+/* the connecting rule between the numbers, drawn only where there is a gap */
+.step+.step::before{content:'';position:absolute;top:2px;left:-1.15rem;width:1.15rem;
+  height:1px;background:linear-gradient(90deg,transparent,var(--line2))}
+.steps-fine{margin:1.7rem auto 0;max-width:70ch;text-align:center;
+  font-size:.86rem;line-height:1.65;color:var(--dim)}
+.steps-fine a{color:var(--sky);text-decoration:none;border-bottom:1px solid rgba(79,195,247,.4)}
+.steps-fine a:hover{border-bottom-color:var(--sky)}
+@media(max-width:980px){
+  .steps{grid-template-columns:repeat(2,1fr);gap:1.6rem 1.15rem}
+  .step+.step::before{display:none}
+}
+@media(max-width:560px){.steps{grid-template-columns:1fr;gap:1.7rem}}
+
+/* ── the rest of the published preventive ladder ─────────────────────── */
+.alsobox{margin-top:clamp(1.8rem,3.4vw,2.8rem);border-radius:var(--r);
+  padding:clamp(1.3rem,2.4vw,1.9rem) clamp(1.2rem,2.4vw,1.8rem);
+  background:linear-gradient(160deg,rgba(10,37,64,.62),rgba(3,16,29,.7));
+  border:1px solid var(--line)}
+.also-h{margin:0 0 1rem;font-family:var(--head);font-size:.66rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--sky)}
+.also{list-style:none;margin:0;padding:0;display:grid;gap:.1rem}
+.also li{display:grid;grid-template-columns:minmax(0,15rem) 1fr auto;
+  gap:.6rem 1.1rem;align-items:baseline;
+  padding:.72rem 0;border-top:1px solid var(--line)}
+.also li:first-child{border-top:0;padding-top:0}
+.also b{font-family:var(--head);font-size:.98rem;font-weight:600;color:#fff}
+.also span{font-size:.9rem;color:var(--dim);line-height:1.5}
+.also i{font-style:normal;font-family:var(--price);font-size:1.02rem;font-weight:700;
+  color:var(--ice);white-space:nowrap;text-align:right}
+@media(max-width:760px){
+  .also li{grid-template-columns:1fr auto;gap:.25rem .9rem}
+  .also span{grid-column:1/-1}
+}
+
+/* ── offer cards that are quoted as a range, a tier or no figure at all ──
+   The braces card carries one clean number. Several offers do not: they start
+   "from", they are priced per tooth or per arch, or (emergency) they have no
+   published figure. These three riders keep all of them on the same plate. */
+.card-price .fr{align-self:center;margin:.5em .5rem 0 0;
+  font-family:var(--head);font-size:.6rem;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--ice);opacity:.92;
+  -webkit-text-fill-color:currentColor}
+.card-price .v.w{font-size:clamp(1.95rem,4.3vw,2.9rem);line-height:1.1;text-align:center}
+/* $18,000 with a FROM rider in front of it does not fit at the braces size.
+   The rider is always the first child, so a sibling selector shrinks exactly
+   the cards that need it without touching the single-figure ones. */
+.card-price .fr ~ .c{font-size:clamp(1.85rem,4.2vw,2.5rem);margin-top:.06em}
+.card-price .fr ~ .v{font-size:clamp(2.55rem,6vw,3.5rem)}
+.card-sub{margin:.15rem 0 0;text-align:center;font-family:var(--head);font-size:.62rem;
+  font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--ice);opacity:.9}

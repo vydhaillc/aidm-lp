@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Straighten Your Smile with Confidence — $2,950 Comprehensive Braces | AIDM Austin</title>
+<title>Atención Dental de Emergencia — 7AM a 7PM, Lun a Sáb | AIDM Austin</title>
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Comprehensive braces treatment for $2,950 for the first 100 orthodontic patients at the Austin Institute of Dental Medicine. Complimentary evaluation, no referral needed.">
-<meta property="og:title" content="Straighten Your Smile with Confidence — $2,950 | AIDM Austin">
-<meta property="og:description" content="Comprehensive braces at Austin's teaching dental institute. First 100 orthodontic patients.">
+<meta name="description" content="Citas dentales de emergencia el mismo día en Austin Institute of Dental Medicine, Mueller. Abierto de lunes a sábado, 7 a.m. a 7 p.m., con centro quirúrgico en las instalaciones.">
+<meta property="og:title" content="Atención Dental de Emergencia — 7AM a 7PM, Lun–Sáb | AIDM Austin">
+<meta property="og:description" content="Atención el mismo día. Evaluación enfocada en el problema, radiografías necesarias y centro quirúrgico en las instalaciones.">
 <meta property="og:image" content="https://aidm.org/wp-content/uploads/2026/07/16-AIDM-Operatory-01--1536x1024.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 <style>
 /* ═══════════════════════════════════════════════════════════════════════════
-   AIDM — ORTHODONTICS LP  ·  V3 "dark blue, picture-led"
+   AIDM — EMERGENCIA (ES) LP  ·  on the V3 "dark blue, picture-led" theme
    Every surface is a blue; there is no white section anywhere, including the
    form fields and the map (which is filtered to match). Photography carries
    the page — alternating full-bleed feature rows, a gallery, a film wall.
@@ -106,7 +106,7 @@ section{position:relative}
    because a background layer cannot carry its own opacity. */
 .ph::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
   background-image:
-    url('../aidm-lp-assets/brand-watermark.png'),
+    url('../../aidm-lp-assets/brand-watermark.png'),
     radial-gradient(ellipse 65% 55% at 18% 0%,rgba(46,190,239,.13),transparent 62%),
     radial-gradient(ellipse 58% 55% at 88% 100%,rgba(79,195,247,.1),transparent 64%),
     linear-gradient(180deg,rgba(var(--tint),.95) 0%,rgba(var(--tint),.85) 8%,
@@ -586,7 +586,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
    medallion breaking out of its corner, an unboxed copy stack on the right,
    and a full-width perks rail closing the section. */
 .promo.ph::after{background-image:
-    url('../aidm-lp-assets/brand-watermark.png'),
+    url('../../aidm-lp-assets/brand-watermark.png'),
     radial-gradient(ellipse 62% 58% at 12% 8%,rgba(232,64,47,.2),transparent 62%),
     radial-gradient(ellipse 58% 60% at 92% 78%,rgba(79,195,247,.16),transparent 64%),
     linear-gradient(180deg,rgba(var(--tint),.95) 0%,rgba(var(--tint),.85) 8%,
@@ -980,6 +980,89 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
   .rv{opacity:1;transform:none}
   .swoosh path{stroke-dashoffset:0}
 }
+/* ══ OFFER-PAGE ADDITIONS ═════════════════════════════════════════
+   Three blocks the orthodontics page has no use for: the am/pm marker in
+   the offer card's fact strip (which replaces its countdown), the numbered
+   first-visit band that stands where the before/after rail stood, and the
+   quiet list of further published packages under the three package cards.
+   Everything is built from tokens already declared above. */
+
+/* am/pm rider on the big figure in the card's fact cells */
+.cd-c b .u{display:inline;font-style:normal;font-size:.42em;font-weight:700;
+  letter-spacing:.02em;margin:0 0 0 .06em;vertical-align:.42em;
+  text-transform:uppercase;color:inherit;text-shadow:none;opacity:.9}
+
+/* six films on this page rather than the ortho page's four — a 3-up rail
+   fills two complete rows instead of leaving two orphans on the second */
+#films .frail{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:940px){#films .frail{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){#films .frail{grid-template-columns:1fr}}
+
+/* ── your first visit, step by step ──────────────────────────────────── */
+.steps{list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1.15rem}
+.step{position:relative;border-radius:var(--r);padding:2.5rem 1.4rem 1.6rem;
+  background:linear-gradient(165deg,rgba(14,49,85,.62),rgba(6,26,44,.72));
+  border:1px solid var(--line);
+  box-shadow:0 18px 40px -28px #000}
+.step-n{position:absolute;top:-15px;left:1.3rem;
+  width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+  font-family:var(--price);font-size:1rem;font-weight:800;color:#08243c;
+  background:linear-gradient(135deg,#8fe3ff,var(--sky));
+  box-shadow:0 6px 16px -6px rgba(79,195,247,.8)}
+.step b{display:block;font-family:var(--head);font-size:1.04rem;font-weight:600;
+  color:#fff;margin-bottom:.5rem;line-height:1.3}
+.step p{margin:0;font-size:.93rem;line-height:1.6;color:var(--dim)}
+/* the connecting rule between the numbers, drawn only where there is a gap */
+.step+.step::before{content:'';position:absolute;top:2px;left:-1.15rem;width:1.15rem;
+  height:1px;background:linear-gradient(90deg,transparent,var(--line2))}
+.steps-fine{margin:1.7rem auto 0;max-width:70ch;text-align:center;
+  font-size:.86rem;line-height:1.65;color:var(--dim)}
+.steps-fine a{color:var(--sky);text-decoration:none;border-bottom:1px solid rgba(79,195,247,.4)}
+.steps-fine a:hover{border-bottom-color:var(--sky)}
+@media(max-width:980px){
+  .steps{grid-template-columns:repeat(2,1fr);gap:1.6rem 1.15rem}
+  .step+.step::before{display:none}
+}
+@media(max-width:560px){.steps{grid-template-columns:1fr;gap:1.7rem}}
+
+/* ── the rest of the published preventive ladder ─────────────────────── */
+.alsobox{margin-top:clamp(1.8rem,3.4vw,2.8rem);border-radius:var(--r);
+  padding:clamp(1.3rem,2.4vw,1.9rem) clamp(1.2rem,2.4vw,1.8rem);
+  background:linear-gradient(160deg,rgba(10,37,64,.62),rgba(3,16,29,.7));
+  border:1px solid var(--line)}
+.also-h{margin:0 0 1rem;font-family:var(--head);font-size:.66rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--sky)}
+.also{list-style:none;margin:0;padding:0;display:grid;gap:.1rem}
+.also li{display:grid;grid-template-columns:minmax(0,15rem) 1fr auto;
+  gap:.6rem 1.1rem;align-items:baseline;
+  padding:.72rem 0;border-top:1px solid var(--line)}
+.also li:first-child{border-top:0;padding-top:0}
+.also b{font-family:var(--head);font-size:.98rem;font-weight:600;color:#fff}
+.also span{font-size:.9rem;color:var(--dim);line-height:1.5}
+.also i{font-style:normal;font-family:var(--price);font-size:1.02rem;font-weight:700;
+  color:var(--ice);white-space:nowrap;text-align:right}
+@media(max-width:760px){
+  .also li{grid-template-columns:1fr auto;gap:.25rem .9rem}
+  .also span{grid-column:1/-1}
+}
+
+/* ── offer cards that are quoted as a range, a tier or no figure at all ──
+   The braces card carries one clean number. Several offers do not: they start
+   "from", they are priced per tooth or per arch, or (emergency) they have no
+   published figure. These three riders keep all of them on the same plate. */
+.card-price .fr{align-self:center;margin:.5em .5rem 0 0;
+  font-family:var(--head);font-size:.6rem;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--ice);opacity:.92;
+  -webkit-text-fill-color:currentColor}
+.card-price .v.w{font-size:clamp(1.95rem,4.3vw,2.9rem);line-height:1.1;text-align:center}
+/* $18,000 with a FROM rider in front of it does not fit at the braces size.
+   The rider is always the first child, so a sibling selector shrinks exactly
+   the cards that need it without touching the single-figure ones. */
+.card-price .fr ~ .c{font-size:clamp(1.85rem,4.2vw,2.5rem);margin-top:.06em}
+.card-price .fr ~ .v{font-size:clamp(2.55rem,6vw,3.5rem)}
+.card-sub{margin:.15rem 0 0;text-align:center;font-family:var(--head);font-size:.62rem;
+  font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--ice);opacity:.9}
 </style>
 </head>
 <body>
@@ -995,16 +1078,16 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 <header class="nav" id="nav">
   <a href="#top"><img class="nav-logo" src="https://aidm.org/wp-content/uploads/2025/09/Full-Horizontal-Lock-up-Austin-Institute-of-Dental-Medicine-Main-Colorway-RGB-scaled.png" alt="Austin Institute of Dental Medicine"></a>
   <ul class="nav-links">
-    <li><a href="#office">Our Office</a></li>
-    <li><a href="#promo">Promotion</a></li>
-    <li><a href="#results">Results</a></li>
-    <li><a href="#staff">Our Team</a></li>
-    <li><a href="#films">Films</a></li>
-    <li><a href="#treatment">Treatment</a></li>
-    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#office">La Cl&iacute;nica</a></li>
+    <li><a href="#promo">La Oferta</a></li>
+    <li><a href="#visit">C&oacute;mo Funciona</a></li>
+    <li><a href="#staff">Nuestro Equipo</a></li>
+    <li><a href="#films">Videos</a></li>
+    <li><a href="#packages">Precios</a></li>
+    <li><a href="#faq">Preguntas</a></li>
   </ul>
   <a class="nav-tel" href="tel:+17374342436">(737) 434-2436</a>
-  <a class="btn btn-sky" href="#contact" data-book>Book Free Eval</a>
+  <a class="btn btn-sky" href="#contact" data-book>Atenci&oacute;n Hoy</a>
 </header>
 
 <!-- ══════════════ HERO ══════════════ -->
@@ -1012,10 +1095,10 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
   <div class="hero-media">
     <!-- AIDM's own welcome film (Drive: "Welcome Video FINAL with name change
          7.20.26"), muted + looped. Played untreated — no filter, no scrim. -->
-    <video class="hero-vid" id="heroVid" poster="../aidm-lp-assets/aidm-hero-poster.jpg"
+    <video class="hero-vid" id="heroVid" poster="../../aidm-lp-assets/aidm-hero-poster.jpg"
            autoplay muted loop playsinline preload="auto" disablepictureinpicture
            aria-hidden="true" tabindex="-1">
-      <source src="../aidm-lp-assets/aidm-hero.mp4" type="video/mp4">
+      <source src="../../aidm-lp-assets/aidm-hero.mp4" type="video/mp4">
     </video>
   </div>
 
@@ -1027,25 +1110,25 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <div class="lock">
           <span class="lock-rail"></span>
           <h1>
-            <span class="l1">Straighten</span>
-            <span class="l2">Your Smile with</span>
-            <span class="l3">Confidence.</span>
+            <span class="l1">Atenci&oacute;n Dental</span>
+            <span class="l2">de Emergencia</span>
+            <span class="l3">7am a 7pm, Lun&ndash;S&aacute;b.</span>
           </h1>
           <svg class="swoosh" viewBox="0 0 460 20" preserveAspectRatio="none" aria-hidden="true">
             <path d="M4 14 C 90 5, 200 3, 280 8 S 410 16, 456 6"/>
           </svg>
           <div class="hero-cta">
             <a class="grev" href="https://www.google.com/maps/search/Austin+Institute+of+Dental+Medicine"
-               target="_blank" rel="noopener" aria-label="4.9 star Google rating — read the reviews">
+               target="_blank" rel="noopener" aria-label="Calificaci&oacute;n de 4.9 estrellas en Google — lea las rese&ntilde;as">
               <span class="grev-g" aria-hidden="true">
                 <svg width="19" height="19" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>
               </span>
               <span class="grev-b">
                 <span class="grev-n">4.9<span class="grev-st">&#9733;&#9733;&#9733;&#9733;&#9733;</span></span>
-                <span class="grev-t">Google reviews</span>
+                <span class="grev-t">Rese&ntilde;as de Google</span>
               </span>
             </a>
-            <a class="btn btn-ghost btn-lg" href="tel:+17374342436">Call (737) 434-2436</a>
+            <a class="btn btn-ghost btn-lg" href="tel:+17374342436">Llame al (737) 434-2436</a>
           </div>
         </div>
 
@@ -1054,41 +1137,44 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
           <div class="card" id="offerCard">
            <div class="card-face card-offer">
             <p class="card-lim">
-              <span class="star">&#9733;</span>Limited &ndash; first 100 patients
+              <span class="star">&#9733;</span>Citas el mismo d&iacute;a
               <i class="spk" style="--s:13px;top:14%;left:8%;animation-delay:.4s"></i>
               <i class="spk" style="--s:10px;top:56%;left:31%;animation-delay:1.5s"></i>
               <i class="spk" style="--s:12px;top:18%;right:14%;animation-delay:2.4s"></i>
             </p>
-            <h2 class="card-t">Comprehensive Braces Treatment</h2>
+            <h2 class="card-t">Atenci&oacute;n Dental de Emergencia</h2>
 
             <div class="card-price">
-              <span class="c">$</span><span class="v">2,950</span><a class="ast ast-lg" href="#terms" aria-label="See fee disclosures">*</a>
+              <span class="v w">Atenci&oacute;n hoy</span><a class="ast ast-lg" href="#terms" aria-label="Ver los t&eacute;rminos de honorarios">*</a>
               <i class="spk" style="--s:24px;top:0%;left:3%;animation-delay:.9s"></i>
               <i class="spk" style="--s:17px;top:66%;left:16%;animation-delay:2.1s"></i>
               <i class="spk" style="--s:26px;top:56%;right:1%;animation-delay:1.6s"></i>
               <i class="spk" style="--s:13px;bottom:6%;right:22%;animation-delay:3s"></i>
             </div>
+            <p class="card-sub">Sin precio publicado</p>
 
             <ul class="card-list">
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Comprehensive braces treatment</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Routine orthodontic adjustment visits</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Appliance removal</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Standard orthodontic retention</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Care coordinated throughout treatment</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Atenci&oacute;n el mismo d&iacute;a</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Abierto de lunes a s&aacute;bado, 7 a.m. a 7 p.m.</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Evaluaci&oacute;n enfocada en el problema</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Radiograf&iacute;as necesarias para el diagn&oacute;stico</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Centro quir&uacute;rgico en las instalaciones</li>
             </ul>
 
+            <!-- The braces card counts down to a stated expiry. This offer has
+                 none, so the same four cells carry the access facts instead. -->
             <div class="card-cd">
-              <p class="cd-cap">Offer ends 1 October 2026</p>
-              <div class="cd" id="cd" role="timer" aria-label="Time remaining on the offer">
-                <div class="cd-c cd-d"><b id="cdD">--</b><i>Days left</i></div>
-                <div class="cd-c"><b id="cdH">--</b><i>Hrs</i></div>
-                <div class="cd-c"><b id="cdM">--</b><i>Min</i></div>
-                <div class="cd-c"><b id="cdS">--</b><i>Sec</i></div>
+              <p class="cd-cap">Abierto seis d&iacute;as a la semana &middot; Mueller, Austin</p>
+              <div class="cd" aria-label="De un vistazo">
+                <div class="cd-c cd-d"><b>7<i class="u">am</i></b><i>Abre</i></div>
+                <div class="cd-c"><b>7<i class="u">pm</i></b><i>Cierra</i></div>
+                <div class="cd-c"><b>6</b><i>D&iacute;as/sem</i></div>
+                <div class="cd-c"><b>$0</b><i>Parqueo</i></div>
               </div>
             </div>
 
-            <button class="btn btn-sky" type="button" id="cardBook">Book free consult</button>
-            <p class="card-fine">Evaluation complimentary &mdash; no obligation to start. <a href="#terms">*Fee&nbsp;terms</a></p>
+            <button class="btn btn-sky" type="button" id="cardBook">Solicitar cita para hoy</button>
+            <p class="card-fine">&iquest;Tiene dolor ahora? Llamar es m&aacute;s r&aacute;pido que cualquier formulario. <a href="#terms">*T&eacute;rminos</a></p>
            </div>
 
            <!-- ── the same card, flipped to a booking form ──────────────────
@@ -1096,28 +1182,28 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
                 face in rather than throwing the visitor down to the footer
                 form. On success it thanks them and returns to the offer. -->
            <div class="card-face card-form" hidden>
-             <button class="cf-back" type="button" id="cardBack">&larr; Back to the offer</button>
-             <p class="cf-k">Complimentary evaluation</p>
-             <h2 class="cf-h">Book your free consult</h2>
+             <button class="cf-back" type="button" id="cardBack">&larr; Volver a la oferta</button>
+             <p class="cf-k">Emergencia el mismo d&iacute;a</p>
+             <h2 class="cf-h">Pida una cita para hoy</h2>
              <form id="cardForm" novalidate>
                <div class="cf-row">
-                 <div class="fld"><label for="cf_fn">First name</label><input id="cf_fn" name="first_name" type="text" autocomplete="given-name" required></div>
-                 <div class="fld"><label for="cf_ln">Last name</label><input id="cf_ln" name="last_name" type="text" autocomplete="family-name" required></div>
+                 <div class="fld"><label for="cf_fn">Nombre</label><input id="cf_fn" name="first_name" type="text" autocomplete="given-name" required></div>
+                 <div class="fld"><label for="cf_ln">Apellido</label><input id="cf_ln" name="last_name" type="text" autocomplete="family-name" required></div>
                </div>
-               <div class="fld"><label for="cf_ph">Mobile number</label><input id="cf_ph" name="phone" type="tel" autocomplete="tel" required></div>
-               <div class="fld"><label for="cf_em">Email</label><input id="cf_em" name="email" type="email" autocomplete="email" required></div>
-               <div class="fld"><label for="cf_who">This is for</label>
+               <div class="fld"><label for="cf_ph">Tel&eacute;fono m&oacute;vil</label><input id="cf_ph" name="phone" type="tel" autocomplete="tel" required></div>
+               <div class="fld"><label for="cf_em">Correo electr&oacute;nico</label><input id="cf_em" name="email" type="email" autocomplete="email" required></div>
+               <div class="fld"><label for="cf_who">La cita es para</label>
                  <select id="cf_who" name="patient_type">
-                   <option>Myself</option><option>My child</option><option>Someone else</option>
+                   <option>Para m&iacute;</option><option>Para mi hijo o hija</option><option>Para otra persona</option>
                  </select></div>
-               <input type="hidden" name="offer" value="ortho-2950-first-100">
+               <input type="hidden" name="offer" value="emergency-dental-same-day-es">
                <input type="hidden" name="gclid" id="cf_gclid">
                <input type="hidden" name="wbraid" id="cf_wbraid">
                <input type="hidden" name="utm_source" id="cf_utm_source">
                <input type="hidden" name="utm_medium" id="cf_utm_medium">
                <input type="hidden" name="utm_campaign" id="cf_utm_campaign">
-               <button class="btn btn-sky" type="submit">Request my free consult</button>
-               <p class="cf-fine">No obligation. We call back the same working day.</p>
+               <button class="btn btn-sky" type="submit">Solicitar cita para hoy</button>
+               <p class="cf-fine">Sin compromiso. Le devolvemos la llamada el mismo d&iacute;a h&aacute;bil.</p>
              </form>
            </div>
 
@@ -1127,9 +1213,8 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
                <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#0b2b18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
              </div>
              <h2 class="cf-h">Request received.</h2>
-             <p class="cf-p">Thank you &mdash; the orthodontic team will call you back to confirm your
-               complimentary evaluation. Your $2,950 first-100 place is held while we speak.</p>
-             <p class="cf-p cf-tel">Need us sooner? <a href="tel:+17374342436">(737) 434-2436</a></p>
+             <p class="cf-p">Gracias &mdash; le llamaremos de inmediato para buscarle un espacio. Si el dolor es fuerte, llame al <a href="tel:+17374342436">(737) 434-2436</a> ahora en lugar de esperar.</p>
+             <p class="cf-p cf-tel">&iquest;Necesita atenci&oacute;n antes? <a href="tel:+17374342436">(737) 434-2436</a></p>
            </div>
           </div>
         </aside>
@@ -1140,7 +1225,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 
   <!-- team marquee, riding the bottom of the film -->
   <div class="hteam" id="team">
-    <p class="hteam-h">AIDM Team</p>
+    <p class="hteam-h">Equipo AIDM</p>
     <div class="tmask">
       <div class="tmarq" id="marq">
       <div class="doc"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/Dr.-Ravi.jpg" alt="Ravikumar Anthony, B.D.S., M.D.S., M.S."></div><b>Ravikumar Anthony</b><span>B.D.S., M.D.S., M.S.</span><i>Chair &amp; Program Director</i></div>
@@ -1174,170 +1259,157 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 </section>
 
 <!-- ══════════════ OFFICE TOUR ══════════════ -->
-<section class="pad tight-top tight-bot bg-abyss ph" id="office" style="--ph:url('../aidm-lp-assets/bg/ext-01.jpg')">
+<section class="pad tight-top tight-bot bg-abyss ph" id="office" style="--ph:url('../../aidm-lp-assets/bg/ext-01.jpg')">
   <div class="wrap">
     <div class="sh sh-tight rv">
       <p class="k">1401 Philomena Street, Mueller</p>
-      <h2>Take the <em>office tour.</em></h2>
+      <h2>Conozca <em>nuestra cl&iacute;nica.</em></h2>
       <div class="bar"></div>
     </div>
     <div class="mosaic rv">
-      <figure class="gt mo-1 slide kb" data-src="../aidm-lp-assets/office/ext-02.jpg">
-        <img class="on" src="../aidm-lp-assets/office/ext-02.jpg" alt="The AIDM building on Philomena Street, Mueller">
-        <img loading="lazy" src="../aidm-lp-assets/office/ext-03.jpg" alt="">
-        <img loading="lazy" src="../aidm-lp-assets/office/ext-04.jpg" alt="">
-        <figcaption><em>1401 Philomena Street</em>The building</figcaption></figure>
-      <figure class="gt mo-2 slide kb d1" data-src="../aidm-lp-assets/office/reception.jpg">
-        <img class="on" src="../aidm-lp-assets/office/reception.jpg" alt="The AIDM reception desk beneath the illuminated wordmark">
-        <img loading="lazy" src="../aidm-lp-assets/office/reception-02.jpg" alt="">
-        <img loading="lazy" src="../aidm-lp-assets/office/lobby-03.jpg" alt="">
-        <figcaption><em>Ground floor</em>Reception &amp; arrival</figcaption></figure>
-      <figure class="gt mo-3" data-src="../aidm-lp-assets/office/ortho-bay.jpg"><img loading="lazy" src="../aidm-lp-assets/office/ortho-bay.jpg" alt="The open orthodontic treatment bay, flooded with daylight"><figcaption><em>Treatment</em>Open orthodontic bay</figcaption></figure>
-      <figure class="gt mo-4 kb d2" data-src="../aidm-lp-assets/office/lobby-ground.jpg"><img loading="lazy" src="../aidm-lp-assets/office/lobby-ground.jpg" alt="The double-height ground-floor lobby"><figcaption><em>Arrival</em>Two-storey lobby</figcaption></figure>
-      <figure class="gt mo-5" data-src="../aidm-lp-assets/office/operatory-glass.jpg"><img loading="lazy" src="../aidm-lp-assets/office/operatory-glass.jpg" alt="A private operatory with corner glazing over the treetops"><figcaption><em>Treatment</em>Private operatory</figcaption></figure>
-      <figure class="gt mo-6" data-src="../aidm-lp-assets/office/conference.jpg"><img loading="lazy" src="../aidm-lp-assets/office/conference.jpg" alt="The AIDM case-review and conference room"><figcaption><em>Planning</em>Case-review room</figcaption></figure>
-      <figure class="gt mo-7 kb" data-src="../aidm-lp-assets/office/lobby-lounge.jpg"><img loading="lazy" src="../aidm-lp-assets/office/lobby-lounge.jpg" alt="The AIDM waiting lounge"><figcaption><em>Comfort</em>Waiting lounge</figcaption></figure>
-      <figure class="gt mo-8" data-src="../aidm-lp-assets/office/walkway.jpg"><img loading="lazy" src="../aidm-lp-assets/office/walkway.jpg" alt="The landscaped walkway from the car park to the AIDM entrance"><figcaption><em>Free parking</em>The approach</figcaption></figure>
+      <figure class="gt mo-1 slide kb" data-src="../../aidm-lp-assets/office/ext-02.jpg">
+        <img class="on" src="../../aidm-lp-assets/office/ext-02.jpg" alt="The AIDM building on Philomena Street, Mueller">
+        <img loading="lazy" src="../../aidm-lp-assets/office/ext-03.jpg" alt="">
+        <img loading="lazy" src="../../aidm-lp-assets/office/ext-04.jpg" alt="">
+        <figcaption><em>1401 Philomena Street</em>El edificio</figcaption></figure>
+      <figure class="gt mo-2 slide kb d1" data-src="../../aidm-lp-assets/office/reception.jpg">
+        <img class="on" src="../../aidm-lp-assets/office/reception.jpg" alt="The AIDM reception desk beneath the illuminated wordmark">
+        <img loading="lazy" src="../../aidm-lp-assets/office/reception-02.jpg" alt="">
+        <img loading="lazy" src="../../aidm-lp-assets/office/lobby-03.jpg" alt="">
+        <figcaption><em>Planta baja</em>Recepci&oacute;n y llegada</figcaption></figure>
+      <figure class="gt mo-3" data-src="../../aidm-lp-assets/office/ortho-bay.jpg"><img loading="lazy" src="../../aidm-lp-assets/office/ortho-bay.jpg" alt="The open treatment bay, flooded with daylight"><figcaption><em>Tratamiento</em>&Aacute;rea de tratamiento abierta</figcaption></figure>
+      <figure class="gt mo-4 kb d2" data-src="../../aidm-lp-assets/office/lobby-ground.jpg"><img loading="lazy" src="../../aidm-lp-assets/office/lobby-ground.jpg" alt="The double-height ground-floor lobby"><figcaption><em>Llegada</em>Vest&iacute;bulo de doble altura</figcaption></figure>
+      <figure class="gt mo-5" data-src="../../aidm-lp-assets/office/operatory-glass.jpg"><img loading="lazy" src="../../aidm-lp-assets/office/operatory-glass.jpg" alt="A private operatory with corner glazing over the treetops"><figcaption><em>Tratamiento</em>Consultorio privado</figcaption></figure>
+      <figure class="gt mo-6" data-src="../../aidm-lp-assets/office/conference.jpg"><img loading="lazy" src="../../aidm-lp-assets/office/conference.jpg" alt="The AIDM case-review and conference room"><figcaption><em>Planificaci&oacute;n</em>Sala de revisi&oacute;n de casos</figcaption></figure>
+      <figure class="gt mo-7 kb" data-src="../../aidm-lp-assets/office/lobby-lounge.jpg"><img loading="lazy" src="../../aidm-lp-assets/office/lobby-lounge.jpg" alt="The AIDM waiting lounge"><figcaption><em>Comodidad</em>Sala de espera</figcaption></figure>
+      <figure class="gt mo-8" data-src="../../aidm-lp-assets/office/walkway.jpg"><img loading="lazy" src="../../aidm-lp-assets/office/walkway.jpg" alt="The landscaped walkway from the car park to the AIDM entrance"><figcaption><em>Estacionamiento gratis</em>La entrada</figcaption></figure>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ SPECIAL PROMOTION ══════════════ -->
-<section class="promo pad tight-top bg-deep2 ph" id="promo" style="--ph:url('../aidm-lp-assets/bg/reception.jpg')">
+<!-- ══════════════ THE OFFER + FILM ══════════════
+     The screen carries AIDM's own film for this treatment; the column beside
+     it is the offer itself, verbatim from the approved promotions sheet. -->
+<section class="promo pad tight-top bg-deep2 ph" id="promo" style="--ph:url('../../aidm-lp-assets/bg/reception.jpg')">
   <div class="wrap">
     <div class="sh sh-tight rv">
-      <p class="promo-k"><span class="star">&#9733;</span>Special promotion</p>
-      <h2>The First-100 <em>orthodontic offer.</em></h2>
+      <p class="promo-k"><span class="star">&#9733;</span>Atenci&oacute;n dental de emergencia</p>
+      <h2>&iquest;Dolor hoy? <em>Pida hoy.</em></h2>
       <div class="bar"></div>
     </div>
-
     <div class="promo-grid rv">
 
-      <!-- the film, on a screen -->
       <div class="tv-wrap">
         <div class="tv">
-          <div class="tv-scr" id="promoScr" data-yt="CEgwotre0h8">
-            <img loading="lazy" src="https://i.ytimg.com/vi/CEgwotre0h8/maxresdefault.jpg"
-                 alt="Orthodontics at the Austin Institute of Dental Medicine">
-            <span class="pl" role="button" tabindex="0" aria-label="Play: Orthodontics at AIDM"><i></i></span>
+          <div class="tv-scr" id="promoScr" data-yt="NtubApnQFt0">
+            <img loading="lazy" src="https://i.ytimg.com/vi/NtubApnQFt0/maxresdefault.jpg"
+                 alt="Atenci&oacute;n dental de emergencia en el Austin Institute of Dental Medicine">
+            <span class="pl" role="button" tabindex="0" aria-label="Play: Atenci&oacute;n dental de emergencia en el Austin Institute of Dental Medicine"><i></i></span>
           </div>
-          <span class="tv-led">Orthodontics at AIDM</span>
+          <span class="tv-led">Emergencia dental &mdash; atenci&oacute;n hoy</span>
         </div>
         <div class="tv-foot"></div>
         <div class="tv-base"></div>
         <div class="promo-badge">
-          <b>$2,950</b>
-          <i>First 100 patients</i>
+          <b>7&ndash;7</b>
+          <i>Lun a S&aacute;b</i>
         </div>
       </div>
 
-      <!-- the offer, unboxed -->
-      <!-- The figure is carried by the medallion on the screen and by the
-           section heading, so this column is just the picture and the three
-           things the complimentary visit gives you. -->
       <div class="promo-copy">
         <figure class="promo-ph">
-          <img loading="lazy" src="../aidm-lp-assets/promo/braces-smile.jpg"
-               alt="A patient smiling with fixed braces">
+          <img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/02/iStock-2-1024x732.jpg"
+               alt="Un hombre con una bolsa de hielo en la mand&iacute;bula por dolor de muelas">
         </figure>
         <ul class="promo-hl">
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Meet with the orthodontic team</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Review appropriate treatment options</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Understand expected fees and payment options</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Atenci&oacute;n el mismo d&iacute;a</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Abierto de lunes a s&aacute;bado, 7 a.m. a 7 p.m.</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Evaluaci&oacute;n enfocada en el problema</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Radiograf&iacute;as necesarias para el diagn&oacute;stico</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Centro quir&uacute;rgico en las instalaciones</li>
         </ul>
       </div>
     </div>
 
-    <p class="promo-fine"><span class="fs">*</span>Package eligibility, clinical recommendations, and final pricing are
-      confirmed after an appropriate evaluation. Package pricing applies only to the services specifically listed and
-      cannot be combined with insurance benefits, membership pricing, or other discounts. Additional treatment may be
-      recommended when clinically necessary. The advertised fee applies to standard, comprehensive traditional bracket
-      cases; complex cases, clear aligner therapy or phase-one interceptive orthodontics may incur additional fees, and
-      a complete clinical evaluation is required to determine case complexity and the final fee.
-      <a href="#terms">Read the full offer terms</a>.</p>
+    <p class="promo-fine"><span class="fs">*</span>Las citas de emergencia se priorizan cl&iacute;nicamente y est&aacute;n sujetas a disponibilidad. Una evaluaci&oacute;n de emergencia atiende el problema que le trae; cualquier tratamiento adicional se cotiza antes de iniciarse, y las radiograf&iacute;as se toman &uacute;nicamente donde son necesarias para el diagn&oacute;stico.
+      <a href="#terms">Lea los t&eacute;rminos completos de la oferta</a>.</p>
 
     <div class="perks rv">
-      <div class="perk"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M5 6h14a1 1 0 011 1v12a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1z"/></svg><b>Book online</b></div>
-      <div class="perk"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h7a5 5 0 010 10H9m0 0v8m0-8H6"/></svg><b>Free parking</b></div>
-      <div class="perk"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v5l3.2 2M12 3a9 9 0 100 18 9 9 0 000-18z"/></svg><b>Monday&ndash;Saturday</b></div>
-      <div class="perk"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v12H3zM3 11h18M7 15h4"/></svg><b>Financing available</b></div>
-      <div class="perk"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6L12 16.8 6.6 19.6l1.2-6L3.3 9.4l6.1-.8z"/></svg><b>No referral needed</b></div>
+      <div class="perk"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v5l3.2 2M12 3a9 9 0 100 18 9 9 0 000-18z"/></svg><b>7am&ndash;7pm, Lun&ndash;S&aacute;b</b></div>
+      <div class="perk"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6L12 16.8 6.6 19.6l1.2-6L3.3 9.4l6.1-.8z"/></svg><b>Sin referencia</b></div>
+      <div class="perk"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h7a5 5 0 010 10H9m0 0v8m0-8H6"/></svg><b>Parqueo gratis</b></div>
+      <div class="perk"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v12H3zM3 11h18M7 15h4"/></svg><b>Aceptamos seguros</b></div>
+      <div class="perk"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M5 6h14a1 1 0 011 1v12a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1z"/></svg><b>Atendemos en espa&ntilde;ol</b></div>
     </div>
 
   </div>
 </section>
 
-<!-- ══════════════ BEFORE & AFTER ══════════════ -->
-<section class="pad bg-deep ph" id="results" style="--ph:url('../aidm-lp-assets/bg/operatory-02.jpg')">
+<!-- ══════════════ HOW IT GOES ══════════════
+     The braces page runs its intraoral before/after rail here. Those records
+     belong to orthodontics, so on this page the band carries the sequence of
+     the treatment itself instead. -->
+<section class="pad bg-deep ph" id="visit" style="--ph:url('../../aidm-lp-assets/bg/operatory-02.jpg')">
   <div class="wrap">
     <div class="sh rv">
-      <p class="k">Treated at AIDM</p>
-      <h2>Actual cases. <em>Actual bites.</em></h2>
+      <p class="k">De su llamada a salir sin dolor</p>
+      <h2>C&oacute;mo funciona <em>una cita el mismo d&iacute;a.</em></h2>
       <div class="bar"></div>
-      <p>Intraoral records from orthodontic cases completed at the Austin Institute of Dental Medicine. Hover to pause the row, click any case to see it full size.</p>
+      <p>Una cita de emergencia no es un chequeo. Existe para encontrar qu&eacute; causa el dolor y detenerlo hoy &mdash; el plan completo puede esperar a que usted est&eacute; c&oacute;modo.</p>
     </div>
-    <div class="cmask rv">
-      <div class="cmarq" id="cmarq">
-      <figure class="case" data-src="../assets/cases/IMG_3202.jpg"><img loading="lazy" src="../assets/cases/IMG_3202.jpg" alt="AIDM orthodontic case 01 — before and after"><figcaption class="cap"><b>Case 01</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3203.jpg"><img loading="lazy" src="../assets/cases/IMG_3203.jpg" alt="AIDM orthodontic case 02 — before and after"><figcaption class="cap"><b>Case 02</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3204.jpg"><img loading="lazy" src="../assets/cases/IMG_3204.jpg" alt="AIDM orthodontic case 03 — before and after"><figcaption class="cap"><b>Case 03</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3205.jpg"><img loading="lazy" src="../assets/cases/IMG_3205.jpg" alt="AIDM orthodontic case 04 — before and after"><figcaption class="cap"><b>Case 04</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3206.jpg"><img loading="lazy" src="../assets/cases/IMG_3206.jpg" alt="AIDM orthodontic case 05 — before and after"><figcaption class="cap"><b>Case 05</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3207.jpg"><img loading="lazy" src="../assets/cases/IMG_3207.jpg" alt="AIDM orthodontic case 06 — before and after"><figcaption class="cap"><b>Case 06</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3208.jpg"><img loading="lazy" src="../assets/cases/IMG_3208.jpg" alt="AIDM orthodontic case 07 — before and after"><figcaption class="cap"><b>Case 07</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3209.jpg"><img loading="lazy" src="../assets/cases/IMG_3209.jpg" alt="AIDM orthodontic case 08 — before and after"><figcaption class="cap"><b>Case 08</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3210.jpg"><img loading="lazy" src="../assets/cases/IMG_3210.jpg" alt="AIDM orthodontic case 09 — before and after"><figcaption class="cap"><b>Case 09</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3211.jpg"><img loading="lazy" src="../assets/cases/IMG_3211.jpg" alt="AIDM orthodontic case 10 — before and after"><figcaption class="cap"><b>Case 10</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" data-src="../assets/cases/IMG_3212.jpg"><img loading="lazy" src="../assets/cases/IMG_3212.jpg" alt="AIDM orthodontic case 11 — before and after"><figcaption class="cap"><b>Case 11</b><i>Comprehensive braces</i></figcaption></figure>
-        <!-- loop duplicate -->
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3202.jpg"><img loading="lazy" src="../assets/cases/IMG_3202.jpg" alt=""><figcaption class="cap"><b>Case 01</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3203.jpg"><img loading="lazy" src="../assets/cases/IMG_3203.jpg" alt=""><figcaption class="cap"><b>Case 02</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3204.jpg"><img loading="lazy" src="../assets/cases/IMG_3204.jpg" alt=""><figcaption class="cap"><b>Case 03</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3205.jpg"><img loading="lazy" src="../assets/cases/IMG_3205.jpg" alt=""><figcaption class="cap"><b>Case 04</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3206.jpg"><img loading="lazy" src="../assets/cases/IMG_3206.jpg" alt=""><figcaption class="cap"><b>Case 05</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3207.jpg"><img loading="lazy" src="../assets/cases/IMG_3207.jpg" alt=""><figcaption class="cap"><b>Case 06</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3208.jpg"><img loading="lazy" src="../assets/cases/IMG_3208.jpg" alt=""><figcaption class="cap"><b>Case 07</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3209.jpg"><img loading="lazy" src="../assets/cases/IMG_3209.jpg" alt=""><figcaption class="cap"><b>Case 08</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3210.jpg"><img loading="lazy" src="../assets/cases/IMG_3210.jpg" alt=""><figcaption class="cap"><b>Case 09</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3211.jpg"><img loading="lazy" src="../assets/cases/IMG_3211.jpg" alt=""><figcaption class="cap"><b>Case 10</b><i>Comprehensive braces</i></figcaption></figure>
-      <figure class="case" aria-hidden="true" data-src="../assets/cases/IMG_3212.jpg"><img loading="lazy" src="../assets/cases/IMG_3212.jpg" alt=""><figcaption class="cap"><b>Case 11</b><i>Comprehensive braces</i></figcaption></figure>
-      </div>
-    </div>
-    <p style="margin:1.7rem 0 0;text-align:center;font-size:.78rem;color:#6d90aa;line-height:1.6">
-      Individual treatment results vary. Cases shown were completed at AIDM and are illustrative of typical
-      comprehensive orthodontic treatment; they are not a guarantee of any particular outcome.</p>
+    <ol class="steps rv">
+      <li class="step">
+        <span class="step-n">1</span>
+        <b>Llame y descr&iacute;balo</b>
+        <p>D&iacute;ganos qu&eacute; le duele, desde cu&aacute;ndo, y si hay inflamaci&oacute;n, fiebre o un diente que se sali&oacute;. Eso determina con qu&eacute; rapidez debe verlo un cl&iacute;nico.</p>
+      </li>
+      <li class="step">
+        <span class="step-n">2</span>
+        <b>Prioridad y hora</b>
+        <p>Le damos el espacio m&aacute;s pronto que sea cl&iacute;nicamente apropiado. La inflamaci&oacute;n severa, los traumatismos y el sangrado no controlado tienen prioridad.</p>
+      </li>
+      <li class="step">
+        <span class="step-n">3</span>
+        <b>Diagnosticar la causa</b>
+        <p>Una evaluaci&oacute;n enfocada en el problema, con las radiograf&iacute;as necesarias para ver qu&eacute; ocurre &mdash; un absceso, una fractura, una restauraci&oacute;n perdida, un diente retenido.</p>
+      </li>
+      <li class="step">
+        <span class="step-n">4</span>
+        <b>Aliviarlo hoy</b>
+        <p>Todo lo que se pueda hacer con seguridad el mismo d&iacute;a se hace el mismo d&iacute;a, con el costo acordado antes. El centro quir&uacute;rgico en las instalaciones significa que una extracci&oacute;n urgente no necesita una segunda cita en otro lugar.</p>
+      </li>
+    </ol>
+    <p class="steps-fine">Si tiene inflamaci&oacute;n facial que se est&aacute; extendiendo, dificultad para respirar o tragar, o sangrado no controlado, trátelo como una emergencia m&eacute;dica y acuda a una sala de emergencias.</p>
   </div>
 </section>
-
 
 <!-- ══════════════ OFFICE STAFF ══════════════ -->
-<section class="pad bg-deep2 ph" id="staff" style="--ph:url('../aidm-lp-assets/bg/conference.jpg')">
+<section class="pad bg-deep2 ph" id="staff" style="--ph:url('../../aidm-lp-assets/bg/conference.jpg')">
   <div class="wrap">
     <div class="sh rv">
-      <p class="k">Who you will meet</p>
-      <h2>The people <em>behind the chair.</em></h2>
+      <p class="k">A qui&eacute;nes conocer&aacute;</p>
+      <h2>Las personas <em>detr&aacute;s del sill&oacute;n.</em></h2>
       <div class="bar"></div>
-      <p>Board-certified faculty, specialists and residents working side by side &mdash; every orthodontic
-        plan at AIDM is reviewed and signed off by faculty.</p>
+      <p>Docentes certificados, especialistas y residentes trabajando lado a lado &mdash; y un centro quir&uacute;rgico en las instalaciones, para que una extracci&oacute;n urgente no se convierta en una referencia a otro lugar.</p>
     </div>
 
     <div class="gwall rv">
-      <figure class="gt gw-a" data-src="../aidm-lp-assets/staff/group-01.jpg">
-        <img loading="lazy" src="../aidm-lp-assets/staff/group-01.jpg"
+      <figure class="gt gw-a" data-src="../../aidm-lp-assets/staff/group-01.jpg">
+        <img loading="lazy" src="../../aidm-lp-assets/staff/group-01.jpg"
              alt="The clinical faculty of the Austin Institute of Dental Medicine">
-        <figcaption><em>Faculty</em>The specialists who sign off every plan</figcaption></figure>
-      <figure class="gt gw-b" data-src="../aidm-lp-assets/staff/ortho-team.jpg">
-        <img loading="lazy" src="../aidm-lp-assets/staff/ortho-team.jpg"
-             alt="The AIDM orthodontic residents and clinical team in the treatment bay">
-        <figcaption><em>Orthodontics</em>The team in the bay</figcaption></figure>
-      <figure class="gt gw-c" data-src="../aidm-lp-assets/staff/doc-resident.jpg">
-        <img loading="lazy" src="../aidm-lp-assets/staff/doc-resident.jpg"
+        <figcaption><em>Docentes</em>Los especialistas que aprueban cada plan</figcaption></figure>
+      <figure class="gt gw-b" data-src="../../aidm-lp-assets/staff/ortho-team.jpg">
+        <img loading="lazy" src="../../aidm-lp-assets/staff/ortho-team.jpg"
+             alt="AIDM residents and the clinical team in the treatment bay">
+        <figcaption><em>Equipo cl&iacute;nico</em>El equipo en el &aacute;rea de tratamiento</figcaption></figure>
+      <figure class="gt gw-c" data-src="../../aidm-lp-assets/staff/doc-resident.jpg">
+        <img loading="lazy" src="../../aidm-lp-assets/staff/doc-resident.jpg"
              alt="An AIDM resident and assistant treating a patient chairside">
-        <figcaption><em>At the chair</em>Two clinicians on every appointment</figcaption></figure>
-      <figure class="gt gw-c" data-src="../aidm-lp-assets/staff/resident-patient.jpg">
-        <img loading="lazy" src="../aidm-lp-assets/staff/resident-patient.jpg"
+        <figcaption><em>En el sill&oacute;n</em>Dos cl&iacute;nicos en cada cita</figcaption></figure>
+      <figure class="gt gw-c" data-src="../../aidm-lp-assets/staff/resident-patient.jpg">
+        <img loading="lazy" src="../../aidm-lp-assets/staff/resident-patient.jpg"
              alt="An AIDM clinician showing a patient her records on a chairside tablet">
-        <figcaption><em>Your records</em>Reviewed with you, before anything is booked</figcaption></figure>
+        <figcaption><em>Sus registros</em>Revisados con usted, antes de agendar nada</figcaption></figure>
     </div>
 
     <div class="sfgrid rv">
@@ -1362,88 +1434,90 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
      One feature film, the two orientation films beside it, then the
      treatment films on their own labelled rail. Every tile is a thumbnail
      facade — no YouTube iframe loads until someone asks for one. -->
-<section class="pad bg-deep ph" id="films" style="--ph:url('../aidm-lp-assets/bg/stairs.jpg')">
+<section class="pad bg-deep ph" id="films" style="--ph:url('../../aidm-lp-assets/bg/stairs.jpg')">
   <div class="wrap">
     <div class="sh sh-tight rv">
-      <p class="k">See it for yourself</p>
-      <h2>Films from <em>inside AIDM.</em></h2>
+      <p class="k">V&eacute;alo usted mismo</p>
+      <h2>Videos desde <em>adentro de AIDM.</em></h2>
       <div class="bar"></div>
-      <p>The building, the clinicians and the treatments &mdash; in their own words.</p>
+      <p>El edificio, los cl&iacute;nicos y los tratamientos &mdash; en sus propias palabras. Los videos est&aacute;n en ingl&eacute;s, salvo donde se indique.</p>
     </div>
 
     <div class="fstage rv">
-      <div class="film" data-yt="QNsMOG1B6G8">
-        <span class="tag">Start here</span>
-        <img loading="lazy" src="https://i.ytimg.com/vi/QNsMOG1B6G8/maxresdefault.jpg" alt="">
-        <span class="pl"><i></i></span><b>Welcome to AIDM &mdash; the practice, the people, the teaching model</b></div>
+      <div class="film" data-yt="NtubApnQFt0">
+        <span class="tag">Empiece aqu&iacute;</span>
+        <img loading="lazy" src="https://i.ytimg.com/vi/NtubApnQFt0/maxresdefault.jpg" alt="">
+        <span class="pl"><i></i></span><b>Emergencia dental en AIDM &mdash; qu&eacute; ocurre cuando llega</b></div>
       <div class="fside">
-        <div class="film" data-yt="CEgwotre0h8">
-          <img loading="lazy" src="https://i.ytimg.com/vi/CEgwotre0h8/maxresdefault.jpg" alt="">
-          <span class="pl"><i></i></span><b>Orthodontics at AIDM</b></div>
+        <div class="film" data-yt="OBTJIDJHHTc">
+          <img loading="lazy" src="https://i.ytimg.com/vi/OBTJIDJHHTc/maxresdefault.jpg" alt="">
+          <span class="pl"><i></i></span><b>Qu&eacute; esperar en AIDM &mdash; en espa&ntilde;ol</b></div>
         <div class="film" data-yt="DV9t9dZJauA">
           <img loading="lazy" src="https://i.ytimg.com/vi/DV9t9dZJauA/maxresdefault.jpg" alt="">
-          <span class="pl"><i></i></span><b>Finding us &amp; where to park</b></div>
+          <span class="pl"><i></i></span><b>C&oacute;mo llegar y d&oacute;nde parquear</b></div>
       </div>
     </div>
 
     <div class="flane rv">
-      <p class="flane-h">Treatments explained</p>
+      <p class="flane-h">Lo que hacemos</p>
       <div class="frail">
+        <div class="film" data-yt="QNsMOG1B6G8">
+          <img loading="lazy" src="https://i.ytimg.com/vi/QNsMOG1B6G8/maxresdefault.jpg" alt="">
+          <span class="pl"><i></i></span><b>Bienvenido a AIDM</b></div>
         <div class="film" data-yt="f7HHTbB-qe8">
           <img loading="lazy" src="https://i.ytimg.com/vi/f7HHTbB-qe8/maxresdefault.jpg" alt="">
-          <span class="pl"><i></i></span><b>Comprehensive dental care</b></div>
+          <span class="pl"><i></i></span><b>Atenci&oacute;n dental integral</b></div>
         <div class="film" data-yt="k9PavRdjiyc">
           <img loading="lazy" src="https://i.ytimg.com/vi/k9PavRdjiyc/maxresdefault.jpg" alt="">
-          <span class="pl"><i></i></span><b>Comfort, sedation &amp; anxiety care</b></div>
+          <span class="pl"><i></i></span><b>Comodidad, sedaci&oacute;n y manejo de la ansiedad</b></div>
+        <div class="film" data-yt="CEgwotre0h8">
+          <img loading="lazy" src="https://i.ytimg.com/vi/CEgwotre0h8/maxresdefault.jpg" alt="">
+          <span class="pl"><i></i></span><b>Ortodoncia</b></div>
         <div class="film" data-yt="7Ci0z84BpDI">
           <img loading="lazy" src="https://i.ytimg.com/vi/7Ci0z84BpDI/maxresdefault.jpg" alt="">
-          <span class="pl"><i></i></span><b>Dental implants</b></div>
+          <span class="pl"><i></i></span><b>Implantes dentales</b></div>
         <div class="film" data-yt="cCUQyiHkJxg">
           <img loading="lazy" src="https://i.ytimg.com/vi/cCUQyiHkJxg/maxresdefault.jpg" alt="">
-          <span class="pl"><i></i></span><b>Prosthodontics</b></div>
+          <span class="pl"><i></i></span><b>Prostodoncia</b></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ══════════════ PICTURE-LED FEATURE ROWS ══════════════ -->
-<section class="pad bg-deep2 ph" id="treatment" style="--ph:url('../aidm-lp-assets/bg/ortho-bay.jpg')">
+<section class="pad bg-deep2 ph" id="treatment" style="--ph:url('../../aidm-lp-assets/bg/ortho-bay.jpg')">
   <div class="wrap">
 
     <div class="frow flip rv">
       <div class="fimg-wrap"><figure class="fimg">
-        <img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/07/Ortho-Resident-and-Patient-6-1024x683.jpg" alt="An AIDM clinician reviewing a patient's digital X-rays on a chairside display">
-        <figcaption>Your records reviewed chairside, before anything is booked</figcaption>
+        <img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/02/iStock-2-1024x732.jpg" alt="Un hombre con una bolsa de hielo en la mand&iacute;bula por dolor de muelas">
+        <figcaption>El dolor que lo despierta no es dolor que espere</figcaption>
       </figure></div>
       <div class="fcopy">
-        <p class="k">Why it matters</p>
-        <h2>Straight teeth are the <em>visible part.</em></h2>
-        <p>Aligned teeth are easier to clean, which lowers plaque, cavity and gum-disease risk and protects
-          enamel from uneven wear. Correcting the bite spreads load evenly and reduces strain on the jaw
-          joints — often easing TMJ discomfort and headaches.</p>
+        <p class="k">Por qu&eacute; importa</p>
+        <h2>El dolor dental <em>no se resuelve solo.</em></h2>
+        <p>Un dolor de muelas que ya lleg&oacute; al nervio, un absceso en la ra&iacute;z o una c&uacute;spide fracturada no se resuelven con analg&eacute;sicos &mdash; solo los enmascaran mientras la causa contin&uacute;a. La infecci&oacute;n de un diente puede extenderse al hueso y a los tejidos blandos de la cara, y lo que pudo haber sido una endodoncia termina siendo una extracci&oacute;n.</p>
         <ul>
-          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Clearer speech, more efficient chewing, less muscle tension</li>
-          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Airway-focused options for sleep-related breathing concerns</li>
-          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Long-term retention strategies that hold the result</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>La inflamaci&oacute;n que se extiende hacia el ojo o el piso de la boca es un problema de sala de emergencias, no dental</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Un diente permanente que se sali&oacute; muchas veces se puede reimplantar &mdash; pero la ventana se mide en horas</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Los analg&eacute;sicos y antibi&oacute;ticos manejan s&iacute;ntomas; solo tratar la causa lo termina</li>
         </ul>
       </div>
     </div>
 
     <div class="frow rv">
       <div class="fimg-wrap"><figure class="fimg">
-        <img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/07/Ortho-Team-with-Faculty-Lead-1024x683.jpg" alt="The AIDM orthodontic team photographed together in the treatment bay">
-        <figcaption>The orthodontic team, in the bay they work in</figcaption>
+        <img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/07/a-dentist-examines-a-patient-using-advanced-1024x684.jpeg" alt="Un consultorio de AIDM con un paciente siendo atendido">
+        <figcaption>Centro quir&uacute;rgico, en el mismo edificio</figcaption>
       </figure></div>
       <div class="fcopy">
-        <p class="k">Who treats you</p>
-        <h2>Two clinicians. <em>One fee.</em></h2>
-        <p>AIDM is a teaching institute. Orthodontic residents — already qualified dentists in advanced
-          postgraduate training — treat under the direct supervision of board-certified faculty. You get
-          more clinical attention, not less, and the economics reflect the teaching mission.</p>
+        <p class="k">Por qu&eacute; aqu&iacute;</p>
+        <h2>Todo bajo <em>un mismo techo.</em></h2>
+        <p>La mayor&iacute;a de las cl&iacute;nicas que lo atienden de urgencia luego lo refieren a otro lado para lo que realmente necesita. AIDM tiene endodoncia, cirug&iacute;a oral, periodoncia y prostodoncia en el mismo edificio, seis d&iacute;as a la semana, as&iacute; que el tratamiento que sigue al diagn&oacute;stico se suele agendar de inmediato.</p>
         <ul>
-          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>A second, board-certified opinion built into the plan</li>
-          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Periodontics, endodontics, surgery and paediatrics on site</li>
-          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Fees in writing before anything is scheduled</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Centro quir&uacute;rgico en las instalaciones para extracciones urgentes</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Sedaci&oacute;n y manejo de la ansiedad disponibles para quien los necesite</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Abierto de 7:00 a.m. a 7:00 p.m., de lunes a s&aacute;bado &mdash; antes y despu&eacute;s del trabajo</li>
         </ul>
       </div>
     </div>
@@ -1451,64 +1525,72 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
   </div>
 </section>
 
-<!-- ══════════════ OPTIONS ══════════════ -->
-<section class="pad bg-deep ph" style="--ph:url('../aidm-lp-assets/bg/lobby-lounge.jpg')">
+<!-- ══════════════ PRICE POINTS ══════════════
+     The braces page carries "Orthodontic options for every stage" here. On
+     this page the same band carries this offer's own tiers and the packages
+     next to it, so nobody has to leave to find the number that applies. -->
+<section class="pad bg-deep ph" id="packages" style="--ph:url('../../aidm-lp-assets/bg/lobby-lounge.jpg')">
   <div class="wrap">
     <div class="sh rv">
-      <p class="k">Orthodontic options for every stage</p>
-      <h2>Braces are one of <em>three routes.</em></h2>
+      <p class="k">En qu&eacute; suele resultar una emergencia</p>
+      <h2>La cita es urgente. <em>El precio no es sorpresa.</em></h2>
       <div class="bar"></div>
-      <p>Which one is appropriate depends on your bite, not on your budget — including when the answer is
-        the cheaper option.</p>
+      <p>Una evaluaci&oacute;n de emergencia encuentra la causa; estos son los precios publicados de las tres cosas en las que m&aacute;s a menudo resulta. Usted conoce el costo antes de que se inicie cualquier tratamiento.</p>
     </div>
     <div class="opts">
       <div class="opt rv">
-        <p class="sub">The right care at the right time</p>
-        <h3>Early Orthodontic Treatment</h3>
-        <p class="amt">$2,500<a class="ast" href="#terms" aria-label="See fee disclosures">*</a></p>
-        <p class="strike">&nbsp;</p>
-        <p class="d">Focused orthodontic care for growing children, when early treatment may help guide dental development.</p>
-        <ul><li>Limited early orthodontic treatment</li><li>Routine treatment visits</li><li>Growth-appropriate treatment planning</li><li>Retention when included in the treatment plan</li><li>Care based on the child&rsquo;s stage of dental development</li></ul>
-        <p class="optfine">*Standalone appliances and services outside the approved early-treatment plan are priced separately.</p>
-        <a class="btn btn-ghost" href="#contact">Ask if this fits</a>
+        <p class="sub">Salvar el diente</p>
+        <h3>Endodoncia</h3>
+        <p class="amt">desde $995<a class="ast" href="#terms" aria-label="Ver los t&eacute;rminos de honorarios">*</a></p>
+        <p class="strike">Con corona cer&aacute;mica, $2,300&ndash;$2,500</p>
+        <p class="d">Conserve un diente elegible con tratamiento de conducto, un mu&ntilde;&oacute;n de protecci&oacute;n y una corona cer&aacute;mica.</p>
+        <ul><li>Imagen 3D de campo limitado</li><li>Tratamiento de conducto inicial</li><li>Mu&ntilde;&oacute;n de protecci&oacute;n (paquete con corona)</li><li>Corona de porcelana o cer&aacute;mica (paquete con corona)</li><li>Atenci&oacute;n endod&oacute;ntica y restaurativa coordinada</li></ul>
+        <p class="optfine">*El precio anunciado de $995 aplica a la terapia de conducto est&aacute;ndar. Los casos complejos, incluidos conductos muy calcificados o retratamientos, pueden requerir un honorario ajustado.</p>
+        <a class="btn btn-ghost" href="#contact">Ver precios de endodoncia</a>
       </div>
-      <div class="opt feat rv d1">
-        <span class="opt-flag">First 100 patients</span>
-        <p class="sub">Straighten your smile with confidence</p>
-        <h3>Comprehensive Braces</h3>
-        <p class="amt">$2,950<a class="ast" href="#terms" aria-label="See fee disclosures">*</a></p>
-        <p class="strike">Promotional fee &mdash; first 100 patients</p>
-        <p class="d">A complete fixed-braces package with coordinated orthodontic care from active treatment through standard retention.</p>
-        <ul><li>Comprehensive braces treatment</li><li>Routine orthodontic adjustment visits</li><li>Appliance removal</li><li>Standard orthodontic retention</li><li>Care coordinated throughout treatment</li></ul>
-        <p class="optfine">*Applies to standard, comprehensive traditional bracket cases. Complex cases, clear aligner
-          therapy or phase-one interceptive orthodontics may incur additional fees. A complete clinical evaluation is
-          required to determine case complexity and the final fee.</p>
-        <a class="btn btn-gold" href="#contact">Claim this rate</a>
+      <div class="opt feat rv">
+        <span class="opt-flag">Usted est&aacute; aqu&iacute;</span>
+        <p class="sub">Atenci&oacute;n dental de emergencia</p>
+        <h3>Evaluaci&oacute;n de Emergencia</h3>
+        <p class="amt">Atenci&oacute;n hoy<a class="ast" href="#terms" aria-label="Ver los t&eacute;rminos de honorarios">*</a></p>
+        <p class="strike">Enfocada en el problema &mdash; sin precio publicado</p>
+        <p class="d">La cita en s&iacute;: averiguar qu&eacute; causa el dolor y resolver lo que se pueda resolver hoy con seguridad.</p>
+        <ul><li>Atenci&oacute;n el mismo d&iacute;a</li><li>Abierto de lunes a s&aacute;bado, 7 a.m. a 7 p.m.</li><li>Evaluaci&oacute;n enfocada en el problema</li><li>Radiograf&iacute;as necesarias para el diagn&oacute;stico</li><li>Centro quir&uacute;rgico en las instalaciones</li></ul>
+        <p class="optfine">*Las citas de emergencia se priorizan cl&iacute;nicamente y est&aacute;n sujetas a disponibilidad. Cualquier tratamiento que resulte se cotiza antes de iniciarse.</p>
+        <a class="btn btn-gold" href="#contact">Solicitar cita para hoy</a>
       </div>
-      <div class="opt rv d2">
-        <p class="sub">Clear aligners. Confident smile.</p>
-        <h3>Invisalign® Clear Aligners</h3>
-        <p class="amt">$3,900<a class="ast" href="#terms" aria-label="See fee disclosures">*</a></p>
-        <p class="strike">&nbsp;</p>
-        <p class="d">A discreet, removable option personalised to your smile and supported by routine professional monitoring.</p>
-        <ul><li>Personalised clear-aligner treatment</li><li>Standard aligner laboratory materials</li><li>Routine orthodontic visits</li><li>Treatment completion and appliance removal</li><li>Standard orthodontic retention</li></ul>
-        <p class="optfine">*Applies to Invisalign&reg; clear-aligner cases. Complex cases, retainers or phase-one
-          interceptive orthodontics may incur additional fees. A complete clinical evaluation is required to
-          determine case complexity and the final fee.</p>
-        <a class="btn btn-ghost" href="#contact">Compare with braces</a>
+      <div class="opt rv">
+        <p class="sub">Cuando el diente no se puede conservar</p>
+        <h3>Extracciones</h3>
+        <p class="amt">desde $200<a class="ast" href="#terms" aria-label="Ver los t&eacute;rminos de honorarios">*</a></p>
+        <p class="strike">Por diente, seg&uacute;n complejidad quir&uacute;rgica</p>
+        <p class="d">Precios claros de extracci&oacute;n seg&uacute;n la posici&oacute;n y la complejidad quir&uacute;rgica de cada diente.</p>
+        <ul><li>Extracci&oacute;n simple de diente erupcionado &mdash; $200 por diente</li><li>Extracci&oacute;n quir&uacute;rgica de diente erupcionado &mdash; $275 por diente</li><li>Retenci&oacute;n en tejido blando &mdash; $300 por diente</li><li>Retenci&oacute;n &oacute;sea parcial &mdash; $375 por diente</li><li>Retenci&oacute;n &oacute;sea completa &mdash; $450 por diente</li></ul>
+        <p class="optfine">*El paquete cubre &uacute;nicamente las extracciones. La sedaci&oacute;n y la anestesia se cobran por separado.</p>
+        <a class="btn btn-ghost" href="#contact">Ver precios de extracci&oacute;n</a>
       </div>
+    </div>
+    <div class="alsobox rv">
+      <p class="also-h">Tambi&eacute;n &uacute;til si es nuevo en AIDM</p>
+      <ul class="also">
+        <li><b>Especial para Pacientes Nuevos</b><span>Examen dental completo y radiograf&iacute;as seg&uacute;n sea necesario, una vez sin dolor</span><i>$100</i></li>
+        <li><b>Comodidad y sedaci&oacute;n</b><span>Sedaci&oacute;n y manejo de la ansiedad para quien los necesite, cotizados por separado</span><i>En evaluaci&oacute;n</i></li>
+      </ul>
+      <p class="optfine" style="margin:1.1rem 0 0">El precio del paquete aplica &uacute;nicamente a los servicios
+        expresamente listados. Las recomendaciones finales, la elegibilidad y los honorarios se determinan tras una
+        evaluaci&oacute;n cl&iacute;nica completa.</p>
     </div>
   </div>
 </section>
 
 <!-- ══════════════ REVIEWS ══════════════ -->
-<section class="pad bg-abyss ph" style="--ph:url('../aidm-lp-assets/bg/walkway.jpg')">
+<section class="pad bg-abyss ph" style="--ph:url('../../aidm-lp-assets/bg/walkway.jpg')">
   <div class="wrap">
     <div class="sh rv">
-      <p class="k">Patients, in their words</p>
-      <h2>&ldquo;Not your regular <em>dental experience.</em>&rdquo;</h2>
+      <p class="k">Pacientes, en sus propias palabras</p>
+      <h2>&ldquo;No es la experiencia dental <em>de siempre.</em>&rdquo;</h2>
       <div class="bar"></div>
-      <p>Straight from AIDM&rsquo;s Google reviews &mdash; the newest ones first.</p>
+      <p>Directamente de las rese&ntilde;as de Google de AIDM &mdash; las m&aacute;s recientes primero. Las rese&ntilde;as se muestran en su idioma original.</p>
     </div>
     <div class="revs">
       <div class="rev rv fresh"><div class="st">★★★★★<em>Google</em></div><p>&ldquo;Beautiful building. Impressive to have everything under one roof. It&rsquo;s so frustrating to have to drive to different locations when getting dental work done. Seems like they have the best technology too.&rdquo;</p><div class="who">Rusty Curtis<span>4 days ago</span></div></div>
@@ -1525,70 +1607,69 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 </section>
 
 <!-- ══════════════ FAQ ══════════════ -->
-<section class="pad bg-deep2 ph" id="faq" style="--ph:url('../aidm-lp-assets/bg/lobby-03.jpg')">
+<section class="pad bg-deep2 ph" id="faq" style="--ph:url('../../aidm-lp-assets/bg/lobby-03.jpg')">
   <div class="wrap">
-    <div class="sh rv"><p class="k">Before you ask</p><h2>Frequently asked <em>questions.</em></h2><div class="bar"></div></div>
+    <div class="sh rv"><p class="k">Antes de que pregunte</p><h2>Preguntas <em>frecuentes.</em></h2><div class="bar"></div></div>
     <div class="faq rv">
-      <details open><summary>Will a student be treating me?</summary><div class="a">You will be treated by a licensed dentist. AIDM&rsquo;s orthodontic residents are qualified dentists undertaking advanced postgraduate training, and every plan is reviewed by board-certified faculty who teach the specialty. That two-clinician model is precisely why the fee is what it is.</div></details>
-      <details><summary>Why is the braces package $2,950?</summary><div class="a">$2,950 is a promotional fee for the first 100 eligible orthodontic patients, and it reflects AIDM&rsquo;s teaching model &mdash; residents in advanced postgraduate training treating under board-certified faculty supervision. It applies to patients who pay the treatment fee in full and cannot be combined with insurance benefits, membership discounts, financing promotions or other offers. Patients using a payment plan or financing are charged AIDM&rsquo;s standard treatment fees.</div></details>
-      <details><summary>What is included in the complimentary evaluation?</summary><div class="a">A personalised orthodontic evaluation with the team, plus the records needed to plan your case: panoramic imaging, cephalometric imaging and analysis, clinical photographs and a digital 3D intraoral scan, each when indicated. Diagnostic records are taken only when clinically appropriate and actually needed. There is no charge and no referral is required.</div></details>
-      <details><summary>Can I use insurance or a payment plan instead?</summary><div class="a">Yes — AIDM accepts many PPO plans, and financing and payment options may be available subject to approval. They just cannot be stacked on top of the $2,950 promotional rate. At your evaluation the team will show you both routes side by side so you can pick whichever leaves you better off.</div></details>
-      <details><summary>How long does treatment take?</summary><div class="a">Most cases run 12 to 24 months. Minor corrections can be shorter, and complex cases can take longer — you will be given a realistic range at your evaluation rather than an average.</div></details>
-      <details><summary>Am I too old for braces?</summary><div class="a">No. Orthodontics is effective for children, teens and adults alike. Treatment can also be combined with cosmetic, restorative or surgical work, which is coordinated across specialties in the same building.</div></details>
-      <details><summary>Is retention included, or is that extra later?</summary><div class="a">Standard orthodontic retention is included in the package, as is appliance removal. What is not included is a <em>replacement</em> appliance or retainer — if one is lost or broken, that is charged separately.</div></details>
-      <details><summary>Do I need a referral, and where do I park?</summary><div class="a">No referral is needed. There is a garage immediately next door at 1401 Philomena Street and parking is free. The building is in Mueller, minutes from I-35 and 51st Street.</div></details>
+      <details open><summary>Tengo dolor ahora mismo. &iquest;Qu&eacute; hago?</summary><div class="a">Llame al <a href="tel:+17374342436">(737) 434-2436</a>. Llamar es m&aacute;s r&aacute;pido que cualquier formulario &mdash; priorizamos por tel&eacute;fono y le damos el espacio m&aacute;s pronto que sea cl&iacute;nicamente apropiado. Abrimos de lunes a s&aacute;bado, de 7:00 a.m. a 7:00 p.m. Si tiene inflamaci&oacute;n facial que se extiende, dificultad para respirar o tragar, o sangrado no controlado, acuda a una sala de emergencias.</div></details>
+      <details><summary>&iquest;Cu&aacute;nto cuesta una cita de emergencia?</summary><div class="a">No hay un precio &uacute;nico publicado, porque una emergencia se cobra seg&uacute;n lo que resulte ser. Usted recibe una evaluaci&oacute;n enfocada en el problema y las radiograf&iacute;as necesarias para diagnosticarlo, y el costo de cualquier tratamiento se le presenta antes de iniciarlo. Los tres desenlaces m&aacute;s comunes tienen precios publicados &mdash; endodoncia desde $995, extracci&oacute;n desde $200 por diente.</div></details>
+      <details><summary>&iquest;De verdad lo pueden tratar el mismo d&iacute;a?</summary><div class="a">Todo lo que se pueda hacer con seguridad el mismo d&iacute;a se hace el mismo d&iacute;a. AIDM tiene centro quir&uacute;rgico en las instalaciones, as&iacute; que una extracci&oacute;n urgente no se convierte en una referencia a otro lugar, y endodoncia, periodoncia y prostodoncia est&aacute;n en el mismo edificio.</div></details>
+      <details><summary>&iquest;Atienden en espa&ntilde;ol?</summary><div class="a">S&iacute;. Puede llamar y agendar en espa&ntilde;ol, y d&iacute;galo al llamar para que le asignemos personal que hable espa&ntilde;ol en su cita.</div></details>
+      <details><summary>No tengo seguro dental. &iquest;Me pueden atender?</summary><div class="a">S&iacute;. AIDM atiende pacientes de pago directo y publica precios por paquete precisamente para que quien no tiene seguro pueda ver la cifra antes de comprometerse. Si s&iacute; tiene un plan, se aceptan muchos PPO.</div></details>
+      <details><summary>Se me sali&oacute; un diente. &iquest;Qu&eacute; hago ahora?</summary><div class="a">T&oacute;melo por la corona, nunca por la ra&iacute;z. Si est&aacute; limpio, intente colocarlo de vuelta en su lugar y muerda suavemente sobre un pa&ntilde;o limpio; si no puede, gu&aacute;rdelo en leche o en su propia saliva &mdash; nunca en agua. Luego ll&aacute;menos de inmediato. La probabilidad de salvarlo baja mucho con cada hora que pasa.</div></details>
+      <details><summary>Tengo mucha ansiedad al dentista.</summary><div class="a">D&iacute;galo al llamar. La comodidad, la sedaci&oacute;n y el manejo de la ansiedad son una de las fortalezas reconocidas de AIDM y se pueden coordinar tambi&eacute;n para tratamiento de emergencia. La sedaci&oacute;n y la anestesia se cobran por separado del tratamiento.</div></details>
+      <details><summary>&iquest;Necesito referencia y d&oacute;nde puedo parquear?</summary><div class="a">No se necesita referencia. Hay parqueo gratuito en el garaje justo al lado, en 1401 Philomena Street, Mueller &mdash; a minutos de la I-35 y la calle 51.</div></details>
     </div>
   </div>
 </section>
 
 <!-- ══════════════ CONTACT ══════════════ -->
-<section class="pad bg-deep ph" id="contact" style="--ph:url('../aidm-lp-assets/bg/ext-04.jpg')">
+<section class="pad bg-deep ph" id="contact" style="--ph:url('../../aidm-lp-assets/bg/ext-04.jpg')">
   <div class="wrap">
     <div class="sh rv">
-      <p class="k">Limited to the first 100 orthodontic patients</p>
-      <h2>Ready for a radiant smile? <em>Let&rsquo;s start today.</em></h2>
+      <p class="k">Abierto de lunes a s&aacute;bado, 7 a.m. a 7 p.m.</p>
+      <h2>&iquest;Tiene dolor? <em>Ll&aacute;menos primero.</em></h2>
       <div class="bar"></div>
-      <p>The evaluation is complimentary and commits you to nothing. We will call you back to confirm a
-        time — usually the same working day.</p>
+      <p>El <a href="tel:+17374342436" style="color:#4fc3f7">(737) 434-2436</a> es la v&iacute;a m&aacute;s r&aacute;pida para conseguir un espacio hoy. Si prefiere que le llamemos, d&eacute;jenos sus datos. Atendemos en espa&ntilde;ol.</p>
     </div>
     <div class="cgrid">
       <div class="cbox rv">
         <form id="lpForm" novalidate>
           <div class="fgrid">
-            <div class="fld"><label for="fn">First name</label><input id="fn" name="first_name" type="text" autocomplete="given-name" required></div>
-            <div class="fld"><label for="ln">Last name</label><input id="ln" name="last_name" type="text" autocomplete="family-name" required></div>
-            <div class="fld"><label for="ph">Mobile number</label><input id="ph" name="phone" type="tel" autocomplete="tel" required></div>
-            <div class="fld"><label for="em">Email</label><input id="em" name="email" type="email" autocomplete="email" required></div>
-            <div class="fld full"><label for="who">Who is the treatment for?</label>
+            <div class="fld"><label for="fn">Nombre</label><input id="fn" name="first_name" type="text" autocomplete="given-name" required></div>
+            <div class="fld"><label for="ln">Apellido</label><input id="ln" name="last_name" type="text" autocomplete="family-name" required></div>
+            <div class="fld"><label for="ph">Tel&eacute;fono m&oacute;vil</label><input id="ph" name="phone" type="tel" autocomplete="tel" required></div>
+            <div class="fld"><label for="em">Correo electr&oacute;nico</label><input id="em" name="email" type="email" autocomplete="email" required></div>
+            <div class="fld full"><label for="who">&iquest;Qui&eacute;n necesita atenci&oacute;n?</label>
               <select id="who" name="patient_type">
-                <option value="">Please choose…</option>
-                <option>Myself — adult</option>
-                <option>My teenager</option>
-                <option>My child</option>
-                <option>More than one family member</option>
+                <option value="">Seleccione…</option>
+                <option>Para mí</option>
+                <option>Para mi hijo o hija</option>
+                <option>Para mi pareja o madre/padre</option>
+                <option>Para otra persona</option>
               </select></div>
-            <div class="fld full"><label for="msg">Message <span style="text-transform:none;letter-spacing:0;font-weight:400">(optional)</span></label>
-              <textarea id="msg" name="notes" placeholder="Preferred days, previous orthodontic treatment, concerns…"></textarea></div>
+            <div class="fld full"><label for="msg">Mensaje <span style="text-transform:none;letter-spacing:0;font-weight:400">(opcional)</span></label>
+              <textarea id="msg" name="notes" placeholder="Qué le duele, desde cuándo, y si hay inflamación…"></textarea></div>
           </div>
-          <input type="hidden" name="offer" value="ortho-comprehensive-braces-2950">
+          <input type="hidden" name="offer" value="emergency-dental-same-day-es">
           <input type="hidden" name="gclid" id="f_gclid">
           <input type="hidden" name="wbraid" id="f_wbraid">
           <input type="hidden" name="utm_source" id="f_utm_source">
           <input type="hidden" name="utm_medium" id="f_utm_medium">
           <input type="hidden" name="utm_campaign" id="f_utm_campaign">
-          <button class="btn btn-sky btn-lg" type="submit">Book my free evaluation</button>
+          <button class="btn btn-sky btn-lg" type="submit">Ll&aacute;menme para una cita hoy</button>
         </form>
-        <p class="fnote">By submitting you agree to be contacted about your enquiry. Promotional pricing is
-          subject to clinical qualification determined at your evaluation.</p>
+        <p class="fnote">Al enviar este formulario, usted acepta que lo contactemos sobre su solicitud. Los precios
+          promocionales est&aacute;n sujetos a la evaluaci&oacute;n cl&iacute;nica correspondiente.</p>
       </div>
 
       <div class="mapbox rv d1">
-        <iframe title="Map to Austin Institute of Dental Medicine, 1401 Philomena Street, Austin TX 78723"
+        <iframe title="Mapa al Austin Institute of Dental Medicine, 1401 Philomena Street, Austin TX 78723"
                 loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                 src="https://maps.google.com/maps?q=1401%20Philomena%20St%2C%20Austin%2C%20TX%2078723&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
         <div class="mapinfo">
           <b>Austin Institute of Dental Medicine</b>
-          <span>1401 Philomena Street, Austin, TX 78723 · Free parking in the garage next door<br>
+          <span>1401 Philomena Street, Austin, TX 78723 · Estacionamiento gratuito en el garaje de al lado<br>
           <a href="tel:+17374342436">(737) 434-2436</a> · <a href="mailto:hello@aidm.org">hello@aidm.org</a></span>
         </div>
       </div>
@@ -1602,50 +1683,63 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
     <div class="ft-top">
       <div>
         <img class="ft-logo" src="https://aidm.org/wp-content/uploads/2025/09/Full-Horizontal-Lock-up-Austin-Institute-of-Dental-Medicine-Main-Colorway-RGB-scaled.png" alt="Austin Institute of Dental Medicine">
-        <p style="margin:0;max-width:34ch;line-height:1.62">A teaching dental institute in Mueller, Austin — every specialty under one roof, six days a week.</p>
+        <p style="margin:0;max-width:34ch;line-height:1.62">Un instituto dental docente en Mueller, Austin — todas las especialidades bajo un mismo techo, seis d&iacute;as a la semana.</p>
       </div>
-      <div><h4>Visit</h4><ul><li>1401 Philomena Street<br>Austin, TX 78723</li><li>Free parking next door</li><li>Monday – Saturday</li></ul></div>
-      <div><h4>Contact</h4><ul><li><a href="tel:+17374342436">(737) 434-2436</a></li><li><a href="mailto:hello@aidm.org">hello@aidm.org</a></li><li><a href="https://aidm.org">aidm.org</a></li></ul></div>
+      <div><h4>Vis&iacute;tenos</h4><ul><li>1401 Philomena Street<br>Austin, TX 78723</li><li>Estacionamiento gratuito al lado</li><li>Lunes a s&aacute;bado</li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a href="tel:+17374342436">(737) 434-2436</a></li><li><a href="mailto:hello@aidm.org">hello@aidm.org</a></li><li><a href="https://aidm.org">aidm.org</a></li></ul></div>
     </div>
 
     <div class="terms" id="terms">
-      <div><b>The offer</b>Comprehensive braces at $2,950 for the first 100 eligible orthodontic patients.</div>
-      <div><b>Who it is for</b>Adolescent and adult patients who need comprehensive orthodontic correction. Suitability is confirmed at your evaluation.</div>
-      <div><b>Eligibility</b>Applies only to qualifying patients who pay the treatment fee in full. Cannot be combined with financing, insurance benefits, membership discounts or other promotional offers.</div>
-      <div><b>Validity</b>Advertised package fees are minimum fees available to eligible self-pay patients from 1 July 2026 through 1 October 2026, unless an earlier stated limit applies.</div>
-      <div><b>Important to know</b>Replacement appliances or retainers, surgical procedures, and services outside standard comprehensive treatment are additional — as are additional diagnostics, laboratory fees, and sedation or anaesthesia.</div>
+      <div><b>La oferta</b>Una evaluaci&oacute;n dental de emergencia el mismo d&iacute;a, enfocada en el problema, con radiograf&iacute;as seg&uacute;n sean necesarias para el diagn&oacute;stico.</div>
+      <div><b>Para qui&eacute;n es</b>Pacientes con un problema dental urgente. Las citas se priorizan cl&iacute;nicamente y est&aacute;n sujetas a disponibilidad.</div>
+      <div><b>Precio</b>No hay precio publicado para la evaluaci&oacute;n de emergencia. El costo de cualquier tratamiento que resulte se presenta antes de iniciarlo.</div>
+      <div><b>Qu&eacute; no incluye</b>El tratamiento restaurativo, quir&uacute;rgico y de especialidad derivado de la evaluaci&oacute;n, los honorarios de laboratorio, la sedaci&oacute;n y la anestesia son adicionales.</div>
+      <div><b>Importante</b>Si tiene inflamaci&oacute;n facial que se extiende, dificultad para respirar o tragar, o sangrado no controlado, acuda a una sala de emergencias en lugar de agendar una cita dental.</div>
     </div>
 
     <div class="legal">
-      <p><b>Pricing.</b> Package eligibility, clinical recommendations and final pricing are confirmed after an
-        appropriate clinical evaluation. Fees may increase depending on the treatment required. Package pricing
-        applies only to the services specifically identified and may not be billed to or combined with dental
-        insurance benefits, membership pricing or other discounts unless expressly stated. Patients using payment
-        plans or financing are subject to AIDM&rsquo;s standard treatment fees. Financing may be available subject
-        to approval and applicable terms. Individual treatment results vary.</p>
-      <p><b>Who treats you.</b> AIDM is a premier educational institute. Treatment under this promotional offer may
-        be provided by licensed dental residents participating in advanced training programmes under the direct
-        supervision of our licensed clinical faculty. All promotional pricing is subject to clinical qualification
-        and medical clearance as determined by the attending doctor. AIDM reserves the right to withdraw or change
-        this offer at any time.</p>
-      <p><b>Provider.</b> Dental services are provided by Philomena Street PLLC, supported by AIDM. Services at the
-        Austin Institute of Dental Medicine are provided by licensed General Dentists, Residents and Faculty Members.
-        Terms such as &ldquo;Advanced,&rdquo; &ldquo;Complex&rdquo; or &ldquo;Institute&rdquo; refer to the scope of
-        training and services offered and do not imply a specific specialisation unless the provider is explicitly
-        designated as a Specialist recognised by the American Dental Association (ADA). Invisalign® is a registered
-        trademark of Align Technology, Inc.</p>
-      <p style="color:#4a6d87">© 2026 Austin Institute of Dental Medicine. All rights reserved.</p>
+      <p><b>Precios.</b> Las ofertas promocionales, los precios por paquete y los servicios incluidos est&aacute;n
+        sujetos a cambio, modificaci&oacute;n o descontinuaci&oacute;n en cualquier momento y sin aviso previo. Las
+        ofertas est&aacute;n disponibles por tiempo limitado y pueden retirarse a discreci&oacute;n exclusiva de Austin
+        Institute of Dental Medicine. Las promociones son v&aacute;lidas &uacute;nicamente para pacientes elegibles que
+        cumplan los criterios cl&iacute;nicos determinados por el dentista o especialista tratante tras un examen
+        apropiado. El precio del paquete aplica &uacute;nicamente a los servicios expresamente listados y no se puede
+        combinar con beneficios de seguro, precios de membres&iacute;a, promociones de financiamiento u otros
+        descuentos, salvo indicaci&oacute;n expresa. Los tratamientos adicionales, procedimientos de diagn&oacute;stico,
+        servicios de especialidad, honorarios de laboratorio, sedaci&oacute;n u otros procedimientos cl&iacute;nicamente
+        necesarios pueden generar cargos adicionales. Las recomendaciones finales de tratamiento, la elegibilidad y los
+        honorarios se determinan tras una evaluaci&oacute;n cl&iacute;nica completa. AIDM se reserva el derecho de
+        modificar precios, requisitos de elegibilidad, contenido de los paquetes, periodos promocionales y
+        t&eacute;rminos y condiciones en cualquier momento y sin aviso.</p>
+      <p><b>Su derecho a cancelar (Texas).</b> El paciente y cualquier otra persona responsable del pago tiene derecho a
+        negarse a pagar, cancelar el pago, o ser reembolsado por el pago de cualquier otro servicio, examen o
+        tratamiento realizado como resultado de, y dentro de las 72 horas siguientes a, responder al anuncio del
+        servicio, examen o tratamiento gratuito, con descuento o de tarifa reducida.</p>
+      <p><b>Qui&eacute;n lo atiende.</b> AIDM es un instituto educativo de primer nivel. El tratamiento bajo estas
+        ofertas promocionales puede ser proporcionado por residentes dentales con licencia que participan en programas
+        de formaci&oacute;n avanzada, bajo la supervisi&oacute;n directa de nuestros docentes cl&iacute;nicos con
+        licencia. Todos los precios promocionales est&aacute;n sujetos a la calificaci&oacute;n cl&iacute;nica y a la
+        autorizaci&oacute;n m&eacute;dica que determine el doctor tratante.</p>
+      <p><b>Proveedor.</b> Los servicios dentales son proporcionados por Philomena Street PLLC, con el apoyo de AIDM.
+        Los servicios en el Austin Institute of Dental Medicine son proporcionados por Dentistas Generales, Residentes y
+        Docentes con licencia. T&eacute;rminos como &ldquo;Avanzado&rdquo;, &ldquo;Complejo&rdquo; o
+        &ldquo;Instituto&rdquo; se refieren al alcance de la formaci&oacute;n y de los servicios ofrecidos y no implican
+        una especializaci&oacute;n espec&iacute;fica, salvo que el proveedor est&eacute; expresamente designado como
+        Especialista reconocido por la American Dental Association (ADA). Esta p&aacute;gina es una traducci&oacute;n de
+        cortes&iacute;a; en caso de discrepancia, prevalece la versi&oacute;n en ingl&eacute;s de los t&eacute;rminos
+        publicados por Austin Institute of Dental Medicine.</p>
+      <p style="color:#4a6d87">© 2026 Austin Institute of Dental Medicine. Todos los derechos reservados.</p>
     </div>
   </div>
 </footer>
 
 <div class="mbar">
-  <a class="btn btn-ghost" href="tel:+17374342436">Call</a>
-  <a class="btn btn-sky" href="#contact" data-book>Book Free Eval</a>
+  <a class="btn btn-ghost" href="tel:+17374342436">Llamar</a>
+  <a class="btn btn-sky" href="#contact" data-book>Atenci&oacute;n Hoy</a>
 </div>
 
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Media viewer">
-  <div class="lb-in"><button class="lb-x" id="lbx" aria-label="Close">✕</button><div id="lbslot"></div></div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Visor de medios">
+  <div class="lb-in"><button class="lb-x" id="lbx" aria-label="Cerrar">✕</button><div id="lbslot"></div></div>
 </div>
 
 <script>
@@ -1664,8 +1758,8 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
     new FormData(form).forEach(function(v,k){ data[k] = v; });
     data.page         = location.href;
     data.submitted_at = new Date().toISOString();
-    data.form         = form.id === 'cardForm' ? 'hero offer card' : 'contact section';
-    data._subject     = 'AIDM braces LP — new enquiry from ' +
+    data.form         = form.id === 'cardForm' ? 'hero offer card (ES)' : 'contact section (ES)';
+    data._subject     = 'AIDM es/emergencia LP — new enquiry from ' +
                         ((data.first_name||'') + ' ' + (data.last_name||'')).trim();
     return data;
   }
@@ -1686,8 +1780,8 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
   function leadError(form){
     var err = form.querySelector('.cf-err');
     if (!err) { err = document.createElement('p'); err.className = 'cf-err'; form.appendChild(err); }
-    err.innerHTML = 'That did not go through. Please call ' +
-      '<a href="tel:+17374342436">(737) 434-2436</a> and we will book you in.';
+    err.innerHTML = 'No se pudo enviar. Por favor llame al ' +
+      '<a href="tel:+17374342436">(737) 434-2436</a> y con gusto lo agendamos.';
   }
 
   /* ── sticky nav ─────────────────────────────────────────────────────── */
@@ -1750,35 +1844,9 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
     }
   }
 
-  /* ── live counter to the offer deadline ──────────────────────────────
-     1 Oct 2026, end of day Austin time — the last day of the validity window
-     stated in the offer terms. Written with an explicit -05:00 offset (Austin
-     is on CDT in October) so the deadline is the same instant for every
-     visitor regardless of their own timezone. */
-  var cdEnd = new Date('2026-10-01T23:59:59-05:00').getTime();
-  var cdD = document.getElementById('cdD'), cdH = document.getElementById('cdH'),
-      cdM = document.getElementById('cdM'), cdS = document.getElementById('cdS'),
-      cdBox = document.getElementById('cd');
-
-  if (cdD && cdH && cdM && cdS) {
-    var pad = function(n){ return n < 10 ? '0' + n : '' + n; };
-    var tick = function(){
-      var left = cdEnd - Date.now();
-      if (left <= 0) {
-        cdBox.classList.add('over');
-        cdD.textContent = cdH.textContent = cdM.textContent = cdS.textContent = '—';
-        clearInterval(cdTimer);
-        return;
-      }
-      var s = Math.floor(left / 1000);
-      cdD.textContent = Math.floor(s / 86400);
-      cdH.textContent = pad(Math.floor(s / 3600) % 24);
-      cdM.textContent = pad(Math.floor(s / 60) % 60);
-      cdS.textContent = pad(s % 60);
-    };
-    var cdTimer = setInterval(tick, 1000);
-    tick();
-  }
+  /* ── no countdown on this page ───────────────────────────────────────
+     The braces offer expires; this one carries no stated end date, so the
+     four cells in the card are static facts and nothing here ticks. */
 
   /* ── marquees pause off-screen ──────────────────────────────────────── */
   if ('IntersectionObserver' in window) {
@@ -1811,7 +1879,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
       var vid = v.getAttribute('data-yt');
       if (!vid) return;
       openLb('<iframe src="https://www.youtube-nocookie.com/embed/' + vid +
-        '?autoplay=1&rel=0&modestbranding=1" title="AIDM film" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>', false);
+        '?autoplay=1&rel=0&modestbranding=1" title="Video de AIDM" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>', false);
     });
   });
 
@@ -1824,7 +1892,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
       scr.dataset.on = '1';
       scr.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' +
         scr.getAttribute('data-yt') + '?autoplay=1&rel=0&modestbranding=1" ' +
-        'title="Orthodontics at AIDM" allow="accelerometer; autoplay; encrypted-media; ' +
+        'title="Emergencia dental - atenci&oacute;n hoy" allow="accelerometer; autoplay; encrypted-media; ' +
         'picture-in-picture" allowfullscreen></iframe>';
     };
     scr.addEventListener('click', playScr);
@@ -1985,7 +2053,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
       if (bad) return;
 
       var cbtn = cardForm.querySelector('button[type=submit]'), clabel = cbtn.textContent;
-      cbtn.disabled = true; cbtn.textContent = 'Sending…';
+      cbtn.disabled = true; cbtn.textContent = 'Enviando…';
       submitLead(cardForm, function(ok){
         cbtn.disabled = false; cbtn.textContent = clabel;
         if (!ok) { leadError(cardForm); return; }
@@ -2021,10 +2089,10 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
       });
       if (bad.length) { bad[0].focus(); return; }
       var btn = form.querySelector('button[type=submit]'), label = btn.textContent;
-      btn.disabled = true; btn.textContent = 'Sending…';
+      btn.disabled = true; btn.textContent = 'Enviando…';
       submitLead(form, function(ok){
         if (!ok) { btn.disabled = false; btn.textContent = label; leadError(form); return; }
-        btn.textContent = 'Thank you — we will call you shortly ✓';
+        btn.textContent = 'Gracias — le llamaremos en breve ✓';
         btn.style.background = 'linear-gradient(135deg,#5fd39a,#2f9e5f)';
         btn.disabled = true;
         form.reset();
