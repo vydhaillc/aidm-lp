@@ -68,6 +68,8 @@ CHROME = [
  ('<label for="ln">Last name</label>', '<label for="ln">Apellido</label>'),
  ('<label for="ph">Mobile number</label>', '<label for="ph">Tel&eacute;fono m&oacute;vil</label>'),
  ('<label for="em">Email</label>', '<label for="em">Correo electr&oacute;nico</label>'),
+ ('<label for="cf_msg">Message <span style="text-transform:none;letter-spacing:0;font-weight:400">(optional)</span></label>',
+  '<label for="cf_msg">Mensaje <span style="text-transform:none;letter-spacing:0;font-weight:400">(opcional)</span></label>'),
  ('<label for="msg">Message <span style="text-transform:none;letter-spacing:0;font-weight:400">(optional)</span></label>',
   '<label for="msg">Mensaje <span style="text-transform:none;letter-spacing:0;font-weight:400">(opcional)</span></label>'),
  ('<option value="">Please choose…</option>', '<option value="">Seleccione…</option>'),

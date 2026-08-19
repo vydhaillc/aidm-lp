@@ -396,6 +396,8 @@ def build(o):
         '                <option value="">Please choose…</option>\n' +
         '\n'.join('                <option>' + x + '</option>' for x in o['who2']) +
         '\n              </select></div>', 'ctwho')
+    sub('<textarea id="cf_msg" name="notes" placeholder="Preferred days, previous orthodontic treatment, concerns…"></textarea>',
+        '<textarea id="cf_msg" name="notes" placeholder="' + o['placeholder'] + '"></textarea>', 'cfmsg')
     sub('<textarea id="msg" name="notes" placeholder="Preferred days, previous orthodontic treatment, concerns…"></textarea>',
         '<textarea id="msg" name="notes" placeholder="' + o['placeholder'] + '"></textarea>', 'ctmsg')
     sub('<input type="hidden" name="offer" value="ortho-comprehensive-braces-2950">',

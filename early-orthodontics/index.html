@@ -450,6 +450,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 .card-form .fld{margin-bottom:.6rem}
 .card-form .fld label{font-size:.62rem}
 .card-form .fld input,.card-form .fld select{padding:.62rem .7rem;font-size:.92rem}
+.card-form .fld textarea{padding:.62rem .7rem;font-size:.92rem;min-height:62px}
 .card-form .btn{margin-top:.35rem}
 .cf-fine{margin:.6rem 0 0;text-align:center;font-size:.72rem;color:var(--dim)}
 .cf-err{margin:.7rem 0 0;padding:.6rem .8rem;border-radius:9px;font-size:.82rem;line-height:1.5;
@@ -1287,6 +1288,8 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
                  <select id="cf_who" name="patient_type">
                    <option>My child</option><option>My teenager</option><option>More than one child</option><option>Someone else</option>
                  </select></div>
+               <div class="fld"><label for="cf_msg">Message <span style="text-transform:none;letter-spacing:0;font-weight:400">(optional)</span></label>
+                 <textarea id="cf_msg" name="notes" placeholder="Your child’s age, preferred days, anything a dentist has already flagged…"></textarea></div>
                <input type="hidden" name="offer" value="early-orthodontic-treatment-2500">
                <input type="hidden" name="gclid" id="cf_gclid">
                <input type="hidden" name="wbraid" id="cf_wbraid">
