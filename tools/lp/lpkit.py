@@ -103,7 +103,7 @@ def build(o):
 
     # ── offer card ──────────────────────────────────────────────────────────
     cut('           <div class="card-face card-offer">',
-        '            <p class="card-fine">Evaluation complimentary &mdash; no obligation to start. <a href="#terms">*Fee&nbsp;terms</a></p>\n           </div>',
+        '            <p class="card-fine">Evaluation complimentary &mdash; no obligation to start. <a href="#terms">*Terms &amp; Conditions</a></p>\n           </div>',
 '''           <div class="card-face card-offer">
             <div class="rib">
               <span class="rib-tail rib-l" aria-hidden="true"></span>
@@ -135,7 +135,7 @@ def build(o):
             </div>
 
             <button class="btn btn-sky" type="button" id="cardBook">''' + o['cardcta'] + '''</button>
-            <p class="card-fine">''' + o['cardfine'] + ''' <a href="#terms">*Fee&nbsp;terms</a></p>
+            <p class="card-fine">''' + o['cardfine'] + ''' <a href="#terms">*Terms &amp; Conditions</a></p>
            </div>''', 'card')
 
     sub('<p class="cf-k">Complimentary evaluation</p>', '<p class="cf-k">' + o['cfk'] + '</p>', 'cfk')
@@ -460,7 +460,7 @@ def build(o):
     up = '../' * (o['slug'].count('/') + 1)
     if up != '../':
         s2['v'] = s2['v'].replace('../aidm-lp-assets/', up + 'aidm-lp-assets/')
-        s2['v'] = s2['v'].replace('../assets/cases/', up + 'assets/cases/')
+        s2['v'] = s2['v'].replace('../assets/', up + 'assets/')
 
     # literal swaps for the chrome the template hard-codes (nav, form labels,
     # the standing section headings) — how the Spanish pages get translated

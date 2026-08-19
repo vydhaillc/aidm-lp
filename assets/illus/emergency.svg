@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" role="img" aria-label="Cross-section of a molar during root canal treatment: the infected pulp is removed from the canals and the tooth is sealed">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" role="img" aria-label="A cracked molar with an abscess forming at the root tip — a dental emergency">
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
     <stop offset="0" stop-color="#f5f9fc"/><stop offset="1" stop-color="#e0eaf2"/></linearGradient>
@@ -37,30 +37,34 @@
 <path d="M-38 -86 Q-20 -98 0 -90 Q20 -98 38 -86" fill="none" stroke="#dde4e3" stroke-width="3.4" stroke-linecap="round"/>
 
 </g>
-<g transform="translate(486 196)">
+<g transform="translate(200 196)">
 <path d="M-22 4 L-14 74 C-12 92 12 92 14 74 L22 4 Z" fill="url(#dent)"/>
 <path d="M-30 8 C-38 8 -38 -6 -38 -18 L-36 -68 C-34 -92 -18 -102 0 -102 C18 -102 34 -92 36 -68 L38 -18 C38 -6 38 8 30 8 Z" fill="url(#ena)"/>
 <path d="M-24 -82 Q0 -96 24 -82" fill="none" stroke="#dde4e3" stroke-width="3.4" stroke-linecap="round"/>
 
 </g>
-<g transform="translate(566 196)">
+<g transform="translate(452 196)">
 <path d="M-22 4 L-14 74 C-12 92 12 92 14 74 L22 4 Z" fill="url(#dent)"/>
 <path d="M-30 8 C-38 8 -38 -6 -38 -18 L-36 -68 C-34 -92 -18 -102 0 -102 C18 -102 34 -92 36 -68 L38 -18 C38 -6 38 8 30 8 Z" fill="url(#ena)"/>
 <path d="M-24 -82 Q0 -96 24 -82" fill="none" stroke="#dde4e3" stroke-width="3.4" stroke-linecap="round"/>
 
 </g>
-<g transform="translate(610 196)">
-<path d="M-16 4 L-10 72 C-8 90 8 90 10 72 L16 4 Z" fill="url(#dent)"/>
-<path d="M-22 8 C-28 8 -28 -4 -28 -14 L-26 -74 C-24 -94 -12 -102 0 -102 C12 -102 24 -94 26 -74 L28 -14 C28 -4 28 8 22 8 Z" fill="url(#ena)"/>
-
-</g>
-<g transform="translate(300 196)">
-<path d="M-40 4 L-32 66 C-30 84 -18 84 -16 66 L-12 4 Z" fill="url(#dent)"/><path d="M40 4 L32 66 C30 84 18 84 16 66 L12 4 Z" fill="url(#dent)"/>
-<path d="M-46 8 C-54 8 -54 -6 -54 -18 L-52 -72 C-50 -98 -34 -110 -20 -106 C-12 -104 -8 -98 0 -98 C8 -98 12 -104 20 -106 C34 -110 50 -98 52 -72 L54 -18 C54 -6 54 8 46 8 Z" fill="url(#dent)"/>
-<path d="M-54 -18 L-52 -72 C-50 -98 -34 -110 -20 -106 C-12 -104 -8 -98 0 -98 C8 -98 12 -104 20 -106 C34 -110 50 -98 52 -72 L54 -18 C18 -8 -18 -8 -54 -18 Z" fill="url(#ena)"/>
-<path d="M-26 -66 Q0 -78 26 -66 L26 -40 Q26 -28 17 -22 L34 56 Q35 68 29 68 Q23 68 23 56 L9 -22 Q0 -28 -9 -22 L-23 56 Q-24 68 -30 68 Q-36 68 -35 56 L-17 -22 Q-26 -28 -26 -40 Z" fill="#e0596a"/>
-<path d="M-26 -66 Q0 -78 26 -66" fill="none" stroke="#c33f52" stroke-width="2" opacity=".6"/>
+<g transform="translate(560 196)">
+<path d="M-40 4 L-32 66 C-30 84 -18 84 -16 66 L-12 4 Z" fill="url(#dent)"/>
+<path d="M40 4 L32 66 C30 84 18 84 16 66 L12 4 Z" fill="url(#dent)"/>
+<path d="M-46 8 C-54 8 -54 -6 -54 -18 L-52 -72 C-50 -98 -34 -110 -20 -106 C-12 -104 -8 -98 0 -98 C8 -98 12 -104 20 -106 C34 -110 50 -98 52 -72 L54 -18 C54 -6 54 8 46 8 Z" fill="url(#ena)"/>
 <path d="M-38 -86 Q-20 -98 0 -90 Q20 -98 38 -86" fill="none" stroke="#dde4e3" stroke-width="3.4" stroke-linecap="round"/>
+
 </g>
-<g><g transform="rotate(-3 277 40)"><rect x="264" y="12" width="26" height="52" rx="7" fill="url(#sky)"/><rect x="269" y="20" width="4" height="36" rx="2" fill="#fff" opacity=".45"/><rect x="273" y="62" width="8" height="13" rx="2" fill="#7d8895"/></g><path d="M275 74 L268 246" stroke="url(#steel)" stroke-width="5" stroke-linecap="round"/><path d="M274 104 l-4 7 7 7 -7 7 7 7 -7 7 7 7 -7 7 7 7 -7 7 7 7 -7 7 7 7 -7 7 6 7" fill="none" stroke="#8f9dab" stroke-width="1.4" opacity=".8"/></g>
+<g transform="translate(326 196)">
+<path d="M-40 4 L-32 66 C-30 84 -18 84 -16 66 L-12 4 Z" fill="url(#dent)"/><path d="M40 4 L32 66 C30 84 18 84 16 66 L12 4 Z" fill="url(#dent)"/>
+<path d="M-46 8 C-54 8 -54 -6 -54 -18 L-52 -72 C-50 -98 -34 -110 -20 -106 C-12 -104 -8 -98 0 -98 C8 -98 12 -104 20 -106 C34 -110 50 -98 52 -72 L54 -18 C54 -6 54 8 46 8 Z" fill="url(#ena)"/>
+<path d="M-38 -86 Q-20 -98 0 -90 Q20 -98 38 -86" fill="none" stroke="#dde4e3" stroke-width="3.4" stroke-linecap="round"/>
+<path d="M6 -96 L-6 -62 L10 -44 L-4 -14 L6 8" fill="none" stroke="#8d5a4a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="-24" cy="80" r="19" fill="#d9534f" opacity=".55"/>
+<circle cx="-24" cy="80" r="11" fill="#e0596a"/>
+</g>
+<path d="M282 78 a44 44 0 0 1 88 0" fill="none" stroke="#e0596a" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+<path d="M264 78 a62 62 0 0 1 124 0" fill="none" stroke="#e0596a" stroke-width="4" stroke-linecap="round" opacity="0.41"/>
+<path d="M246 78 a80 80 0 0 1 160 0" fill="none" stroke="#e0596a" stroke-width="4" stroke-linecap="round" opacity="0.27"/>
 </svg>

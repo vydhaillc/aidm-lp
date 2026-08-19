@@ -6,7 +6,7 @@ else is translated here and is flagged for AIDM review before launch — in
 particular the Texas 72-hour disclosure, which is statutory language.
 """
 from offers_a import (NAV_STD, OPERATORY, EXAM, XRAY_TALK, RES_PATIENT, PAIN,
-                      CHAIR_SMILE, OG_OP, OG_LOBBY)
+                      CHAIR_SMILE, OG_OP, OG_LOBBY, ILLUS, ALT)
 
 # Every standing string the template hard-codes, translated once.
 CHROME = [
@@ -59,7 +59,7 @@ CHROME = [
  ('<p class="k">Patients, in their words</p>', '<p class="k">Pacientes, en sus propias palabras</p>'),
  ('<h2>&ldquo;Not your regular <em>dental experience.</em>&rdquo;</h2>',
   '<h2>&ldquo;No es la experiencia dental <em>de siempre.</em>&rdquo;</h2>'),
- ('<p>Straight from AIDM&rsquo;s Google reviews &mdash; the newest ones first.</p>',
+ ('<p>Straight from AIDM&rsquo;s Google Business Profile &mdash; the newest ones first.</p>',
   '<p>Directamente de las rese&ntilde;as de Google de AIDM &mdash; las m&aacute;s recientes primero. '
   'Las rese&ntilde;as se muestran en su idioma original.</p>'),
  ('<p class="k">Before you ask</p><h2>Frequently asked <em>questions.</em></h2>',
@@ -92,11 +92,8 @@ CHROME = [
  ("btn.disabled = true; btn.textContent = 'Sending…';", "btn.disabled = true; btn.textContent = 'Enviando…';"),
  ("btn.textContent = 'Thank you — we will call you shortly ✓';",
   "btn.textContent = 'Gracias — le llamaremos en breve ✓';"),
- ('<p class="cd-cap">Open six days a week &middot; Mueller, Austin</p>',
-  '<p class="cd-cap">Abierto seis d&iacute;as a la semana &middot; Mueller, Austin</p>'),
- ('<a href="#terms">*Fee&nbsp;terms</a>', '<a href="#terms">*T&eacute;rminos</a>'),
+ ('<a href="#terms">*Terms &amp; Conditions</a>', '<a href="#terms">*T&eacute;rminos y Condiciones</a>'),
  ('aria-label="See fee disclosures"', 'aria-label="Ver los t&eacute;rminos de honorarios"'),
- ('aria-label="At a glance"', 'aria-label="De un vistazo"'),
  ('<p class="hours">Open 7am &ndash; 7pm<span class="sp"></span>Mon&ndash;Sat</p>',
   '<p class="hours">Abierto 7am &ndash; 7pm<span class="sp"></span>Lun&ndash;S&aacute;b</p>'),
  ('<a href="#terms">Read the full offer terms</a>', '<a href="#terms">Lea los t&eacute;rminos completos de la oferta</a>'),
@@ -226,7 +223,8 @@ ES_NUEVO = dict(
   optsk='Paquetes para pacientes nuevos', optsh2='Empiece en $100 &mdash; o <em>empiece con todo.</em>',
   optssub='El especial de $100 cubre el examen y las radiograf&iacute;as. Si ya sabe que quiere la limpieza en la '
     'misma visita, el paquete de al lado la incluye &mdash; y puede decidirlo despu&eacute;s del examen, no antes.',
-  opts=[dict(feat=True, flag='Oferta anunciada', sub='Su nuevo hogar dental en Mueller',
+  opts=[dict(img=XRAY_TALK, imgalt='Un dentista de AIDM explicando las radiograf&iacute;as a una paciente', imgpos='center 32%',
+      feat=True, flag='Oferta anunciada', sub='Su nuevo hogar dental en Mueller',
       h3='Especial para Pacientes Nuevos', amt='$100',
       strike='Examen y radiograf&iacute;as &mdash; limpieza por separado',
       d='Una introducci&oacute;n completa a AIDM: c&oacute;mo est&aacute; realmente su boca, y un plan por escrito de qu&eacute; hacer al respecto.',
@@ -235,7 +233,8 @@ ES_NUEVO = dict(
       fine='Aplica a un examen dental completo para pacientes nuevos y radiograf&iacute;as tomadas &uacute;nicamente '
            'cuando sea cl&iacute;nicamente indicado. La limpieza profesional y el fl&uacute;or no est&aacute;n '
            'incluidos y se cobran por separado.', cta='Agendar esta cita'),
-    dict(sub='Examen, radiograf&iacute;as y su limpieza', h3='Establecer Atenci&oacute;n', amt='$450',
+    dict(img=ILLUS['cleaning'], imgalt='Un ultrasonido retirando placa y sarro de los dientes en la l&iacute;nea de las enc&iacute;as', imgpos='center 54%',
+      sub='Examen, radiograf&iacute;as y su limpieza', h3='Establecer Atenci&oacute;n', amt='$450',
       strike='Una sola cita, todo cubierto',
       d='La primera visita completa para quienes ya saben que tambi&eacute;n les toca limpieza: examen, radiograf&iacute;as de boca completa y la limpieza juntas.',
       ul=['Examen dental completo','Radiograf&iacute;as de boca completa','Limpieza dental de adulto cuando corresponde',
@@ -243,7 +242,8 @@ ES_NUEVO = dict(
       fine='La limpieza incluida aplica cuando una limpieza preventiva de rutina es cl&iacute;nicamente apropiada. '
            'Los pacientes que requieran tratamiento periodontal recibir&aacute;n una recomendaci&oacute;n distinta.',
       cta='Preguntar si me conviene'),
-    dict(sub='Atenci&oacute;n el mismo d&iacute;a', h3='Emergencia Dental', amt='El mismo d&iacute;a',
+    dict(img=ILLUS['emergency'], imgalt='Un molar fracturado con un absceso en la punta de la ra&iacute;z', imgpos='center 52%',
+      sub='Atenci&oacute;n el mismo d&iacute;a', h3='Emergencia Dental', amt='El mismo d&iacute;a',
       strike='Sin precio publicado',
       d='Si tiene dolor hoy, la cita de emergencia es la correcta &mdash; no el examen de paciente nuevo.',
       ul=['Atenci&oacute;n el mismo d&iacute;a','Abierto de lunes a s&aacute;bado, 7 a.m. a 7 p.m.',
@@ -380,14 +380,16 @@ ES_EMERGENCIA = dict(
   optsh2='La cita es urgente. <em>El precio no es sorpresa.</em>',
   optssub='Una evaluaci&oacute;n de emergencia encuentra la causa; estos son los precios publicados de las tres cosas '
     'en las que m&aacute;s a menudo resulta. Usted conoce el costo antes de que se inicie cualquier tratamiento.',
-  opts=[dict(sub='Salvar el diente', h3='Endodoncia', amt='desde $995',
+  opts=[dict(img=ILLUS['root-canal'], imgalt='Corte transversal de un molar durante el tratamiento de conducto', imgpos='center 55%',
+      sub='Salvar el diente', h3='Endodoncia', amt='desde $995',
       strike='Con corona cer&aacute;mica, $2,300&ndash;$2,500',
       d='Conserve un diente elegible con tratamiento de conducto, un mu&ntilde;&oacute;n de protecci&oacute;n y una corona cer&aacute;mica.',
       ul=['Imagen 3D de campo limitado','Tratamiento de conducto inicial','Mu&ntilde;&oacute;n de protecci&oacute;n (paquete con corona)',
           'Corona de porcelana o cer&aacute;mica (paquete con corona)','Atenci&oacute;n endod&oacute;ntica y restaurativa coordinada'],
       fine='El precio anunciado de $995 aplica a la terapia de conducto est&aacute;ndar. Los casos complejos, incluidos '
            'conductos muy calcificados o retratamientos, pueden requerir un honorario ajustado.', cta='Ver precios de endodoncia'),
-    dict(feat=True, flag='Usted est&aacute; aqu&iacute;', sub='Atenci&oacute;n dental de emergencia',
+    dict(img=PAIN, imgalt='Un hombre con dolor de muelas sujet&aacute;ndose la mand&iacute;bula', imgpos='center 34%',
+      feat=True, flag='Usted est&aacute; aqu&iacute;', sub='Atenci&oacute;n dental de emergencia',
       h3='Evaluaci&oacute;n de Emergencia', amt='Atenci&oacute;n hoy',
       strike='Enfocada en el problema &mdash; sin precio publicado',
       d='La cita en s&iacute;: averiguar qu&eacute; causa el dolor y resolver lo que se pueda resolver hoy con seguridad.',
@@ -396,7 +398,8 @@ ES_EMERGENCIA = dict(
           'Centro quir&uacute;rgico en las instalaciones'],
       fine='Las citas de emergencia se priorizan cl&iacute;nicamente y est&aacute;n sujetas a disponibilidad. Cualquier '
            'tratamiento que resulte se cotiza antes de iniciarse.', cta='Solicitar cita para hoy'),
-    dict(sub='Cuando el diente no se puede conservar', h3='Extracciones', amt='desde $200',
+    dict(img=ILLUS['wisdom-erupted'], imgalt='Una muela del juicio siendo extra&iacute;da con f&oacute;rceps', imgpos='center 56%',
+      sub='Cuando el diente no se puede conservar', h3='Extracciones', amt='desde $200',
       strike='Por diente, seg&uacute;n complejidad quir&uacute;rgica',
       d='Precios claros de extracci&oacute;n seg&uacute;n la posici&oacute;n y la complejidad quir&uacute;rgica de cada diente.',
       ul=['Extracci&oacute;n simple de diente erupcionado &mdash; $200 por diente',

@@ -939,6 +939,31 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 .opt ul{list-style:none;margin:0 0 1.5rem;padding:1.05rem 0 0;border-top:1px solid var(--line);display:grid;gap:.45rem}
 .opt li{display:flex;gap:.55rem;font-size:.92rem;line-height:1.5;color:var(--pale)}
 .opt li::before{content:'';flex:none;width:5px;height:5px;border-radius:50%;background:var(--sky);margin-top:.5rem}
+/* — the picture band on a package card —
+   The printed flyers lead each package with a picture; three identical navy
+   slabs do not. Most cards carry a drawn procedure panel from
+   tools/lp/illus.py; the card for a page's own offer carries that page's
+   own photograph instead. The band breaks out of the card padding to meet its
+   rounded top corners, and fades into the card so it reads as part of the
+   plate rather than pasted onto it. .opt keeps overflow visible, or the
+   "You are here" flag above it would be clipped. */
+.opt.has-ph{padding-top:0}
+.opt-ph{position:relative;margin:0 -1.7rem 1.3rem;overflow:hidden;
+  border-radius:var(--r) var(--r) 0 0;background:#07203a}
+/* the flag rides above the band, not under it */
+.opt .opt-flag{z-index:4}
+.opt-ph img{display:block;width:100%;height:clamp(150px,15vw,186px);object-fit:cover;
+  object-position:center 28%;transition:transform 1.1s var(--ease)}
+.opt:hover .opt-ph img{transform:scale(1.05)}
+/* the drawn panels are light artwork, not photographs — a dark scrim over
+   them just muddies the drawing, so the fade only applies to the photo */
+.opt-ph.is-art::after{display:none}
+.opt-ph.is-art{box-shadow:inset 0 -1px 0 rgba(120,190,235,.28)}
+.opt-ph.is-art img{object-fit:contain;background:#eef4f9}
+.opt-ph::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(6,26,44,.16) 0%,rgba(6,26,44,0) 34%,rgba(10,37,64,.72) 88%,rgba(10,37,64,.96) 100%)}
+.opt.feat .opt-ph::after{background:linear-gradient(180deg,rgba(6,26,44,.16) 0%,rgba(6,26,44,0) 34%,rgba(20,68,111,.74) 88%,rgba(20,68,111,.97) 100%)}
+@media(max-width:880px){.opt-ph{margin-inline:-1.7rem}}
 .opt .btn{width:100%;margin-top:auto}
 @media(max-width:880px){.opts{grid-template-columns:1fr;gap:1.8rem}}
 
@@ -959,6 +984,24 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 .promo-fine a{color:var(--sky)}
 
 /* ══ REVIEWS ════════════════════════════════════════════════════════════ */
+
+/* — the reviews rail —
+   They were a static grid; they now run as one continuous left-to-right
+   marquee, doubled so the loop has no seam, and each card carries the Google
+   mark so it is obvious where it came from. Pauses on hover, on focus, and
+   for anyone who has asked for reduced motion. */
+.rmask{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.rmarq{display:flex;gap:1.2rem;width:max-content;will-change:transform}
+@media(prefers-reduced-motion:no-preference){
+  .rmarq{animation:revroll 82s linear infinite}
+  .rmask:hover .rmarq,.rmask:focus-within .rmarq{animation-play-state:paused}
+}
+.rmarq.off{animation-play-state:paused}
+@keyframes revroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.rmarq .rev{flex:0 0 clamp(268px,25vw,330px);margin:0}
+.rev .st .rg{flex:none}
+.rev .who span{white-space:nowrap}
 .revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:1.2rem}
 .rev{border-radius:var(--r);padding:1.9rem 1.65rem;background:rgba(10,37,64,.55);
   border:1px solid var(--line);backdrop-filter:blur(8px);
@@ -1267,7 +1310,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
             </div>
 
             <button class="btn btn-sky" type="button" id="cardBook">Book Free Consult</button>
-            <p class="card-fine">Your tier is set by the case, and stated before you commit. <a href="#terms">*Fee&nbsp;terms</a></p>
+            <p class="card-fine">Your tier is set by the case, and stated before you commit. <a href="#terms">*Terms &amp; Conditions</a></p>
            </div>
 
            <!-- ── the same card, flipped to a booking form ──────────────────
@@ -1624,7 +1667,8 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
       <p>Every tier contains the same five things. What moves the price is the state of the arch it is going into &mdash; how many extractions, how much grafting, what the bone will carry, and how complex the case is.</p>
     </div>
     <div class="opts">
-      <div class="opt rv">
+      <div class="opt has-ph rv">
+        <figure class="opt-ph is-art"><img loading="lazy" src="../assets/illus/full-arch-4.svg" alt="A fixed full-arch bridge carried on four dental implants" style="object-position:center 52%"></figure>
         <p class="sub">Straightforward arch</p>
         <h3>Simple</h3>
         <p class="amt">$18,000<a class="ast" href="#terms" aria-label="See fee disclosures">*</a></p>
@@ -1634,8 +1678,9 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <p class="optfine">*Tier is based on extractions, grafting, bone condition and case complexity, determined from imaging.</p>
         <a class="btn btn-ghost" href="#contact">Book Free Consult</a>
       </div>
-      <div class="opt feat rv">
+      <div class="opt feat has-ph rv">
         <span class="opt-flag">Most common</span>
+        <figure class="opt-ph is-art"><img loading="lazy" src="../assets/illus/full-arch-4.svg" alt="A fixed full-arch bridge carried on four dental implants" style="object-position:center 52%"></figure>
         <p class="sub">Some grafting or extractions</p>
         <h3>Moderate</h3>
         <p class="amt">$22,000<a class="ast" href="#terms" aria-label="See fee disclosures">*</a></p>
@@ -1645,7 +1690,8 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <p class="optfine">*Tier is based on extractions, grafting, bone condition and case complexity, determined from imaging.</p>
         <a class="btn btn-gold" href="#contact">Book Free Consult</a>
       </div>
-      <div class="opt rv">
+      <div class="opt has-ph rv">
+        <figure class="opt-ph is-art"><img loading="lazy" src="../assets/illus/full-arch-6.svg" alt="A fixed full-arch bridge carried on six dental implants" style="object-position:center 52%"></figure>
         <p class="sub">Demanding reconstruction</p>
         <h3>Complex</h3>
         <p class="amt">$26,000<a class="ast" href="#terms" aria-label="See fee disclosures">*</a></p>
@@ -1676,18 +1722,28 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
       <p class="k">Patients, in their words</p>
       <h2>&ldquo;Not your regular <em>dental experience.</em>&rdquo;</h2>
       <div class="bar"></div>
-      <p>Straight from AIDM&rsquo;s Google reviews &mdash; the newest ones first.</p>
+      <p>Straight from AIDM&rsquo;s Google Business Profile &mdash; the newest ones first.</p>
     </div>
-    <div class="revs">
-      <div class="rev rv fresh"><div class="st">★★★★★<em>Google</em></div><p>&ldquo;Beautiful building. Impressive to have everything under one roof. It&rsquo;s so frustrating to have to drive to different locations when getting dental work done. Seems like they have the best technology too.&rdquo;</p><div class="who">Rusty Curtis<span>4 days ago</span></div></div>
-      <div class="rev rv d1 fresh"><div class="st">★★★★★<em>Google</em></div><p>&ldquo;Had a great experience at this clinic! Everyone was very friendly and knowledgeable. The facilities are beautiful and up to date with technology. Highly recommend!&rdquo;</p><div class="who">Raina Chandiramani<span>1 week ago</span></div></div>
-      <div class="rev rv d2 fresh"><div class="st">★★★★★<em>Google</em></div><p>&ldquo;Extremely friendly, knowledgeable instructors. Patient and kind throughout my entire consultation.&rdquo;</p><div class="who">Yolanda<span>1 week ago</span></div></div>
-      <div class="rev rv"><div class="st">★★★★★<em>Google</em></div><p>&ldquo;Had a great experience with Dr. Paskey! What a fantastic provider! So gentle and a wonderful listener! I get so many compliments on my teeth now.&rdquo;</p><div class="who">Nick Perron<span>Google review</span></div></div>
-      <div class="rev rv d1"><div class="st">★★★★★<em>Google</em></div><p>&ldquo;Literally the best experience I&rsquo;ve ever had with a dentist office. Extremely affordable and considerate of non-insured people.&rdquo;</p><div class="who">Ani N.<span>Local Guide</span></div></div>
-      <div class="rev rv d2"><div class="st">★★★★★<em>Google</em></div><p>&ldquo;Super helpful, knowledgeable and supportive team. The office is new, all equipment is state of the art and the overall experience with my regular checkup has been pleasant. Highly recommend.&rdquo;</p><div class="who">Diwakar Prasad<span>Local Guide</span></div></div>
-      <div class="rev rv"><div class="st">★★★★★<em>Google</em></div><p>&ldquo;Very kind and easy to work with. They have early hours which is great to be able to go in before work.&rdquo;</p><div class="who">Rebecca Meester<span>Google review</span></div></div>
-      <div class="rev rv d1"><div class="st">★★★★★<em>Google</em></div><p>&ldquo;Great location and easy to get to, which is important for moms travelling with kids. Parking right next door, and you can tell when you enter this isn&rsquo;t going to be your regular dental experience. Mom approved!&rdquo;</p><div class="who">Heloisa Moser<span>Google review</span></div></div>
-      <div class="rev rv d2"><div class="st">★★★★★<em>Google</em></div><p>&ldquo;This clinic is for those who want the newest in technology paired with the personal care and attention the staff and doctors give their patients.&rdquo;</p><div class="who">Lan Tran<span>Google review</span></div></div>
+    <div class="rmask rv">
+      <div class="rmarq" id="rmarq">
+        <div class="rev"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Had a great experience at this clinic! Everyone was very friendly and knowledgeable. The facilities are beautiful and up to date with technology. Highly recommend!&rdquo;</p><div class="who">Raina Chandiramani<span>12 August 2026</span></div></div>
+        <div class="rev"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Extremely friendly, knowledgeable instructors. Patient and kind throughout my entire consultation.&rdquo;</p><div class="who">Yolanda<span>12 August 2026</span></div></div>
+        <div class="rev"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Had a great experience with Dr. Paskey! What a fantastic provider! So gentle and a wonderful listener! I get so many compliments on my teeth now.&rdquo;</p><div class="who">Nick Perron<span>24 July 2026</span></div></div>
+        <div class="rev"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Literally the best experience I&rsquo;ve ever had with a dentist office. Extremely affordable and considerate of non-insured people.&rdquo;</p><div class="who">Ani N.<span>9 July 2026</span></div></div>
+        <div class="rev"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Super helpful, knowledgeable and supportive team. The office is new, all equipment is state of the art and the overall experience with my regular checkup has been pleasant. Highly recommend.&rdquo;</p><div class="who">Diwakar Prasad<span>26 June 2026</span></div></div>
+        <div class="rev"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Very kind and easy to work with. They have early hours which is great to be able to go in before work.&rdquo;</p><div class="who">Rebecca Meester<span>11 June 2026</span></div></div>
+        <div class="rev"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Great location and easy to get to, which is important for moms travelling with kids. Parking right next door, and you can tell when you enter this isn&rsquo;t going to be your regular dental experience. Mom approved!&rdquo;</p><div class="who">Heloisa Moser<span>28 May 2026</span></div></div>
+        <div class="rev"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;This clinic is for those who want the newest in technology paired with the personal care and attention the staff and doctors give their patients.&rdquo;</p><div class="who">Lan Tran<span>14 May 2026</span></div></div>
+        <!-- loop duplicate -->
+        <div class="rev" aria-hidden="true"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Had a great experience at this clinic! Everyone was very friendly and knowledgeable. The facilities are beautiful and up to date with technology. Highly recommend!&rdquo;</p><div class="who">Raina Chandiramani<span>12 August 2026</span></div></div>
+        <div class="rev" aria-hidden="true"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Extremely friendly, knowledgeable instructors. Patient and kind throughout my entire consultation.&rdquo;</p><div class="who">Yolanda<span>12 August 2026</span></div></div>
+        <div class="rev" aria-hidden="true"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Had a great experience with Dr. Paskey! What a fantastic provider! So gentle and a wonderful listener! I get so many compliments on my teeth now.&rdquo;</p><div class="who">Nick Perron<span>24 July 2026</span></div></div>
+        <div class="rev" aria-hidden="true"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Literally the best experience I&rsquo;ve ever had with a dentist office. Extremely affordable and considerate of non-insured people.&rdquo;</p><div class="who">Ani N.<span>9 July 2026</span></div></div>
+        <div class="rev" aria-hidden="true"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Super helpful, knowledgeable and supportive team. The office is new, all equipment is state of the art and the overall experience with my regular checkup has been pleasant. Highly recommend.&rdquo;</p><div class="who">Diwakar Prasad<span>26 June 2026</span></div></div>
+        <div class="rev" aria-hidden="true"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Very kind and easy to work with. They have early hours which is great to be able to go in before work.&rdquo;</p><div class="who">Rebecca Meester<span>11 June 2026</span></div></div>
+        <div class="rev" aria-hidden="true"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Great location and easy to get to, which is important for moms travelling with kids. Parking right next door, and you can tell when you enter this isn&rsquo;t going to be your regular dental experience. Mom approved!&rdquo;</p><div class="who">Heloisa Moser<span>28 May 2026</span></div></div>
+        <div class="rev" aria-hidden="true"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;This clinic is for those who want the newest in technology paired with the personal care and attention the staff and doctors give their patients.&rdquo;</p><div class="who">Lan Tran<span>14 May 2026</span></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1909,7 +1965,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 
       document.addEventListener('visibilitychange', function(){
         tabVisible = !document.hidden;
-        [marq, cmarq].forEach(function(el){
+        [marq, cmarq, document.getElementById('rmarq')].forEach(function(el){
           if (el) el.classList.toggle('off', !tabVisible);
         });
         sync();
@@ -1931,7 +1987,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 
   /* ── marquees pause off-screen ──────────────────────────────────────── */
   if ('IntersectionObserver' in window) {
-    [marq, cmarq].forEach(function(el){
+    [marq, cmarq, document.getElementById('rmarq')].forEach(function(el){
       if (!el) return;
       new IntersectionObserver(function(es){
         es.forEach(function(e){ el.classList.toggle('off', !e.isIntersecting); });

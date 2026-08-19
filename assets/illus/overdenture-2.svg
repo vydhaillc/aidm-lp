@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" role="img" aria-label="A removable implant-supported denture clipping onto two implants">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f5f9fc"/><stop offset="1" stop-color="#e0eaf2"/></linearGradient>
+  <linearGradient id="gum" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ef9aa4"/><stop offset="1" stop-color="#cd6875"/></linearGradient>
+  <linearGradient id="bone" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f7e9d9"/><stop offset="1" stop-color="#e5d0b6"/></linearGradient>
+  <linearGradient id="ena" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#ffffff"/><stop offset=".58" stop-color="#f6f9f8"/>
+    <stop offset="1" stop-color="#dfe6e3"/></linearGradient>
+  <linearGradient id="dent" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f6e9d3"/><stop offset="1" stop-color="#e2ceac"/></linearGradient>
+  <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#a7b2c0"/><stop offset=".36" stop-color="#f1f5f9"/>
+    <stop offset=".64" stop-color="#8b97a6"/><stop offset="1" stop-color="#c2cbd6"/></linearGradient>
+  <linearGradient id="tita" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#8b98a6"/><stop offset=".4" stop-color="#dbe3ea"/>
+    <stop offset="1" stop-color="#7d8a99"/></linearGradient>
+  <linearGradient id="sky" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#2f7fb5"/><stop offset=".5" stop-color="#5cb8e9"/>
+    <stop offset="1" stop-color="#2b6f9f"/></linearGradient>
+  <linearGradient id="cera" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e6efe9"/></linearGradient>
+  <linearGradient id="acr" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f2a3ad"/><stop offset="1" stop-color="#d9848f"/></linearGradient>
+  <linearGradient id="alg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#bfe6fb"/><stop offset="1" stop-color="#8ccdf0"/></linearGradient>
+</defs>
+<rect width="640" height="300" fill="url(#bg)"/>
+<path d="M0 214 Q 160 202 320 208 Q 480 214 640 200 L640 300 L0 300 Z" fill="url(#bone)"/>
+<path d="M0 200 Q 150 186 320 192 Q 500 198 640 186 L640 300 L0 300 Z" fill="url(#gum)"/>
+<g transform="translate(200 196)"><path d="M-19 -2 L-15 56 Q-13 72 0 72 Q13 72 15 56 L19 -2 Z" fill="url(#tita)"/><circle cx="0" cy="-14" r="15" fill="url(#tita)"/><circle cx="0" cy="-14" r="6" fill="#eef3f7"/></g>
+<g transform="translate(440 196)"><path d="M-19 -2 L-15 56 Q-13 72 0 72 Q13 72 15 56 L19 -2 Z" fill="url(#tita)"/><circle cx="0" cy="-14" r="15" fill="url(#tita)"/><circle cx="0" cy="-14" r="6" fill="#eef3f7"/></g>
+<g transform="translate(0 -54)">
+<path d="M40 166 Q 320 150 600 166 L600 210 Q 320 224 40 210 Z" fill="url(#acr)" stroke="#c4737f" stroke-width="2"/>
+<circle cx="200" cy="200" r="14" fill="#f6dfe2" stroke="#c4737f" stroke-width="2.5"/>
+<circle cx="440" cy="200" r="14" fill="#f6dfe2" stroke="#c4737f" stroke-width="2.5"/>
+<g transform="translate(76 162) scale(0.7)">
+<path d="M-46 8 C-54 8 -54 -6 -54 -18 L-52 -72 C-50 -98 -34 -110 -20 -106 C-12 -104 -8 -98 0 -98 C8 -98 12 -104 20 -106 C34 -110 50 -98 52 -72 L54 -18 C54 -6 54 8 46 8 Z" fill="url(#cera)"/>
+<path d="M-38 -86 Q-20 -98 0 -90 Q20 -98 38 -86" fill="none" stroke="#dde4e3" stroke-width="3.4" stroke-linecap="round"/>
+
+</g>
+<g transform="translate(166 162) scale(0.7)">
+<path d="M-46 8 C-54 8 -54 -6 -54 -18 L-52 -72 C-50 -98 -34 -110 -20 -106 C-12 -104 -8 -98 0 -98 C8 -98 12 -104 20 -106 C34 -110 50 -98 52 -72 L54 -18 C54 -6 54 8 46 8 Z" fill="url(#cera)"/>
+<path d="M-38 -86 Q-20 -98 0 -90 Q20 -98 38 -86" fill="none" stroke="#dde4e3" stroke-width="3.4" stroke-linecap="round"/>
+
+</g>
+<g transform="translate(242 162) scale(0.7)">
+<path d="M-30 8 C-38 8 -38 -6 -38 -18 L-36 -68 C-34 -92 -18 -102 0 -102 C18 -102 34 -92 36 -68 L38 -18 C38 -6 38 8 30 8 Z" fill="url(#cera)"/>
+<path d="M-24 -82 Q0 -96 24 -82" fill="none" stroke="#dde4e3" stroke-width="3.4" stroke-linecap="round"/>
+
+</g>
+<g transform="translate(304 162) scale(0.7)">
+<path d="M-22 8 C-28 8 -28 -4 -28 -14 L-26 -74 C-24 -94 -12 -102 0 -102 C12 -102 24 -94 26 -74 L28 -14 C28 -4 28 8 22 8 Z" fill="url(#cera)"/>
+
+</g>
+<g transform="translate(354 162) scale(0.7)">
+<path d="M-22 8 C-28 8 -28 -4 -28 -14 L-26 -74 C-24 -94 -12 -102 0 -102 C12 -102 24 -94 26 -74 L28 -14 C28 -4 28 8 22 8 Z" fill="url(#cera)"/>
+
+</g>
+<g transform="translate(404 162) scale(0.7)">
+<path d="M-22 8 C-28 8 -28 -4 -28 -14 L-26 -74 C-24 -94 -12 -102 0 -102 C12 -102 24 -94 26 -74 L28 -14 C28 -4 28 8 22 8 Z" fill="url(#cera)"/>
+
+</g>
+<g transform="translate(468 162) scale(0.7)">
+<path d="M-30 8 C-38 8 -38 -6 -38 -18 L-36 -68 C-34 -92 -18 -102 0 -102 C18 -102 34 -92 36 -68 L38 -18 C38 -6 38 8 30 8 Z" fill="url(#cera)"/>
+<path d="M-24 -82 Q0 -96 24 -82" fill="none" stroke="#dde4e3" stroke-width="3.4" stroke-linecap="round"/>
+
+</g>
+<g transform="translate(558 162) scale(0.7)">
+<path d="M-46 8 C-54 8 -54 -6 -54 -18 L-52 -72 C-50 -98 -34 -110 -20 -106 C-12 -104 -8 -98 0 -98 C8 -98 12 -104 20 -106 C34 -110 50 -98 52 -72 L54 -18 C54 -6 54 8 46 8 Z" fill="url(#cera)"/>
+<path d="M-38 -86 Q-20 -98 0 -90 Q20 -98 38 -86" fill="none" stroke="#dde4e3" stroke-width="3.4" stroke-linecap="round"/>
+
+</g>
+<path d="M40 162 Q 320 146 600 162" fill="none" stroke="#c4737f" stroke-width="2.4" opacity=".7"/>
+</g>
+<path d="M200 144 L200 166" stroke="#4fc3f7" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="6 6" opacity=".8"/>
+<path d="M440 144 L440 166" stroke="#4fc3f7" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="6 6" opacity=".8"/>
+</svg>
