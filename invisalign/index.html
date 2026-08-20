@@ -7,7 +7,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="description" content="Invisalign clear aligner treatment for $3,900 at the Austin Institute of Dental Medicine in Mueller, Austin. Complimentary orthodontic evaluation, no referral needed.">
 <meta property="og:title" content="Clear Aligners. Confident Smile. — Invisalign® $3,900 | AIDM Austin">
-<meta property="og:description" content="Personalised clear-aligner treatment, routine orthodontic visits and standard retention, $3,900.">
+<meta property="og:description" content="Personalized clear-aligner treatment, routine orthodontic visits and standard retention, $3,900.">
 <meta property="og:image" content="https://aidm.org/wp-content/uploads/2026/07/16-AIDM-Operatory-01--1536x1024.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -153,6 +153,10 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 .btn-gold{background:linear-gradient(135deg,#f3d78f,var(--gold));color:#2e2405;
   box-shadow:0 14px 30px -12px rgba(233,196,106,.7)}
 .btn-gold:hover{transform:translateY(-2px)}
+/* white, in place of the gold treatment on the featured comparison card */
+.btn-white{background:linear-gradient(135deg,#ffffff,#e7f1f8);color:var(--deep2);
+  box-shadow:0 14px 30px -12px rgba(0,0,0,.4)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 20px 40px -14px rgba(0,0,0,.5)}
 /* NOTE: no backdrop-filter on anything that sits over the hero <video> —
    per-frame re-blur of live video crashes Chrome's GPU process on macOS.
    Solid rgba backgrounds only above the film. */
@@ -182,6 +186,10 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 .nav .btn{padding:.72rem 1.3rem;font-size:.78rem}
 @media(max-width:1060px){.nav-links{display:none}.nav .btn{margin-left:auto}}
 @media(max-width:520px){.nav-tel{display:none}}
+/* the standardized CTA copy can run longer than the old button label —
+   give it room on narrow screens rather than letting white-space:nowrap
+   push it past the button's edge */
+@media(max-width:400px){.nav .btn{font-size:.66rem;padding:.7rem 1rem}}
 
 /* ══ HERO ═══════════════════════════════════════════════════════════════ */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;
@@ -335,7 +343,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 
 /* the qualifier that used to live on the flag */
 .card-sub{margin:.2rem 0 0;text-align:center;font-family:var(--head);font-size:.62rem;
-  font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:var(--gold)}
+  font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:#fff}
 
 /* — the hours band —
    Stands where the countdown stood. One statement at one size, in the same
@@ -344,10 +352,10 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
   text-align:center;white-space:nowrap;
   font-family:var(--head);font-size:clamp(.88rem,2.05vw,1.08rem);font-weight:800;
   line-height:1.15;letter-spacing:.035em;text-transform:uppercase;
-  color:#ffe14d;text-shadow:0 0 18px rgba(255,214,64,.55);
+  color:#fff;text-shadow:0 0 18px rgba(255,255,255,.4);
   font-variant-numeric:tabular-nums;
   background:linear-gradient(180deg,rgba(9,30,50,.95),rgba(3,14,26,.95));
-  border:1px solid rgba(233,196,106,.7);
+  border:1px solid rgba(159,216,242,.4);
   box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 6px 16px -8px #000}
 .hours .sp{display:inline-block;width:.85em}
 @media(prefers-reduced-motion:no-preference){.hours{animation:cdpulse 2.6s ease-in-out infinite}}
@@ -380,12 +388,11 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
   gap:.06em;line-height:.92;margin:.05rem 0 .1rem;padding:.05rem 0 .2rem}
 .card-price .c,.card-price .v{
   font-family:var(--price);font-weight:900;letter-spacing:-.018em;
-  background-image:linear-gradient(178deg,#fff8dc 2%,#ffe89b 16%,#e8b93d 31%,
-                   #a97612 44%,#fffbe8 53%,#ffe07a 62%,#c9931f 78%,#ffeeb4 94%);
+  background-image:linear-gradient(178deg,#ffffff 2%,#f3f9ff 31%,#ffffff 53%,#e4eff9 78%,#ffffff 94%);
   background-size:100% 260%;background-position:0 22%;
   -webkit-background-clip:text;background-clip:text;color:transparent;
-  filter:drop-shadow(0 2px 0 rgba(96,58,4,.9)) drop-shadow(0 4px 1px rgba(52,30,0,.55))
-         drop-shadow(0 10px 22px rgba(0,0,0,.62)) drop-shadow(0 0 26px rgba(233,196,106,.42))}
+  filter:drop-shadow(0 2px 0 rgba(6,26,44,.75)) drop-shadow(0 4px 1px rgba(3,16,29,.5))
+         drop-shadow(0 10px 22px rgba(0,0,0,.62)) drop-shadow(0 0 26px rgba(255,255,255,.35))}
 .card-price .c{font-size:clamp(3rem,7.2vw,4.2rem);margin-top:.05em}
 .card-price .v{font-size:clamp(4.4rem,10.6vw,6.3rem)}
 @media(prefers-reduced-motion:no-preference){
@@ -402,30 +409,30 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 /* — live counter — */
 .card-cd{margin-top:.85rem;padding-top:.8rem;border-top:1px solid var(--line)}
 .cd-cap{margin:0 0 .45rem;text-align:center;font-family:var(--head);font-size:.58rem;
-  font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
-/* Four equal cells, every figure in the same high-visibility yellow at a
-   size you can read across a room, labels in white under them. The days
-   cell keeps a gold rim and a slow pulse so the eye still lands there
-   first without breaking the row's rhythm. */
+  font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#fff}
+/* Four equal cells, every figure in white at a size you can read across a
+   room, labels in white under them. The days cell keeps a light rim and a
+   slow pulse so the eye still lands there first without breaking the row's
+   rhythm. */
 .cd{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.42rem}
 .cd-c{background:linear-gradient(180deg,rgba(9,30,50,.95),rgba(3,14,26,.95));
-  border:1px solid rgba(233,196,106,.28);border-radius:12px;
+  border:1px solid rgba(159,216,242,.28);border-radius:12px;
   padding:.42rem .15rem .36rem;text-align:center;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 6px 14px -8px #000}
 .cd-c b{display:block;font-family:var(--head);
   font-size:clamp(1.5rem,3.4vw,1.92rem);font-weight:800;line-height:1;
-  color:#ffe14d;text-shadow:0 0 18px rgba(255,214,64,.55);
+  color:#fff;text-shadow:0 0 18px rgba(255,255,255,.4);
   font-variant-numeric:tabular-nums}
 .cd-c i{display:block;font-style:normal;font-size:.54rem;font-weight:700;letter-spacing:.12em;
   text-transform:uppercase;color:#fff;margin-top:.3rem}
-.cd-d{border-color:rgba(233,196,106,.7)}
+.cd-d{border-color:rgba(159,216,242,.7)}
 @media(prefers-reduced-motion:no-preference){
   .cd-d{animation:cdpulse 2.6s ease-in-out infinite}
 }
 @keyframes cdpulse{
-  0%,100%{box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 0 12px -6px rgba(233,196,106,.6)}
-  50%{box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 0 24px -3px rgba(233,196,106,.95)}}
-.cd.over b{font-size:1.1rem;color:var(--gold)}
+  0%,100%{box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 0 12px -6px rgba(159,216,242,.6)}
+  50%{box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 0 24px -3px rgba(159,216,242,.95)}}
+.cd.over b{font-size:1.1rem;color:#fff}
 
 .card .btn{width:100%;margin-top:.85rem;padding-block:.88rem}
 
@@ -444,7 +451,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
   font-family:var(--head);font-size:.74rem;font-weight:600;color:var(--sky)}
 .cf-back:hover{text-decoration:underline}
 .cf-k{margin:0 0 .2rem;font-family:var(--head);font-size:.62rem;font-weight:700;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+  letter-spacing:.2em;text-transform:uppercase;color:#fff}
 .cf-h{font-size:clamp(1.24rem,2.4vw,1.5rem);font-weight:700;color:#fff;margin:0 0 .9rem}
 .cf-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
 .card-form .fld{margin-bottom:.6rem}
@@ -755,12 +762,12 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
   width:clamp(116px,13vw,146px);aspect-ratio:1;border-radius:50%;
   display:grid;place-content:center;text-align:center;gap:.05rem;
   background:linear-gradient(150deg,#1b5b8e,#0a2942);
-  border:1px solid rgba(233,196,106,.6);
+  border:1px solid rgba(159,216,242,.55);
   box-shadow:0 26px 52px -18px #000,0 0 40px -10px rgba(79,195,247,.75)}
 .promo-badge b{font-family:var(--price);font-size:clamp(1.55rem,2.7vw,1.95rem);font-weight:700;
   color:#fff;letter-spacing:-.01em;line-height:1}
 .promo-badge i{font-style:normal;font-family:var(--head);font-size:.53rem;font-weight:700;
-  letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-top:.2rem}
+  letter-spacing:.15em;text-transform:uppercase;color:#fff;margin-top:.2rem}
 @media(max-width:820px){.promo-badge{right:-6px;bottom:-22px}}
 
 /* — the copy stack — */
@@ -814,7 +821,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 .promo-fine{margin:clamp(1.4rem,2.6vw,2rem) 0 clamp(1.2rem,2.2vw,1.7rem);
   padding-left:1.05rem;text-indent:-1.05rem;
   font-size:.8rem;color:#6b90ac;line-height:1.65;max-width:none}
-.promo-fine .fs{color:var(--gold);font-weight:700;padding-right:.35rem}
+.promo-fine .fs{color:#fff;font-weight:700;padding-right:.35rem}
 
 /* ══ BEFORE & AFTER — montages run at their natural height ══════════════ */
 .cmask{position:relative}
@@ -927,9 +934,9 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 .opt:hover{transform:translateY(-6px);border-color:var(--line2);box-shadow:0 30px 60px -30px #000}
 .opt.feat{background:linear-gradient(160deg,rgba(20,68,111,.85),rgba(10,37,64,.9));border-color:rgba(79,195,247,.55)}
 .opt-flag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);
-  background:linear-gradient(135deg,#f3d78f,var(--gold));color:#2e2405;font-family:var(--head);
+  background:linear-gradient(135deg,#ffffff,#e7f1f8);color:var(--deep2);font-family:var(--head);
   font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-  padding:.36rem 1rem;border-radius:100px;white-space:nowrap}
+  padding:.36rem 1rem;border-radius:100px;white-space:nowrap;box-shadow:0 6px 16px -8px rgba(0,0,0,.5)}
 .opt .sub{font-family:var(--head);font-size:.63rem;font-weight:600;letter-spacing:.16em;
   text-transform:uppercase;color:var(--sky);margin:0 0 .5rem}
 .opt h3{font-size:1.14rem;font-weight:600;margin:0 0 .85rem}
@@ -977,7 +984,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
    resolve against the row rather than the figure — pin it in rem and hang it
    off the top of the numerals instead */
 .card-price .ast,.promo-price .ast{align-self:flex-start;vertical-align:baseline;
-  line-height:1;font-size:1.5rem;color:#ffe6a8;margin:.34rem 0 0 .1rem}
+  line-height:1;font-size:1.5rem;color:#fff;margin:.34rem 0 0 .1rem}
 .promo-price .ast{font-size:1.15rem;color:var(--gold);margin-top:.28rem}
 .card-fine a{color:var(--sky);text-decoration:none}
 .card-fine a:hover{text-decoration:underline}
@@ -1061,6 +1068,10 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
   outline:0;border-color:var(--sky);background:rgba(3,16,29,.8);box-shadow:0 0 0 3px rgba(79,195,247,.18)}
 .cbox .btn{width:100%;margin-top:1.15rem}
 .fnote{font-size:.73rem;color:var(--dim);margin:.95rem 0 0;text-align:center;line-height:1.55}
+.opt-tag{text-transform:none;letter-spacing:0;font-weight:400}
+/* PHI caution under the free-text message field — the lead endpoint is a
+   plain mailer/DB insert, not cleared to receive protected health info */
+.fld-note{margin:.4rem 0 0;font-size:.7rem;color:var(--dim);line-height:1.5}
 .mapbox{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:340px;
   display:flex;flex-direction:column;min-width:0;background:var(--mid)}
 /* the Google embed is light by nature — invert it into the page's palette */
@@ -1097,6 +1108,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
   background:rgba(6,26,44,.97);backdrop-filter:blur(14px);border-top:1px solid var(--line)}
 .mbar .btn{flex:1;padding:.9rem .6rem;font-size:.8rem}
 @media(max-width:760px){.mbar{display:flex}.ft{padding-bottom:6rem}}
+@media(max-width:400px){.mbar .btn{font-size:.66rem;padding:.9rem .35rem;letter-spacing:.02em}}
 
 .lb{position:fixed;inset:0;z-index:140;background:rgba(3,16,29,.96);display:none;
   place-items:center;padding:1rem;backdrop-filter:blur(9px)}
@@ -1202,6 +1214,9 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 .card-price .fr ~ .v{font-size:clamp(2.55rem,6vw,3.5rem)}
 .card-sub{margin:.15rem 0 0;text-align:center;font-family:var(--head);font-size:.62rem;
   font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--ice);opacity:.9}
+/* the price-qualifier disclosure, required directly beside/below every
+   prominent price — small enough to sit in the card without disturbing it */
+.card-disc{margin:.5rem 0 0;text-align:left;font-size:.66rem;line-height:1.5;color:var(--dim)}
 </style>
 </head>
 <body>
@@ -1226,7 +1241,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
     <li><a href="#faq">FAQ</a></li>
   </ul>
   <a class="nav-tel" href="tel:+17374342436">(737) 434-2436</a>
-  <a class="btn btn-sky" href="#contact" data-book>Book Free Consult</a>
+  <a class="btn btn-sky" href="#contact" data-book>Book Free Orthodontic Evaluation</a>
 </header>
 
 <!-- ══════════════ HERO ══════════════ -->
@@ -1295,6 +1310,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
               <i class="spk" style="--s:26px;top:56%;right:1%;animation-delay:1.6s"></i>
               <i class="spk" style="--s:13px;bottom:6%;right:22%;animation-delay:3s"></i>
             </div>
+            <p class="card-disc">*For qualifying Invisalign&reg; clear-aligner cases. Payment in full required. Cannot be combined with insurance benefits, financing, membership discounts, or other promotions. Complex cases, retainers or phase-one interceptive orthodontics may incur additional fees.</p>
 
             <ul class="card-list">
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Personalized clear-aligner treatment</li>
@@ -1308,8 +1324,9 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
               <p class="hours">Open 7am &ndash; 7pm<span class="sp"></span>Mon&ndash;Sat</p>
             </div>
 
-            <button class="btn btn-sky" type="button" id="cardBook">Book Free Consult</button>
-            <p class="card-fine">Evaluation complimentary &mdash; no obligation to start. <a href="#terms">*Terms &amp; Conditions</a></p>
+            <button class="btn btn-sky" type="button" id="cardBook">Book Free Orthodontic Evaluation</button>
+            <p class="card-fine">Evaluation complimentary &mdash; no obligation to start. </p>
+            <p class="card-fine"><a href="#terms">Terms &amp; Conditions</a></p>
            </div>
 
            <!-- ── the same card, flipped to a booking form ──────────────────
@@ -1319,27 +1336,25 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
            <div class="card-face card-form" hidden>
              <button class="cf-back" type="button" id="cardBack">&larr; Back to the offer</button>
              <p class="cf-k">Complimentary evaluation</p>
-             <h2 class="cf-h">Book your free consult</h2>
+             <h2 class="cf-h">Book your free evaluation</h2>
              <form id="cardForm" novalidate>
-               <div class="cf-row">
-                 <div class="fld"><label for="cf_fn">First name</label><input id="cf_fn" name="first_name" type="text" autocomplete="given-name" required></div>
-                 <div class="fld"><label for="cf_ln">Last name</label><input id="cf_ln" name="last_name" type="text" autocomplete="family-name" required></div>
-               </div>
+               <div class="fld"><label for="cf_fn">First name</label><input id="cf_fn" name="first_name" type="text" autocomplete="given-name" required></div>
                <div class="fld"><label for="cf_ph">Mobile number</label><input id="cf_ph" name="phone" type="tel" autocomplete="tel" required></div>
-               <div class="fld"><label for="cf_em">Email</label><input id="cf_em" name="email" type="email" autocomplete="email" required></div>
+               <div class="fld"><label for="cf_em">Email <span class="opt-tag">(optional)</span></label><input id="cf_em" name="email" type="email" autocomplete="email"></div>
                <div class="fld"><label for="cf_who">This is for</label>
                  <select id="cf_who" name="patient_type">
                    <option>Myself</option><option>My teenager</option><option>My child</option><option>Someone else</option>
                  </select></div>
-               <div class="fld"><label for="cf_msg">Message <span style="text-transform:none;letter-spacing:0;font-weight:400">(optional)</span></label>
-                 <textarea id="cf_msg" name="notes" placeholder="Preferred days, previous orthodontic treatment, concerns…"></textarea></div>
+               <div class="fld"><label for="cf_msg">Message <span class="opt-tag">(optional)</span></label>
+                 <textarea id="cf_msg" name="notes" placeholder="Preferred days, previous orthodontic treatment, concerns…"></textarea>
+                 <p class="fld-note">Please do not include medical or dental information in this form.</p></div>
                <input type="hidden" name="offer" value="invisalign-3900">
                <input type="hidden" name="gclid" id="cf_gclid">
                <input type="hidden" name="wbraid" id="cf_wbraid">
                <input type="hidden" name="utm_source" id="cf_utm_source">
                <input type="hidden" name="utm_medium" id="cf_utm_medium">
                <input type="hidden" name="utm_campaign" id="cf_utm_campaign">
-               <button class="btn btn-sky" type="submit">Book Free Consult</button>
+               <button class="btn btn-sky" type="submit">Book Free Orthodontic Evaluation</button>
                <p class="cf-fine">No obligation. We call back the same working day.</p>
              </form>
            </div>
@@ -1439,7 +1454,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
       <div class="tv-wrap">
         <div class="tv">
           <div class="tv-scr" id="promoScr" data-yt="CEgwotre0h8">
-            <img loading="lazy" src="https://i.ytimg.com/vi/CEgwotre0h8/maxresdefault.jpg"
+            <img loading="lazy" src="../aidm-lp-assets/promo/ortho-video-poster.jpg"
                  alt="Orthodontics at the Austin Institute of Dental Medicine">
             <span class="pl" role="button" tabindex="0" aria-label="Play: Orthodontics at the Austin Institute of Dental Medicine"><i></i></span>
           </div>
@@ -1519,7 +1534,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
       </div>
     </div>
     <p style="margin:1.7rem 0 0;text-align:center;font-size:.78rem;color:#6d90aa;line-height:1.6">
-      Individual treatment results vary. Cases shown were completed at AIDM and are illustrative of typical
+      Actual results may vary. Cases shown were completed at AIDM and are illustrative of typical
       comprehensive orthodontic treatment; they are not a guarantee of any particular outcome.</p>
   </div>
 </section>
@@ -1680,7 +1695,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <p class="d">Focused orthodontic care for growing children, when early treatment may help guide dental development.</p>
         <ul><li>Limited early orthodontic treatment</li><li>Routine treatment visits</li><li>Growth-appropriate treatment planning</li><li>Retention when included in the treatment plan</li><li>Care based on the child&rsquo;s stage of dental development</li></ul>
         <p class="optfine">*Standalone appliances and services outside the approved early-treatment plan are priced separately.</p>
-        <a class="btn btn-ghost" href="#contact">Book Free Consult</a>
+        <a class="btn btn-ghost" href="#contact">Book Free Orthodontic Evaluation</a>
       </div>
       <div class="opt has-ph rv">
         <figure class="opt-ph"><img loading="lazy" src="../aidm-lp-assets/promo/braces-smile.jpg" alt="A smile with fixed braces" style="object-position:center 46%"></figure>
@@ -1691,7 +1706,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <p class="d">A complete fixed-braces package with coordinated orthodontic care from active treatment through standard retention.</p>
         <ul><li>Comprehensive braces treatment</li><li>Routine orthodontic adjustment visits</li><li>Appliance removal</li><li>Standard orthodontic retention</li><li>Care coordinated throughout treatment</li></ul>
         <p class="optfine">*Applies to standard, comprehensive traditional bracket cases. Complex cases, clear aligner therapy or phase-one interceptive orthodontics may incur additional fees. $2,950 is valid for the first 100 patients, uninsured and paid in full, and expires 31 October 2026.</p>
-        <a class="btn btn-ghost" href="#contact">Book Free Consult</a>
+        <a class="btn btn-ghost" href="#contact">Book Free Orthodontic Evaluation</a>
       </div>
       <div class="opt feat has-ph rv">
         <span class="opt-flag">This offer</span>
@@ -1700,10 +1715,10 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <h3>Invisalign&reg; Clear Aligners</h3>
         <p class="amt">$3,900<a class="ast" href="#terms" aria-label="See fee disclosures">*</a></p>
         <p class="strike">&nbsp;</p>
-        <p class="d">A discreet, removable option personalised to your smile and supported by routine professional monitoring.</p>
-        <ul><li>Personalised clear-aligner treatment</li><li>Standard aligner laboratory materials</li><li>Routine orthodontic visits</li><li>Treatment completion and appliance removal</li><li>Standard orthodontic retention</li></ul>
+        <p class="d">A discreet, removable option personalized to your smile and supported by routine professional monitoring.</p>
+        <ul><li>Personalized clear-aligner treatment</li><li>Standard aligner laboratory materials</li><li>Routine orthodontic visits</li><li>Treatment completion and appliance removal</li><li>Standard orthodontic retention</li></ul>
         <p class="optfine">*Applies to Invisalign&reg; clear-aligner cases. Complex cases, retainers or phase-one interceptive orthodontics may incur additional fees.</p>
-        <a class="btn btn-gold" href="#contact">Book Free Consult</a>
+        <a class="btn btn-white" href="#contact">Book Free Orthodontic Evaluation</a>
       </div>
     </div>
   </div>
@@ -1749,7 +1764,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
     <div class="faq rv">
       <details open><summary>Will Invisalign work for my bite, or do I need braces?</summary><div class="a">That is exactly what the complimentary evaluation answers. Aligners handle a very wide range of cases, but severe rotations, large vertical movements and some bite corrections are still more predictable with fixed brackets. You will be told honestly which one suits your case &mdash; including when the answer is the cheaper one.</div></details>
       <details><summary>Why is Invisalign $3,900 here?</summary><div class="a">$3,900 is AIDM&rsquo;s published package fee for Invisalign&reg; clear aligner cases, and it reflects the teaching model &mdash; residents in advanced postgraduate training treating under board-certified faculty supervision. It applies to the services listed and cannot be combined with insurance benefits, membership pricing or other discounts unless expressly stated.</div></details>
-      <details><summary>What is included in the complimentary evaluation?</summary><div class="a">A personalised orthodontic evaluation with the team, plus the records needed to plan your case: panoramic imaging, cephalometric imaging and analysis, clinical photographs and a digital 3D intraoral scan, each when clinically indicated. There is no charge and no referral is required.</div></details>
+      <details><summary>What is included in the complimentary evaluation?</summary><div class="a">A personalized orthodontic evaluation with the team, plus the records needed to plan your case: panoramic imaging, cephalometric imaging and analysis, clinical photographs and a digital 3D intraoral scan, each when clinically indicated. There is no charge and no referral is required.</div></details>
       <details><summary>How long does treatment take?</summary><div class="a">Most cases run 12 to 24 months, and minor corrections can be considerably shorter. You will be given a realistic range for your own case at the evaluation rather than an average.</div></details>
       <details><summary>How many hours a day do I have to wear them?</summary><div class="a">Roughly 20 to 22, every day. Aligners only move teeth while they are in your mouth, and the single biggest cause of a case running long is wear time. They come out to eat, drink anything but water, and brush.</div></details>
       <details><summary>Is retention included, or is that extra later?</summary><div class="a">Standard orthodontic retention is included in the package, as is treatment completion and appliance removal. A <em>replacement</em> retainer &mdash; if one is lost or broken &mdash; is charged separately.</div></details>
@@ -1773,9 +1788,8 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <form id="lpForm" novalidate>
           <div class="fgrid">
             <div class="fld"><label for="fn">First name</label><input id="fn" name="first_name" type="text" autocomplete="given-name" required></div>
-            <div class="fld"><label for="ln">Last name</label><input id="ln" name="last_name" type="text" autocomplete="family-name" required></div>
             <div class="fld"><label for="ph">Mobile number</label><input id="ph" name="phone" type="tel" autocomplete="tel" required></div>
-            <div class="fld"><label for="em">Email</label><input id="em" name="email" type="email" autocomplete="email" required></div>
+            <div class="fld full"><label for="em">Email <span class="opt-tag">(optional)</span></label><input id="em" name="email" type="email" autocomplete="email"></div>
             <div class="fld full"><label for="who">Who is the treatment for?</label>
               <select id="who" name="patient_type">
                 <option value="">Please choose…</option>
@@ -1784,8 +1798,9 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
                 <option>My child</option>
                 <option>More than one family member</option>
               </select></div>
-            <div class="fld full"><label for="msg">Message <span style="text-transform:none;letter-spacing:0;font-weight:400">(optional)</span></label>
-              <textarea id="msg" name="notes" placeholder="Preferred days, previous orthodontic treatment, concerns…"></textarea></div>
+            <div class="fld full"><label for="msg">Message <span class="opt-tag">(optional)</span></label>
+              <textarea id="msg" name="notes" placeholder="Preferred days, previous orthodontic treatment, concerns…"></textarea>
+              <p class="fld-note">Please do not include medical or dental information in this form.</p></div>
           </div>
           <input type="hidden" name="offer" value="invisalign-3900">
           <input type="hidden" name="gclid" id="f_gclid">
@@ -1793,9 +1808,9 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
           <input type="hidden" name="utm_source" id="f_utm_source">
           <input type="hidden" name="utm_medium" id="f_utm_medium">
           <input type="hidden" name="utm_campaign" id="f_utm_campaign">
-          <button class="btn btn-sky btn-lg" type="submit">Book Free Consult</button>
+          <button class="btn btn-sky btn-lg" type="submit">Book Free Orthodontic Evaluation</button>
         </form>
-        <p class="fnote">By submitting you agree to be contacted about your enquiry. Promotional pricing is
+        <p class="fnote">By submitting you agree to be contacted about your inquiry. Promotional pricing is
           subject to clinical qualification determined at your evaluation.</p>
       </div>
 
@@ -1829,8 +1844,8 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
       <div><b>The offer</b>Invisalign&reg; clear aligner treatment at $3,900, including standard orthodontic retention.</div>
       <div><b>Who it is for</b>Adolescent and adult patients whose cases are suitable for clear-aligner therapy. Suitability is confirmed at your evaluation.</div>
       <div><b>Eligibility</b>Package pricing applies only to the services specifically listed and cannot be combined with insurance benefits, membership pricing, financing promotions or other discounts unless expressly stated.</div>
-      <div><b>What is not included</b>Complex cases, replacement retainers and phase-one interceptive orthodontics may incur additional fees, as may additional diagnostics, laboratory fees, sedation and anaesthesia.</div>
-      <div><b>Important to know</b>A complete clinical evaluation is required to determine case complexity and the final fee. Individual treatment results vary.</div>
+      <div><b>What is not included</b>Complex cases, replacement retainers and phase-one interceptive orthodontics may incur additional fees, as may additional diagnostics, laboratory fees, sedation and anesthesia.</div>
+      <div><b>Important to know</b>A complete clinical evaluation is required to determine case complexity and the final fee. Actual results may vary.</div>
     </div>
 
     <div class="legal">
@@ -1850,7 +1865,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         treatment that is performed as a result of and within 72 hours of responding to the advertisement for the
         free, discounted fee, or reduced fee service, examination, or treatment.</p>
       <p><b>Who treats you.</b> AIDM is a premier educational institute. Treatment under these promotional offers
-        may be provided by licensed dental residents participating in advanced training programmes under the direct
+        may be provided by dental residents participating in advanced training programs under the direct
         supervision of our licensed clinical faculty. All promotional pricing is subject to clinical qualification
         and medical clearance as determined by the attending doctor.</p>
       <p><b>Provider.</b> Dental services are provided by Philomena Street PLLC, supported by AIDM. Services at the
@@ -1865,7 +1880,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 
 <div class="mbar">
   <a class="btn btn-ghost" href="tel:+17374342436">Call</a>
-  <a class="btn btn-sky" href="#contact" data-book>Book Free Consult</a>
+  <a class="btn btn-sky" href="#contact" data-book>Book Free Orthodontic Evaluation</a>
 </div>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Media viewer">
@@ -1889,7 +1904,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
     data.page         = location.href;
     data.submitted_at = new Date().toISOString();
     data.form         = form.id === 'cardForm' ? 'hero offer card' : 'contact section';
-    data._subject     = 'AIDM invisalign LP — new enquiry from ' +
+    data._subject     = 'AIDM invisalign LP — new inquiry from ' +
                         ((data.first_name||'') + ' ' + (data.last_name||'')).trim();
     return data;
   }
@@ -2176,7 +2191,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
     cardForm.addEventListener('submit', function(e){
       e.preventDefault();
       var bad = false;
-      ['cf_fn','cf_ln','cf_ph','cf_em'].forEach(function(id){
+      ['cf_fn','cf_ph'].forEach(function(id){
         var f = document.getElementById(id);
         if (!f.value.trim()) { f.style.borderColor = '#d1614a'; bad = true; }
         else f.style.borderColor = '';
@@ -2213,7 +2228,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
     form.addEventListener('submit', function(e){
       e.preventDefault();
       var bad = [];
-      ['fn','ln','ph','em'].forEach(function(idn){
+      ['fn','ph'].forEach(function(idn){
         var f = document.getElementById(idn);
         if (!f.value.trim()) { bad.push(f); f.style.borderColor = '#d1614a'; }
         else f.style.borderColor = '';
