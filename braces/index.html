@@ -713,19 +713,10 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
    the fit/exclusions detail already has its own panel further down. */
 .promo-grid{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(0,1fr);
   gap:clamp(1.6rem,3.2vw,2.8rem);align-items:stretch}
-.promo-copy{display:flex;flex-direction:column;gap:clamp(.9rem,1.6vw,1.25rem)}
-/* the photo takes whatever height is left once the three points are set, so
-   the column finishes exactly level with the screen beside it */
-/* flex-basis 0 with the image taken out of flow: without this the square
-   photo's own aspect ratio sets the column height and the screen beside it
-   is left floating in empty space */
-.promo-ph{position:relative;flex:1 1 0;min-height:clamp(170px,18vw,230px);
-  border-radius:16px;overflow:hidden;
-  background:var(--mid);border:1px solid rgba(233,196,106,.28);
-  box-shadow:0 26px 52px -30px #000}
-.promo-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  object-position:center 60%;transition:transform 1.1s var(--ease)}
-.promo-ph:hover img{transform:scale(1.05)}
+/* no photo to stretch against the screen any more, so the short copy block
+   is centred within the row instead of pinned to its top */
+.promo-copy{display:flex;flex-direction:column;justify-content:center;
+  gap:clamp(.9rem,1.6vw,1.25rem)}
 .promo-copy .promo-hl{margin:0;gap:.7rem}
 .promo-copy .promo-hl li{font-size:1rem;line-height:1.4}
 
@@ -796,8 +787,6 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 .promo-hl li{display:flex;gap:.6rem;font-size:.95rem;color:var(--pale);line-height:1.45}
 .promo-hl svg{flex:none;margin-top:.2rem}
 @media(max-width:520px){.promo-hl{grid-template-columns:1fr}}
-/* stacked, the photo has no column height to fill, so give it a shape */
-@media(max-width:960px){.promo-ph{flex:none;min-height:0;aspect-ratio:16/10}}
 
 /* the two buttons share the row and shrink together rather than one of them
    dropping to its own line as the type scales up */
@@ -819,11 +808,10 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
   .promo-grid{grid-template-columns:minmax(0,1fr);gap:2.6rem}
   .promo-fine{text-align:left}
 }
-/* the note runs the full width of the wrap — capping it at 78ch left it
-   breaking mid-column against all that empty space to its right — and the
-   marker hangs outside the text block so the copy stays flush left */
-.promo-fine{margin:clamp(1.4rem,2.6vw,2rem) 0 clamp(1.2rem,2.2vw,1.7rem);
-  padding-left:1.05rem;text-indent:-1.05rem;
+/* last item in the narrow copy column — the flex gap on .promo-copy sets
+   the space above it, so no margin of its own is needed; the marker still
+   hangs outside the text block so the copy stays flush left */
+.promo-fine{margin:0;padding-left:1.05rem;text-indent:-1.05rem;
   font-size:.8rem;color:#6b90ac;line-height:1.65;max-width:none}
 .promo-fine .fs{color:#fff;font-weight:700;padding-right:.35rem}
 
@@ -950,31 +938,8 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 .opt ul{list-style:none;margin:0 0 1.5rem;padding:1.05rem 0 0;border-top:1px solid var(--line);display:grid;gap:.45rem}
 .opt li{display:flex;gap:.55rem;font-size:.92rem;line-height:1.5;color:var(--pale)}
 .opt li::before{content:'';flex:none;width:5px;height:5px;border-radius:50%;background:var(--sky);margin-top:.5rem}
-/* — the picture band on a package card —
-   The printed flyers lead each package with a picture; three identical navy
-   slabs do not. Most cards carry a drawn procedure panel from
-   tools/lp/illus.py; the card for a page's own offer carries that page's
-   own photograph instead. The band breaks out of the card padding to meet its
-   rounded top corners, and fades into the card so it reads as part of the
-   plate rather than pasted onto it. .opt keeps overflow visible, or the
-   "You are here" flag above it would be clipped. */
-.opt.has-ph{padding-top:0}
-.opt-ph{position:relative;margin:0 -1.7rem 1.3rem;overflow:hidden;
-  border-radius:var(--r) var(--r) 0 0;background:#07203a}
-/* the flag rides above the band, not under it */
+/* the flag rides above the card's top edge */
 .opt .opt-flag{z-index:4}
-.opt-ph img{display:block;width:100%;height:clamp(150px,15vw,186px);object-fit:cover;
-  object-position:center 28%;transition:transform 1.1s var(--ease)}
-.opt:hover .opt-ph img{transform:scale(1.05)}
-/* the drawn panels are light artwork, not photographs — a dark scrim over
-   them just muddies the drawing, so the fade only applies to the photo */
-.opt-ph.is-art::after{display:none}
-.opt-ph.is-art{box-shadow:inset 0 -1px 0 rgba(120,190,235,.28)}
-.opt-ph.is-art img{object-fit:contain;background:#eef4f9}
-.opt-ph::after{content:'';position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(180deg,rgba(6,26,44,.16) 0%,rgba(6,26,44,0) 34%,rgba(10,37,64,.72) 88%,rgba(10,37,64,.96) 100%)}
-.opt.feat .opt-ph::after{background:linear-gradient(180deg,rgba(6,26,44,.16) 0%,rgba(6,26,44,0) 34%,rgba(20,68,111,.74) 88%,rgba(20,68,111,.97) 100%)}
-@media(max-width:880px){.opt-ph{margin-inline:-1.7rem}}
 .opt .btn{width:100%;margin-top:auto}
 @media(max-width:880px){.opts{grid-template-columns:1fr;gap:1.8rem}}
 
@@ -1395,22 +1360,17 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
            section heading, so this column is just the picture and the three
            things the complimentary visit gives you. -->
       <div class="promo-copy">
-        <figure class="promo-ph">
-          <img loading="lazy" src="../aidm-lp-assets/promo/braces-smile.jpg"
-               alt="A patient smiling with fixed braces">
-        </figure>
         <ul class="promo-hl">
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Meet with the orthodontic team</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Review appropriate treatment options</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#4fc3f7" opacity=".18"/><path d="M7 12.4l3.2 3.2L17 8.8" stroke="#4fc3f7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Understand expected fees and payment options</li>
         </ul>
+        <p class="promo-fine"><span class="fs">*</span>For qualifying standard comprehensive traditional braces cases.
+          Payment in full required. Cannot be combined with insurance benefits, financing, membership discounts, or other
+          promotions. Additional services may involve additional fees. A complete clinical evaluation is required to
+          determine case complexity and the final fee. <a href="#terms">Read the full offer terms</a>.</p>
       </div>
     </div>
-
-    <p class="promo-fine"><span class="fs">*</span>For qualifying standard comprehensive traditional braces cases.
-      Payment in full required. Cannot be combined with insurance benefits, financing, membership discounts, or other
-      promotions. Additional services may involve additional fees. A complete clinical evaluation is required to
-      determine case complexity and the final fee. <a href="#terms">Read the full offer terms</a>.</p>
 
     <div class="perks rv">
       <div class="perk"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M5 6h14a1 1 0 011 1v12a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1z"/></svg><b>Book online</b></div>
@@ -1618,8 +1578,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         the cheaper option.</p>
     </div>
     <div class="opts">
-      <div class="opt has-ph rv">
-                <figure class="opt-ph"><img loading="lazy" src="../aidm-lp-assets/promo/early-ortho-boy.jpg" alt="A smiling boy with a gap in his front teeth" style="object-position:center 30%"></figure>
+      <div class="opt rv">
         <p class="sub">The right care at the right time</p>
         <h3>Early Orthodontic Treatment</h3>
         <p class="amt">$2,500<a class="ast" href="#terms" aria-label="See fee disclosures">*</a></p>
@@ -1629,9 +1588,8 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
         <p class="optfine">*For qualifying early orthodontic treatment cases. Payment in full required. Cannot be combined with insurance benefits, financing, membership discounts, or other promotions. Additional services may involve additional fees.</p>
         <a class="btn btn-ghost" href="#contact">Book Free Orthodontic Evaluation</a>
       </div>
-      <div class="opt feat has-ph rv d1">
+      <div class="opt feat rv d1">
         <span class="opt-flag">First 100 patients</span>
-                <figure class="opt-ph"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/07/Ortho-Resident-and-Patient-6-1024x683.jpg" alt="An AIDM clinician reviewing a patient&rsquo;s digital X-rays on a chairside display" style="object-position:center 32%"></figure>
         <p class="sub">Straighten your smile with confidence</p>
         <h3>Comprehensive Braces</h3>
         <p class="amt">$2,950<a class="ast" href="#terms" aria-label="See fee disclosures">*</a></p>
@@ -1643,8 +1601,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
           Additional services may involve additional fees.</p>
         <a class="btn btn-white" href="#contact">Book Free Orthodontic Evaluation</a>
       </div>
-      <div class="opt has-ph rv d2">
-                <figure class="opt-ph"><img loading="lazy" src="../aidm-lp-assets/promo/clear-aligner.jpg" alt="A clear aligner being fitted over the teeth" style="object-position:center 48%"></figure>
+      <div class="opt rv d2">
         <p class="sub">Clear aligners. Confident smile.</p>
         <h3>Invisalign® Clear Aligners</h3>
         <p class="amt">$3,900<a class="ast" href="#terms" aria-label="See fee disclosures">*</a></p>
