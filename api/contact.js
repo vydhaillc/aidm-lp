@@ -117,12 +117,13 @@ async function readBody(req) {
   }
 }
 
-/* The page is served from GitHub Pages until DNS moves to Vercel, so the
-   POST is cross-origin for now. Allowlist the hosts it can legitimately come
-   from rather than opening this up with a wildcard. */
+/* The page is served from GitHub Pages and Vercel, so the POST is
+   cross-origin. Allowlist the hosts it can legitimately come from rather
+   than opening this up with a wildcard. */
 const ALLOWED_ORIGINS = [
   "https://aidm.vydhai.com",
   "https://aidm-lp.vercel.app",
+  "https://aidm.dental",
   "http://localhost:8901",
   "http://localhost:8904",
 ];
