@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P5MV8V6G');</script>
+<!-- End Google Tag Manager -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Straighten Your Smile with Confidence — $2,950 Comprehensive Braces | AIDM Austin</title>
@@ -1106,6 +1112,10 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5MV8V6G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- gradient definition for the hand-drawn underline -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1576,7 +1586,20 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
       method: 'POST',
       headers: {'Content-Type':'application/json', 'Accept':'application/json'},
       body: JSON.stringify(leadPayload(form))
-    }).then(function(r){ done(r.ok); })
+    }).then(function(r){
+      /* Conversion signal for GTM — fires only on a real, confirmed
+         submission, never on page load. GTM-side: a Custom Event trigger
+         on 'lead_form_submit' feeds the Google Ads conversion tag. */
+      if (r.ok) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'lead_form_submit',
+          form_location: form.id === 'cardForm' ? 'hero_offer_card' : 'contact_section',
+          offer_path: location.pathname
+        });
+      }
+      done(r.ok);
+    })
       .catch(function(){ done(false); });
   }
 

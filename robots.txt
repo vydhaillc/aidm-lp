@@ -1,4 +1,14 @@
-# Client review preview — not for indexing.
-# The live orthodontics page is https://aidm.org/orthodontics/
+# Paid landing pages for aidm.dental — kept out of organic search (see the
+# per-page noindex meta tag), but ad crawlers must be explicitly allowed
+# through or campaigns get disapproved for "destination not reachable".
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
 User-agent: *
 Disallow: /
