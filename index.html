@@ -1,123 +1,1904 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Straighten Your Smile with Confidence — $2,950 Comprehensive Braces | AIDM Austin</title>
 <meta name="robots" content="noindex, nofollow">
-<title>AIDM offer landing pages — review index</title>
+<meta name="description" content="Comprehensive braces treatment for $2,950 for the first 100 orthodontic patients at the Austin Institute of Dental Medicine. Complimentary evaluation, no referral needed.">
+<meta property="og:title" content="Straighten Your Smile with Confidence — $2,950 | AIDM Austin">
+<meta property="og:description" content="Comprehensive braces at Austin's teaching dental institute. First 100 orthodontic patients.">
+<meta property="og:image" content="https://aidm.org/wp-content/uploads/2026/07/16-AIDM-Operatory-01--1536x1024.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="https://aidm.org/wp-content/uploads/2026/07/16-AIDM-Operatory-01--1536x1024.jpg" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--abyss:#03101d;--deep:#061a2c;--deep2:#0a2540;--line:rgba(120,190,235,.16);
-  --line2:rgba(120,190,235,.3);--sky:#4fc3f7;--cyan:#2ebeef;--ice:#9fd8f2;--pale:#cfe6f5;--dim:#8bb0cb;
-  --gold:#e9c46a;--head:'Poppins',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;
-  --price:'Montserrat','Poppins',sans-serif;--r:16px}
+/* ═══════════════════════════════════════════════════════════════════════════
+   AIDM — ORTHODONTICS LP  ·  V3 "dark blue, picture-led"
+   Every surface is a blue; there is no white section anywhere, including the
+   form fields and the map (which is filtered to match). Photography carries
+   the page — alternating full-bleed feature rows, a gallery, a film wall.
+   All prices, package terms, faculty names and legal lines are AIDM's own.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root{
+  /* the blues — deepest ground to palest text */
+  --abyss:#03101d;
+  --deep:#061a2c;
+  --deep2:#0a2540;
+  --mid:#0e3155;
+  --mid2:#14446f;
+  --line:rgba(120,190,235,.16);
+  --line2:rgba(120,190,235,.28);
+
+  /* light blues */
+  --sky:#4fc3f7;
+  --cyan:#2ebeef;
+  --ice:#9fd8f2;
+  --pale:#cfe6f5;
+  --dim:#8bb0cb;
+
+  --gold:#e9c46a;
+
+  --head:'Poppins',system-ui,sans-serif;
+  --body:'Inter',system-ui,-apple-system,sans-serif;
+  /* every price on the page is set in this one heavy geometric sans, struck
+     in gold on the hero card — distinct from Poppins headings, and the
+     figure carries at a glance the way the offer plate needs it to */
+  --price:'Montserrat','Poppins',system-ui,sans-serif;
+  --wrap:1240px;
+  --pad:clamp(1.1rem,4vw,2rem);
+  --r:18px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
 *,*::before,*::after{box-sizing:border-box}
-body{margin:0;background:var(--deep);color:var(--pale);font-family:var(--body);line-height:1.65;
+/* 17px root: every rem size on the page scales from here, so this one line
+   lifts the whole type stack ~6% without touching a hundred declarations */
+html{font-size:17px;-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px;overflow-x:hidden}
+body{
+  margin:0;background:var(--deep);color:var(--pale);
+  font-family:var(--body);font-size:1.02rem;line-height:1.7;overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
-  background-image:radial-gradient(ellipse 70% 55% at 15% 0%,rgba(46,190,239,.13),transparent 62%),
-    radial-gradient(ellipse 60% 55% at 90% 100%,rgba(79,195,247,.1),transparent 64%)}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1120px;margin:0 auto;padding:clamp(2.2rem,5vw,4rem) clamp(1.1rem,4vw,2rem)}
-header img{height:46px;width:auto;display:block;margin-bottom:2rem}
-h1{font-family:var(--head);font-size:clamp(1.7rem,4vw,2.7rem);font-weight:700;letter-spacing:-.02em;
-  margin:0 0 .5rem;color:#fff;line-height:1.12}
-h1 em{font-style:normal;color:var(--sky)}
-.lede{margin:0 0 .4rem;color:var(--dim);max-width:70ch}
-.note{margin:1.6rem 0 0;padding:1rem 1.15rem;border-radius:12px;font-size:.88rem;color:var(--ice);
-  background:rgba(233,196,106,.07);border:1px solid rgba(233,196,106,.3)}
-h2{font-family:var(--head);font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--sky);margin:3rem 0 1.1rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1rem}
-.card{display:flex;flex-direction:column;border-radius:var(--r);padding:1.3rem 1.35rem 1.25rem;
-  background:linear-gradient(160deg,rgba(14,49,85,.5),rgba(6,26,44,.7));border:1px solid var(--line);
-  transition:transform .25s cubic-bezier(.22,.61,.36,1),border-color .25s}
-.card:hover{transform:translateY(-3px);border-color:var(--line2)}
-.n{font-family:var(--head);font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--dim);margin-bottom:.5rem}
-.card b{font-family:var(--head);font-size:1.06rem;font-weight:600;color:#fff;line-height:1.25}
-.card .tag{margin:.35rem 0 .8rem;font-size:.87rem;color:var(--dim);font-style:italic}
-.amt{font-family:var(--price);font-size:1.5rem;font-weight:800;color:var(--gold);line-height:1;margin-top:auto}
-.u{font-family:var(--body);font-size:.72rem;font-weight:600;color:var(--dim);letter-spacing:.04em;
-  display:block;margin-top:.3rem}
-.card .go{margin-top:.95rem;font-family:var(--head);font-size:.7rem;font-weight:700;letter-spacing:.14em;
+}
+img{max-width:100%;display:block}
+figure{margin:0}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--head);margin:0;line-height:1.14;letter-spacing:-.015em;color:#fff}
+p{margin:0 0 1em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--pad)}
+section{position:relative}
+.pad{padding-block:clamp(2.5rem,5.1vw,4.2rem)}
+/* photo-led sections earn their impact from the pictures, not from the air
+   around them — these pull the band up under the section above it */
+.pad.tight-top{padding-top:clamp(1.4rem,2.4vw,2rem)}
+.pad.tight-bot{padding-bottom:clamp(1.5rem,2.6vw,2.1rem)}
+/* Section tone. Each utility sets both the base colour AND the --tint the
+   photo scrim is mixed from — without the second half the scrim (which sits
+   at .83–.95 opacity) simply repaints every section the same blue, which is
+   exactly what was happening. .ph is declared later, so these carry a second
+   class to win the cascade. */
+.bg-deep,.ph.bg-deep{background:var(--deep);--tint:6,26,44}
+.bg-deep2,.ph.bg-deep2{background:var(--deep2);--tint:10,37,64}
+.bg-abyss,.ph.bg-abyss{background:var(--abyss);--tint:3,16,29}
+
+/* soft blue glow that keeps the dark sections from going flat */
+.glow::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 65% 60% at 20% 0%,rgba(46,190,239,.11),transparent 65%),
+             radial-gradient(ellipse 55% 55% at 90% 100%,rgba(79,195,247,.08),transparent 65%);
+}
+
+/* ══ PHOTO-BACKED SECTIONS ══════════════════════════════════════════════
+   Each section carries a different room of the practice as a shaded plate
+   behind it — set per section with --ph. The plates are small, softened
+   1200px files: at this opacity, behind this scrim, they read as texture and
+   tone rather than as a legible photo, so nothing competes with the copy. */
+.ph{--tint:6,26,44;position:relative;overflow:hidden;background:var(--deep)}
+.ph::before{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:var(--ph);background-size:cover;background-position:center;
+  opacity:.34;filter:saturate(.66) contrast(1.04)}
+/* The AIDM mark, tiled as a watermark on the topmost layer of the scrim: it
+   sits over the photo plate but under the content (::after is z-index 1, the
+   copy is 2), so it never touches legibility. Three marks at three sizes and
+   angles are baked into one 560px tile with their alpha already at 5–9%,
+   because a background layer cannot carry its own opacity. */
+.ph::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+  background-image:
+    url('aidm-lp-assets/brand-watermark.png'),
+    radial-gradient(ellipse 65% 55% at 18% 0%,rgba(46,190,239,.13),transparent 62%),
+    radial-gradient(ellipse 58% 55% at 88% 100%,rgba(79,195,247,.1),transparent 64%),
+    linear-gradient(180deg,rgba(var(--tint),.95) 0%,rgba(var(--tint),.85) 8%,
+      rgba(var(--tint),.83) 92%,rgba(var(--tint),.95) 100%);
+  background-repeat:repeat,no-repeat,no-repeat,no-repeat;
+  background-size:clamp(300px,26vw,420px) auto,auto,auto,auto;
+  background-position:0 0,center,center,center}
+/* stagger the tile per section so the marks never line up across a seam */
+.bg-deep2.ph::after{background-position:140px -90px,center,center,center}
+.bg-abyss.ph::after{background-position:-70px 60px,center,center,center}
+.ph>*{position:relative;z-index:2}
+/* the seam: a hairline of light plus a wide, very soft bloom where two
+   photo-backed sections meet, so the join reads as a transition rather than
+   as two plates butted together */
+section.ph+section.ph{box-shadow:inset 0 1px 0 rgba(159,216,242,.09)}
+/* a soft bloom rides just under the hairline, drawn by the plate itself so
+   each section's own scrim colour is left alone */
+section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247,.5)}
+
+/* section heading */
+.sh{text-align:center;max-width:760px;margin:0 auto clamp(1.7rem,3vw,2.5rem);position:relative;z-index:2}
+.sh .k{font-family:var(--head);font-size:.68rem;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--sky);margin:0 0 .85rem}
+.sh h2{font-size:clamp(1.62rem,3.6vw,2.6rem);font-weight:700}
+.sh h2 em{font-style:normal;color:var(--sky)}
+.sh .bar{width:60px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--cyan),var(--sky));margin:1.1rem auto 0}
+.sh p{margin:1.15rem 0 0;color:var(--dim);font-size:1.06rem}
+.sh.sh-tight{margin-bottom:clamp(1.1rem,1.9vw,1.6rem)}
+.sh.sh-tight .k{margin-bottom:.5rem}
+.sh.sh-tight .bar{margin-top:.8rem}
+.sh.sh-tight p{margin-top:.8rem;font-size:.94rem}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font-family:var(--head);font-weight:600;font-size:.88rem;letter-spacing:.05em;
+  text-transform:uppercase;padding:1.02rem 1.9rem;border-radius:10px;text-decoration:none;
+  border:1px solid transparent;cursor:pointer;white-space:nowrap;
+  transition:transform .26s var(--ease),box-shadow .26s var(--ease),background .26s,border-color .26s;
+}
+.btn-sky{background:linear-gradient(135deg,var(--sky),#1f8fd0);color:#03101d;
+  box-shadow:0 14px 30px -12px rgba(79,195,247,.75)}
+.btn-sky:hover{transform:translateY(-2px);box-shadow:0 20px 40px -14px rgba(79,195,247,.9)}
+.btn-gold{background:linear-gradient(135deg,#f3d78f,var(--gold));color:#2e2405;
+  box-shadow:0 14px 30px -12px rgba(233,196,106,.7)}
+.btn-gold:hover{transform:translateY(-2px)}
+/* white, in place of the gold treatment on the featured comparison card */
+.btn-white{background:linear-gradient(135deg,#ffffff,#e7f1f8);color:var(--deep2);
+  box-shadow:0 14px 30px -12px rgba(0,0,0,.4)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 20px 40px -14px rgba(0,0,0,.5)}
+/* NOTE: no backdrop-filter on anything that sits over the hero <video> —
+   per-frame re-blur of live video crashes Chrome's GPU process on macOS.
+   Solid rgba backgrounds only above the film. */
+.btn-ghost{background:rgba(10,37,64,.62);border-color:var(--line2);color:#fff}
+.btn-ghost:hover{background:rgba(159,216,242,.14);transform:translateY(-2px)}
+.btn-lg{padding:1.16rem 2.3rem;font-size:.94rem}
+
+/* ══ NAV ════════════════════════════════════════════════════════════════ */
+.nav{
+  position:fixed;inset:0 0 auto;z-index:90;display:flex;align-items:center;gap:1.4rem;
+  padding:.7rem var(--pad);transition:background .4s var(--ease),box-shadow .4s var(--ease);
+}
+.nav::before{content:'';position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(3,16,29,.8),transparent);transition:opacity .4s}
+.nav.stuck{background:rgba(6,26,44,.97);
+  box-shadow:0 1px 0 var(--line),0 12px 30px -22px #000}
+.nav.stuck::before{opacity:0}
+.nav-logo{height:36px;width:auto;filter:brightness(0) invert(1)}
+.nav-links{display:flex;gap:1.45rem;margin-left:auto;list-style:none;padding:0}
+.nav-links a{font-family:var(--head);font-size:.845rem;font-weight:400;color:var(--pale);
+  text-decoration:none;position:relative;padding:.3rem 0;transition:color .24s}
+.nav-links a::after{content:'';position:absolute;left:0;right:100%;bottom:0;height:2px;
+  background:var(--sky);transition:right .3s var(--ease)}
+.nav-links a:hover{color:var(--sky)}
+.nav-links a:hover::after{right:0}
+.nav-tel{font-family:var(--head);font-weight:600;font-size:.88rem;color:#fff;text-decoration:none;white-space:nowrap}
+.nav .btn{padding:.72rem 1.3rem;font-size:.78rem}
+@media(max-width:1060px){.nav-links{display:none}.nav .btn{margin-left:auto}}
+/* below this the sticky .mbar already carries Call + Book Free Orthodontic
+   Evaluation, so the nav CTA is dropped rather than fighting the logo for
+   room — that's what was squeezing .nav-logo's width down against its fixed
+   height and squishing it */
+@media(max-width:760px){.nav .btn{display:none}.nav-tel{margin-left:auto}}
+@media(max-width:520px){.nav-tel{display:none}}
+
+/* ══ HERO ═══════════════════════════════════════════════════════════════ */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;
+  background:var(--abyss);overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:0;overflow:hidden;background:var(--abyss)}
+/* The film plays untreated — no brightness, saturation or scrim layer over it.
+   object-fit:cover is the only thing applied, purely to fill the frame.
+   Copy legibility is carried entirely by the elements' own shadows and by the
+   solid dark surfaces of the offer disc and the team strip. */
+.hero-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+
+.hero-in{position:relative;z-index:3;width:100%;
+  padding-block:5rem clamp(15rem,32.5vh,18.5rem)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);
+  gap:clamp(2rem,5vw,4rem);align-items:center}
+
+/* — the designed headline lockup — */
+.lock{position:relative}
+@keyframes pls{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.32;transform:scale(.68)}}
+
+/* the film behind can be any brightness, so the lockup carries its own contrast.
+   NOTE: text-shadow must not touch .l3 — that line is gradient-filled via
+   background-clip:text, and a shadow paints the whole glyph shape straight
+   through the transparent fill, turning it muddy. It uses drop-shadow instead,
+   which filters the painted result. */
+.lock h1 .l1,.lock h1 .l2{text-shadow:0 2px 10px rgba(3,16,29,.95),0 2px 34px rgba(3,16,29,.9),0 1px 3px rgba(3,16,29,.8)}
+.lock h1{font-size:clamp(2.5rem,6vw,4.6rem);font-weight:300;line-height:1.02;letter-spacing:-.03em;margin:0}
+.lock h1 .l1{display:block;font-weight:300;color:var(--ice)}
+.lock h1 .l2{display:block;font-weight:700;color:#fff}
+.lock h1 .l3{display:block;font-weight:800;position:relative;width:max-content;max-width:100%;
+  background:linear-gradient(100deg,#7fdcff,#c9f3ff 45%,#5fd0f7);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 8px rgba(3,16,29,.95)) drop-shadow(0 0 26px rgba(3,16,29,.85))}
+/* hand-drawn underline that draws itself in */
+.swoosh{display:block;width:min(100%,460px);height:20px;margin-top:.1rem;overflow:visible;
+  filter:drop-shadow(0 2px 10px rgba(3,16,29,.85))}
+.swoosh path{fill:none;stroke:url(#swg);stroke-width:5;stroke-linecap:round;
+  stroke-dasharray:520;stroke-dashoffset:520;animation:draw 1.5s .5s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* vertical accent rail beside the headline */
+.lock-rail{position:absolute;left:-1.6rem;top:.4rem;bottom:.4rem;width:3px;border-radius:3px;
+  background:linear-gradient(180deg,transparent,var(--sky) 22%,var(--cyan) 74%,transparent);opacity:.8}
+@media(max-width:1200px){.lock-rail{display:none}}
+
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.1rem}
+
+/* ══ THE OFFER CARD ═════════════════════════════════════════════════════
+   A proper pricing panel: solid dark surface (never backdrop-filter — it sits
+   over the film), a gold→sky rim, a red corner ribbon carrying the SPECIAL
+   flag, and the package highlights lifted verbatim from AIDM's ortho flyer. */
+.offer{display:flex;justify-content:center}
+.card{position:relative;width:100%;max-width:412px;overflow:hidden;
+  border-radius:22px;padding:1.15rem 1.35rem 1.2rem;
+  background:linear-gradient(168deg,rgba(15,49,82,.97),rgba(5,22,38,.985));
+  box-shadow:0 46px 92px -34px #000,0 0 54px -16px rgba(233,196,106,.34),
+             inset 0 1px 0 rgba(255,255,255,.09)}
+/* gold rim, full circuit — the card should read as the framed offer plate */
+.card::before{content:'';position:absolute;inset:0;border-radius:22px;padding:2px;pointer-events:none;z-index:4;
+  background:linear-gradient(160deg,#f6e3a8,#c99a2e 26%,#8c6613 52%,#e6c775 74%,#f8ecc4);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude}
+
+/* — the limited-run flag —
+   Full-width red plate with its own gold rim. Three motions, all
+   compositor-only and all silenced by prefers-reduced-motion: a red halo
+   breathing under the plate, a light sweep crossing it, and the star. */
+.card-lim{position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+  margin:0 0 .85rem;text-align:center;
+  font-family:var(--head);font-size:clamp(.74rem,1.55vw,.88rem);font-weight:800;
+  letter-spacing:.055em;text-transform:uppercase;color:#fff;
+  text-shadow:0 1px 2px rgba(70,4,0,.75);
+  background:linear-gradient(180deg,#d0301f,#8e1409);
+  border:2px solid transparent;border-radius:100px;padding:.5rem 1rem;
+  background-origin:border-box;
+  background-image:linear-gradient(180deg,#d0301f,#8e1409),
+                   linear-gradient(150deg,#f8e9bd,#c99a2e 40%,#8c6613 62%,#f2dda2);
+  background-clip:padding-box,border-box}
+.card-lim .star{position:relative;z-index:2;flex:none;
+  display:grid;place-items:center;width:1.25em;height:1.25em;border-radius:50%;
+  background:radial-gradient(circle at 40% 34%,#fff3cd,#e9c46a 58%,#b8860b);
+  color:#7a1a06;font-size:.72em;line-height:1;
+  box-shadow:0 0 10px -2px rgba(255,224,150,.9)}
+.card-lim::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:3;
+  background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.62) 50%,transparent 62%);
+  transform:translateX(-130%)}
+@media(prefers-reduced-motion:no-preference){
+  .card-lim{animation:limglow 2.9s ease-in-out infinite}
+  .card-lim::after{animation:limshine 3.8s ease-in-out infinite}
+  .card-lim .star{animation:limstar 2.9s ease-in-out infinite}
+}
+@keyframes limglow{
+  0%,100%{box-shadow:0 0 0 0 rgba(232,64,47,0),0 0 14px -5px rgba(232,64,47,.6)}
+  50%{box-shadow:0 0 0 5px rgba(232,64,47,.14),0 0 28px -2px rgba(232,64,47,.95)}}
+@keyframes limshine{0%{transform:translateX(-130%)}45%,100%{transform:translateX(130%)}}
+@keyframes limstar{0%,100%{transform:scale(1)}50%{transform:scale(1.16)}}
+
+/* — the special-offer ribbon —
+   Replaces the flat pill. A darker tail runs out to each edge of the plate
+   with a chevron notched into its outer end, and the band sits over them
+   with the same gold rim and the same three motions the pill carried. The
+   tails are clipped by the card's own overflow, which is what makes the
+   ribbon read as wrapped around the plate rather than drawn on it. */
+.rib{position:relative;display:flex;justify-content:center;
+  margin:.1rem -1.35rem 1rem;
+  font-family:var(--head);font-size:clamp(.78rem,1.62vw,.92rem);
+  filter:drop-shadow(0 9px 14px -9px rgba(0,0,0,.85))}
+.rib-tail{position:absolute;top:54%;transform:translateY(-50%);z-index:0;
+  height:2.15em;width:2.6rem;
+  background:linear-gradient(180deg,#8b1308,#4f0902);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+.rib-l{left:0;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,30% 50%)}
+.rib-r{right:0;clip-path:polygon(0 0,100% 0,70% 50%,100% 100%,0 100%)}
+.rib-band{position:relative;z-index:2;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+  margin:0;padding:.52rem 1.35rem;min-width:min(100%,19rem);
+  font-size:1em;font-weight:800;letter-spacing:.085em;text-transform:uppercase;
+  color:#fff;text-shadow:0 1px 2px rgba(70,4,0,.75);
+  border-radius:4px;
+  background:linear-gradient(180deg,#e5462f 0%,#c72a1b 47%,#9c1408 100%);
+  border-top:2px solid rgba(248,233,189,.8);
+  border-bottom:2px solid rgba(140,102,19,.9)}
+/* the folds, where the band turns over the tails */
+.rib-band::before,.rib-band::after{content:'';position:absolute;top:100%;z-index:-1;
+  width:.9rem;height:.62rem;background:#3d0500}
+.rib-band::before{left:0;clip-path:polygon(0 0,100% 0,100% 100%)}
+.rib-band::after{right:0;clip-path:polygon(0 0,100% 0,0 100%)}
+/* the light sweep lives in its own clipped layer so the folds are not cut off */
+.rib-shine{position:absolute;inset:0;overflow:hidden;border-radius:inherit;pointer-events:none;z-index:3}
+.rib-shine::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.6) 50%,transparent 62%);
+  transform:translateX(-130%)}
+.rib .star{position:relative;z-index:4;flex:none;
+  display:grid;place-items:center;width:1.25em;height:1.25em;border-radius:50%;
+  background:radial-gradient(circle at 40% 34%,#fff3cd,#e9c46a 58%,#b8860b);
+  color:#7a1a06;font-size:.72em;line-height:1;
+  box-shadow:0 0 10px -2px rgba(255,224,150,.9)}
+@media(prefers-reduced-motion:no-preference){
+  .rib-band{animation:limglow 2.9s ease-in-out infinite}
+  .rib-shine::after{animation:limshine 3.8s ease-in-out infinite}
+  .rib .star{animation:limstar 2.9s ease-in-out infinite}
+}
+@media(max-width:460px){
+  /* the band has to give ground on a phone, or the tails disappear behind it
+     and the ribbon reads as the flat pill it replaced */
+  .rib{margin-inline:-1.15rem}
+  .rib-tail{width:2.1rem}
+  .rib-band{min-width:0;padding-inline:1.15rem;letter-spacing:.06em}
+}
+
+/* the qualifier that used to live on the flag */
+.card-sub{margin:.2rem 0 0;text-align:center;font-family:var(--head);font-size:.62rem;
+  font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:#fff}
+/* the price-qualifier disclosure, required directly beside/below every
+   prominent $2,950 — small enough to sit in the card without disturbing it */
+.card-disc{margin:.5rem 0 0;text-align:left;font-size:.66rem;line-height:1.5;color:var(--dim)}
+
+/* — the hours band —
+   Stands where the countdown stood. One statement at one size, white rather
+   than the gold/yellow the counter cells used. */
+.hours{position:relative;margin:0;padding:.78rem .8rem;border-radius:12px;
+  text-align:center;white-space:nowrap;
+  font-family:var(--head);font-size:clamp(.88rem,2.05vw,1.08rem);font-weight:800;
+  line-height:1.15;letter-spacing:.035em;text-transform:uppercase;
+  color:#fff;text-shadow:0 0 18px rgba(255,255,255,.4);
+  font-variant-numeric:tabular-nums;
+  background:linear-gradient(180deg,rgba(9,30,50,.95),rgba(3,14,26,.95));
+  border:1px solid rgba(159,216,242,.4);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 6px 16px -8px #000}
+.hours .sp{display:inline-block;width:.85em}
+@media(prefers-reduced-motion:no-preference){.hours{animation:cdpulse 2.6s ease-in-out infinite}}
+
+/* — sparkle glints —
+   Four-point stars scattered over the plate and the figure. Pure clip-path
+   and opacity, no images, and they hold still for reduced-motion readers. */
+.spk{position:absolute;width:var(--s,15px);aspect-ratio:1;pointer-events:none;z-index:3;
+  background:#fffaf0;opacity:0;
+  clip-path:polygon(50% 0%,57% 43%,100% 50%,57% 57%,50% 100%,43% 57%,0% 50%,43% 43%);
+  filter:drop-shadow(0 0 7px rgba(255,232,168,.95))}
+@media(prefers-reduced-motion:no-preference){
+  .spk{animation:twinkle 3.4s ease-in-out infinite}
+}
+@keyframes twinkle{
+  0%,58%,100%{opacity:0;transform:scale(.35) rotate(0deg)}
+  72%{opacity:1;transform:scale(1) rotate(20deg)}
+  86%{opacity:.35;transform:scale(.72) rotate(34deg)}}
+
+.card-t{font-size:clamp(1.14rem,2.2vw,1.3rem);font-weight:700;color:#fff;
+  margin:0 0 .35rem;line-height:1.24;text-align:center}
+
+/* — the figure —
+   Struck gold: a multi-stop metallic gradient clipped to the glyphs, an
+   extruded bronze edge and a drop shadow underneath it, and a highlight
+   that travels across the metal. filter:drop-shadow is applied to the
+   already-clipped text, which is what gives the raised edge rather than a
+   flat text-shadow. */
+.card-price{position:relative;display:flex;align-items:flex-start;justify-content:center;
+  gap:.06em;line-height:.92;margin:.05rem 0 .1rem;padding:.05rem 0 .2rem}
+.card-price .c,.card-price .v{
+  font-family:var(--price);font-weight:900;letter-spacing:-.018em;
+  background-image:linear-gradient(178deg,#ffffff 2%,#f3f9ff 31%,#ffffff 53%,#e4eff9 78%,#ffffff 94%);
+  background-size:100% 260%;background-position:0 22%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 0 rgba(6,26,44,.75)) drop-shadow(0 4px 1px rgba(3,16,29,.5))
+         drop-shadow(0 10px 22px rgba(0,0,0,.62)) drop-shadow(0 0 26px rgba(255,255,255,.35))}
+.card-price .c{font-size:clamp(3rem,7.2vw,4.2rem);margin-top:.05em}
+.card-price .v{font-size:clamp(4.4rem,10.6vw,6.3rem)}
+@media(prefers-reduced-motion:no-preference){
+  .card-price .c,.card-price .v{animation:goldroll 6s ease-in-out infinite}
+}
+@keyframes goldroll{0%,100%{background-position:0 8%}50%{background-position:0 92%}}
+
+/* — package highlights, straight from the flyer — */
+.card-list{list-style:none;margin:.55rem 0 0;padding:.8rem 0 0;display:grid;gap:.34rem;
+  border-top:1px solid rgba(233,196,106,.22)}
+.card-list li{display:flex;gap:.5rem;font-size:.86rem;color:var(--pale);line-height:1.34}
+.card-list svg{flex:none;margin-top:.2rem}
+
+/* — live counter — */
+.card-cd{margin-top:.85rem;padding-top:.8rem;border-top:1px solid var(--line)}
+.cd-cap{margin:0 0 .45rem;text-align:center;font-family:var(--head);font-size:.58rem;
+  font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#fff}
+/* Four equal cells, every figure in white at a size you can read across a
+   room, labels in white under them. The days cell keeps a light rim and a
+   slow pulse so the eye still lands there first without breaking the row's
+   rhythm. */
+.cd{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.42rem}
+.cd-c{background:linear-gradient(180deg,rgba(9,30,50,.95),rgba(3,14,26,.95));
+  border:1px solid rgba(159,216,242,.28);border-radius:12px;
+  padding:.42rem .15rem .36rem;text-align:center;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 6px 14px -8px #000}
+.cd-c b{display:block;font-family:var(--head);
+  font-size:clamp(1.5rem,3.4vw,1.92rem);font-weight:800;line-height:1;
+  color:#fff;text-shadow:0 0 18px rgba(255,255,255,.4);
+  font-variant-numeric:tabular-nums}
+.cd-c i{display:block;font-style:normal;font-size:.54rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:#fff;margin-top:.3rem}
+.cd-d{border-color:rgba(159,216,242,.7)}
+@media(prefers-reduced-motion:no-preference){
+  .cd-d{animation:cdpulse 2.6s ease-in-out infinite}
+}
+@keyframes cdpulse{
+  0%,100%{box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 0 12px -6px rgba(159,216,242,.6)}
+  50%{box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 0 24px -3px rgba(159,216,242,.95)}}
+.cd.over b{font-size:1.1rem;color:#fff}
+
+.card .btn{width:100%;margin-top:.85rem;padding-block:.88rem}
+
+/* ══ THE CARD'S THREE FACES ═════════════════════════════════════════════
+   Offer → form → confirmation, swapped in place inside the same gold plate
+   so booking never costs the visitor their place on the page. Only one face
+   is in the DOM flow at a time (the others carry [hidden]), and each fades
+   in rather than snapping. */
+.card-face[hidden]{display:none}
+.card-face{animation:faceIn .34s var(--ease) both}
+@keyframes faceIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.card-face{animation:none}}
+
+.cf-back{display:inline-flex;align-items:center;gap:.3rem;margin:0 0 .8rem;padding:0;
+  background:none;border:0;cursor:pointer;
+  font-family:var(--head);font-size:.74rem;font-weight:600;color:var(--sky)}
+.cf-back:hover{text-decoration:underline}
+.cf-k{margin:0 0 .2rem;font-family:var(--head);font-size:.62rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:#fff}
+.cf-h{font-size:clamp(1.24rem,2.4vw,1.5rem);font-weight:700;color:#fff;margin:0 0 .9rem}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.card-form .fld{margin-bottom:.6rem}
+.card-form .fld label{font-size:.62rem}
+.card-form .fld input,.card-form .fld select{padding:.62rem .7rem;font-size:.92rem}
+.card-form .fld textarea{padding:.62rem .7rem;font-size:.92rem;min-height:62px}
+.card-form .btn{margin-top:.35rem}
+.cf-fine{margin:.6rem 0 0;text-align:center;font-size:.72rem;color:var(--dim)}
+.cf-err{margin:.7rem 0 0;padding:.6rem .8rem;border-radius:9px;font-size:.82rem;line-height:1.5;
+  color:#ffd9d3;background:rgba(140,22,14,.55);border:1px solid rgba(232,64,47,.6)}
+.cf-err a{color:#fff;font-weight:600}
+
+.card-done{text-align:center;padding:1.2rem 0 .6rem}
+.cf-tick{width:56px;height:56px;margin:0 auto 1rem;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(150deg,#7fe0a6,#37b26e);box-shadow:0 0 34px -6px rgba(90,220,150,.7)}
+.cf-p{margin:0 0 .7rem;font-size:.92rem;color:var(--pale);line-height:1.6}
+.cf-tel a{color:var(--sky);font-weight:600}
+.card-fine{margin:.55rem 0 0;text-align:center;font-size:.72rem;color:var(--dim)}
+
+/* ══ TEAM STRIP — pinned to the bottom of the film ══════════════════════ */
+.hteam{position:absolute;left:0;right:0;bottom:0;z-index:4;overflow:hidden;
+  padding:2.1rem 0 1rem;
+  /* the strip's own surface, feathered at the top so it grows out of the film
+     rather than cutting a hard line across it */
+  background:linear-gradient(180deg,rgba(3,16,29,0) 0%,rgba(3,16,29,.62) 30%,
+    rgba(3,16,29,.9) 58%,rgba(3,16,29,.97) 100%)}
+.hteam-h{display:flex;align-items:center;justify-content:center;gap:.85rem;
+  margin:0 0 .7rem;font-family:var(--head);font-size:.64rem;font-weight:700;
+  letter-spacing:.24em;text-transform:uppercase;color:#fff;
+  text-shadow:0 2px 12px rgba(3,16,29,.9)}
+.hteam-h::before,.hteam-h::after{content:'';width:clamp(28px,7vw,68px);height:2px;border-radius:2px;
+  background:linear-gradient(90deg,transparent,var(--sky))}
+.hteam-h::after{background:linear-gradient(270deg,transparent,var(--cyan))}
+.tmask{position:relative}
+.tmask::before,.tmask::after{content:'';position:absolute;top:0;bottom:0;
+  width:clamp(30px,8vw,120px);z-index:3;pointer-events:none}
+.tmask::before{left:0;background:linear-gradient(90deg,rgba(3,16,29,.95),transparent)}
+.tmask::after{right:0;background:linear-gradient(270deg,rgba(3,16,29,.95),transparent)}
+.tmarq{display:flex;gap:clamp(.85rem,1.9vw,1.5rem);width:max-content;animation:marq 50s linear infinite}
+.hteam:hover .tmarq,.tmarq.off{animation-play-state:paused}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.doc{width:clamp(62px,7.4vw,78px);text-align:center;flex:none}
+.doc-r{width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;background:var(--mid);
+  border:2px solid var(--line2);margin-bottom:.45rem;
+  box-shadow:0 12px 26px -16px #000;
+  transition:border-color .35s var(--ease),transform .35s var(--ease),box-shadow .35s var(--ease)}
+.doc-r img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.doc:hover .doc-r{border-color:var(--sky);transform:translateY(-5px) scale(1.04);
+  box-shadow:0 18px 36px -14px rgba(0,0,0,.85)}
+.doc b{display:block;font-family:var(--head);font-size:.7rem;font-weight:600;color:#fff;line-height:1.2}
+.doc span{display:block;font-size:.55rem;color:var(--dim);margin-top:.12rem;line-height:1.22}
+.doc i{display:block;font-style:normal;font-size:.52rem;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--sky);margin-top:.16rem;line-height:1.2}
+
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:2.6rem}
+  .hero-in{padding-block:5.2rem clamp(13.5rem,23vh,16rem)}
+  .lock{text-align:center}
+  .lock h1 .l3{margin-inline:auto}
+  .swoosh{margin-inline:auto}
+  .hero-cta{justify-content:center}
+  .hteam{padding-top:2.6rem}
+  .doc i{display:none}
+}
+@media(max-width:560px){
+  .doc span{display:none}
+  .card-lim{font-size:.72rem;letter-spacing:.04em;padding:.46rem .7rem}
+  .cd-c i{font-size:.5rem;letter-spacing:.08em}
+}
+
+/* Short laptops (1366x768 and friends): the whole point of the strip is that it
+   rides the film, so on a shallow viewport the disc, the stack and the strip all
+   step down together rather than letting the strip fall past the fold. */
+@media(max-height:850px){
+  .hero-in{padding-block:4rem clamp(12.6rem,25vh,13.5rem)}
+  .card{padding:1.05rem 1.3rem 1.15rem}
+  .card-price .v{font-size:clamp(3.5rem,7.4vw,4.4rem)}
+  .card-price .c{font-size:clamp(2.4rem,5vw,2.9rem)}
+  .card-lim{font-size:.74rem;padding:.42rem .8rem;margin-bottom:.7rem}
+  .cd-c b{font-size:1.5rem}
+  .card-t{font-size:1.1rem;margin-bottom:.25rem}
+  .card-list{gap:.3rem;margin-top:.45rem;padding-top:.7rem}
+  .card-list li{font-size:.76rem;line-height:1.3}
+  .card-cd{margin-top:.9rem;padding-top:.85rem}
+  .card .btn{margin-top:.9rem;padding-block:.9rem}
+  .card-fine{display:none}
+  .hteam{padding:1.5rem 0 .9rem}
+  .hteam-h{margin-bottom:.65rem}
+  .doc{width:clamp(54px,6.4vw,66px)}
+  .doc span{display:none}
+  .doc i{display:none}
+}
+
+/* ══ FEATURE ROWS (picture-led) ═════════════════════════════════════════ */
+.frow{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(2rem,5vw,4.4rem);align-items:center}
+.frow+.frow{margin-top:clamp(2.4rem,4.6vw,3.8rem)}
+/* the grid children are .fimg-wrap and .fcopy — order must go on the wrap */
+/* NOTE: this modifier must not be called .rev — .rev is the review card, and
+   its `display:flex` is declared later in the sheet, which silently collapsed
+   this row to a single column and italicised its copy. */
+.frow.flip .fimg-wrap{order:2}
+.fimg{position:relative;border-radius:var(--r);overflow:hidden;
+  box-shadow:0 50px 100px -46px #000,0 0 0 1px var(--line)}
+.fimg img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1.2s var(--ease)}
+.fimg:hover img{transform:scale(1.05)}
+.fimg::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(3,16,29,.06),rgba(3,16,29,.42))}
+.fimg figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:2.4rem 1.4rem 1.1rem;
+  font-family:var(--head);font-size:.8rem;font-weight:500;color:#fff;
+  background:linear-gradient(180deg,transparent,rgba(3,16,29,.9))}
+/* a light-blue frame sitting just outside the photo */
+.fimg-wrap{position:relative}
+.fimg-wrap::before{content:'';position:absolute;inset:-13px;border-radius:calc(var(--r) + 7px);
+  border:1px solid var(--line2);pointer-events:none;opacity:.6}
+@media(max-width:900px){.fimg-wrap::before{inset:-9px}}
+
+.fcopy .k{font-family:var(--head);font-size:.68rem;font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--sky);margin:0 0 .9rem}
+.fcopy h2{font-size:clamp(1.55rem,3.2vw,2.4rem);font-weight:700;margin:0 0 1.05rem}
+.fcopy h2 em{font-style:normal;color:var(--sky)}
+.fcopy p{color:var(--dim);font-size:1.04rem;line-height:1.72}
+.fcopy ul{list-style:none;margin:1.4rem 0 1.8rem;padding:0;display:grid;gap:.72rem}
+.fcopy li{display:flex;gap:.7rem;font-size:1rem;color:var(--pale);line-height:1.54}
+.fcopy li svg{flex:none;margin-top:.2rem}
+.fstats{display:flex;flex-wrap:wrap;gap:1.8rem;margin:1.6rem 0 0;padding-top:1.5rem;border-top:1px solid var(--line)}
+.fstat b{display:block;font-family:var(--head);font-size:1.72rem;font-weight:700;color:#fff;line-height:1}
+.fstat span{display:block;font-size:.76rem;letter-spacing:.11em;text-transform:uppercase;color:var(--dim);margin-top:.34rem}
+@media(max-width:900px){
+  .frow{grid-template-columns:1fr;gap:2rem}
+  .frow.flip .fimg{order:-1}
+  .fimg{order:-1}
+}
+
+/* ══ OFFER BLOCK ════════════════════════════════════════════════════════ */
+
+
+
+/* ══ GOOGLE RATING BADGE ════════════════════════════════════════════════ */
+.grev{display:inline-flex;align-items:center;gap:.85rem;text-decoration:none;
+  background:rgba(6,26,44,.9);border:1px solid var(--line2);border-radius:12px;
+  padding:.72rem 1.25rem .72rem 1rem;
+  box-shadow:0 18px 40px -20px #000,inset 0 1px 0 rgba(255,255,255,.07);
+  transition:transform .26s var(--ease),border-color .26s,box-shadow .26s}
+.grev:hover{transform:translateY(-2px);border-color:rgba(159,216,242,.42);
+  box-shadow:0 24px 48px -22px #000}
+.grev-g{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;
+  background:#fff}
+.grev-b{display:grid;gap:.14rem}
+.grev-n{display:flex;align-items:center;gap:.45rem;font-family:var(--head);
+  font-size:1.16rem;font-weight:800;color:#fff;line-height:1}
+.grev-st{display:inline-flex;gap:1px;color:#fbbc05;font-size:.82rem;letter-spacing:.02em}
+.grev-t{font-family:var(--head);font-size:.66rem;font-weight:600;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--pale)}
+
+/* — the two hero chips —
+   They sit over a live film whose top half is bright sky, and at .62 alpha
+   the ghost button all but vanished into it. Both plates go near-opaque with
+   a sky rim and a dark halo outside it, so they hold their edge whatever
+   frame is behind them. Solid rgba only — no backdrop-filter over the video,
+   for the reason noted on .btn-ghost. */
+.hero-cta .grev,
+.hero-cta .btn-ghost{
+  background:linear-gradient(180deg,rgba(5,22,39,.97),rgba(2,11,21,.97));
+  border:1px solid rgba(79,195,247,.55);
+  box-shadow:0 0 0 1px rgba(3,16,29,.85),0 22px 46px -18px #000,
+             inset 0 1px 0 rgba(255,255,255,.1)}
+.hero-cta .grev:hover,
+.hero-cta .btn-ghost:hover{
+  background:linear-gradient(180deg,rgba(12,44,75,.98),rgba(4,18,32,.98));
+  border-color:rgba(79,195,247,.92);
+  box-shadow:0 0 0 1px rgba(3,16,29,.85),0 26px 54px -20px #000,
+             0 0 26px -10px rgba(79,195,247,.7),
+             inset 0 1px 0 rgba(255,255,255,.12);
+  transform:translateY(-2px)}
+.hero-cta .grev-t{color:#bfe4f7}
+
+
+/* ══ OFFICE TOUR ════════════════════════════════════════════════════════
+   A 12-column mosaic that opens on the two photographs which actually sell
+   the place — the building and the reception — and lets the remaining six
+   flow around them in an alternating 4|5|3 / 3|5|4 rhythm, so no two bands
+   break at the same column. The two dominant tiles cross-fade between
+   several frames and the wide tiles carry a slow Ken Burns push, which keeps
+   the collage alive without anything sliding or jumping under the reader. */
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);
+  grid-auto-rows:clamp(46px,5.2vw,66px);gap:clamp(9px,1vw,14px)}
+.mo-1{grid-column:span 7;grid-row:span 6}   /* the building  */
+.mo-2{grid-column:span 5;grid-row:span 6}   /* the reception */
+.mo-3{grid-column:span 4;grid-row:span 4}
+.mo-4{grid-column:span 5;grid-row:span 4}
+.mo-5{grid-column:span 3;grid-row:span 4}
+.mo-6{grid-column:span 3;grid-row:span 3}
+.mo-7{grid-column:span 5;grid-row:span 3}
+.mo-8{grid-column:span 4;grid-row:span 3}
+
+/* cross-fading tiles: every frame is stacked, one carries .on */
+.gt.slide img{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease}
+.gt.slide img.on{opacity:1}
+@media(prefers-reduced-motion:no-preference){
+  .gt.kb img{animation:kb 24s var(--ease) infinite alternate}
+  .gt.kb.d1 img{animation-duration:30s;animation-delay:-8s}
+  .gt.kb.d2 img{animation-duration:27s;animation-delay:-14s}
+  .gt.kb:hover img{animation-play-state:paused}
+  @keyframes kb{from{transform:scale(1.005)}to{transform:scale(1.1)}}
+}
+/* on a phone the bands regroup into full-width / paired-half / full-width so
+   no tile is ever left stranded beside empty grid */
+@media(max-width:820px){
+  .mosaic{grid-auto-rows:clamp(40px,7.4vw,58px)}
+  .mo-1,.mo-2{grid-column:span 12;grid-row:span 5}
+  .mo-3,.mo-4,.mo-5,.mo-6{grid-column:span 6;grid-row:span 4}
+  .mo-7,.mo-8{grid-column:span 12;grid-row:span 4}
+  .mosaic .gt figcaption{display:block;padding:1.8rem .7rem .6rem;font-size:.72rem;line-height:1.3}
+  .mosaic .gt figcaption em{display:block;margin-bottom:.1rem}
+  .mosaic .mo-1 figcaption,.mosaic .mo-2 figcaption{font-size:.82rem}
+}
+.gt{position:relative;overflow:hidden;border-radius:16px;background:var(--mid);
+  border:1px solid var(--line);cursor:zoom-in;
+  box-shadow:0 26px 52px -30px #000;
+  transition:transform .4s var(--ease),border-color .4s,box-shadow .4s}
+.gt:hover{transform:translateY(-4px);border-color:rgba(159,216,242,.45);
+  box-shadow:0 36px 68px -30px #000}
+.gt img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
+.gt:hover img{transform:scale(1.07)}
+.gt figcaption{position:absolute;inset:auto 0 0;padding:2.4rem .95rem .8rem;z-index:2;
+  display:flex;align-items:baseline;gap:.55rem;
+  font-family:var(--head);font-size:.78rem;font-weight:500;color:#fff;
+  background:linear-gradient(180deg,transparent,rgba(3,16,29,.92))}
+.gt figcaption em{font-style:normal;font-size:.6rem;font-weight:700;letter-spacing:.16em;
   text-transform:uppercase;color:var(--sky)}
-.card.live{border-color:rgba(233,196,106,.45)}
-footer{margin-top:3.5rem;padding-top:1.5rem;border-top:1px solid var(--line);font-size:.8rem;color:#5d829c}
+.mo-1 figcaption,.mo-2 figcaption{font-size:.94rem;padding-bottom:1rem}
+
+/* ══ SPECIAL PROMOTION ══════════════════════════════════════════════════
+   Deliberately not two facing boxes: a screen on the left with a price
+   medallion breaking out of its corner, an unboxed copy stack on the right,
+   and a full-width perks rail closing the section. */
+.promo.ph::after{background-image:
+    url('aidm-lp-assets/brand-watermark.png'),
+    radial-gradient(ellipse 62% 58% at 12% 8%,rgba(232,64,47,.2),transparent 62%),
+    radial-gradient(ellipse 58% 60% at 92% 78%,rgba(79,195,247,.16),transparent 64%),
+    linear-gradient(180deg,rgba(var(--tint),.95) 0%,rgba(var(--tint),.85) 8%,
+      rgba(var(--tint),.83) 92%,rgba(var(--tint),.95) 100%);
+  background-repeat:repeat,no-repeat,no-repeat,no-repeat;
+  background-size:clamp(300px,26vw,420px) auto,auto,auto,auto;
+  background-position:60px 30px,center,center,center}
+.promo-k{display:inline-flex;align-items:center;gap:.5rem;margin:0 auto 1rem;
+  font-family:var(--head);font-size:.66rem;font-weight:800;letter-spacing:.2em;
+  text-transform:uppercase;color:#ffd9d3;
+  background:rgba(140,22,14,.9);border:1px solid rgba(232,64,47,.75);
+  border-radius:100px;padding:.42rem 1.05rem}
+.promo-k .star{color:#ff6a55;font-size:.9rem;line-height:1;margin-top:-1px}
+
+/* The screen carries this section, so it takes the lion's share of the row
+   and the copy beside it is cut to price, inclusions and the two buttons —
+   the fit/exclusions detail already has its own panel further down. */
+.promo-grid{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(0,1fr);
+  gap:clamp(1.6rem,3.2vw,2.8rem);align-items:stretch}
+/* no photo to stretch against the screen any more, so the short copy block
+   is centred within the row instead of pinned to its top */
+.promo-copy{display:flex;flex-direction:column;justify-content:center;
+  gap:clamp(.9rem,1.6vw,1.25rem)}
+.promo-copy .promo-hl{margin:0;gap:.7rem}
+.promo-copy .promo-hl li{font-size:1rem;line-height:1.4}
+
+/* — the screen — */
+.tv-wrap{position:relative}
+.tv{position:relative;border-radius:20px;padding:11px 11px 26px;
+  background:linear-gradient(158deg,#31404f,#101c27 46%,#070f18);
+  box-shadow:0 60px 110px -44px #000,0 0 0 1px rgba(255,255,255,.07),
+             inset 0 1px 0 rgba(255,255,255,.16)}
+.tv-scr{position:relative;border-radius:9px;overflow:hidden;aspect-ratio:16/9;background:#000;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.9),0 0 34px -8px rgba(79,195,247,.5)}
+.tv-scr img{width:100%;height:100%;object-fit:cover;opacity:.82;
+  transition:opacity .4s,transform 1s var(--ease)}
+.tv-scr iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.tv-scr .pl{position:absolute;inset:0;display:grid;place-items:center;cursor:pointer}
+.tv-scr .pl i{width:clamp(66px,7vw,92px);aspect-ratio:1;height:auto;border-radius:50%;display:grid;place-items:center;
+  background:rgba(255,255,255,.94);box-shadow:0 18px 40px -14px #000;
+  transition:transform .3s var(--ease)}
+.tv-scr .pl i::after{content:'';border-left:clamp(18px,1.9vw,25px) solid #0e3155;
+  border-block:clamp(11px,1.2vw,15px) solid transparent;margin-left:6px}
+.tv-scr:hover .pl i{transform:scale(1.1)}
+.tv-scr:hover img{opacity:.95;transform:scale(1.04)}
+.tv-led{position:absolute;left:50%;bottom:11px;transform:translateX(-50%);
+  display:flex;align-items:center;gap:.5rem;
+  font-family:var(--head);font-size:.54rem;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:rgba(159,216,242,.5)}
+.tv-led::before{content:'';width:5px;height:5px;border-radius:50%;background:#4fc3f7;
+  box-shadow:0 0 9px #4fc3f7;animation:pls 2.4s infinite}
+/* stand */
+.tv-foot{margin:0 auto;width:22%;height:16px;
+  background:linear-gradient(180deg,#26333f,#111c26);border-radius:0 0 4px 4px}
+.tv-base{margin:0 auto;width:44%;height:9px;border-radius:100px;
+  background:linear-gradient(180deg,#2b3945,#0c151d);
+  box-shadow:0 26px 40px -22px #000}
+
+/* the medallion breaking out of the screen's corner */
+.promo-badge{position:absolute;right:-22px;bottom:-16px;z-index:3;
+  width:clamp(116px,13vw,146px);aspect-ratio:1;border-radius:50%;
+  display:grid;place-content:center;text-align:center;gap:.05rem;
+  background:linear-gradient(150deg,#1b5b8e,#0a2942);
+  border:1px solid rgba(159,216,242,.55);
+  box-shadow:0 26px 52px -18px #000,0 0 40px -10px rgba(79,195,247,.75)}
+.promo-badge b{font-family:var(--price);font-size:clamp(1.55rem,2.7vw,1.95rem);font-weight:700;
+  color:#fff;letter-spacing:-.01em;line-height:1}
+.promo-badge i{font-style:normal;font-family:var(--head);font-size:.53rem;font-weight:700;
+  letter-spacing:.15em;text-transform:uppercase;color:#fff;margin-top:.2rem}
+@media(max-width:820px){.promo-badge{right:-6px;bottom:-22px}}
+
+/* — the copy stack — */
+.promo-copy h2{font-size:clamp(1.6rem,3.2vw,2.35rem);font-weight:700;margin:0 0 .5rem}
+.promo-copy h2 em{font-style:normal;color:var(--sky)}
+.promo-copy .lede{margin:0 0 1.3rem;color:var(--dim);font-size:1.04rem}
+.promo-price{display:flex;align-items:flex-end;gap:.9rem;flex-wrap:wrap;
+  padding-bottom:1.2rem;margin-bottom:1.2rem;border-bottom:1px solid var(--line)}
+.promo-price .now{display:flex;align-items:flex-start;gap:.2rem;line-height:1}
+.promo-price .now span{font-family:var(--price);font-size:1.5rem;font-weight:600;color:var(--sky);margin-top:.45rem}
+.promo-price .now b{font-family:var(--price);font-size:clamp(2.9rem,5.2vw,3.7rem);font-weight:700;
+  color:#fff;letter-spacing:-.02em;text-shadow:0 0 40px rgba(79,195,247,.4)}
+.promo-price .off{padding-bottom:.45rem;font-size:.88rem;color:var(--dim)}
+.promo-price .off s{text-decoration-thickness:2px}
+.promo-price .off b{display:block;color:var(--gold);font-weight:700;font-size:.95rem}
+
+.promo-lbl{margin:0 0 .65rem;font-family:var(--head);font-size:.6rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--sky)}
+.promo-hl{list-style:none;margin:0 0 1.35rem;padding:0;
+  display:grid;grid-template-columns:minmax(0,1fr);gap:.55rem 1.1rem}
+
+.promo-hl li{display:flex;gap:.6rem;font-size:.95rem;color:var(--pale);line-height:1.45}
+.promo-hl svg{flex:none;margin-top:.2rem}
+@media(max-width:520px){.promo-hl{grid-template-columns:1fr}}
+
+/* the two buttons share the row and shrink together rather than one of them
+   dropping to its own line as the type scales up */
+.promo-cta{display:flex;flex-wrap:wrap;gap:.7rem}
+.promo-cta .btn{flex:1 1 auto;padding-inline:1.2rem;white-space:nowrap}
+
+/* — perks rail — */
+.perks{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;
+  margin-top:clamp(2.6rem,5vw,4rem);border-radius:16px;overflow:hidden;
+  background:var(--line);border:1px solid var(--line)}
+.perk{display:grid;justify-items:center;gap:.5rem;text-align:center;
+  padding:1.35rem .7rem;background:rgba(6,26,44,.94)}
+.perk svg{color:var(--sky)}
+.perk b{font-family:var(--head);font-size:.8rem;font-weight:600;color:#fff;letter-spacing:.02em}
+@media(max-width:860px){.perks{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .perk:last-child{grid-column:span 2}}
+
+@media(max-width:960px){
+  .promo-grid{grid-template-columns:minmax(0,1fr);gap:2.6rem}
+  .promo-fine{text-align:left}
+}
+/* last item in the narrow copy column — the flex gap on .promo-copy sets
+   the space above it, so no margin of its own is needed; the marker still
+   hangs outside the text block so the copy stays flush left */
+.promo-fine{margin:0;padding-left:1.05rem;text-indent:-1.05rem;
+  font-size:.8rem;color:#6b90ac;line-height:1.65;max-width:none}
+.promo-fine .fs{color:#fff;font-weight:700;padding-right:.35rem}
+
+/* ══ BEFORE & AFTER — montages run at their natural height ══════════════ */
+.cmask{position:relative}
+.cmask::before,.cmask::after{content:'';position:absolute;top:0;bottom:0;z-index:3;
+  width:clamp(28px,7vw,110px);pointer-events:none}
+.cmask::before{left:0;background:linear-gradient(90deg,rgba(6,26,44,.92),transparent)}
+.cmask::after{right:0;background:linear-gradient(270deg,rgba(6,26,44,.92),transparent)}
+/* the track holds the cases twice over, so translating it exactly -50%
+   loops seamlessly. Negative X = the row travels right to left. */
+.cmarq{display:flex;gap:1.1rem;width:max-content;animation:marq 52s linear infinite}
+.cmask:hover .cmarq,.cmarq.off{animation-play-state:paused}
+/* uniform height, natural width — the montages differ wildly in aspect ratio
+   and each one stays whole rather than being cropped to a common box */
+.case{flex:none;position:relative;border-radius:14px;overflow:hidden;cursor:zoom-in;
+  background:var(--mid);border:1px solid var(--line);
+  transition:transform .34s var(--ease),border-color .34s,box-shadow .34s}
+.case img{display:block;height:clamp(220px,30vh,320px);width:auto;max-width:none}
+
+/* ══ OFFICE STAFF ═══════════════════════════════════════════════════════
+   The people band leads with the two real group photographs — faculty and
+   the orthodontic team — with the two chairside frames under them, before
+   the headshot grid names everybody. Same .gt tile as the office mosaic, so
+   these open full size on click too. */
+.gwall{display:grid;grid-template-columns:repeat(12,1fr);
+  grid-auto-rows:clamp(44px,4.9vw,64px);gap:clamp(9px,1vw,14px);
+  margin-bottom:clamp(1.6rem,3vw,2.4rem)}
+.gw-a{grid-column:span 7;grid-row:span 6}
+.gw-b{grid-column:span 5;grid-row:span 6}
+.gw-c{grid-column:span 6;grid-row:span 4}
+.gwall .gt img{object-position:center 34%}
+@media(max-width:820px){
+  .gw-a,.gw-b{grid-column:span 12;grid-row:span 5}
+  .gw-c{grid-column:span 12;grid-row:span 4}
+}
+
+.sfgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));
+  gap:clamp(.9rem,1.8vw,1.4rem)}
+.sfm{text-align:center}
+.sfm-p{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/5;background:var(--mid);
+  border:1px solid var(--line);box-shadow:0 22px 44px -26px #000;
+  transition:transform .36s var(--ease),border-color .36s,box-shadow .36s}
+.sfm:hover .sfm-p{transform:translateY(-5px);border-color:rgba(159,216,242,.5);
+  box-shadow:0 32px 60px -26px #000}
+.sfm-p img{width:100%;height:100%;object-fit:cover;object-position:center 16%;
+  transition:transform 1s var(--ease)}
+.sfm:hover .sfm-p img{transform:scale(1.05)}
+.sfm-p::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,transparent 52%,rgba(3,16,29,.5))}
+.sfm b{display:block;margin-top:.7rem;font-family:var(--head);font-size:.92rem;
+  font-weight:600;color:#fff;line-height:1.25}
+.sfm span{display:block;font-size:.73rem;color:var(--dim);margin-top:.18rem;line-height:1.3}
+.sfm i{display:block;font-style:normal;font-size:.6rem;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--sky);margin-top:.3rem;line-height:1.3}
+
+/* ══ FILM WALL ══════════════════════════════════════════════════════════
+   Organised rather than tiled flat: one feature player, a two-film "inside
+   the practice" column beside it, then a labelled rail of the treatment
+   films underneath. */
+.fstage{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(0,1fr);
+  gap:clamp(1rem,1.9vw,1.35rem);align-items:stretch}
+.fside{display:grid;grid-auto-rows:1fr;gap:clamp(1rem,1.9vw,1.35rem);align-content:stretch}
+.fside .film{aspect-ratio:auto;min-height:clamp(130px,15vw,196px)}
+.flane{margin-top:clamp(1.5rem,2.8vw,2.3rem)}
+.flane-h{display:flex;align-items:center;gap:.85rem;margin:0 0 .95rem;
+  font-family:var(--head);font-size:.66rem;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--sky)}
+.flane-h::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--line2),transparent)}
+.frail{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(.85rem,1.6vw,1.15rem)}
+.film .tag{position:absolute;top:.6rem;left:.65rem;z-index:2;
+  font-family:var(--head);font-size:.55rem;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:#cfe6f5;background:rgba(6,26,44,.86);
+  border:1px solid var(--line2);border-radius:100px;padding:.24rem .6rem}
+@media(max-width:940px){.frail{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:820px){
+  .fstage{grid-template-columns:1fr}
+  .fside{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fside .film{aspect-ratio:16/9;min-height:0}
+}
+@media(max-width:560px){.fside{grid-template-columns:1fr}.frail{grid-template-columns:1fr}}
+.film{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:16/9;cursor:pointer;
+  background:var(--mid);border:1px solid var(--line);
+  transition:transform .38s var(--ease),box-shadow .38s var(--ease),border-color .38s}
+.film:hover{transform:translateY(-6px);border-color:var(--line2);box-shadow:0 28px 56px -26px #000}
+.film img{width:100%;height:100%;object-fit:cover;opacity:.72;transition:opacity .38s,transform .9s var(--ease)}
+.film:hover img{opacity:.92;transform:scale(1.06)}
+.film .pl{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
+.film .pl i{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(207,230,245,.95);box-shadow:0 12px 30px -8px #000;transition:transform .35s var(--ease)}
+.film .pl i::after{content:'';border-left:16px solid #0e3155;border-block:10px solid transparent;margin-left:5px}
+.film:hover .pl i{transform:scale(1.1)}
+.film b{position:absolute;left:0;right:0;bottom:0;padding:2.2rem .95rem .85rem;pointer-events:none;
+  background:linear-gradient(180deg,transparent,rgba(3,16,29,.93));
+  font-family:var(--head);font-size:.85rem;font-weight:600;color:#fff}
+.frail .film b{font-size:.84rem;padding:1.9rem .8rem .7rem}
+
+/* ══ BEFORE / AFTER ═════════════════════════════════════════════════════ */
+.case:hover{transform:translateY(-5px);border-color:var(--line2);box-shadow:0 26px 52px -26px #000}
+.case .cap{display:flex;align-items:baseline;gap:.6rem;
+  padding:.7rem .9rem .75rem;background:rgba(6,26,44,.96);border-top:1px solid var(--line)}
+.case .cap b{font-family:var(--head);font-size:.75rem;font-weight:700;color:#fff;
+  letter-spacing:.09em;text-transform:uppercase}
+.case .cap i{font-style:normal;font-size:.62rem;color:var(--sky);
+  text-transform:uppercase;letter-spacing:.09em}
+
+/* ══ OPTIONS ════════════════════════════════════════════════════════════ */
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;align-items:stretch}
+.opt{display:flex;flex-direction:column;position:relative;border-radius:var(--r);padding:2.1rem 1.7rem;
+  background:rgba(10,37,64,.6);border:1px solid var(--line);backdrop-filter:blur(8px);
+  transition:transform .38s var(--ease),box-shadow .38s var(--ease),border-color .38s}
+.opt:hover{transform:translateY(-6px);border-color:var(--line2);box-shadow:0 30px 60px -30px #000}
+.opt.feat{background:linear-gradient(160deg,rgba(20,68,111,.85),rgba(10,37,64,.9));border-color:rgba(79,195,247,.55)}
+.opt-flag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(135deg,#ffffff,#e7f1f8);color:var(--deep2);font-family:var(--head);
+  font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding:.36rem 1rem;border-radius:100px;white-space:nowrap;box-shadow:0 6px 16px -8px rgba(0,0,0,.5)}
+.opt .sub{font-family:var(--head);font-size:.63rem;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--sky);margin:0 0 .5rem}
+.opt h3{font-size:1.14rem;font-weight:600;margin:0 0 .85rem}
+.opt .amt{font-family:var(--price);font-size:2.6rem;font-weight:700;color:#fff;letter-spacing:-.02em;line-height:1;margin:0 0 .2rem}
+.opt .strike{font-size:.85rem;color:var(--dim);margin:0 0 1rem;min-height:1.3em}
+.opt p.d{font-size:.97rem;color:var(--dim);line-height:1.6;margin:0 0 .3rem}
+.opt ul{list-style:none;margin:0 0 1.5rem;padding:1.05rem 0 0;border-top:1px solid var(--line);display:grid;gap:.45rem}
+.opt li{display:flex;gap:.55rem;font-size:.92rem;line-height:1.5;color:var(--pale)}
+.opt li::before{content:'';flex:none;width:5px;height:5px;border-radius:50%;background:var(--sky);margin-top:.5rem}
+/* the flag rides above the card's top edge */
+.opt .opt-flag{z-index:4}
+.opt .btn{width:100%;margin-top:auto}
+@media(max-width:880px){.opts{grid-template-columns:1fr;gap:1.8rem}}
+
+.optfine{margin:-.6rem 0 1.2rem;font-size:.74rem;line-height:1.55;color:#6b90ac}
+/* the marker itself: present enough to be seen next to a price, quiet enough
+   not to compete with it, and it jumps to the terms block */
+.ast{text-decoration:none;color:var(--gold);opacity:.85;font-weight:600;
+  font-size:.5em;vertical-align:super;line-height:0;margin-left:.12em}
+.ast:hover{opacity:1;text-decoration:underline}
+/* inside the two price lockups the marker is a flex item, so em sizing would
+   resolve against the row rather than the figure — pin it in rem and hang it
+   off the top of the numerals instead */
+.card-price .ast,.promo-price .ast{align-self:flex-start;vertical-align:baseline;
+  line-height:1;font-size:1.5rem;color:#fff;margin:.34rem 0 0 .1rem}
+.promo-price .ast{font-size:1.15rem;color:var(--gold);margin-top:.28rem}
+.card-fine a{color:var(--sky);text-decoration:none}
+.card-fine a:hover{text-decoration:underline}
+.promo-fine a{color:var(--sky)}
+
+/* ══ REVIEWS ════════════════════════════════════════════════════════════ */
+
+/* — the reviews rail —
+   They were a static grid; they now run as one continuous left-to-right
+   marquee, doubled so the loop has no seam, and each card carries the Google
+   mark so it is obvious where it came from. Pauses on hover, on focus, and
+   for anyone who has asked for reduced motion. */
+.rmask{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.rmarq{display:flex;gap:1.2rem;width:max-content;will-change:transform}
+@media(prefers-reduced-motion:no-preference){
+  .rmarq{animation:revroll 82s linear infinite}
+  .rmask:hover .rmarq,.rmask:focus-within .rmarq{animation-play-state:paused}
+}
+.rmarq.off{animation-play-state:paused}
+@keyframes revroll{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.rmarq .rev{flex:0 0 clamp(268px,25vw,330px);margin:0}
+.rev .st .rg{flex:none}
+.rev .who span{white-space:nowrap}
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:1.2rem}
+.rev{border-radius:var(--r);padding:1.9rem 1.65rem;background:rgba(10,37,64,.55);
+  border:1px solid var(--line);backdrop-filter:blur(8px);
+  transition:transform .38s var(--ease),border-color .38s,box-shadow .38s var(--ease)}
+.rev:hover{transform:translateY(-5px);border-color:var(--line2);box-shadow:0 26px 52px -28px #000}
+.rev .st{color:var(--gold);letter-spacing:.15em;font-size:.87rem;margin-bottom:.85rem}
+.rev p{font-size:1rem;color:var(--pale);line-height:1.68;margin:0 0 1rem;font-style:italic}
+.rev{display:flex;flex-direction:column}
+.rev p{flex:1}
+.rev .who{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap;
+  font-family:var(--head);font-size:.78rem;font-weight:600;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--sky)}
+.rev .who span{font-size:.66rem;font-weight:500;letter-spacing:.1em;color:var(--dim);
+  text-transform:uppercase}
+.rev.fresh{border-color:rgba(159,216,242,.4)}
+.rev.fresh .who span{color:#8fe0b0}
+/* the star row carries Google's own mark so the quotes read as verifiable */
+.rev .st{display:flex;align-items:center;gap:.55rem}
+.rev .st em{font-style:normal;font-family:var(--head);font-size:.6rem;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--dim)}
+
+/* ══ FAQ ════════════════════════════════════════════════════════════════ */
+.faq{max-width:840px;margin:0 auto}
+.faq details{background:rgba(10,37,64,.5);border:1px solid var(--line);border-radius:12px;
+  margin-bottom:.75rem;overflow:hidden;transition:border-color .3s}
+.faq details[open]{border-color:var(--line2)}
+.faq summary{cursor:pointer;list-style:none;padding:1.15rem 3rem 1.15rem 1.4rem;position:relative;
+  font-family:var(--head);font-size:1rem;font-weight:600;color:#fff;transition:color .24s}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--sky)}
+.faq summary::after{content:'';position:absolute;right:1.4rem;top:50%;width:10px;height:10px;
+  border-right:2px solid var(--sky);border-bottom:2px solid var(--sky);
+  transform:translateY(-70%) rotate(45deg);transition:transform .3s var(--ease)}
+.faq details[open] summary::after{transform:translateY(-25%) rotate(-135deg)}
+.faq .a{padding:0 1.4rem 1.3rem;font-size:1rem;color:var(--dim);line-height:1.7}
+
+/* ══ CONTACT ════════════════════════════════════════════════════════════ */
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;align-items:stretch}
+.cgrid>*,.fgrid>*{min-width:0}
+.cbox{border-radius:var(--r);padding:2.1rem;background:rgba(10,37,64,.62);
+  border:1px solid var(--line);backdrop-filter:blur(10px);min-width:0}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+.fld{display:flex;flex-direction:column;gap:.34rem;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld label{font-family:var(--head);font-size:.66rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--dim)}
+.fld input,.fld select,.fld textarea{
+  font-family:var(--body);font-size:.94rem;color:#fff;padding:.85rem .95rem;
+  border:1px solid var(--line2);border-radius:9px;background:rgba(3,16,29,.55);width:100%;
+  transition:border-color .22s,box-shadow .22s,background .22s}
+.fld input::placeholder,.fld textarea::placeholder{color:#6d90aa}
+.fld select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--sky) 50%),linear-gradient(135deg,var(--sky) 50%,transparent 50%);
+  background-position:calc(100% - 18px) 50%,calc(100% - 12px) 50%;background-size:6px 6px,6px 6px;background-repeat:no-repeat}
+.fld select option{background:#0a2540;color:#fff}
+.fld textarea{resize:vertical;min-height:80px}
+.fld input:focus,.fld select:focus,.fld textarea:focus{
+  outline:0;border-color:var(--sky);background:rgba(3,16,29,.8);box-shadow:0 0 0 3px rgba(79,195,247,.18)}
+.cbox .btn{width:100%;margin-top:1.15rem}
+.fnote{font-size:.73rem;color:var(--dim);margin:.95rem 0 0;text-align:center;line-height:1.55}
+.opt-tag{text-transform:none;letter-spacing:0;font-weight:400}
+/* PHI caution under the free-text message field — the lead endpoint is a
+   plain mailer/DB insert, not cleared to receive protected health info */
+.fld-note{margin:.4rem 0 0;font-size:.7rem;color:var(--dim);line-height:1.5}
+.mapbox{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:340px;
+  display:flex;flex-direction:column;min-width:0;background:var(--mid)}
+/* the Google embed is light by nature — invert it into the page's palette */
+.mapbox iframe{width:100%;max-width:100%;flex:1;border:0;min-height:250px;
+  filter:invert(92%) hue-rotate(185deg) saturate(.75) brightness(.92) contrast(1.05)}
+.mapinfo{padding:1.25rem 1.45rem;background:rgba(10,37,64,.8);border-top:1px solid var(--line)}
+.mapinfo b{display:block;font-family:var(--head);font-size:.95rem;color:#fff;margin-bottom:.22rem}
+.mapinfo span{font-size:.85rem;color:var(--dim)}
+.mapinfo a{color:var(--sky);font-weight:600;text-decoration:none}
+@media(max-width:880px){.cgrid{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}}
+
+/* ══ FOOTER ═════════════════════════════════════════════════════════════ */
+.ft{background:var(--abyss);color:var(--dim);padding-block:3.4rem 7rem;font-size:.88rem;border-top:1px solid var(--line)}
+.ft-top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2.2rem;padding-bottom:2.1rem;border-bottom:1px solid var(--line)}
+.ft-logo{height:44px;filter:brightness(0) invert(1);margin-bottom:1rem}
+.ft h4{font-family:var(--head);font-size:.68rem;font-weight:700;letter-spacing:.17em;
+  text-transform:uppercase;color:var(--sky);margin:0 0 .9rem}
+.ft ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
+.ft a{color:var(--pale);text-decoration:none;transition:color .22s}
+.ft a:hover{color:var(--sky)}
+.terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(212px,1fr));gap:1.1rem;margin:1.6rem 0 1.9rem}
+.terms div{padding:1.05rem 1.15rem;border:1px solid var(--line);border-radius:11px;
+  font-size:.75rem;line-height:1.58;color:var(--dim)}
+.terms b{display:block;font-family:var(--head);font-size:.62rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:.45rem}
+.legal{font-size:.72rem;line-height:1.7;color:#6d90aa}
+.legal p{margin:0 0 .85rem}
+.legal b{color:var(--dim)}
+@media(max-width:800px){.ft-top{grid-template-columns:1fr;gap:1.7rem}}
+
+/* ══ MOBILE BAR / LIGHTBOX ══════════════════════════════════════════════ */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:95;display:none;gap:.55rem;
+  padding:.65rem .75rem calc(.65rem + env(safe-area-inset-bottom));
+  background:rgba(6,26,44,.97);backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+.mbar .btn{flex:1;padding:.9rem .6rem;font-size:.8rem}
+@media(max-width:760px){.mbar{display:flex}.ft{padding-bottom:6rem}}
+@media(max-width:400px){.mbar .btn{font-size:.66rem;padding:.9rem .35rem;letter-spacing:.02em}}
+
+.lb{position:fixed;inset:0;z-index:140;background:rgba(3,16,29,.96);display:none;
+  place-items:center;padding:1rem;backdrop-filter:blur(9px)}
+.lb.on{display:grid}
+.lb-in{width:min(1080px,100%);aspect-ratio:16/9;position:relative}
+.lb-in.is-img{aspect-ratio:auto;max-height:86vh;display:grid}
+.lb-in.is-img img{width:100%;max-height:86vh;object-fit:contain;border-radius:12px}
+.lb-in iframe{width:100%;height:100%;border:0;border-radius:12px}
+.lb-x{position:absolute;top:-44px;right:0;width:38px;height:38px;border-radius:50%;
+  background:rgba(159,216,242,.14);border:1px solid var(--line2);color:#fff;
+  font-size:1.2rem;cursor:pointer;display:grid;place-items:center}
+.lb-x:hover{background:rgba(159,216,242,.26)}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.09s}.rv.d2{transition-delay:.18s}.rv.d3{transition-delay:.27s}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+  .rv{opacity:1;transform:none}
+  .swoosh path{stroke-dashoffset:0}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header>
-  <img src="https://aidm.org/wp-content/uploads/2025/09/Full-Horizontal-Lock-up-Austin-Institute-of-Dental-Medicine-Main-Colorway-RGB-scaled.png" alt="Austin Institute of Dental Medicine">
+
+<!-- gradient definition for the hand-drawn underline -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><linearGradient id="swg" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#2ebeef"/><stop offset=".55" stop-color="#8fe3ff"/><stop offset="1" stop-color="#4fc3f7"/>
+  </linearGradient></defs>
+</svg>
+
+<!-- ══════════════ NAV ══════════════ -->
+<header class="nav" id="nav">
+  <a href="#top"><img class="nav-logo" src="https://aidm.org/wp-content/uploads/2025/09/Full-Horizontal-Lock-up-Austin-Institute-of-Dental-Medicine-Main-Colorway-RGB-scaled.png" alt="Austin Institute of Dental Medicine"></a>
+  <ul class="nav-links">
+    <li><a href="#office">Our Office</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#staff">Our Team</a></li>
+    <li><a href="#films">Films</a></li>
+    <li><a href="#treatment">Treatment</a></li>
+  </ul>
+  <a class="nav-tel" href="tel:+17374342436">(737) 434-2436</a>
+  <a class="btn btn-sky" href="#contact" data-book>Book Free Orthodontic Evaluation</a>
 </header>
 
-<h1>Offer landing pages &mdash; <em>for review.</em></h1>
-<p class="lede">One page per approved promotion, all on the same theme. Taglines, inclusions and fine print are taken
-  from the approved promotions sheet; every price shown is AIDM&rsquo;s own.</p>
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" id="top">
+  <div class="hero-media">
+    <!-- AIDM's own welcome film (Drive: "Welcome Video FINAL with name change
+         7.20.26"), muted + looped. Played untreated — no filter, no scrim. -->
+    <video class="hero-vid" id="heroVid" poster="aidm-lp-assets/aidm-hero-poster.jpg"
+           autoplay muted loop playsinline preload="auto" disablepictureinpicture
+           aria-hidden="true" tabindex="-1">
+      <source src="aidm-lp-assets/aidm-hero.mp4" type="video/mp4">
+    </video>
+  </div>
 
-<div class="note"><b>Preview only.</b> The whole host is <code>noindex, nofollow</code> and disallowed in
-  <code>robots.txt</code>. The forms post to a preview endpoint and there is no conversion tracking, so none of these
-  pages should receive ad traffic until that is wired.</div>
+  <div class="hero-in">
+    <div class="wrap">
+      <div class="hero-grid">
 
-<h2>English &mdash; new patient</h2>
-<div class="grid">
-  <a class="card" href="/new-patient/"><p class="n">Offer 1</p><b>New Patient Special</b>
-    <span class="tag">Your New Neighborhood Dental Home in Mueller</span>
-    <span class="amt">$100<span class="u">Exam + X-rays as needed</span></span><span class="go">Open page &rarr;</span></a>
-  <a class="card" href="/emergency/"><p class="n">Offer 2</p><b>Emergency Dental Care</b>
-    <span class="tag">Emergency Dental Care &mdash; 7AM to 7PM, Mon&ndash;Sat</span>
-    <span class="amt">Seen today<span class="u">No published price</span></span><span class="go">Open page &rarr;</span></a>
+        <!-- designed headline lockup -->
+        <div class="lock">
+          <span class="lock-rail"></span>
+          <h1>
+            <span class="l1">Straighten</span>
+            <span class="l2">Your Smile with</span>
+            <span class="l3">Confidence.</span>
+          </h1>
+          <svg class="swoosh" viewBox="0 0 460 20" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M4 14 C 90 5, 200 3, 280 8 S 410 16, 456 6"/>
+          </svg>
+          <div class="hero-cta">
+            <a class="grev" href="https://www.google.com/maps/search/Austin+Institute+of+Dental+Medicine"
+               target="_blank" rel="noopener" aria-label="4.9 star Google rating — read the reviews">
+              <span class="grev-g" aria-hidden="true">
+                <svg width="19" height="19" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>
+              </span>
+              <span class="grev-b">
+                <span class="grev-n">4.9<span class="grev-st">&#9733;&#9733;&#9733;&#9733;&#9733;</span></span>
+                <span class="grev-t">Google reviews</span>
+              </span>
+            </a>
+            <a class="btn btn-ghost btn-lg" href="tel:+17374342436">Call (737) 434-2436</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- team marquee, riding the bottom of the film -->
+  <div class="hteam" id="team">
+    <p class="hteam-h">AIDM Team</p>
+    <div class="tmask">
+      <div class="tmarq" id="marq">
+      <div class="doc"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/Dr.-Ravi.jpg" alt="Ravikumar Anthony, B.D.S., M.D.S., M.S."></div><b>Ravikumar Anthony</b><span>B.D.S., M.D.S., M.S.</span><i>Chair &amp; Program Director</i></div>
+      <div class="doc"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/06/Dr-Anthony-Patel_Headshot-819x1024.jpg" alt="Anthony Patel, DMD, MS Ed"></div><b>Anthony Patel</b><span>DMD, MS Ed</span><i>Clinical Operations</i></div>
+      <div class="doc"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/Hani-Alsibai.jpg" alt="Dr. Hani Alsibai, BDS"></div><b>Hani Alsibai</b><span>BDS</span><i>Board-Certified Orthodontist</i></div>
+      <div class="doc"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/Dr.-Comella.jpg" alt="Brandon Comella, D.D.S., M.S."></div><b>Brandon Comella</b><span>D.D.S., M.S.</span><i>Practice Management</i></div>
+      <div class="doc"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/Dr.-Duarte.jpeg" alt="Maria Eduarda Duarte, DDS, CAGS, MSD"></div><b>Maria E. Duarte</b><span>DDS, CAGS, MSD</span><i>Director of Research</i></div>
+      <div class="doc"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/Eliza-Jaria.jpg" alt="Eliza Jaria, Director of Clinical Education"></div><b>Eliza Jaria</b><span>Orthodontics</span><i>Clinical Education</i></div>
+      <div class="doc"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/dr-kubavat.jpeg" alt="Prof. Ajay K. Kubavat, BDS, MDS, FPFA"></div><b>Ajay K. Kubavat</b><span>BDS, MDS, FPFA</span><i>Academic Affairs</i></div>
+      <div class="doc"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/06/Dr.-Edgar-O_Neill1-683x1024.jpg" alt="Edgar P. O'Neill, DDS, MS, FACP"></div><b>Edgar P. O&rsquo;Neill</b><span>DDS, MS, FACP</span><i>Prosthodontics</i></div>
+      <div class="doc"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/06/Dr.-Steve-Katz1-683x1024.jpg" alt="Steven J. Katz, DDS, MS"></div><b>Steven J. Katz</b><span>DDS, MS</span><i>Endodontics</i></div>
+      <div class="doc"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/06/sabbah-headshot-683x1024.jpg" alt="Ahmed Sabbah, DDS, PhD"></div><b>Ahmed Sabbah</b><span>DDS, PhD</span><i>AEGD Director</i></div>
+      <div class="doc"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/08/drHonigmanheadshot-682x1024.png" alt="Allen S. Honigman, DDS, MS"></div><b>Allen S. Honigman</b><span>DDS, MS</span><i>Laser Dentistry</i></div>
+      <div class="doc"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/07/drreeves-headshot-683x1024.png" alt="Dr. Reeves, Periodontics Director"></div><b>Dr. Reeves</b><span>Periodontics</span><i>Periodontics Director</i></div>
+      <!-- loop duplicate -->
+      <div class="doc" aria-hidden="true"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/Dr.-Ravi.jpg" alt=""></div><b>Ravikumar Anthony</b><span>B.D.S., M.D.S., M.S.</span><i>Chair &amp; Program Director</i></div>
+      <div class="doc" aria-hidden="true"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/06/Dr-Anthony-Patel_Headshot-819x1024.jpg" alt=""></div><b>Anthony Patel</b><span>DMD, MS Ed</span><i>Clinical Operations</i></div>
+      <div class="doc" aria-hidden="true"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/Hani-Alsibai.jpg" alt=""></div><b>Hani Alsibai</b><span>BDS</span><i>Board-Certified Orthodontist</i></div>
+      <div class="doc" aria-hidden="true"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/Dr.-Comella.jpg" alt=""></div><b>Brandon Comella</b><span>D.D.S., M.S.</span><i>Practice Management</i></div>
+      <div class="doc" aria-hidden="true"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/Dr.-Duarte.jpeg" alt=""></div><b>Maria E. Duarte</b><span>DDS, CAGS, MSD</span><i>Director of Research</i></div>
+      <div class="doc" aria-hidden="true"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/Eliza-Jaria.jpg" alt=""></div><b>Eliza Jaria</b><span>Orthodontics</span><i>Clinical Education</i></div>
+      <div class="doc" aria-hidden="true"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/dr-kubavat.jpeg" alt=""></div><b>Ajay K. Kubavat</b><span>BDS, MDS, FPFA</span><i>Academic Affairs</i></div>
+      <div class="doc" aria-hidden="true"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/06/Dr.-Edgar-O_Neill1-683x1024.jpg" alt=""></div><b>Edgar P. O&rsquo;Neill</b><span>DDS, MS, FACP</span><i>Prosthodontics</i></div>
+      <div class="doc" aria-hidden="true"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/06/Dr.-Steve-Katz1-683x1024.jpg" alt=""></div><b>Steven J. Katz</b><span>DDS, MS</span><i>Endodontics</i></div>
+      <div class="doc" aria-hidden="true"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/06/sabbah-headshot-683x1024.jpg" alt=""></div><b>Ahmed Sabbah</b><span>DDS, PhD</span><i>AEGD Director</i></div>
+      <div class="doc" aria-hidden="true"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/08/drHonigmanheadshot-682x1024.png" alt=""></div><b>Allen S. Honigman</b><span>DDS, MS</span><i>Laser Dentistry</i></div>
+      <div class="doc" aria-hidden="true"><div class="doc-r"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/07/drreeves-headshot-683x1024.png" alt=""></div><b>Dr. Reeves</b><span>Periodontics</span><i>Periodontics Director</i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ OFFICE TOUR ══════════════ -->
+<section class="pad tight-top tight-bot bg-abyss ph" id="office" style="--ph:url('aidm-lp-assets/bg/ext-01.jpg')">
+  <div class="wrap">
+    <div class="sh sh-tight rv">
+      <p class="k">1401 Philomena Street, Mueller</p>
+      <h2>Take the <em>office tour.</em></h2>
+      <div class="bar"></div>
+    </div>
+    <div class="mosaic rv">
+      <figure class="gt mo-1 slide kb" data-src="aidm-lp-assets/office/ext-02.jpg">
+        <img class="on" src="aidm-lp-assets/office/ext-02.jpg" alt="The AIDM building on Philomena Street, Mueller">
+        <img loading="lazy" src="aidm-lp-assets/office/ext-03.jpg" alt="">
+        <img loading="lazy" src="aidm-lp-assets/office/ext-04.jpg" alt="">
+        <figcaption><em>1401 Philomena Street</em>The building</figcaption></figure>
+      <figure class="gt mo-2 slide kb d1" data-src="aidm-lp-assets/office/reception.jpg">
+        <img class="on" src="aidm-lp-assets/office/reception.jpg" alt="The AIDM reception desk beneath the illuminated wordmark">
+        <img loading="lazy" src="aidm-lp-assets/office/reception-02.jpg" alt="">
+        <img loading="lazy" src="aidm-lp-assets/office/lobby-03.jpg" alt="">
+        <figcaption><em>Ground floor</em>Reception &amp; arrival</figcaption></figure>
+      <figure class="gt mo-3" data-src="aidm-lp-assets/office/ortho-bay.jpg"><img loading="lazy" src="aidm-lp-assets/office/ortho-bay.jpg" alt="The open orthodontic treatment bay, flooded with daylight"><figcaption><em>Treatment</em>Open orthodontic bay</figcaption></figure>
+      <figure class="gt mo-4 kb d2" data-src="aidm-lp-assets/office/lobby-ground.jpg"><img loading="lazy" src="aidm-lp-assets/office/lobby-ground.jpg" alt="The double-height ground-floor lobby"><figcaption><em>Arrival</em>Two-storey lobby</figcaption></figure>
+      <figure class="gt mo-5" data-src="aidm-lp-assets/office/operatory-glass.jpg"><img loading="lazy" src="aidm-lp-assets/office/operatory-glass.jpg" alt="A private operatory with corner glazing over the treetops"><figcaption><em>Treatment</em>Private operatory</figcaption></figure>
+      <figure class="gt mo-6" data-src="aidm-lp-assets/office/conference.jpg"><img loading="lazy" src="aidm-lp-assets/office/conference.jpg" alt="The AIDM case-review and conference room"><figcaption><em>Planning</em>Case-review room</figcaption></figure>
+      <figure class="gt mo-7 kb" data-src="aidm-lp-assets/office/lobby-lounge.jpg"><img loading="lazy" src="aidm-lp-assets/office/lobby-lounge.jpg" alt="The AIDM waiting lounge"><figcaption><em>Comfort</em>Waiting lounge</figcaption></figure>
+      <figure class="gt mo-8" data-src="aidm-lp-assets/office/walkway.jpg"><img loading="lazy" src="aidm-lp-assets/office/walkway.jpg" alt="The landscaped walkway from the car park to the AIDM entrance"><figcaption><em>Free parking</em>The approach</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ BEFORE & AFTER ══════════════ -->
+<section class="pad bg-deep ph" id="results" style="--ph:url('aidm-lp-assets/bg/operatory-02.jpg')">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="k">Treated at AIDM</p>
+      <h2>Actual cases. <em>Actual bites.</em></h2>
+      <div class="bar"></div>
+      <p>Intraoral records from orthodontic cases completed at the Austin Institute of Dental Medicine. Hover to pause the row, click any case to see it full size.</p>
+    </div>
+    <div class="cmask rv">
+      <div class="cmarq" id="cmarq">
+      <figure class="case" data-src="assets/cases/IMG_3202.jpg"><img loading="lazy" src="assets/cases/IMG_3202.jpg" alt="AIDM orthodontic case 01 — before and after"><figcaption class="cap"><b>Case 01</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" data-src="assets/cases/IMG_3203.jpg"><img loading="lazy" src="assets/cases/IMG_3203.jpg" alt="AIDM orthodontic case 02 — before and after"><figcaption class="cap"><b>Case 02</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" data-src="assets/cases/IMG_3204.jpg"><img loading="lazy" src="assets/cases/IMG_3204.jpg" alt="AIDM orthodontic case 03 — before and after"><figcaption class="cap"><b>Case 03</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" data-src="assets/cases/IMG_3205.jpg"><img loading="lazy" src="assets/cases/IMG_3205.jpg" alt="AIDM orthodontic case 04 — before and after"><figcaption class="cap"><b>Case 04</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" data-src="assets/cases/IMG_3206.jpg"><img loading="lazy" src="assets/cases/IMG_3206.jpg" alt="AIDM orthodontic case 05 — before and after"><figcaption class="cap"><b>Case 05</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" data-src="assets/cases/IMG_3207.jpg"><img loading="lazy" src="assets/cases/IMG_3207.jpg" alt="AIDM orthodontic case 06 — before and after"><figcaption class="cap"><b>Case 06</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" data-src="assets/cases/IMG_3208.jpg"><img loading="lazy" src="assets/cases/IMG_3208.jpg" alt="AIDM orthodontic case 07 — before and after"><figcaption class="cap"><b>Case 07</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" data-src="assets/cases/IMG_3209.jpg"><img loading="lazy" src="assets/cases/IMG_3209.jpg" alt="AIDM orthodontic case 08 — before and after"><figcaption class="cap"><b>Case 08</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" data-src="assets/cases/IMG_3210.jpg"><img loading="lazy" src="assets/cases/IMG_3210.jpg" alt="AIDM orthodontic case 09 — before and after"><figcaption class="cap"><b>Case 09</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" data-src="assets/cases/IMG_3211.jpg"><img loading="lazy" src="assets/cases/IMG_3211.jpg" alt="AIDM orthodontic case 10 — before and after"><figcaption class="cap"><b>Case 10</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" data-src="assets/cases/IMG_3212.jpg"><img loading="lazy" src="assets/cases/IMG_3212.jpg" alt="AIDM orthodontic case 11 — before and after"><figcaption class="cap"><b>Case 11</b><i>Comprehensive braces</i></figcaption></figure>
+        <!-- loop duplicate -->
+      <figure class="case" aria-hidden="true" data-src="assets/cases/IMG_3202.jpg"><img loading="lazy" src="assets/cases/IMG_3202.jpg" alt=""><figcaption class="cap"><b>Case 01</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="assets/cases/IMG_3203.jpg"><img loading="lazy" src="assets/cases/IMG_3203.jpg" alt=""><figcaption class="cap"><b>Case 02</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="assets/cases/IMG_3204.jpg"><img loading="lazy" src="assets/cases/IMG_3204.jpg" alt=""><figcaption class="cap"><b>Case 03</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="assets/cases/IMG_3205.jpg"><img loading="lazy" src="assets/cases/IMG_3205.jpg" alt=""><figcaption class="cap"><b>Case 04</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="assets/cases/IMG_3206.jpg"><img loading="lazy" src="assets/cases/IMG_3206.jpg" alt=""><figcaption class="cap"><b>Case 05</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="assets/cases/IMG_3207.jpg"><img loading="lazy" src="assets/cases/IMG_3207.jpg" alt=""><figcaption class="cap"><b>Case 06</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="assets/cases/IMG_3208.jpg"><img loading="lazy" src="assets/cases/IMG_3208.jpg" alt=""><figcaption class="cap"><b>Case 07</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="assets/cases/IMG_3209.jpg"><img loading="lazy" src="assets/cases/IMG_3209.jpg" alt=""><figcaption class="cap"><b>Case 08</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="assets/cases/IMG_3210.jpg"><img loading="lazy" src="assets/cases/IMG_3210.jpg" alt=""><figcaption class="cap"><b>Case 09</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="assets/cases/IMG_3211.jpg"><img loading="lazy" src="assets/cases/IMG_3211.jpg" alt=""><figcaption class="cap"><b>Case 10</b><i>Comprehensive braces</i></figcaption></figure>
+      <figure class="case" aria-hidden="true" data-src="assets/cases/IMG_3212.jpg"><img loading="lazy" src="assets/cases/IMG_3212.jpg" alt=""><figcaption class="cap"><b>Case 11</b><i>Comprehensive braces</i></figcaption></figure>
+      </div>
+    </div>
+    <p style="margin:1.7rem 0 0;text-align:center;font-size:.78rem;color:#6d90aa;line-height:1.6">
+      Actual results may vary. Cases shown were completed at AIDM and are illustrative of typical
+      comprehensive orthodontic treatment; they are not a guarantee of any particular outcome.</p>
+  </div>
+</section>
+
+
+<!-- ══════════════ OFFICE STAFF ══════════════ -->
+<section class="pad bg-deep2 ph" id="staff" style="--ph:url('aidm-lp-assets/bg/conference.jpg')">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="k">Who you will meet</p>
+      <h2>The people <em>behind the chair.</em></h2>
+      <div class="bar"></div>
+      <p>Board-certified faculty, specialists and residents working side by side &mdash; every orthodontic
+        plan at AIDM is reviewed and signed off by faculty.</p>
+    </div>
+
+    <div class="gwall rv">
+      <figure class="gt gw-a" data-src="aidm-lp-assets/staff/group-01.jpg">
+        <img loading="lazy" src="aidm-lp-assets/staff/group-01.jpg"
+             alt="The clinical faculty of the Austin Institute of Dental Medicine">
+        <figcaption><em>Faculty</em>The specialists who sign off every plan</figcaption></figure>
+      <figure class="gt gw-b" data-src="aidm-lp-assets/staff/ortho-team.jpg">
+        <img loading="lazy" src="aidm-lp-assets/staff/ortho-team.jpg"
+             alt="The AIDM orthodontic residents and clinical team in the treatment bay">
+        <figcaption><em>Orthodontics</em>The team in the bay</figcaption></figure>
+      <figure class="gt gw-c" data-src="aidm-lp-assets/staff/doc-resident.jpg">
+        <img loading="lazy" src="aidm-lp-assets/staff/doc-resident.jpg"
+             alt="An AIDM resident and assistant treating a patient chairside">
+        <figcaption><em>At the chair</em>Two clinicians on every appointment</figcaption></figure>
+      <figure class="gt gw-c" data-src="aidm-lp-assets/staff/resident-patient.jpg">
+        <img loading="lazy" src="aidm-lp-assets/staff/resident-patient.jpg"
+             alt="An AIDM clinician showing a patient her records on a chairside tablet">
+        <figcaption><em>Your records</em>Reviewed with you, before anything is booked</figcaption></figure>
+    </div>
+
+    <div class="sfgrid rv">
+      <figure class="sfm"><div class="sfm-p"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/Dr.-Ravi.jpg" alt="Ravikumar Anthony, B.D.S., M.D.S., M.S."></div><b>Ravikumar Anthony</b><span>B.D.S., M.D.S., M.S.</span><i>Chair &amp; Program Director</i></figure>
+      <figure class="sfm"><div class="sfm-p"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/06/Dr-Anthony-Patel_Headshot-819x1024.jpg" alt="Anthony Patel, DMD, MS Ed"></div><b>Anthony Patel</b><span>DMD, MS Ed</span><i>Clinical Operations</i></figure>
+      <figure class="sfm"><div class="sfm-p"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/Hani-Alsibai.jpg" alt="Hani Alsibai, BDS"></div><b>Hani Alsibai</b><span>BDS</span><i>Board-Certified Orthodontist</i></figure>
+      <figure class="sfm"><div class="sfm-p"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/Dr.-Comella.jpg" alt="Brandon Comella, D.D.S., M.S."></div><b>Brandon Comella</b><span>D.D.S., M.S.</span><i>Practice Management</i></figure>
+      <figure class="sfm"><div class="sfm-p"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/Dr.-Duarte.jpeg" alt="Maria E. Duarte, DDS, CAGS, MSD"></div><b>Maria E. Duarte</b><span>DDS, CAGS, MSD</span><i>Director of Research</i></figure>
+      <figure class="sfm"><div class="sfm-p"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/Eliza-Jaria.jpg" alt="Eliza Jaria, Orthodontics"></div><b>Eliza Jaria</b><span>Orthodontics</span><i>Clinical Education</i></figure>
+      <figure class="sfm"><div class="sfm-p"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/05/dr-kubavat.jpeg" alt="Ajay K. Kubavat, BDS, MDS, FPFA"></div><b>Ajay K. Kubavat</b><span>BDS, MDS, FPFA</span><i>Academic Affairs</i></figure>
+      <figure class="sfm"><div class="sfm-p"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/06/Dr.-Edgar-O_Neill1-683x1024.jpg" alt="Edgar P. O'Neill, DDS, MS, FACP"></div><b>Edgar P. O&rsquo;Neill</b><span>DDS, MS, FACP</span><i>Prosthodontics</i></figure>
+      <figure class="sfm"><div class="sfm-p"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/06/Dr.-Steve-Katz1-683x1024.jpg" alt="Steven J. Katz, DDS, MS"></div><b>Steven J. Katz</b><span>DDS, MS</span><i>Endodontics</i></figure>
+      <figure class="sfm"><div class="sfm-p"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/06/sabbah-headshot-683x1024.jpg" alt="Ahmed Sabbah, DDS, PhD"></div><b>Ahmed Sabbah</b><span>DDS, PhD</span><i>AEGD Director</i></figure>
+      <figure class="sfm"><div class="sfm-p"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/08/drHonigmanheadshot-682x1024.png" alt="Allen S. Honigman, DDS, MS"></div><b>Allen S. Honigman</b><span>DDS, MS</span><i>Laser Dentistry</i></figure>
+      <figure class="sfm"><div class="sfm-p"><img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/07/drreeves-headshot-683x1024.png" alt="Dr. Reeves, Periodontics"></div><b>Dr. Reeves</b><span>Periodontics</span><i>Periodontics Director</i></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FILM WALL ══════════════
+     Sits directly under the people band: the same faces and rooms, moving.
+     One feature film, the two orientation films beside it, then the
+     treatment films on their own labelled rail. Every tile is a thumbnail
+     facade — no YouTube iframe loads until someone asks for one. -->
+<section class="pad bg-deep ph" id="films" style="--ph:url('aidm-lp-assets/bg/stairs.jpg')">
+  <div class="wrap">
+    <div class="sh sh-tight rv">
+      <p class="k">See it for yourself</p>
+      <h2>Films from <em>inside AIDM.</em></h2>
+      <div class="bar"></div>
+      <p>The building, the clinicians and the treatments &mdash; in their own words.</p>
+    </div>
+
+    <div class="fstage rv">
+      <div class="film" data-yt="QNsMOG1B6G8">
+        <span class="tag">Start here</span>
+        <img loading="lazy" src="https://i.ytimg.com/vi/QNsMOG1B6G8/maxresdefault.jpg" alt="">
+        <span class="pl"><i></i></span><b>Welcome to AIDM &mdash; the practice, the people, the teaching model</b></div>
+      <div class="fside">
+        <div class="film" data-yt="CEgwotre0h8">
+          <img loading="lazy" src="https://i.ytimg.com/vi/CEgwotre0h8/maxresdefault.jpg" alt="">
+          <span class="pl"><i></i></span><b>Orthodontics at AIDM</b></div>
+        <div class="film" data-yt="DV9t9dZJauA">
+          <img loading="lazy" src="https://i.ytimg.com/vi/DV9t9dZJauA/maxresdefault.jpg" alt="">
+          <span class="pl"><i></i></span><b>Finding us &amp; where to park</b></div>
+      </div>
+    </div>
+
+    <div class="flane rv">
+      <p class="flane-h">Treatments explained</p>
+      <div class="frail">
+        <div class="film" data-yt="f7HHTbB-qe8">
+          <img loading="lazy" src="https://i.ytimg.com/vi/f7HHTbB-qe8/maxresdefault.jpg" alt="">
+          <span class="pl"><i></i></span><b>Comprehensive dental care</b></div>
+        <div class="film" data-yt="k9PavRdjiyc">
+          <img loading="lazy" src="https://i.ytimg.com/vi/k9PavRdjiyc/maxresdefault.jpg" alt="">
+          <span class="pl"><i></i></span><b>Comfort, sedation &amp; anxiety care</b></div>
+        <div class="film" data-yt="7Ci0z84BpDI">
+          <img loading="lazy" src="https://i.ytimg.com/vi/7Ci0z84BpDI/maxresdefault.jpg" alt="">
+          <span class="pl"><i></i></span><b>Dental implants</b></div>
+        <div class="film" data-yt="cCUQyiHkJxg">
+          <img loading="lazy" src="https://i.ytimg.com/vi/cCUQyiHkJxg/maxresdefault.jpg" alt="">
+          <span class="pl"><i></i></span><b>Prosthodontics</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PICTURE-LED FEATURE ROWS ══════════════ -->
+<section class="pad bg-deep2 ph" id="treatment" style="--ph:url('aidm-lp-assets/bg/ortho-bay.jpg')">
+  <div class="wrap">
+
+    <div class="frow rv">
+      <div class="fimg-wrap"><figure class="fimg">
+        <img loading="lazy" src="https://aidm.org/wp-content/uploads/2026/07/Ortho-Team-with-Faculty-Lead-1024x683.jpg" alt="The AIDM orthodontic team photographed together in the treatment bay">
+        <figcaption>The orthodontic team, in the bay they work in</figcaption>
+      </figure></div>
+      <div class="fcopy">
+        <p class="k">Who treats you</p>
+        <h2>Two clinicians. <em>One fee.</em></h2>
+        <p>AIDM is a teaching institute. Orthodontic residents — already qualified dentists in advanced
+          postgraduate training — treat under the direct supervision of board-certified faculty. You get
+          more clinical attention, not less, and the economics reflect the teaching mission.</p>
+        <ul>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>A second, board-certified opinion built into the plan</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Periodontics, endodontics, surgery and pediatrics on site</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="#4fc3f7" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Fees in writing before anything is scheduled</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ REVIEWS ══════════════ -->
+<section class="pad bg-abyss ph" style="--ph:url('aidm-lp-assets/bg/walkway.jpg')">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="k">Patients, in their words</p>
+      <h2>&ldquo;Not your regular <em>dental experience.</em>&rdquo;</h2>
+      <div class="bar"></div>
+      <p>Straight from AIDM&rsquo;s Google Business Profile &mdash; the newest ones first.</p>
+    </div>
+    <div class="rmask rv">
+      <div class="rmarq" id="rmarq">
+        <div class="rev"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Had a great experience at this clinic! Everyone was very friendly and knowledgeable. The facilities are beautiful and up to date with technology. Highly recommend!&rdquo;</p><div class="who">Raina Chandiramani<span>12 August 2026</span></div></div>
+        <div class="rev"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Extremely friendly, knowledgeable instructors. Patient and kind throughout my entire consultation.&rdquo;</p><div class="who">Yolanda<span>12 August 2026</span></div></div>
+        <div class="rev"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Had a great experience with Dr. Paskey! What a fantastic provider! So gentle and a wonderful listener! I get so many compliments on my teeth now.&rdquo;</p><div class="who">Nick Perron<span>24 July 2026</span></div></div>
+        <div class="rev"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Literally the best experience I&rsquo;ve ever had with a dentist office. Extremely affordable and considerate of non-insured people.&rdquo;</p><div class="who">Ani N.<span>9 July 2026</span></div></div>
+        <div class="rev"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Super helpful, knowledgeable and supportive team. The office is new, all equipment is state of the art and the overall experience with my regular checkup has been pleasant. Highly recommend.&rdquo;</p><div class="who">Diwakar Prasad<span>26 June 2026</span></div></div>
+        <div class="rev"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Very kind and easy to work with. They have early hours which is great to be able to go in before work.&rdquo;</p><div class="who">Rebecca Meester<span>11 June 2026</span></div></div>
+        <div class="rev"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Great location and easy to get to, which is important for moms travelling with kids. Parking right next door, and you can tell when you enter this isn&rsquo;t going to be your regular dental experience. Mom approved!&rdquo;</p><div class="who">Heloisa Moser<span>28 May 2026</span></div></div>
+        <div class="rev"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;This clinic is for those who want the newest in technology paired with the personal care and attention the staff and doctors give their patients.&rdquo;</p><div class="who">Lan Tran<span>14 May 2026</span></div></div>
+        <!-- loop duplicate -->
+        <div class="rev" aria-hidden="true"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Had a great experience at this clinic! Everyone was very friendly and knowledgeable. The facilities are beautiful and up to date with technology. Highly recommend!&rdquo;</p><div class="who">Raina Chandiramani<span>12 August 2026</span></div></div>
+        <div class="rev" aria-hidden="true"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Extremely friendly, knowledgeable instructors. Patient and kind throughout my entire consultation.&rdquo;</p><div class="who">Yolanda<span>12 August 2026</span></div></div>
+        <div class="rev" aria-hidden="true"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Had a great experience with Dr. Paskey! What a fantastic provider! So gentle and a wonderful listener! I get so many compliments on my teeth now.&rdquo;</p><div class="who">Nick Perron<span>24 July 2026</span></div></div>
+        <div class="rev" aria-hidden="true"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Literally the best experience I&rsquo;ve ever had with a dentist office. Extremely affordable and considerate of non-insured people.&rdquo;</p><div class="who">Ani N.<span>9 July 2026</span></div></div>
+        <div class="rev" aria-hidden="true"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Super helpful, knowledgeable and supportive team. The office is new, all equipment is state of the art and the overall experience with my regular checkup has been pleasant. Highly recommend.&rdquo;</p><div class="who">Diwakar Prasad<span>26 June 2026</span></div></div>
+        <div class="rev" aria-hidden="true"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Very kind and easy to work with. They have early hours which is great to be able to go in before work.&rdquo;</p><div class="who">Rebecca Meester<span>11 June 2026</span></div></div>
+        <div class="rev" aria-hidden="true"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;Great location and easy to get to, which is important for moms travelling with kids. Parking right next door, and you can tell when you enter this isn&rsquo;t going to be your regular dental experience. Mom approved!&rdquo;</p><div class="who">Heloisa Moser<span>28 May 2026</span></div></div>
+        <div class="rev" aria-hidden="true"><div class="st"><svg class="rg" width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.2 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.1 12.4-9.1z"/></svg>★★★★★<em>Google</em></div><p>&ldquo;This clinic is for those who want the newest in technology paired with the personal care and attention the staff and doctors give their patients.&rdquo;</p><div class="who">Lan Tran<span>14 May 2026</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<section class="pad bg-deep ph" id="contact" style="--ph:url('aidm-lp-assets/bg/ext-04.jpg')">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="k">Limited to the first 100 orthodontic patients</p>
+      <h2>Ready for a radiant smile? <em>Let&rsquo;s start today.</em></h2>
+      <div class="bar"></div>
+      <p>The evaluation is complimentary and commits you to nothing. We will call you back to confirm a
+        time — usually the same working day.</p>
+    </div>
+    <div class="cgrid">
+      <div class="cbox rv">
+        <form id="lpForm" novalidate>
+          <div class="fgrid">
+            <div class="fld"><label for="fn">First name</label><input id="fn" name="first_name" type="text" autocomplete="given-name" required></div>
+            <div class="fld"><label for="ph">Mobile number</label><input id="ph" name="phone" type="tel" autocomplete="tel" required></div>
+            <div class="fld full"><label for="em">Email <span class="opt-tag">(optional)</span></label><input id="em" name="email" type="email" autocomplete="email"></div>
+            <div class="fld full"><label for="who">Who is the treatment for?</label>
+              <select id="who" name="patient_type">
+                <option value="">Please choose…</option>
+                <option>Myself — adult</option>
+                <option>My teenager</option>
+                <option>My child</option>
+                <option>More than one family member</option>
+              </select></div>
+            <div class="fld full"><label for="msg">Message <span class="opt-tag">(optional)</span></label>
+              <textarea id="msg" name="notes" placeholder="Preferred days, previous orthodontic treatment, concerns…"></textarea>
+              <p class="fld-note">Please do not include medical or dental information in this form.</p></div>
+          </div>
+          <input type="hidden" name="offer" value="ortho-comprehensive-braces-2950">
+          <input type="hidden" name="gclid" id="f_gclid">
+          <input type="hidden" name="wbraid" id="f_wbraid">
+          <input type="hidden" name="utm_source" id="f_utm_source">
+          <input type="hidden" name="utm_medium" id="f_utm_medium">
+          <input type="hidden" name="utm_campaign" id="f_utm_campaign">
+          <button class="btn btn-sky btn-lg" type="submit">Book Free Orthodontic Evaluation</button>
+        </form>
+        <p class="fnote">By submitting you agree to be contacted about your inquiry. Promotional pricing is
+          subject to clinical qualification determined at your evaluation.</p>
+      </div>
+
+      <div class="mapbox rv d1">
+        <iframe title="Map to Austin Institute of Dental Medicine, 1401 Philomena Street, Austin TX 78723"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                src="https://maps.google.com/maps?q=1401%20Philomena%20St%2C%20Austin%2C%20TX%2078723&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+        <div class="mapinfo">
+          <b>Austin Institute of Dental Medicine</b>
+          <span>1401 Philomena Street, Austin, TX 78723 · Free parking in the garage next door<br>
+          <a href="tel:+17374342436">(737) 434-2436</a> · <a href="mailto:hello@aidm.org">hello@aidm.org</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-top">
+      <div>
+        <img class="ft-logo" src="https://aidm.org/wp-content/uploads/2025/09/Full-Horizontal-Lock-up-Austin-Institute-of-Dental-Medicine-Main-Colorway-RGB-scaled.png" alt="Austin Institute of Dental Medicine">
+        <p style="margin:0;max-width:34ch;line-height:1.62">A teaching dental institute in Mueller, Austin — every specialty under one roof, six days a week.</p>
+      </div>
+      <div><h4>Visit</h4><ul><li>1401 Philomena Street<br>Austin, TX 78723</li><li>Free parking next door</li><li>Monday – Saturday</li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+17374342436">(737) 434-2436</a></li><li><a href="mailto:hello@aidm.org">hello@aidm.org</a></li><li><a href="https://aidm.org">aidm.org</a></li></ul></div>
+    </div>
+
+    <div class="terms" id="terms">
+      <div><b>The offer</b>Comprehensive braces at $2,950 for the first 100 eligible orthodontic patients.</div>
+      <div><b>Who it is for</b>Adolescent and adult patients who need comprehensive orthodontic correction. Suitability is confirmed at your evaluation.</div>
+      <div><b>Eligibility</b>Applies only to qualifying patients who pay the treatment fee in full. Cannot be combined with financing, insurance benefits, membership discounts or other promotional offers.</div>
+      <div><b>Validity</b>Advertised package fees are minimum fees available to eligible self-pay patients from 1 July 2026 through 1 October 2026, unless an earlier stated limit applies.</div>
+      <div><b>Important to know</b>Replacement appliances or retainers, surgical procedures, and services outside standard comprehensive treatment are additional — as are additional diagnostics, laboratory fees, and sedation or anesthesia.</div>
+    </div>
+
+    <div class="legal">
+      <p><b>Pricing.</b> Package eligibility, clinical recommendations and final pricing are confirmed after an
+        appropriate clinical evaluation. Fees may increase depending on the treatment required. Package pricing
+        applies only to the services specifically identified and may not be billed to or combined with dental
+        insurance benefits, membership pricing or other discounts unless expressly stated. Patients using payment
+        plans or financing are subject to AIDM&rsquo;s standard treatment fees. Financing may be available subject
+        to approval and applicable terms. Actual results may vary.</p>
+      <p><b>Who treats you.</b> AIDM is a premier educational institute. Treatment under this promotional offer may
+        be provided by dental residents participating in advanced training programs under the direct
+        supervision of our licensed clinical faculty. All promotional pricing is subject to clinical qualification
+        and medical clearance as determined by the attending doctor. AIDM reserves the right to withdraw or change
+        this offer at any time.</p>
+      <p><b>Regulatory Disclaimer:</b> Dental services are provided by Philomena Street PLLC, supported by AIDM.
+        Services at the Austin Institute of Dental Medicine are provided by licensed General Dentists, Residents,
+        and Faculty Members. Terms such as &ldquo;Advanced,&rdquo; &ldquo;Complex,&rdquo; or &ldquo;Institute&rdquo;
+        refer to the scope of training and services offered and do not imply a specific specialization unless the
+        provider is explicitly designated as a Specialist recognized by the American Dental Association (ADA).
+        Invisalign® is a registered trademark of Align Technology, Inc.</p>
+      <p style="color:#4a6d87">© 2026 Austin Institute of Dental Medicine. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-ghost" href="tel:+17374342436">Call</a>
+  <a class="btn btn-sky" href="#contact" data-book>Book Free Orthodontic Evaluation</a>
 </div>
 
-<h2>English &mdash; orthodontics</h2>
-<div class="grid">
-  <a class="card live" href="/braces/"><p class="n">Offer 3</p><b>Comprehensive Braces</b>
-    <span class="tag">Straighten Your Smile with Confidence.</span>
-    <span class="amt">$2,950<span class="u">First 100 patients, then $3,500</span></span><span class="go">Open page &rarr;</span></a>
-  <a class="card" href="/invisalign/"><p class="n">Offer 4</p><b>Invisalign Clear Aligners</b>
-    <span class="tag">Clear Aligners. Confident Smile.</span>
-    <span class="amt">$3,900<span class="u">Including standard retention</span></span><span class="go">Open page &rarr;</span></a>
-  <a class="card" href="/early-orthodontics/"><p class="n">Offer 5</p><b>Early Orthodontic Treatment</b>
-    <span class="tag">The Right Care at the Right Time.</span>
-    <span class="amt">$2,500<span class="u">Limited early treatment</span></span><span class="go">Open page &rarr;</span></a>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Media viewer">
+  <div class="lb-in"><button class="lb-x" id="lbx" aria-label="Close">✕</button><div id="lbslot"></div></div>
 </div>
 
-<h2>English &mdash; implants</h2>
-<div class="grid">
-  <a class="card" href="/dental-implant/"><p class="n">Offer 6</p><b>Single Implant + Crown</b>
-    <span class="tag">One Missing Tooth. One Complete Solution.</span>
-    <span class="amt">from $3,750<span class="u">Range $3,750&ndash;$5,000</span></span><span class="go">Open page &rarr;</span></a>
-  <a class="card" href="/full-arch/"><p class="n">Offer 7</p><b>Full-Arch Fixed Teeth (All-on-X)</b>
-    <span class="tag">A Full Smile. A Fresh Start.</span>
-    <span class="amt">from $18,000<span class="u">Per arch &middot; $22,000 &middot; $26,000</span></span><span class="go">Open page &rarr;</span></a>
-  <a class="card" href="/snap-in-dentures/"><p class="n">Offer 8</p><b>Snap-In Dentures</b>
-    <span class="tag">More Stability. More Confidence.</span>
-    <span class="amt">from $9,500<span class="u">Per arch &middot; $12,500 &middot; $17,000</span></span><span class="go">Open page &rarr;</span></a>
-</div>
+<script>
+(function(){
+  'use strict';
 
-<h2>English &mdash; secondary</h2>
-<div class="grid">
-  <a class="card" href="/wisdom-teeth/"><p class="n">Offer 9</p><b>Wisdom Teeth Removal</b>
-    <span class="tag">Comfort-Focused Care with Clear Pricing.</span>
-    <span class="amt">from $200<span class="u">Per tooth &middot; four teeth $800&ndash;$1,800</span></span><span class="go">Open page &rarr;</span></a>
-  <a class="card" href="/root-canal/"><p class="n">Offer 10</p><b>Root Canal</b>
-    <span class="tag">Save Your Tooth. Restore Your Smile.</span>
-    <span class="amt">from $995<span class="u">With crown $2,300 &middot; $2,400 &middot; $2,500</span></span><span class="go">Open page &rarr;</span></a>
-</div>
+  /* ── where enquiries go ───────────────────────────────────────────────
+     One endpoint for both forms. Leave LEAD_ENDPOINT empty and the page
+     keeps its preview behaviour — it will NOT show a confirmation it cannot
+     honour. Set it and every submission is posted with its attribution
+     fields attached. */
+  var LEAD_ENDPOINT = 'https://aidm-lp.vercel.app/api/contact';
 
-<h2>Espa&ntilde;ol</h2>
-<div class="grid">
-  <a class="card" href="/es/paciente-nuevo/"><p class="n">Oferta 11</p><b>Especial para Pacientes Nuevos</b>
-    <span class="tag">Su Nuevo Hogar Dental en Mueller</span>
-    <span class="amt">$100<span class="u">Examen + radiograf&iacute;as</span></span><span class="go">Abrir p&aacute;gina &rarr;</span></a>
-  <a class="card" href="/es/emergencia/"><p class="n">Oferta 12</p><b>Atenci&oacute;n Dental de Emergencia</b>
-    <span class="tag">Atenci&oacute;n Dental de Emergencia &mdash; 7AM a 7PM, Lun&ndash;S&aacute;b</span>
-    <span class="amt">El mismo d&iacute;a<span class="u">Sin precio publicado</span></span><span class="go">Abrir p&aacute;gina &rarr;</span></a>
-</div>
+  function leadPayload(form){
+    var data = {};
+    new FormData(form).forEach(function(v,k){ data[k] = v; });
+    data.page         = location.href;
+    data.submitted_at = new Date().toISOString();
+    data.form         = form.id === 'cardForm' ? 'hero offer card' : 'contact section';
+    data._subject     = 'AIDM braces LP — new inquiry from ' + (data.first_name||'').trim();
+    return data;
+  }
 
-<footer>Built by Vydhai for Austin Institute of Dental Medicine &middot; preview host, not indexed.</footer>
-</div>
+  /* Posts the lead and calls back with true/false. Never reports success on
+     a failed request: a patient told "we will call you" and then not called
+     is worse off than one asked to ring the practice. */
+  function submitLead(form, done){
+    if (!LEAD_ENDPOINT) { done(true); return; }        // preview build
+    fetch(LEAD_ENDPOINT, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json', 'Accept':'application/json'},
+      body: JSON.stringify(leadPayload(form))
+    }).then(function(r){ done(r.ok); })
+      .catch(function(){ done(false); });
+  }
+
+  function leadError(form){
+    var err = form.querySelector('.cf-err');
+    if (!err) { err = document.createElement('p'); err.className = 'cf-err'; form.appendChild(err); }
+    err.innerHTML = 'That did not go through. Please call ' +
+      '<a href="tel:+17374342436">(737) 434-2436</a> and we will book you in.';
+  }
+
+  /* ── sticky nav ─────────────────────────────────────────────────────── */
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('stuck', window.scrollY > 80); };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ── reveal ─────────────────────────────────────────────────────────── */
+  var rv = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:.06});
+    rv.forEach(function(el){ io.observe(el); });
+  } else { rv.forEach(function(el){ el.classList.add('in'); }); }
+
+  /* ── hero film ────────────────────────────────────────────────────────
+     AIDM's own welcome film, served locally and played untreated. Two things
+     matter here beyond autoplay:
+       · GPU safety — a looping <video> keeps decoding in a hidden tab, which
+         on macOS Chrome builds pressure until the GPU process dies. Pausing on
+         visibilitychange and when the hero scrolls away removes that entirely.
+         (For the same reason nothing above the film uses backdrop-filter.)
+       · prefers-reduced-motion — the film is dropped and the poster stands in. */
+  var marq = document.getElementById('marq');
+  var cmarq = document.getElementById('cmarq');
+  var vid = document.getElementById('heroVid');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (vid) {
+    if (reduce) {
+      vid.removeAttribute('autoplay');
+      vid.pause();
+    } else {
+      var heroVisible = true, tabVisible = !document.hidden;
+      var sync = function(){
+        if (heroVisible && tabVisible) { var pr = vid.play(); if (pr && pr.catch) pr.catch(function(){}); }
+        else vid.pause();
+      };
+
+      // some browsers refuse the initial autoplay until muted is set in script
+      vid.muted = true;
+      sync();
+
+      document.addEventListener('visibilitychange', function(){
+        tabVisible = !document.hidden;
+        [marq, cmarq, document.getElementById('rmarq')].forEach(function(el){
+          if (el) el.classList.toggle('off', !tabVisible);
+        });
+        sync();
+      });
+
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function(es){
+          es.forEach(function(e){ heroVisible = e.isIntersecting; });
+          sync();
+        }, {threshold:0}).observe(vid);
+      }
+    }
+  }
+
+  /* ── no countdown on this page ───────────────────────────────────────
+     The card carried a live counter to 1 Oct 2026 until 2026-08-19. It now
+     carries the opening hours instead, so there is nothing here to tick.
+     The validity window still stands in the offer terms in the footer. */
+
+  /* ── marquees pause off-screen ──────────────────────────────────────── */
+  if ('IntersectionObserver' in window) {
+    [marq, cmarq, document.getElementById('rmarq')].forEach(function(el){
+      if (!el) return;
+      new IntersectionObserver(function(es){
+        es.forEach(function(e){ el.classList.toggle('off', !e.isIntersecting); });
+      }, {threshold:0}).observe(el);
+    });
+  }
+
+  /* ── lightbox ───────────────────────────────────────────────────────── */
+  var lb = document.getElementById('lb'),
+      slot = document.getElementById('lbslot'),
+      lbIn = lb.querySelector('.lb-in');
+
+  function closeLb(){
+    lb.classList.remove('on'); lbIn.classList.remove('is-img');
+    slot.innerHTML = ''; document.body.style.overflow = '';
+  }
+  function openLb(html, isImg){
+    slot.innerHTML = html;
+    lbIn.classList.toggle('is-img', !!isImg);
+    lb.classList.add('on');
+    document.body.style.overflow = 'hidden';
+  }
+
+  document.querySelectorAll('.film').forEach(function(v){
+    v.addEventListener('click', function(){
+      var vid = v.getAttribute('data-yt');
+      if (!vid) return;
+      openLb('<iframe src="https://www.youtube-nocookie.com/embed/' + vid +
+        '?autoplay=1&rel=0&modestbranding=1" title="AIDM film" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>', false);
+    });
+  });
+
+  /* ── promotion screen: thumbnail facade, swapped for the real player on
+     click so no third-party iframe loads unless someone asks for it ────── */
+  var scr = document.getElementById('promoScr');
+  if (scr) {
+    var playScr = function(){
+      if (scr.dataset.on) return;
+      scr.dataset.on = '1';
+      scr.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' +
+        scr.getAttribute('data-yt') + '?autoplay=1&rel=0&modestbranding=1" ' +
+        'title="Orthodontics at AIDM" allow="accelerometer; autoplay; encrypted-media; ' +
+        'picture-in-picture" allowfullscreen></iframe>';
+    };
+    scr.addEventListener('click', playScr);
+    scr.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); playScr(); }
+    });
+  }
+
+  /* ── office-tour tiles open full size ───────────────────────────────── */
+  document.querySelectorAll('.gt[data-src]').forEach(function(t){
+    t.addEventListener('click', function(){
+      openLb('<img src="' + t.getAttribute('data-src') + '" alt="">', true);
+    });
+  });
+
+  /* ── the two dominant tour tiles cross-fade through their other frames ──
+     Opacity only — no layout, no scroll-linked work — and the timer is only
+     armed while the mosaic is on screen and the tab is in front. The tile's
+     data-src (what the lightbox opens) follows the visible frame. */
+  (function(){
+    if (reduce) return;
+    var slides = Array.prototype.slice.call(document.querySelectorAll('.gt.slide'));
+    if (!slides.length) return;
+
+    var timer = null, live = false;
+    var step = function(){
+      slides.forEach(function(tile){
+        var frames = tile.querySelectorAll('img');
+        if (frames.length < 2) return;
+        var i = 0;
+        for (var n = 0; n < frames.length; n++) { if (frames[n].classList.contains('on')) { i = n; break; } }
+        var next = (i + 1) % frames.length;
+        frames[i].classList.remove('on');
+        frames[next].classList.add('on');
+        tile.setAttribute('data-src', frames[next].getAttribute('src'));
+      });
+    };
+    var run = function(on){
+      if (on === live) return;
+      live = on;
+      if (on) timer = setInterval(step, 5200);
+      else { clearInterval(timer); timer = null; }
+    };
+
+    var onScreen = true;
+    document.addEventListener('visibilitychange', function(){ run(onScreen && !document.hidden); });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function(es){
+        es.forEach(function(e){ onScreen = e.isIntersecting; });
+        run(onScreen && !document.hidden);
+      }, {threshold:0}).observe(slides[0].parentNode);
+    } else { run(true); }
+  })();
+
+  document.getElementById('lbx').addEventListener('click', closeLb);
+  lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && lb.classList.contains('on')) closeLb(); });
+
+  /* ── before/after: self-healing when the assets are absent ──────────── */
+  var caseWrap = cmarq;
+  if (caseWrap) {
+    var tiles = Array.prototype.slice.call(caseWrap.querySelectorAll('.case'));
+    var alive = tiles.length;
+    var kill = function(t){
+      t.remove();
+      if (--alive === 0) { var sec = document.getElementById('results'); if (sec) sec.remove(); }
+    };
+    var probe = new Image();
+    probe.onerror = function(){
+      var sec = document.getElementById('results'); if (sec) sec.remove(); alive = 0;
+    };
+    probe.src = tiles[0].getAttribute('data-src');
+
+    tiles.forEach(function(t){
+      var img = t.querySelector('img');
+      img.addEventListener('error', function(){ if (alive) kill(t); });
+      if (img.complete && img.naturalWidth === 0 && alive) kill(t);
+      t.addEventListener('click', function(){
+        openLb('<img src="' + t.getAttribute('data-src') + '" alt="">', true);
+      });
+    });
+  }
+
+  /* ── in-page jumps land true ──────────────────────────────────────────
+     Lazy images below the fold load while a smooth scroll is still running
+     and push the target down under it, so a jump from the top of the page
+     (the price asterisks especially) stops short. Re-aligning once after the
+     scroll settles fixes it without disabling smooth scrolling. */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(){
+      var id = a.getAttribute('href').slice(1);
+      if (!id) return;
+      var target = document.getElementById(id);
+      if (!target) return;
+      [700, 1400].forEach(function(t){
+        setTimeout(function(){
+          var top = target.getBoundingClientRect().top;
+          if (Math.abs(top - 80) > 24) target.scrollIntoView({block:'start'});
+        }, t);
+      });
+    });
+  });
+
+  /* ── the offer card books in place ────────────────────────────────────
+     Every "book" control in the top third of the page flips this card to its
+     form face instead of sending the visitor to the footer. The nav button
+     scrolls back up first so the card is actually on screen when it flips.
+     On submit the card thanks them, then returns to the offer by itself. */
+  (function(){
+    var card = document.getElementById('offerCard');
+    if (!card) return;
+    var faces = {
+      offer: card.querySelector('.card-offer'),
+      form:  card.querySelector('.card-form'),
+      done:  card.querySelector('.card-done')
+    };
+    var cardForm = document.getElementById('cardForm');
+    var revertTimer = null;
+
+    function show(name){
+      clearTimeout(revertTimer);
+      Object.keys(faces).forEach(function(k){ faces[k].hidden = (k !== name); });
+    }
+
+    function openForm(focus){
+      show('form');
+      if (focus !== false) {
+        var first = document.getElementById('cf_fn');
+        // let the fade start before stealing focus, or Safari jumps the page
+        setTimeout(function(){ if (first) first.focus({preventScroll:true}); }, 260);
+      }
+    }
+
+    document.getElementById('cardBook').addEventListener('click', function(){ openForm(); });
+    document.getElementById('cardBack').addEventListener('click', function(){ show('offer'); });
+
+    // nav + mobile bar: flip the card when the visitor is still near the top
+    // of the page, otherwise let the link fall through to the footer form,
+    // which by then is the closer of the two.
+    document.querySelectorAll('[data-book]').forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        var near = card.getBoundingClientRect().bottom > -260;
+        if (!near) return;
+        e.preventDefault();
+        window.scrollTo({top:0, behavior:'smooth'});
+        openForm(false);
+      });
+    });
+
+    cardForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var bad = false;
+      ['cf_fn','cf_ph'].forEach(function(id){
+        var f = document.getElementById(id);
+        if (!f.value.trim()) { f.style.borderColor = '#d1614a'; bad = true; }
+        else f.style.borderColor = '';
+      });
+      if (bad) return;
+
+      var cbtn = cardForm.querySelector('button[type=submit]'), clabel = cbtn.textContent;
+      cbtn.disabled = true; cbtn.textContent = 'Sending…';
+      submitLead(cardForm, function(ok){
+        cbtn.disabled = false; cbtn.textContent = clabel;
+        if (!ok) { leadError(cardForm); return; }
+        show('done');
+        cardForm.reset();
+        revertTimer = setTimeout(function(){ show('offer'); }, 9000);
+      });
+    });
+  })();
+
+  /* ── attribution passthrough ──────────────────────────────────────────
+     Both forms carry the same hidden fields — the contact form prefixed f_,
+     the offer card cf_ — so fill each pair, or a lead booked from the card
+     arrives with no campaign attached to it. */
+  var q = new URLSearchParams(location.search);
+  ['gclid','wbraid','utm_source','utm_medium','utm_campaign'].forEach(function(k){
+    var v = q.get(k) || '';
+    ['f_', 'cf_'].forEach(function(prefix){
+      var e = document.getElementById(prefix + k); if (e) e.value = v;
+    });
+  });
+
+  /* ── form: preview-only handler; swap for the live endpoint on launch ── */
+  var form = document.getElementById('lpForm');
+  if (form) {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var bad = [];
+      ['fn','ph'].forEach(function(idn){
+        var f = document.getElementById(idn);
+        if (!f.value.trim()) { bad.push(f); f.style.borderColor = '#d1614a'; }
+        else f.style.borderColor = '';
+      });
+      if (bad.length) { bad[0].focus(); return; }
+      var btn = form.querySelector('button[type=submit]'), label = btn.textContent;
+      btn.disabled = true; btn.textContent = 'Sending…';
+      submitLead(form, function(ok){
+        if (!ok) { btn.disabled = false; btn.textContent = label; leadError(form); return; }
+        btn.textContent = 'Thank you — we will call you shortly ✓';
+        btn.style.background = 'linear-gradient(135deg,#5fd39a,#2f9e5f)';
+        btn.disabled = true;
+        form.reset();
+      });
+    });
+  }
+})();
+</script>
 </body>
 </html>
