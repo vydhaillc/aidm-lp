@@ -128,11 +128,11 @@ EMERGENCY = dict(
   cta='Book Appointment',
   slug='emergency', id='emergency-dental-same-day', banner='EMERGENCY DENTAL',
   title='Emergency Dental Care — 7am to 7pm, Monday to Saturday | AIDM Austin',
-  desc='Same-day emergency dental appointments at the Austin Institute of Dental Medicine in Mueller. Open Monday to Saturday, 7:00 a.m. to 7:00 p.m., with an onsite surgical centre for urgent extractions.',
+  desc='Same-day emergency dental appointments at the Austin Institute of Dental Medicine in Mueller. Open Monday to Saturday, 7:00 a.m. to 7:00 p.m., with dedicated dental surgery rooms onsite for urgent extractions.',
   ogtitle='Emergency Dental Care — 7am to 7pm, Mon–Sat | AIDM Austin',
-  ogdesc='Seen today. Problem-focused emergency evaluation, X-rays as needed, onsite surgical centre. Mueller, Austin.',
+  ogdesc='Same-day appointments available. Problem-focused emergency evaluation, X-rays as needed, dedicated dental surgery rooms onsite. Mueller, Austin.',
   ogimg=OG_OP,
-  nav=NAV_STD, navcta='Get Seen Today', mcall='Call now',
+  nav=NAV_STD, navcta='Same-Day Availability', mcall='Call now',
   css='''/* "Same Day Appointments" where the other cards carry a figure — three
    words need to wrap and to sit a size down from the single-word prices. */
 .card-price .v.w-tight{font-size:clamp(1.5rem,3.4vw,2.15rem);line-height:1.12;
@@ -154,11 +154,11 @@ EMERGENCY = dict(
   h1=['Emergency Dental Care', '7am to 7pm,', 'Mon&ndash;Sat.'],
   pill='In Pain Today?', cardtitle='Emergency Dental Care',
   cardprice='<span class="v w w-tight">Same Day Appointments</span>',
-  included=['Seen today &mdash; same-day appointments',
+  included=['Same-day appointments, subject to availability',
             'Every specialty under one roof',
             'Problem-focused emergency evaluation',
             'X-rays as needed to diagnose',
-            'Onsite surgical centre for urgent extractions'],
+            'Dedicated dental surgery rooms for urgent extractions'],
   cardcta='Request a same-day slot',
   cardfine='In pain right now? Calling is faster than any form.',
   cfk='Same-day emergency', cfh='Ask for a slot today', cfsubmit='Request a same-day slot',
@@ -167,7 +167,7 @@ EMERGENCY = dict(
          'call <a href="tel:+17374342436">(737) 434-2436</a> now rather than waiting for us.',
   promok='Emergency dental care', promoh2='In pain today? <em>Ask for today.</em>',
   video='NtubApnQFt0', videoalt='Emergency dental care at the Austin Institute of Dental Medicine',
-  videoled='Emergency dental &mdash; seen today', badge=('7&ndash;7', 'Mon to Sat'),
+  videoled='Emergency dental &mdash; same-day care', badge=('7&ndash;7', 'Mon to Sat'),
   promoimg=TOOTHACHE, promoalt='A patient in the dental chair holding her jaw in pain, with a clinician beside her',
   promofine='Emergency appointments are triaged clinically and are subject to availability. A problem-focused '
     'emergency evaluation addresses the presenting problem; any further treatment is quoted before it is started, '
@@ -184,11 +184,11 @@ EMERGENCY = dict(
          ('Diagnose the cause','A problem-focused evaluation with the X-rays needed to see what is going on &mdash; '
           'an abscess, a crack, a lost filling, an impacted tooth.'),
          ('Relieve it today','Whatever can be done safely on the day is done on the day, with the fee agreed first. '
-          'An onsite surgical centre means an urgent extraction does not need a second appointment elsewhere.')],
+          'Dedicated dental surgery rooms onsite mean an urgent extraction does not need a second appointment elsewhere.')],
   stepsfine='If you have facial swelling that is spreading, difficulty breathing or swallowing, or uncontrolled '
     'bleeding, treat it as a medical emergency and go to an emergency room.',
-  staffsub='Board-certified faculty, specialists and residents working side by side &mdash; and an onsite surgical '
-    'centre, so an urgent extraction does not become a referral to somewhere else.',
+  staffsub='Board-certified faculty, specialists and residents working side by side &mdash; with dedicated dental surgery '
+    'rooms onsite, so an urgent extraction does not become a referral to somewhere else.',
   films=[('NtubApnQFt0','Emergency dental at AIDM &mdash; what happens when you walk in','Start here'),
          ('DV9t9dZJauA','Finding us &amp; where to park'),
          ('k9PavRdjiyc','Comfort, sedation &amp; anxiety care'),
@@ -205,12 +205,12 @@ EMERGENCY = dict(
       bullets=['Severe toothache or dental pain','Knocked-out or loosened tooth','Cracked or fractured tooth',
                'Lost filling or crown','Abscess or swelling','Bleeding from the mouth','Trauma to the mouth or jaw']),
     dict(img=CHAIRSIDE, alt='A close-up of an AIDM clinician examining a patient&rsquo;s teeth chairside',
-      cap='An onsite surgical centre, in the same building',
+      cap='Dedicated dental surgery rooms, in the same building',
       k='Why here', h2='Everything under <em>one roof.</em>',
       p='Most practices that see you urgently then refer you on for whatever you actually need. AIDM has '
         'endodontics, oral surgery, periodontics and prosthodontics in the same building, six days a week, so the '
         'treatment that follows the diagnosis can usually be booked immediately rather than chased.',
-      bullets=['Onsite surgical centre for urgent extractions',
+      bullets=['Dedicated dental surgery rooms for urgent extractions',
                'Sedation and anxiety care available for patients who need it',
                'Open 7:00 a.m. to 7:00 p.m., Monday to Saturday &mdash; before and after work'])],
   optsk='What an emergency usually turns out to be',
@@ -230,7 +230,7 @@ EMERGENCY = dict(
       amt='Same Day Appointments', strike='Problem-focused evaluation', words=True,
       d='The appointment itself: find out what is causing the pain, and deal with what can safely be dealt with today.',
       ul=['Same-day emergency appointments','Every specialty under one roof','Problem-focused emergency evaluation',
-          'X-rays as needed to diagnose','Onsite surgical centre for urgent extractions'],
+          'X-rays as needed to diagnose','Dedicated dental surgery rooms for urgent extractions'],
       fine='Emergency appointments are triaged clinically and subject to availability. Any treatment arising is '
            'quoted before it is started.', cta='Request a same-day slot'),
     dict(img=PIC['surgery'], imgalt=PALT['surgery'], imgpos='center 40%',
@@ -256,7 +256,7 @@ EMERGENCY = dict(
         'is presented to you before that treatment starts. The three commonest outcomes have published package prices &mdash; '
         'a root canal from $995, an extraction from $200 per tooth &mdash; so you are rarely in unmapped territory.'),
        ('Can you actually treat it the same day, or just look at it?',
-        'Whatever can be done safely on the day is done on the day. AIDM has an onsite surgical centre, so an urgent '
+        'Whatever can be done safely on the day is done on the day. AIDM has dedicated dental surgery rooms onsite, so an urgent '
         'extraction does not become a referral somewhere else, and endodontics, periodontics and prosthodontics are in the '
         'same building for whatever follows.'),
        ('I do not have insurance. Can I still be seen?',
@@ -510,7 +510,7 @@ WISDOM = dict(
   title='Comfort-Focused Care with Clear Pricing — Wisdom Teeth from $200 a Tooth | AIDM Austin',
   desc='Wisdom teeth removal from $200 per tooth at the Austin Institute of Dental Medicine in Mueller, Austin. Published price per surgical complexity; four teeth $800 to $1,800.',
   ogtitle='Wisdom Teeth Removal from $200 a Tooth | AIDM Austin',
-  ogdesc='Straightforward wisdom tooth pricing based on the position and surgical complexity of each tooth. Onsite surgical centre.',
+  ogdesc='Straightforward wisdom tooth pricing based on the position and surgical complexity of each tooth. Dedicated dental surgery rooms onsite.',
   ogimg=OG_OP,
   nav=NAV_STD, navcta='Book a Consult',
   h1=['Comfort-Focused Care', 'with Clear Pricing.'],
@@ -534,7 +534,7 @@ WISDOM = dict(
   promofine='The package covers extractions only. Sedation and anaesthesia are billed separately. Which band a tooth '
     'falls into is determined from imaging at your consult, and the fee is confirmed before any treatment is started.',
   perks=[('cal','Book online'),('park','Free parking'),('clock','Monday&ndash;Saturday'),
-         ('card','Sedation available'),('star','Onsite surgical centre')],
+         ('card','Sedation available'),('star','Dedicated surgery rooms')],
   stepsk='From consult to a soft-food weekend', stepsh2='How a wisdom tooth <em>actually comes out.</em>',
   stepssub='The fee is decided by the X-ray, not by the day. Once you know which of the five bands each tooth is in, '
     'there is nothing left to be surprised by.',
@@ -542,17 +542,17 @@ WISDOM = dict(
           'partial-bony or complete-bony. That position is what sets the fee for that tooth.'),
          ('Your written quote','You are given the per-tooth price for your own case, plus the cost of sedation if you '
           'want it, before anything is booked.'),
-         ('The appointment','Local anaesthetic as standard, with sedation available for patients who want it. An onsite '
-          'surgical centre means the whole thing happens in the same building.'),
+         ('The appointment','Local anaesthetic as standard, with sedation available for patients who want it. Dedicated dental surgery '
+          'rooms mean the whole thing happens in the same building.'),
          ('Healing','Written aftercare, gauze, and a review if you need one. Most people take it easy for a day or two '
           'and eat soft food for a few days.')],
   stepsfine='Not every wisdom tooth needs removing. If yours are through, in a usable position and cleanable, you will '
     'be told to keep them &mdash; the consult exists to answer that question honestly.',
-  staffsub='Board-certified faculty, specialists and residents working side by side, with an onsite surgical centre '
+  staffsub='Board-certified faculty, specialists and residents working side by side, with dedicated dental surgery rooms '
     'and sedation available &mdash; oral surgery does not become a referral somewhere else.',
   films=[('k9PavRdjiyc','Comfort, sedation and anxiety care &mdash; what is available and how it works','Start here'),
          ('QNsMOG1B6G8','Welcome to AIDM'),('2ooc1MlkmNM','What to expect at your first visit'),
-         ('NtubApnQFt0','Emergency dental &mdash; seen today'),('f7HHTbB-qe8','Comprehensive dental care'),
+         ('NtubApnQFt0','Emergency dental &mdash; same-day care'),('f7HHTbB-qe8','Comprehensive dental care'),
          ('DV9t9dZJauA','Finding us &amp; where to park')],
   filmlane='More about AIDM', filmsub='The building, the clinicians and the treatments &mdash; in their own words.',
   frows=[dict(img=OPERATORY, alt='An AIDM operatory with a patient being examined using advanced imaging',
@@ -591,22 +591,22 @@ WISDOM = dict(
       d='A wisdom tooth held back by gum or by part of the surrounding bone &mdash; the commonest reason wisdom teeth '
         'cause trouble in the first place.',
       ul=['Soft-tissue impacted &mdash; $300 per tooth','Partial-bony impacted &mdash; $375 per tooth',
-          'Local anaesthetic included','Onsite surgical centre','Written aftercare instructions'],
+          'Local anaesthetic included','Dedicated dental surgery rooms','Written aftercare instructions'],
       fine='The package covers extractions only. Sedation and anaesthesia are billed separately.',
       cta='Book a consult'),
     dict(img=PIC['surgery'], imgalt=PALT['surgery'], imgpos='center 40%',
       sub='Fully buried', h3='Complete-Bony Impaction', amt='$450',
       strike='Per tooth',
-      d='A wisdom tooth completely enclosed in bone. The most involved of the five positions, and the one where an '
-        'onsite surgical centre matters most.',
-      ul=['Complete-bony impacted &mdash; $450 per tooth','Local anaesthetic included','Onsite surgical centre',
+      d='A wisdom tooth completely enclosed in bone. The most involved of the five positions, and the one where dedicated '
+        'dental surgery rooms matter most.',
+      ul=['Complete-bony impacted &mdash; $450 per tooth','Local anaesthetic included','Dedicated dental surgery rooms',
           'Sedation available, priced separately','Written aftercare instructions'],
       fine='The package covers extractions only. Sedation and anaesthesia are billed separately.',
       cta='Book a consult')],
   alsoh='What it adds up to, and what sits next to it',
   also=[('All four wisdom teeth','Depending on the mix of positions across the four','$800&ndash;$1,800'),
         ('Sedation &amp; anaesthesia','Available for patients who want it, quoted separately from the extraction','On consult'),
-        ('Emergency dental care','If a wisdom tooth has already flared up &mdash; seen today, Mon&ndash;Sat 7am&ndash;7pm','Same-day'),
+        ('Emergency dental care','If a wisdom tooth has already flared up &mdash; same-day care, Mon&ndash;Sat 7am&ndash;7pm','Same-day'),
         ('New Patient Special','Comprehensive examination and X-rays as needed, if you are new to AIDM','$100')],
   faq=[('How much will all four cost me?',
         'Between $800 and $1,800, depending on how the four are sitting. Each tooth is priced on its own position &mdash; '

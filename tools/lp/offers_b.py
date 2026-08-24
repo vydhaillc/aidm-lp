@@ -8,7 +8,7 @@ CAMPING    = U + '2026/05/iStock-52-1024x683.jpg'
 FREEDOM    = U + '2026/08/istock_56-1024x683.jpg'
 
 IMPLANT_PERKS = [('cal','Book online'),('park','Free parking'),('clock','Monday&ndash;Saturday'),
-                 ('card','Financing available'),('star','Onsite surgical centre')]
+                 ('card','Financing available'),('star','Dedicated surgery rooms')]
 
 # The three implant packages as cards, reused across the implant pages.
 def implant_cards(feature, own_photo=None, own_alt=''):
@@ -502,7 +502,7 @@ ROOTCANAL = dict(
   staffsub='Board-certified faculty, specialists and residents working side by side &mdash; with endodontics and '
     'restorative dentistry in the same building, so the tooth is sealed and rebuilt as one plan rather than two.',
   films=[('f7HHTbB-qe8','Comprehensive dental care at AIDM &mdash; every specialty under one roof','Start here'),
-         ('k9PavRdjiyc','Comfort, sedation &amp; anxiety care'),('NtubApnQFt0','Emergency dental &mdash; seen today'),
+         ('k9PavRdjiyc','Comfort, sedation &amp; anxiety care'),('NtubApnQFt0','Emergency dental &mdash; same-day care'),
          ('QNsMOG1B6G8','Welcome to AIDM'),('2ooc1MlkmNM','What to expect at your first visit'),
          ('cCUQyiHkJxg','Prosthodontics')],
   filmlane='More about AIDM', filmsub='The building, the clinicians and the treatments &mdash; in their own words.',
@@ -553,7 +553,7 @@ ROOTCANAL = dict(
       fine='This package applies to initial root canal treatment. Retreatment and procedures not listed in the package '
            'are additional.', cta='Ask about the bundle')],
   alsoh='If the tooth turns out not to be savable',
-  also=[('Emergency dental care','If it is hurting now &mdash; same-day, Mon&ndash;Sat 7am&ndash;7pm','Seen today'),
+  also=[('Emergency dental care','If it is hurting now &mdash; same-day, Mon&ndash;Sat 7am&ndash;7pm','Same-day care'),
         ('Extractions','Priced per tooth by surgical position, when the tooth cannot be kept','from $200'),
         ('Single Implant + Crown','Replacing the tooth: imaging, implant and the final ceramic crown','from $3,750'),
         ('New Patient Special','Comprehensive examination and X-rays as needed, if you are new to AIDM','$100')],

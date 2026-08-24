@@ -248,7 +248,7 @@ ES_NUEVO = dict(
       d='Si tiene dolor hoy, la cita de emergencia es la correcta &mdash; no el examen de paciente nuevo.',
       ul=['Atenci&oacute;n el mismo d&iacute;a','Abierto de lunes a s&aacute;bado, 7 a.m. a 7 p.m.',
           'Evaluaci&oacute;n enfocada en el problema','Radiograf&iacute;as necesarias para el diagn&oacute;stico',
-          'Centro quir&uacute;rgico en las instalaciones'],
+          'Salas de cirug&iacute;a dental en las instalaciones'],
       fine='Las citas de emergencia se priorizan cl&iacute;nicamente y est&aacute;n sujetas a disponibilidad.',
       cta='Ver atenci&oacute;n de emergencia')],
   faq=[('&iquest;Qu&eacute; incluye exactamente por $100?',
@@ -276,7 +276,7 @@ ES_NUEVO = dict(
         'de venir, lo que suele ahorrar quince minutos en recepci&oacute;n.'),
        ('Tengo dolor hoy. &iquest;Es esta la cita correcta?',
         'Si tiene dolor, pida la cita de emergencia. AIDM reserva espacios para el mismo d&iacute;a, de lunes a '
-        's&aacute;bado, de 7:00 a.m. a 7:00 p.m., con centro quir&uacute;rgico en las instalaciones para extracciones '
+        's&aacute;bado, de 7:00 a.m. a 7:00 p.m., con salas de cirug&iacute;a dental en las instalaciones para extracciones '
         'urgentes. Llame al <a href="tel:+17374342436">(737) 434-2436</a> y diga que es urgente.'),
        ('&iquest;Puedo llevar a mis hijos el mismo d&iacute;a?',
         'S&iacute; &mdash; AIDM atiende a ni&ntilde;os y adultos en el mismo edificio, y las familias se agendan '
@@ -306,17 +306,17 @@ ES_EMERGENCIA = dict(
   cta='Agendar Cita',
   slug='es/emergencia', id='emergency-dental-same-day-es', banner='EMERGENCIA (ES)', lang='es',
   title='Atención Dental de Emergencia — 7AM a 7PM, Lun a Sáb | AIDM Austin',
-  desc='Citas dentales de emergencia el mismo día en Austin Institute of Dental Medicine, Mueller. Abierto de lunes a sábado, 7 a.m. a 7 p.m., con centro quirúrgico en las instalaciones.',
+  desc='Citas dentales de emergencia el mismo día en Austin Institute of Dental Medicine, Mueller. Abierto de lunes a sábado, 7 a.m. a 7 p.m., con salas de cirugía dental en las instalaciones.',
   ogtitle='Atención Dental de Emergencia — 7AM a 7PM, Lun–Sáb | AIDM Austin',
-  ogdesc='Atención el mismo día. Evaluación enfocada en el problema, radiografías necesarias y centro quirúrgico en las instalaciones.',
+  ogdesc='Atención el mismo día. Evaluación enfocada en el problema, radiografías necesarias y salas de cirugía dental en las instalaciones.',
   ogimg=OG_OP,
-  nav=NAV_ES, navcta='Atenci&oacute;n Hoy', mcall='Llamar', facts=FACTS_ES, i18n=CHROME,
+  nav=NAV_ES, navcta='Disponibilidad Hoy', mcall='Llamar', facts=FACTS_ES, i18n=CHROME,
   h1=['Atenci&oacute;n Dental', 'de Emergencia', '7am a 7pm, Lun&ndash;S&aacute;b.'],
   pill='Citas el mismo d&iacute;a', cardtitle='Atenci&oacute;n Dental de Emergencia',
   cardprice='<span class="v w">Atenci&oacute;n hoy</span>', cardsub='Sin precio publicado',
   included=['Atenci&oacute;n el mismo d&iacute;a','Abierto de lunes a s&aacute;bado, 7 a.m. a 7 p.m.',
             'Evaluaci&oacute;n enfocada en el problema','Radiograf&iacute;as necesarias para el diagn&oacute;stico',
-            'Centro quir&uacute;rgico en las instalaciones'],
+            'Salas de cirug&iacute;a dental en las instalaciones'],
   cardcta='Solicitar cita para hoy',
   cardfine='&iquest;Tiene dolor ahora? Llamar es m&aacute;s r&aacute;pido que cualquier formulario.',
   cfk='Emergencia el mismo d&iacute;a', cfh='Pida una cita para hoy', cfsubmit='Solicitar cita para hoy',
@@ -342,12 +342,12 @@ ES_EMERGENCIA = dict(
          ('Diagnosticar la causa','Una evaluaci&oacute;n enfocada en el problema, con las radiograf&iacute;as '
           'necesarias para ver qu&eacute; ocurre &mdash; un absceso, una fractura, una restauraci&oacute;n perdida, un diente retenido.'),
          ('Aliviarlo hoy','Todo lo que se pueda hacer con seguridad el mismo d&iacute;a se hace el mismo d&iacute;a, '
-          'con el costo acordado antes. El centro quir&uacute;rgico en las instalaciones significa que una '
+          'con el costo acordado antes. Las salas de cirug&iacute;a dental en las instalaciones significan que una '
           'extracci&oacute;n urgente no necesita una segunda cita en otro lugar.')],
   stepsfine='Si tiene inflamaci&oacute;n facial que se est&aacute; extendiendo, dificultad para respirar o tragar, o '
     'sangrado no controlado, trátelo como una emergencia m&eacute;dica y acuda a una sala de emergencias.',
-  staffsub='Docentes certificados, especialistas y residentes trabajando lado a lado &mdash; y un centro '
-    'quir&uacute;rgico en las instalaciones, para que una extracci&oacute;n urgente no se convierta en una referencia a otro lugar.',
+  staffsub='Docentes certificados, especialistas y residentes trabajando lado a lado &mdash; con salas de '
+    'cirug&iacute;a dental en las instalaciones, para que una extracci&oacute;n urgente no se convierta en una referencia a otro lugar.',
   films=[('NtubApnQFt0','Emergencia dental en AIDM &mdash; qu&eacute; ocurre cuando llega','Empiece aqu&iacute;'),
          ('OBTJIDJHHTc','Qu&eacute; esperar en AIDM &mdash; en espa&ntilde;ol'),
          ('DV9t9dZJauA','C&oacute;mo llegar y d&oacute;nde parquear'),
@@ -367,13 +367,13 @@ ES_EMERGENCIA = dict(
                'Un diente permanente que se sali&oacute; muchas veces se puede reimplantar &mdash; pero la ventana se mide en horas',
                'Los analg&eacute;sicos y antibi&oacute;ticos manejan s&iacute;ntomas; solo tratar la causa lo termina']),
     dict(img=OPERATORY, alt='Un consultorio de AIDM con un paciente siendo atendido',
-      cap='Centro quir&uacute;rgico, en el mismo edificio',
+      cap='Salas de cirug&iacute;a dental, en el mismo edificio',
       k='Por qu&eacute; aqu&iacute;', h2='Todo bajo <em>un mismo techo.</em>',
       p='La mayor&iacute;a de las cl&iacute;nicas que lo atienden de urgencia luego lo refieren a otro lado para lo que '
         'realmente necesita. AIDM tiene endodoncia, cirug&iacute;a oral, periodoncia y prostodoncia en el mismo '
         'edificio, seis d&iacute;as a la semana, as&iacute; que el tratamiento que sigue al diagn&oacute;stico se '
         'suele agendar de inmediato.',
-      bullets=['Centro quir&uacute;rgico en las instalaciones para extracciones urgentes',
+      bullets=['Salas de cirug&iacute;a dental en las instalaciones para extracciones urgentes',
                'Sedaci&oacute;n y manejo de la ansiedad disponibles para quien los necesite',
                'Abierto de 7:00 a.m. a 7:00 p.m., de lunes a s&aacute;bado &mdash; antes y despu&eacute;s del trabajo'])],
   optsk='En qu&eacute; suele resultar una emergencia',
@@ -395,7 +395,7 @@ ES_EMERGENCIA = dict(
       d='La cita en s&iacute;: averiguar qu&eacute; causa el dolor y resolver lo que se pueda resolver hoy con seguridad.',
       ul=['Atenci&oacute;n el mismo d&iacute;a','Abierto de lunes a s&aacute;bado, 7 a.m. a 7 p.m.',
           'Evaluaci&oacute;n enfocada en el problema','Radiograf&iacute;as necesarias para el diagn&oacute;stico',
-          'Centro quir&uacute;rgico en las instalaciones'],
+          'Salas de cirug&iacute;a dental en las instalaciones'],
       fine='Las citas de emergencia se priorizan cl&iacute;nicamente y est&aacute;n sujetas a disponibilidad. Cualquier '
            'tratamiento que resulte se cotiza antes de iniciarse.', cta='Solicitar cita para hoy'),
     dict(img=PIC['surgery'], imgalt='Dos cl&iacute;nicos realizando un procedimiento en el consultorio', imgpos='center 40%',
@@ -423,8 +423,8 @@ ES_EMERGENCIA = dict(
         'diagnosticarlo, y el costo de cualquier tratamiento se le presenta antes de iniciarlo. Los tres desenlaces '
         'm&aacute;s comunes tienen precios publicados &mdash; endodoncia desde $995, extracci&oacute;n desde $200 por diente.'),
        ('&iquest;De verdad lo pueden tratar el mismo d&iacute;a?',
-        'Todo lo que se pueda hacer con seguridad el mismo d&iacute;a se hace el mismo d&iacute;a. AIDM tiene centro '
-        'quir&uacute;rgico en las instalaciones, as&iacute; que una extracci&oacute;n urgente no se convierte en una '
+        'Todo lo que se pueda hacer con seguridad el mismo d&iacute;a se hace el mismo d&iacute;a. AIDM tiene salas de '
+        'cirug&iacute;a dental en las instalaciones, as&iacute; que una extracci&oacute;n urgente no se convierte en una '
         'referencia a otro lugar, y endodoncia, periodoncia y prostodoncia est&aacute;n en el mismo edificio.'),
        ('&iquest;Atienden en espa&ntilde;ol?',
         'S&iacute;. Puede llamar y agendar en espa&ntilde;ol, y d&iacute;galo al llamar para que le asignemos personal '

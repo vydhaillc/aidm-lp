@@ -435,11 +435,11 @@ def build(o):
         treatment that is performed as a result of and within 72 hours of responding to the advertisement for the
         free, discounted fee, or reduced fee service, examination, or treatment.</p>
       <p><b>Who treats you.</b> AIDM is a premier educational institute. Treatment under these promotional offers
-        may be provided by licensed dental residents participating in advanced training programmes under the direct
+        may be provided by dental residents participating in advanced training programmes under the direct
         supervision of our licensed clinical faculty. All promotional pricing is subject to clinical qualification
         and medical clearance as determined by the attending doctor.</p>
       <p><b>Provider.</b> Dental services are provided by Philomena Street PLLC, supported by AIDM. Services at the
-        Austin Institute of Dental Medicine are provided by licensed General Dentists, Residents and Faculty Members.
+        Austin Institute of Dental Medicine are provided by General Dentists, Residents and Faculty Members.
         Terms such as &ldquo;Advanced,&rdquo; &ldquo;Complex&rdquo; or &ldquo;Institute&rdquo; refer to the scope of
         training and services offered and do not imply a specific specialisation unless the provider is explicitly
         designated as a Specialist recognised by the American Dental Association (ADA).''' +
