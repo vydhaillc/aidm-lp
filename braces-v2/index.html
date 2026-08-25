@@ -1102,6 +1102,13 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
    Suman + Shankar's call (Aug 24): booking should feel like a next step in
    the same flow, not a takeover. Reuses the existing lightbox shell. */
 .lb-in.is-book{width:min(440px,92vw);aspect-ratio:auto;height:min(680px,88vh)}
+/* #lbslot has no CSS height of its own (it never needed one — the video
+   and image faces both get a definite height a different way), so the
+   iframe's height:100% had nothing definite to resolve against here and
+   fell back to the browser's built-in 150px default, which is what
+   squashed the widget and made its own header overlap. Pinning #lbslot to
+   the card's edges gives it one. */
+.lb-in.is-book #lbslot{position:absolute;inset:0}
 /* NOTE: never backdrop-filter over the hero <video> — see hero-vid comment
    above; the popup can open while the film is still playing, so it drops
    the blur and uses a solid scrim instead, same as .btn-ghost does. */
