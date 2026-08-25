@@ -1093,6 +1093,22 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
   background:rgba(159,216,242,.14);border:1px solid var(--line2);color:#fff;
   font-size:1.2rem;cursor:pointer;display:grid;place-items:center}
 .lb-x:hover{background:rgba(159,216,242,.26)}
+/* — the FlexBook popup —
+   A smaller card, not the vendor widget's own near-fullscreen modal, per
+   Suman + Shankar's call (Aug 24): booking should feel like a next step in
+   the same flow, not a takeover. Reuses the existing lightbox shell. */
+.lb-in.is-book{width:min(440px,92vw);aspect-ratio:auto;height:min(680px,88vh)}
+/* #lbslot has no CSS height of its own (it never needed one — the video
+   and image faces both get a definite height a different way), so the
+   iframe's height:100% had nothing definite to resolve against here and
+   fell back to the browser's built-in 150px default, which is what
+   squashed the widget and made its own header overlap. Pinning #lbslot to
+   the card's edges gives it one. */
+.lb-in.is-book #lbslot{position:absolute;inset:0}
+/* NOTE: never backdrop-filter over the hero <video> — see hero-vid comment
+   above; the popup can open while the film is still playing, so it drops
+   the blur and uses a solid scrim instead, same as .btn-ghost does. */
+.lb.no-blur{backdrop-filter:none;background:rgba(3,16,29,.93)}
 
 .rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .rv.in{opacity:1;transform:none}
@@ -1323,6 +1339,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                  <textarea id="cf_msg" name="notes" placeholder="Días y horas preferidas, algo que le moleste, ansiedad dental…"></textarea>
                  <p class="fld-note">Por favor, no incluya informaci&oacute;n m&eacute;dica o dental en este formulario.</p></div>
                <input type="hidden" name="offer" value="new-patient-special-100-es">
+               <input type="hidden" name="appointment_type" value="New Patient Appointment">
                <input type="hidden" name="gclid" id="cf_gclid">
                <input type="hidden" name="wbraid" id="cf_wbraid">
                <input type="hidden" name="utm_source" id="cf_utm_source">
@@ -1772,6 +1789,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <p class="fld-note">Por favor, no incluya informaci&oacute;n m&eacute;dica o dental en este formulario.</p></div>
           </div>
           <input type="hidden" name="offer" value="new-patient-special-100-es">
+          <input type="hidden" name="appointment_type" value="New Patient Appointment">
           <input type="hidden" name="gclid" id="f_gclid">
           <input type="hidden" name="wbraid" id="f_wbraid">
           <input type="hidden" name="utm_source" id="f_utm_source">
@@ -1998,7 +2016,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       lbIn = lb.querySelector('.lb-in');
 
   function closeLb(){
-    lb.classList.remove('on'); lbIn.classList.remove('is-img');
+    lb.classList.remove('on','no-blur'); lbIn.classList.remove('is-img','is-book');
     slot.innerHTML = ''; document.body.style.overflow = '';
   }
   function openLb(html, isImg){
@@ -2006,6 +2024,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     lbIn.classList.toggle('is-img', !!isImg);
     lb.classList.add('on');
     document.body.style.overflow = 'hidden';
+  }
+
+  /* ── FlexBook popup ─────────────────────────────────────────────────────
+     Agreed on the call with Suman (Aug 24): the short enquiry form stays
+     the first step for every visitor. The moment it's submitted, FlexBook
+     opens as a next step in the same flow — sized down from the vendor's
+     own near-fullscreen modal (see .lb-in.is-book) rather than taking the
+     whole screen. The enquiry itself is already a complete lead by then
+     (see card-done / the footer thank-you state), so closing the popup
+     without finishing a booking still leaves AIDM with a callback to make.
+
+     FLEXBOOK_URL is the same embed AIDM's own site uses (initFlexBook on
+     aidm.org). FlexBook does not currently expose a documented parameter
+     for preselecting an appointment type — Suman is checking with Flex
+     (see the Aug 24 email thread). Once confirmed, only this URL needs to
+     change, e.g. to a service-specific booking link if Flex provides one. */
+  var FLEXBOOK_URL = 'https://flexbook.me/AIDM';
+  function openFlexBook(){
+    if (vid && !vid.paused) vid.pause();   // never blur a live <video> underneath
+    openLb('<iframe src="' + FLEXBOOK_URL + '" title="Book your appointment — AIDM FlexBook"></iframe>', false);
+    lb.classList.add('no-blur');
+    lbIn.classList.add('is-book');
   }
 
   document.querySelectorAll('.film').forEach(function(v){
@@ -2194,6 +2234,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         show('done');
         cardForm.reset();
         revertTimer = setTimeout(function(){ show('offer'); }, 9000);
+        // the enquiry is already a complete lead at this point — FlexBook
+        // is the next optional step, not a gate on getting one
+        setTimeout(openFlexBook, 650);
       });
     });
   })();
@@ -2230,6 +2273,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         btn.style.background = 'linear-gradient(135deg,#5fd39a,#2f9e5f)';
         btn.disabled = true;
         form.reset();
+        setTimeout(openFlexBook, 650);
       });
     });
   }
