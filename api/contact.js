@@ -155,7 +155,11 @@ export default async function handler(req, res) {
     raw && typeof raw.form === "object" && raw.form !== null ? raw.form : raw || {};
   const name = `${f.first_name || ""} ${f.last_name || ""}`.trim() || f.name;
 
-  if (!name || !f.email || !f.phone) {
+  // Every offer page labels email "(optional)" and only validates name +
+  // phone client-side — email must not be required here too, or a patient
+  // who leaves it blank (as the form invites) gets a false "that did not
+  // go through" and their lead is dropped.
+  if (!name || !f.phone) {
     return res.status(400).json({
       error: "Missing required fields.",
       received: Object.keys(f || {}).slice(0, 20),
@@ -212,7 +216,7 @@ export default async function handler(req, res) {
       bcc: splitAddressList(process.env.MAIL_BCC),
       subject: subjectFor(f),
       html: renderHtml(f),
-      reply_to: f.email,
+      reply_to: f.email || undefined,   // an empty string is not a valid reply-to
     });
   } catch (err) {
     emailError = err.message || String(err);
