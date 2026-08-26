@@ -214,7 +214,7 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 
 .hero-in{position:relative;z-index:3;width:100%;
   padding-block:5rem clamp(15rem,32.5vh,18.5rem)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
   gap:clamp(2rem,5vw,4rem);align-items:center}
 
 /* — the designed headline lockup — */
@@ -487,6 +487,26 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 .cf-p{margin:0 0 .7rem;font-size:.92rem;color:var(--pale);line-height:1.6}
 .cf-tel a{color:var(--sky);font-weight:600}
 .card-fine{margin:.55rem 0 0;text-align:center;font-size:.72rem;color:var(--dim)}
+
+/* ══ SPECIALS MENU — homepage-only. The hero's second column isn't a single
+   offer with a booking form, it's a router: nine tiles, one per active
+   special, each a plain link out to that offer's own landing page (which
+   carries its own price card and form). Reuses .card's dark/gold-rim shell
+   and .rib's ribbon so it still reads as the same offer-card family every
+   /offer/ page opens with. ═══════════════════════════════════════════════ */
+.offers-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:1rem}
+.offers-grid a{position:relative;display:flex;flex-direction:column;gap:.2rem;
+  padding:.72rem 1.7rem .72rem .8rem;border-radius:12px;text-decoration:none;
+  background:rgba(10,37,64,.55);border:1px solid var(--line);
+  transition:transform .18s var(--ease),background .18s var(--ease),border-color .18s var(--ease)}
+.offers-grid a:hover,.offers-grid a:focus-visible{transform:translateY(-2px);
+  background:rgba(20,68,111,.6);border-color:var(--line2)}
+.offers-grid a.wide{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between;gap:.6rem}
+.offers-grid a::after{content:'\203A';position:absolute;top:.62rem;right:.7rem;
+  font-family:var(--head);font-size:1.05rem;font-weight:700;color:var(--gold);opacity:.85}
+.of-name{font-family:var(--head);font-size:.76rem;font-weight:600;color:#fff;line-height:1.26}
+.of-price{font-family:var(--price);font-size:.98rem;font-weight:800;color:var(--sky);letter-spacing:-.01em}
+@media(max-width:380px){.offers-grid{grid-template-columns:1fr}.offers-grid a.wide{grid-column:auto}}
 
 /* ══ TEAM STRIP — pinned to the bottom of the film ══════════════════════ */
 .hteam{position:absolute;left:0;right:0;bottom:0;z-index:4;overflow:hidden;
@@ -1186,6 +1206,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
 
+        <!-- the specials menu — routes to each offer's own landing page,
+             which carries the price card and booking form -->
+        <aside class="offer">
+          <div class="card">
+            <div class="rib">
+              <span class="rib-tail rib-l" aria-hidden="true"></span>
+              <span class="rib-tail rib-r" aria-hidden="true"></span>
+              <p class="rib-band">
+                <span class="star">&#9733;</span>This Month&rsquo;s Specials
+                <i class="rib-shine" aria-hidden="true"></i>
+              </p>
+            </div>
+            <h2 class="card-t">9 Active Offers</h2>
+            <p class="card-sub">Tap an offer to see full details &amp; book</p>
+
+            <div class="offers-grid">
+              <a href="/new-patient/"><span class="of-name">New Patient Special</span><span class="of-price">$100</span></a>
+              <a href="/braces/"><span class="of-name">Comprehensive Braces</span><span class="of-price">$2,950</span></a>
+              <a href="/invisalign/"><span class="of-name">Invisalign</span><span class="of-price">$3,900</span></a>
+              <a href="/early-orthodontics/"><span class="of-name">Early Orthodontics</span><span class="of-price">$2,500</span></a>
+              <a href="/dental-implant/"><span class="of-name">Single Implant + Crown</span><span class="of-price">From $3,750</span></a>
+              <a href="/full-arch/"><span class="of-name">Full-Arch Fixed Teeth</span><span class="of-price">From $18,000</span></a>
+              <a href="/snap-in-dentures/"><span class="of-name">Snap-In Dentures</span><span class="of-price">From $9,500</span></a>
+              <a href="/wisdom-teeth/"><span class="of-name">Wisdom Teeth Removal</span><span class="of-price">From $200</span></a>
+              <a class="wide" href="/root-canal/"><span class="of-name">Root Canal</span><span class="of-price">From $995</span></a>
+            </div>
+
+            <p class="card-fine">Prices are AIDM&rsquo;s current advertised specials. Full terms, eligibility and disclosures are on each offer&rsquo;s own page.</p>
+          </div>
+        </aside>
 
       </div>
     </div>
