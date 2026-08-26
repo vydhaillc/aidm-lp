@@ -6,6 +6,10 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-P5MV8V6G');</script>
+<!-- gtag command queue. AIDM's GTM container already loads the Google tag for
+     AW-18041035322 and G-XT8WC3BQ96, but we cannot publish triggers into that
+     container, so this page fires its own conversion on a confirmed lead. -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}</script>
 <!-- End Google Tag Manager -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1484,7 +1488,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <input type="hidden" name="utm_source" id="f_utm_source">
           <input type="hidden" name="utm_medium" id="f_utm_medium">
           <input type="hidden" name="utm_campaign" id="f_utm_campaign">
-          <button class="btn btn-sky btn-lg" type="submit">Book Appointment</button>
+          <button class="btn btn-sky btn-lg" type="button" data-lead-submit>Book Appointment</button>
         </form>
         <p class="fnote">By submitting you agree to be contacted about your inquiry. Promotional pricing is
           subject to clinical qualification determined at your evaluation.</p>
@@ -1566,11 +1570,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      fields attached. */
   var LEAD_ENDPOINT = 'https://aidm-lp.vercel.app/api/contact';
 
+  /* Google Ads conversion action "AIDM.dental - LP Lead Form" (id 7734075484),
+     counted ONE_PER_CLICK, primary for the lead goal the offer campaigns bid
+     on. GA4 property 515356457 / stream G-XT8WC3BQ96. */
+  var LEAD_CONVERSION = 'AW-18041035322/yDX8CNzA8uccELq00ZpD';
+
+  /* GA4's own client_id, read straight off its first-party cookie, so a
+     server-side Measurement Protocol hit (see api/contact.js) attaches to
+     the same GA4 session as everything else this visitor did on the page,
+     instead of arriving as an orphaned event. Absent if the cookie hasn't
+     been set yet (e.g. an ad blocker) -- the server still records the lead,
+     just without session stitching. */
+  function ga4ClientId(){
+    var m = document.cookie.match(/(?:^|;\s*)_ga=GA\d\.\d\.(\d+\.\d+)/);
+    return m ? m[1] : '';
+  }
+
   function leadPayload(form){
     var data = {};
     new FormData(form).forEach(function(v,k){ data[k] = v; });
     data.page         = location.href;
     data.submitted_at = new Date().toISOString();
+    data.ga_client_id = ga4ClientId();
     data.form         = form.id === 'cardForm' ? 'hero offer card' : 'contact section';
     data._subject     = 'AIDM braces LP — new inquiry from ' + (data.first_name||'').trim();
     return data;
@@ -1590,11 +1611,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          submission, never on page load. GTM-side: a Custom Event trigger
          on 'lead_form_submit' feeds the Google Ads conversion tag. */
       if (r.ok) {
+        var where   = form.id === 'cardForm' ? 'hero_offer_card' : 'contact_section';
+        var offerEl = form.querySelector('input[name=offer]');
+        var offerId = offerEl ? offerEl.value : '';
+
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: 'lead_form_submit',
-          form_location: form.id === 'cardForm' ? 'hero_offer_card' : 'contact_section',
+          form_location: where,
           offer_path: location.pathname
+        });
+
+        /* Google Ads. Fired here, on a response the server accepted — never
+           on a button press, a blank form or a failed post. */
+        gtag('event', 'conversion', {
+          send_to:  LEAD_CONVERSION,
+          value:    0,
+          currency: 'USD'
+        });
+
+        /* GA4 (G-XT8WC3BQ96), same signal, as the recommended lead event.
+           Deliberately no send_to: that destination is registered by AIDM's
+           GTM container and a send_to aimed at it does not resolve from the
+           page — verified in-browser. Unqualified, the event reaches GA4;
+           Google Ads ignores it, as it is not a conversion action. */
+        gtag('event', 'generate_lead', {
+          currency:      'USD',
+          value:         0,
+          offer:         offerId,
+          form_location: where,
+          offer_path:    location.pathname
         });
       }
       done(r.ok);
@@ -1868,7 +1914,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     });
 
-    cardForm.addEventListener('submit', function(e){
+    /* Bound to the button rather than the form's submit event. AIDM's GTM
+       container fires a legacy conversion on ANY gtm.formSubmit — including a
+       blank form and a failed post — and we cannot edit that container. Never
+       dispatching a native submit keeps that tag off these pages, so the only
+       thing counted is the confirmed lead fired in submitLead(). */
+    var cardBtn = cardForm.querySelector('[data-lead-submit]');
+    cardForm.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault(); cardBtn.click();
+      }
+    });
+    cardBtn.addEventListener('click', function(e){
       e.preventDefault();
       var bad = false;
       ['cf_fn','cf_ph'].forEach(function(id){
@@ -1878,7 +1935,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
       if (bad) return;
 
-      var cbtn = cardForm.querySelector('button[type=submit]'), clabel = cbtn.textContent;
+      var cbtn = cardBtn, clabel = cbtn.textContent;
       cbtn.disabled = true; cbtn.textContent = 'Sending…';
       submitLead(cardForm, function(ok){
         cbtn.disabled = false; cbtn.textContent = clabel;
@@ -1905,7 +1962,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   /* ── form: preview-only handler; swap for the live endpoint on launch ── */
   var form = document.getElementById('lpForm');
   if (form) {
-    form.addEventListener('submit', function(e){
+    var formBtn = form.querySelector('[data-lead-submit]');
+    form.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault(); formBtn.click();
+      }
+    });
+    formBtn.addEventListener('click', function(e){
       e.preventDefault();
       var bad = [];
       ['fn','ph'].forEach(function(idn){
@@ -1914,7 +1977,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         else f.style.borderColor = '';
       });
       if (bad.length) { bad[0].focus(); return; }
-      var btn = form.querySelector('button[type=submit]'), label = btn.textContent;
+      var btn = formBtn, label = btn.textContent;
       btn.disabled = true; btn.textContent = 'Sending…';
       submitLead(form, function(ok){
         if (!ok) { btn.disabled = false; btn.textContent = label; leadError(form); return; }

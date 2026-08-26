@@ -673,11 +673,23 @@ section{position:relative}
 
   var LEAD_ENDPOINT = 'https://aidm-lp.vercel.app/api/contact';
 
+  /* GA4's own client_id, read straight off its first-party cookie, so a
+     server-side Measurement Protocol hit (see api/contact.js) attaches to
+     the same GA4 session as everything else this visitor did on the page,
+     instead of arriving as an orphaned event. Absent if the cookie hasn't
+     been set yet (e.g. an ad blocker) -- the server still records the lead,
+     just without session stitching. */
+  function ga4ClientId(){
+    var m = document.cookie.match(/(?:^|;\s*)_ga=GA\d\.\d\.(\d+\.\d+)/);
+    return m ? m[1] : '';
+  }
+
   function leadPayload(form){
     var data = {};
     new FormData(form).forEach(function(v,k){ data[k] = v; });
     data.page         = location.href;
     data.submitted_at = new Date().toISOString();
+    data.ga_client_id = ga4ClientId();
     data.form         = 'contact section (Lume alternate v2)';
     data._subject     = 'AIDM braces LP (Lume alt) — new inquiry from ' + (data.first_name||'').trim();
     return data;

@@ -55,6 +55,58 @@ function splitAddressList(value) {
   return list.length ? list : undefined;
 }
 
+/**
+ * Records the lead in GA4 via the Measurement Protocol, server-side. The
+ * pages sit behind AIDM's GTM container (GTM-P5MV8V6G), which Vydhai cannot
+ * publish into, so a client-side gtag('event', 'generate_lead') never
+ * reaches G-XT8WC3BQ96 -- confirmed by observing the network traffic a real
+ * submission produces, not assumed. Firing from here, on a request the
+ * server actually accepted, sidesteps the container entirely.
+ *
+ * Needs GA4_MP_API_SECRET (created once in GA4: Admin > Data Streams >
+ * aidm.dental stream > Measurement Protocol API secrets). Silently skipped
+ * until that exists, so a lead is never blocked on it.
+ */
+async function sendGA4Lead(f, leadId) {
+  const secret = process.env.GA4_MP_API_SECRET;
+  if (!secret) return;
+  const measurementId = process.env.GA4_MEASUREMENT_ID || "G-XT8WC3BQ96";
+  // f.ga_client_id is read off the visitor's own _ga cookie on the page, so
+  // this event joins their real GA4 session. A submission without that
+  // cookie (blocked storage, ad blocker) still gets counted, just unlinked.
+  const clientId = f.ga_client_id || `${Date.now()}.${Math.floor(Math.random() * 1e9)}`;
+  try {
+    const resp = await fetch(
+      `https://www.google-analytics.com/mp/collect?measurement_id=${measurementId}&api_secret=${secret}`,
+      {
+        method: "POST",
+        body: JSON.stringify({
+          client_id: clientId,
+          non_personalized_ads: false,
+          events: [
+            {
+              name: "generate_lead",
+              params: {
+                lead_id: leadId || undefined,
+                offer: f.offer || undefined,
+                form_location: f.form || undefined,
+                page_location: f.page || undefined,
+                currency: "USD",
+                value: 0,
+              },
+            },
+          ],
+        }),
+      }
+    );
+    if (!resp.ok) {
+      console.error("[contact] GA4 Measurement Protocol rejected:", resp.status, await resp.text());
+    }
+  } catch (err) {
+    console.error("[contact] GA4 Measurement Protocol send failed:", err.message || err);
+  }
+}
+
 function esc(v) {
   return String(v == null ? "" : v).replace(/[<>&]/g, (c) =>
     ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" }[c])
@@ -228,6 +280,8 @@ export default async function handler(req, res) {
       error: "Submission failed. Please try again or call us directly.",
     });
   }
+
+  await sendGA4Lead(f, leadId);
 
   return res.status(200).json({
     ok: true,
