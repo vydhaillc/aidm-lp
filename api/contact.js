@@ -137,9 +137,8 @@ function renderHtml(f) {
     ${row("Message", f.notes)}
     ${row("Offer", f.offer)}
     ${row("Campaign", campaign)}
-    ${row("gclid", f.gclid)}
     ${row("wbraid", f.wbraid)}
-    ${row("Page", f.page)}
+    ${row("Page", f.page ? f.page.split("?")[0] : f.page)}
     ${VYDHAI_FOOTER}
   `;
 }
