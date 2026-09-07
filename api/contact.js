@@ -206,6 +206,14 @@ export default async function handler(req, res) {
     raw && typeof raw.form === "object" && raw.form !== null ? raw.form : raw || {};
   const name = `${f.first_name || ""} ${f.last_name || ""}`.trim() || f.name;
 
+  // Honeypot: a "website" field, invisible to real visitors (see .hp-field
+  // in the page CSS), that only a bot filling every field blindly would
+  // populate. Report success without touching Supabase, Resend, or GA4 --
+  // a 4xx here just teaches the bot to leave this one field blank next time.
+  if (f.website) {
+    return res.status(200).json({ ok: true, leadId: null, emailDelivered: true });
+  }
+
   // Every offer page labels email "(optional)" and only validates name +
   // phone client-side — email must not be required here too, or a patient
   // who leaves it blank (as the form invites) gets a false "that did not
