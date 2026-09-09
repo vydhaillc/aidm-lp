@@ -107,6 +107,26 @@ async function sendGA4Lead(f, leadId) {
   }
 }
 
+/**
+ * A phone number the practice can actually dial. `required` on the input only
+ * ever meant "not empty", which let a real lead through with a surname typed
+ * into the mobile field (Sep 2026). NANP shape: ten digits after a leading
+ * country 1 is trimmed, area code and exchange both starting 2-9, no N11
+ * codes, not one digit repeated. The pages apply the identical rule -- this
+ * copy is what a direct POST to the endpoint has to get past.
+ */
+function phoneDigits(v) {
+  const d = String(v == null ? "" : v).replace(/\D/g, "");
+  return d.length === 11 && d[0] === "1" ? d.slice(1) : d;
+}
+
+function validPhone(v) {
+  const d = phoneDigits(v);
+  if (!/^[2-9]\d{2}[2-9]\d{6}$/.test(d)) return false;
+  if (/^(\d)\1{9}$/.test(d)) return false;
+  return d.slice(1, 3) !== "11" && d.slice(4, 6) !== "11";
+}
+
 function esc(v) {
   return String(v == null ? "" : v).replace(/[<>&]/g, (c) =>
     ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" }[c])
@@ -222,6 +242,16 @@ export default async function handler(req, res) {
     return res.status(400).json({
       error: "Missing required fields.",
       received: Object.keys(f || {}).slice(0, 20),
+    });
+  }
+
+  // Shape, not just presence. A 400 here never reaches Resend or Supabase, so
+  // a rejected submission costs nothing; the pages block the same values at
+  // the button, which means anything arriving here is a direct post.
+  if (!validPhone(f.phone)) {
+    return res.status(400).json({
+      error: "Please enter a 10-digit mobile number.",
+      field: "phone",
     });
   }
 

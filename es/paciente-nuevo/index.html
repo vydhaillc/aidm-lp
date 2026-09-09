@@ -9,7 +9,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- gtag command queue. AIDM's GTM container already loads the Google tag for
      AW-18041035322 and G-XT8WC3BQ96, but we cannot publish triggers into that
      container, so this page fires its own conversion on a confirmed lead. -->
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}</script>
+<!-- Direct gtag.js load for G-XT8WC3BQ96. GTM's container already fires the
+     base pageview to this same property, so send_page_view is off here --
+     this load exists only so the generate_lead event below (fired on a
+     confirmed lead) actually reaches GA4, since we cannot publish a
+     matching trigger into AIDM's GTM container. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XT8WC3BQ96"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XT8WC3BQ96', {send_page_view: false});</script>
 <!-- End Google Tag Manager -->
 <!-- Facebook Pixel Code -->
 <script>
@@ -492,6 +500,8 @@ section.ph+section.ph::before{box-shadow:inset 0 46px 60px -46px rgba(79,195,247
 .cf-err{margin:.7rem 0 0;padding:.6rem .8rem;border-radius:9px;font-size:.82rem;line-height:1.5;
   color:#ffd9d3;background:rgba(140,22,14,.55);border:1px solid rgba(232,64,47,.6)}
 .cf-err a{color:#fff;font-weight:600}
+.fld-err{margin:.3rem 0 0;font-family:var(--body);font-size:.76rem;line-height:1.35;
+  color:#ffb9ad;font-weight:600}
 
 .card-done{text-align:center;padding:1.2rem 0 .6rem}
 .cf-tick{width:56px;height:56px;margin:0 auto 1rem;border-radius:50%;display:grid;place-items:center;
@@ -1352,7 +1362,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
              <h2 class="cf-h">Agende su primera cita</h2>
              <form id="cardForm" novalidate>
                               <div class="fld"><label for="cf_fn">Nombre</label><input id="cf_fn" name="first_name" type="text" autocomplete="given-name" required></div>
-               <div class="fld"><label for="cf_ph">Tel&eacute;fono m&oacute;vil</label><input id="cf_ph" name="phone" type="tel" autocomplete="tel" required></div>
+               <div class="fld"><label for="cf_ph">Tel&eacute;fono m&oacute;vil</label><input id="cf_ph" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="16" placeholder="(512) 555-0134" required></div>
                <div class="fld"><label for="cf_em">Correo electr&oacute;nico <span class="opt-tag">(opcional)</span></label><input id="cf_em" name="email" type="email" autocomplete="email"></div>
                <div class="fld"><label for="cf_who">La cita es para</label>
                  <select id="cf_who" name="patient_type">
@@ -1798,7 +1808,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <form id="lpForm" novalidate>
           <div class="fgrid">
             <div class="fld"><label for="fn">Nombre</label><input id="fn" name="first_name" type="text" autocomplete="given-name" required></div>
-            <div class="fld"><label for="ph">Tel&eacute;fono m&oacute;vil</label><input id="ph" name="phone" type="tel" autocomplete="tel" required></div>
+            <div class="fld"><label for="ph">Tel&eacute;fono m&oacute;vil</label><input id="ph" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="16" placeholder="(512) 555-0134" required></div>
             <div class="fld full"><label for="em">Correo electr&oacute;nico <span class="opt-tag">(opcional)</span></label><input id="em" name="email" type="email" autocomplete="email"></div>
             <div class="fld full"><label for="who">&iquest;Para qui&eacute;n es la cita?</label>
               <select id="who" name="patient_type">
@@ -1931,6 +1941,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   function ga4ClientId(){
     var m = document.cookie.match(/(?:^|;\s*)_ga=GA\d\.\d\.(\d+\.\d+)/);
     return m ? m[1] : '';
+  }
+
+  /* ── phone: a number we can actually dial ───────────────────────
+     `required` on the input only ever meant "not empty" — a real enquiry came
+     in (Sep 2026) with a surname typed into the mobile field and every layer
+     accepted it. Hold the value to NANP shape instead: ten digits (a leading
+     country 1 is trimmed), area code and exchange both starting 2–9, no N11
+     codes, not one digit repeated. api/contact.js applies the identical rule,
+     so a direct POST cannot walk round this. */
+  function phoneDigits(v){
+    var d = String(v == null ? '' : v).replace(/\D/g, '');
+    return (d.length === 11 && d.charAt(0) === '1') ? d.slice(1) : d;
+  }
+  function validPhone(v){
+    var d = phoneDigits(v);
+    if (!/^[2-9]\d{2}[2-9]\d{6}$/.test(d)) return false;
+    if (/^(\d)\1{9}$/.test(d)) return false;                    // 2222222222
+    return d.slice(1,3) !== '11' && d.slice(4,6) !== '11';      // 911 / 411 …
+  }
+
+  var ES_PAGE  = document.documentElement.lang === 'es';
+  var MSG_NAME = ES_PAGE ? 'Introduzca su nombre.' : 'Please enter your first name.';
+  var MSG_PHONE = ES_PAGE ? 'Introduzca un n\u00famero de m\u00f3vil de 10 d\u00edgitos.'
+                          : 'Please enter a 10-digit mobile number.';
+
+  /* One reusable message element, under the field it belongs to. */
+  function setFieldError(el, msg){
+    var host = el.parentNode, err = host.querySelector('.fld-err');
+    if (!msg) { if (err) host.removeChild(err); el.style.borderColor = ''; return; }
+    if (!err) { err = document.createElement('p'); err.className = 'fld-err'; host.appendChild(err); }
+    err.textContent = msg;
+    el.style.borderColor = '#d1614a';
+  }
+
+  /* Reformats to (512) 555-0134 while they type, so a value in the wrong box
+     is obvious straight away rather than at submit. The caret is restored by
+     digit position, not string offset — by offset, editing mid-number jumps
+     the cursor to the end on every keystroke. */
+  function maskPhone(el){
+    if (!el) return;
+    el.addEventListener('input', function(){
+      var before = el.value.slice(0, el.selectionStart || 0).replace(/\D/g, '').length;
+      var d = phoneDigits(el.value).slice(0, 10), out = d;
+      if (d.length > 6)      out = '(' + d.slice(0,3) + ') ' + d.slice(3,6) + '-' + d.slice(6);
+      else if (d.length > 3) out = '(' + d.slice(0,3) + ') ' + d.slice(3);
+      else if (d.length)     out = '(' + d;
+      if (out !== el.value) {
+        el.value = out;
+        var i = 0, seen = 0;
+        while (i < out.length && seen < before) { if (/\d/.test(out.charAt(i))) seen++; i++; }
+        try { el.setSelectionRange(i, i); } catch (e) {}
+      }
+      setFieldError(el, '');
+    });
+    /* Flag it on the way out of the field, not only at submit. */
+    el.addEventListener('blur', function(){
+      if (el.value.trim() && !validPhone(el.value)) setFieldError(el, MSG_PHONE);
+    });
+  }
+  ['cf_ph','ph'].forEach(function(id){ maskPhone(document.getElementById(id)); });
+
+  /* The two fields both forms require. Returns the first bad one, or null. */
+  function checkLeadFields(nameId, phoneId){
+    var bad = null;
+    [[nameId, MSG_NAME], [phoneId, MSG_PHONE]].forEach(function(pair){
+      var f = document.getElementById(pair[0]);
+      if (!f) return;
+      var ok = pair[0] === phoneId ? validPhone(f.value) : !!f.value.trim();
+      setFieldError(f, ok ? '' : pair[1]);
+      if (!ok && !bad) bad = f;
+    });
+    return bad;
   }
 
   function leadPayload(form){
@@ -2297,13 +2379,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     cardBtn.addEventListener('click', function(e){
       e.preventDefault();
-      var bad = false;
-      ['cf_fn','cf_ph'].forEach(function(id){
-        var f = document.getElementById(id);
-        if (!f.value.trim()) { f.style.borderColor = '#d1614a'; bad = true; }
-        else f.style.borderColor = '';
-      });
-      if (bad) return;
+      var bad = checkLeadFields('cf_fn','cf_ph');
+      if (bad) { bad.focus(); return; }
 
       var cbtn = cardBtn, clabel = cbtn.textContent;
       cbtn.disabled = true; cbtn.textContent = 'Enviando…';
@@ -2343,13 +2420,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     formBtn.addEventListener('click', function(e){
       e.preventDefault();
-      var bad = [];
-      ['fn','ph'].forEach(function(idn){
-        var f = document.getElementById(idn);
-        if (!f.value.trim()) { bad.push(f); f.style.borderColor = '#d1614a'; }
-        else f.style.borderColor = '';
-      });
-      if (bad.length) { bad[0].focus(); return; }
+      var bad = checkLeadFields('fn','ph');
+      if (bad) { bad.focus(); return; }
       var btn = formBtn, label = btn.textContent;
       btn.disabled = true; btn.textContent = 'Enviando…';
       submitLead(form, function(ok){
