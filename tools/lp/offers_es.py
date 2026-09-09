@@ -2,7 +2,7 @@
 """Rows 11 and 12 of the approved promotions sheet — the Spanish pages.
 
 Inclusions and fine print are the sheet's own Spanish, verbatim. Everything
-else is translated here and is flagged for AIDM review before launch — in
+else is translated here and is flagged for AIDM® review before launch — in
 particular the Texas 72-hour disclosure, which is statutory language.
 """
 from offers_a import (NAV_STD, OPERATORY, EXAM, XRAY_TALK, RES_PATIENT, PAIN,
@@ -14,7 +14,7 @@ CHROME = [
   'aria-label="Calificaci&oacute;n de 4.9 estrellas en Google — lea las rese&ntilde;as"'),
  ('<span class="grev-t">Google reviews</span>', '<span class="grev-t">Rese&ntilde;as de Google</span>'),
  ('>Call (737) 434-2436</a>', '>Llame al (737) 434-2436</a>'),
- ('<p class="hteam-h">AIDM Team</p>', '<p class="hteam-h">Equipo AIDM</p>'),
+ ('<p class="hteam-h">AIDM® Team</p>', '<p class="hteam-h">Equipo AIDM®</p>'),
  ('<button class="cf-back" type="button" id="cardBack">&larr; Back to the offer</button>',
   '<button class="cf-back" type="button" id="cardBack">&larr; Volver a la oferta</button>'),
  ('<label for="cf_fn">First name</label>', '<label for="cf_fn">Nombre</label>'),
@@ -55,12 +55,12 @@ CHROME = [
  ('<figcaption><em>Your records</em>Reviewed with you, before anything is booked</figcaption>',
   '<figcaption><em>Sus registros</em>Revisados con usted, antes de agendar nada</figcaption>'),
  ('<p class="k">See it for yourself</p>', '<p class="k">V&eacute;alo usted mismo</p>'),
- ('<h2>Films from <em>inside AIDM.</em></h2>', '<h2>Videos desde <em>adentro de AIDM.</em></h2>'),
+ ('<h2>Films from <em>inside AIDM®.</em></h2>', '<h2>Videos desde <em>adentro de AIDM®.</em></h2>'),
  ('<p class="k">Patients, in their words</p>', '<p class="k">Pacientes, en sus propias palabras</p>'),
  ('<h2>&ldquo;Not your regular <em>dental experience.</em>&rdquo;</h2>',
   '<h2>&ldquo;No es la experiencia dental <em>de siempre.</em>&rdquo;</h2>'),
- ('<p>Straight from AIDM&rsquo;s Google Business Profile &mdash; the newest ones first.</p>',
-  '<p>Directamente de las rese&ntilde;as de Google de AIDM &mdash; las m&aacute;s recientes primero. '
+ ('<p>Straight from AIDM®&rsquo;s Google Business Profile &mdash; the newest ones first.</p>',
+  '<p>Directamente de las rese&ntilde;as de Google de AIDM® &mdash; las m&aacute;s recientes primero. '
   'Las rese&ntilde;as se muestran en su idioma original.</p>'),
  ('<p class="k">Before you ask</p><h2>Frequently asked <em>questions.</em></h2>',
   '<p class="k">Antes de que pregunte</p><h2>Preguntas <em>frecuentes.</em></h2>'),
@@ -99,7 +99,7 @@ CHROME = [
  ('<a href="#terms">Read the full offer terms</a>', '<a href="#terms">Lea los t&eacute;rminos completos de la oferta</a>'),
  ('aria-label="Media viewer"', 'aria-label="Visor de medios"'),
  ('<button class="lb-x" id="lbx" aria-label="Close">', '<button class="lb-x" id="lbx" aria-label="Cerrar">'),
- ('title="AIDM film"', 'title="Video de AIDM"'),
+ ('title="AIDM® film"', 'title="Video de AIDM®"'),
  ('title="Map to Austin Institute of Dental Medicine, 1401 Philomena Street, Austin TX 78723"',
   'title="Mapa al Austin Institute of Dental Medicine, 1401 Philomena Street, Austin TX 78723"'),
 ]
@@ -121,19 +121,19 @@ LEGAL_ES_HTML = '''      <p><b>Precios.</b> Las ofertas promocionales, los preci
         descuentos, salvo indicaci&oacute;n expresa. Los tratamientos adicionales, procedimientos de diagn&oacute;stico,
         servicios de especialidad, honorarios de laboratorio, sedaci&oacute;n u otros procedimientos cl&iacute;nicamente
         necesarios pueden generar cargos adicionales. Las recomendaciones finales de tratamiento, la elegibilidad y los
-        honorarios se determinan tras una evaluaci&oacute;n cl&iacute;nica completa. AIDM se reserva el derecho de
+        honorarios se determinan tras una evaluaci&oacute;n cl&iacute;nica completa. AIDM® se reserva el derecho de
         modificar precios, requisitos de elegibilidad, contenido de los paquetes, periodos promocionales y
         t&eacute;rminos y condiciones en cualquier momento y sin aviso.</p>
       <p><b>Su derecho a cancelar (Texas).</b> El paciente y cualquier otra persona responsable del pago tiene derecho a
         negarse a pagar, cancelar el pago, o ser reembolsado por el pago de cualquier otro servicio, examen o
         tratamiento realizado como resultado de, y dentro de las 72 horas siguientes a, responder al anuncio del
         servicio, examen o tratamiento gratuito, con descuento o de tarifa reducida.</p>
-      <p><b>Qui&eacute;n lo atiende.</b> AIDM es un instituto educativo de primer nivel. El tratamiento bajo estas
+      <p><b>Qui&eacute;n lo atiende.</b> AIDM® es un instituto educativo de primer nivel. El tratamiento bajo estas
         ofertas promocionales puede ser proporcionado por residentes dentales con licencia que participan en programas
         de formaci&oacute;n avanzada, bajo la supervisi&oacute;n directa de nuestros docentes cl&iacute;nicos con
         licencia. Todos los precios promocionales est&aacute;n sujetos a la calificaci&oacute;n cl&iacute;nica y a la
         autorizaci&oacute;n m&eacute;dica que determine el doctor tratante.</p>
-      <p><b>Proveedor.</b> Los servicios dentales son proporcionados por Philomena Street PLLC, con el apoyo de AIDM.
+      <p><b>Proveedor.</b> Los servicios dentales son proporcionados por Philomena Street PLLC, con el apoyo de AIDM®.
         Los servicios en el Austin Institute of Dental Medicine son proporcionados por Dentistas Generales, Residentes y
         Docentes con licencia. T&eacute;rminos como &ldquo;Avanzado&rdquo;, &ldquo;Complejo&rdquo; o
         &ldquo;Instituto&rdquo; se refieren al alcance de la formaci&oacute;n y de los servicios ofrecidos y no implican
@@ -150,9 +150,9 @@ NAV_ES = [('office','La Cl&iacute;nica'),('promo','La Oferta'),('visit','C&oacut
 ES_NUEVO = dict(
   cta='Agendar Cita',
   slug='es/paciente-nuevo', id='new-patient-special-100-es', banner='PACIENTE NUEVO (ES)', lang='es',
-  title='Su Nuevo Hogar Dental en Mueller — Especial para Pacientes Nuevos $100 | AIDM Austin',
+  title='Su Nuevo Hogar Dental en Mueller — Especial para Pacientes Nuevos $100 | AIDM® Austin',
   desc='Especial para pacientes nuevos en Austin Institute of Dental Medicine, Mueller: examen dental completo y radiografías según sea necesario por $100. Abierto de lunes a sábado, 7 a.m. a 7 p.m.',
-  ogtitle='Su Nuevo Hogar Dental en Mueller — Especial para Pacientes Nuevos $100 | AIDM',
+  ogtitle='Su Nuevo Hogar Dental en Mueller — Especial para Pacientes Nuevos $100 | AIDM®',
   ogdesc='Examen dental completo y radiografías según sea necesario, $100, en el instituto dental docente de Austin.',
   ogimg=OG_LOBBY,
   nav=NAV_ES, navcta='Agendar Cita', mcall='Llamar', facts=FACTS_ES, i18n=CHROME,
@@ -192,15 +192,15 @@ ES_NUEVO = dict(
   stepsfine='Si tambi&eacute;n necesita una limpieza dental profesional, se agenda por separado &mdash; la limpieza y '
     'el fl&uacute;or no forman parte del especial de $100.',
   staffsub='Docentes certificados, especialistas y residentes trabajando lado a lado &mdash; cada plan de tratamiento '
-    'en AIDM es revisado y aprobado por un docente antes de darle un precio.',
-  films=[('OBTJIDJHHTc','Qu&eacute; esperar en AIDM &mdash; en espa&ntilde;ol','Empiece aqu&iacute;'),
-         ('QNsMOG1B6G8','Bienvenido a AIDM'),('DV9t9dZJauA','C&oacute;mo llegar y d&oacute;nde parquear'),
+    'en AIDM® es revisado y aprobado por un docente antes de darle un precio.',
+  films=[('OBTJIDJHHTc','Qu&eacute; esperar en AIDM® &mdash; en espa&ntilde;ol','Empiece aqu&iacute;'),
+         ('QNsMOG1B6G8','Bienvenido a AIDM®'),('DV9t9dZJauA','C&oacute;mo llegar y d&oacute;nde parquear'),
          ('f7HHTbB-qe8','Atenci&oacute;n dental integral'),('NtubApnQFt0','Atenci&oacute;n dental de emergencia'),
          ('k9PavRdjiyc','Comodidad, sedaci&oacute;n y manejo de la ansiedad'),
          ('CEgwotre0h8','Ortodoncia'),('7Ci0z84BpDI','Implantes dentales'),('cCUQyiHkJxg','Prostodoncia')],
   filmlane='Lo que hacemos', filmsub='El edificio, los cl&iacute;nicos y los tratamientos &mdash; en sus propias '
     'palabras. Los videos est&aacute;n en ingl&eacute;s, salvo donde se indique.',
-  frows=[dict(img=XRAY_TALK, alt='Un dentista de AIDM explicando las radiograf&iacute;as a una paciente',
+  frows=[dict(img=XRAY_TALK, alt='Un dentista de AIDM® explicando las radiograf&iacute;as a una paciente',
       cap='Sus radiograf&iacute;as, explicadas en pantalla &mdash; no archivadas',
       k='Por qu&eacute; importa', h2='Lo que duele <em>rara vez fue lo que empez&oacute;.</em>',
       p='Para cuando un diente duele, la caries lleva normalmente meses avanzando. Un examen completo con '
@@ -210,10 +210,10 @@ ES_NUEVO = dict(
       bullets=['Una caries detectada en radiograf&iacute;a es una restauraci&oacute;n; esa misma caries detectada por dolor suele ser endodoncia y corona',
                'La enfermedad de las enc&iacute;as no duele en sus etapas iniciales y es la principal causa de p&eacute;rdida de dientes en adultos',
                'Cada examen incluye una revisi&oacute;n de detecci&oacute;n de c&aacute;ncer oral']),
-    dict(img=RES_PATIENT, alt='Un residente y un docente de AIDM revisando registros con una paciente',
+    dict(img=RES_PATIENT, alt='Un residente y un docente de AIDM® revisando registros con una paciente',
       cap='Dos cl&iacute;nicos en el sill&oacute;n, en la misma cita',
       k='Qui&eacute;n lo atiende', h2='Dos cl&iacute;nicos. <em>Un solo precio.</em>',
-      p='AIDM es un instituto docente. Los residentes &mdash; dentistas ya titulados en formaci&oacute;n de posgrado '
+      p='AIDM® es un instituto docente. Los residentes &mdash; dentistas ya titulados en formaci&oacute;n de posgrado '
         'avanzada &mdash; atienden bajo la supervisi&oacute;n directa de docentes cl&iacute;nicos con licencia. Usted '
         'recibe m&aacute;s atenci&oacute;n cl&iacute;nica, no menos, y esa misi&oacute;n docente es la raz&oacute;n por '
         'la que un examen completo con radiograf&iacute;as puede costar $100.',
@@ -223,11 +223,11 @@ ES_NUEVO = dict(
   optsk='Paquetes para pacientes nuevos', optsh2='Empiece en $100 &mdash; o <em>empiece con todo.</em>',
   optssub='El especial de $100 cubre el examen y las radiograf&iacute;as. Si ya sabe que quiere la limpieza en la '
     'misma visita, el paquete de al lado la incluye &mdash; y puede decidirlo despu&eacute;s del examen, no antes.',
-  opts=[dict(img=XRAY_TALK, imgalt='Un dentista de AIDM explicando las radiograf&iacute;as a una paciente', imgpos='center 32%',
+  opts=[dict(img=XRAY_TALK, imgalt='Un dentista de AIDM® explicando las radiograf&iacute;as a una paciente', imgpos='center 32%',
       feat=True, flag='Oferta anunciada', sub='Su nuevo hogar dental en Mueller',
       h3='Especial para Pacientes Nuevos', amt='$100',
       strike='Examen y radiograf&iacute;as &mdash; limpieza por separado',
-      d='Una introducci&oacute;n completa a AIDM: c&oacute;mo est&aacute; realmente su boca, y un plan por escrito de qu&eacute; hacer al respecto.',
+      d='Una introducci&oacute;n completa a AIDM®: c&oacute;mo est&aacute; realmente su boca, y un plan por escrito de qu&eacute; hacer al respecto.',
       ul=['Examen dental completo','Radiograf&iacute;as dentales seg&uacute;n sea necesario',
           'Evaluaci&oacute;n del riesgo de caries e higiene oral','Plan de tratamiento personalizado'],
       fine='Aplica a un examen dental completo para pacientes nuevos y radiograf&iacute;as tomadas &uacute;nicamente '
@@ -262,24 +262,24 @@ ES_NUEVO = dict(
         'cu&aacute;l corresponde es precisamente lo que determinan el examen y las radiograf&iacute;as. Si prefiere '
         'todo en una sola visita, el paquete Establecer Atenci&oacute;n de $450 incluye la limpieza.'),
        ('&iquest;Me va a atender un estudiante?',
-        'Lo atender&aacute; un dentista con licencia. AIDM es un instituto docente, as&iacute; que los residentes '
+        'Lo atender&aacute; un dentista con licencia. AIDM® es un instituto docente, as&iacute; que los residentes '
         '&mdash; dentistas ya titulados en formaci&oacute;n de posgrado avanzada &mdash; atienden bajo la '
         'supervisi&oacute;n directa de docentes cl&iacute;nicos con licencia, y su plan es revisado por un docente '
         'antes de darle un precio. Ese modelo de dos cl&iacute;nicos es exactamente por lo que el precio es el que es.'),
        ('&iquest;Necesito seguro dental? &iquest;Puedo usar el m&iacute;o?',
         'No necesita seguro &mdash; el especial de $100 es un paquete de pago directo, y esa es una de las razones por '
-        'las que existe. Si tiene un plan, AIDM acepta muchos PPO, pero los precios promocionales no se pueden combinar '
+        'las que existe. Si tiene un plan, AIDM® acepta muchos PPO, pero los precios promocionales no se pueden combinar '
         'con beneficios de seguro, precios de membres&iacute;a ni otros descuentos.'),
        ('&iquest;Cu&aacute;nto dura la primera cita y qu&eacute; debo llevar?',
         'Calcule entre 60 y 90 minutos. Lleve identificaci&oacute;n con foto, su tarjeta de seguro si la tiene, y una '
         'lista de los medicamentos que toma. Los formularios de paciente nuevo se pueden completar en l&iacute;nea antes '
         'de venir, lo que suele ahorrar quince minutos en recepci&oacute;n.'),
        ('Tengo dolor hoy. &iquest;Es esta la cita correcta?',
-        'Si tiene dolor, pida la cita de emergencia. AIDM reserva espacios para el mismo d&iacute;a, de lunes a '
+        'Si tiene dolor, pida la cita de emergencia. AIDM® reserva espacios para el mismo d&iacute;a, de lunes a '
         's&aacute;bado, de 7:00 a.m. a 7:00 p.m., con salas de cirug&iacute;a dental en las instalaciones para extracciones '
         'urgentes. Llame al <a href="tel:+17374342436">(737) 434-2436</a> y diga que es urgente.'),
        ('&iquest;Puedo llevar a mis hijos el mismo d&iacute;a?',
-        'S&iacute; &mdash; AIDM atiende a ni&ntilde;os y adultos en el mismo edificio, y las familias se agendan '
+        'S&iacute; &mdash; AIDM® atiende a ni&ntilde;os y adultos en el mismo edificio, y las familias se agendan '
         'habitualmente una cita tras otra. D&iacute;ganos cu&aacute;ntas personas vienen al momento de agendar y '
         'reservamos el tiempo.'),
        ('&iquest;Necesito referencia y d&oacute;nde puedo parquear?',
@@ -305,9 +305,9 @@ ES_NUEVO = dict(
 ES_EMERGENCIA = dict(
   cta='Agendar Cita',
   slug='es/emergencia', id='emergency-dental-same-day-es', banner='EMERGENCIA (ES)', lang='es',
-  title='Atención Dental de Emergencia — 7AM a 7PM, Lun a Sáb | AIDM Austin',
+  title='Atención Dental de Emergencia — 7AM a 7PM, Lun a Sáb | AIDM® Austin',
   desc='Citas dentales de emergencia el mismo día en Austin Institute of Dental Medicine, Mueller. Abierto de lunes a sábado, 7 a.m. a 7 p.m., con salas de cirugía dental en las instalaciones.',
-  ogtitle='Atención Dental de Emergencia — 7AM a 7PM, Lun–Sáb | AIDM Austin',
+  ogtitle='Atención Dental de Emergencia — 7AM a 7PM, Lun–Sáb | AIDM® Austin',
   ogdesc='Atención el mismo día. Evaluación enfocada en el problema, radiografías necesarias y salas de cirugía dental en las instalaciones.',
   ogimg=OG_OP,
   nav=NAV_ES, navcta='Disponibilidad Hoy', mcall='Llamar', facts=FACTS_ES, i18n=CHROME,
@@ -348,10 +348,10 @@ ES_EMERGENCIA = dict(
     'sangrado no controlado, trátelo como una emergencia m&eacute;dica y acuda a una sala de emergencias.',
   staffsub='Docentes certificados, especialistas y residentes trabajando lado a lado &mdash; con salas de '
     'cirug&iacute;a dental en las instalaciones, para que una extracci&oacute;n urgente no se convierta en una referencia a otro lugar.',
-  films=[('NtubApnQFt0','Emergencia dental en AIDM &mdash; qu&eacute; ocurre cuando llega','Empiece aqu&iacute;'),
-         ('OBTJIDJHHTc','Qu&eacute; esperar en AIDM &mdash; en espa&ntilde;ol'),
+  films=[('NtubApnQFt0','Emergencia dental en AIDM® &mdash; qu&eacute; ocurre cuando llega','Empiece aqu&iacute;'),
+         ('OBTJIDJHHTc','Qu&eacute; esperar en AIDM® &mdash; en espa&ntilde;ol'),
          ('DV9t9dZJauA','C&oacute;mo llegar y d&oacute;nde parquear'),
-         ('QNsMOG1B6G8','Bienvenido a AIDM'),('f7HHTbB-qe8','Atenci&oacute;n dental integral'),
+         ('QNsMOG1B6G8','Bienvenido a AIDM®'),('f7HHTbB-qe8','Atenci&oacute;n dental integral'),
          ('k9PavRdjiyc','Comodidad, sedaci&oacute;n y manejo de la ansiedad'),
          ('CEgwotre0h8','Ortodoncia'),('7Ci0z84BpDI','Implantes dentales'),('cCUQyiHkJxg','Prostodoncia')],
   filmlane='Lo que hacemos', filmsub='El edificio, los cl&iacute;nicos y los tratamientos &mdash; en sus propias '
@@ -366,11 +366,11 @@ ES_EMERGENCIA = dict(
       bullets=['La inflamaci&oacute;n que se extiende hacia el ojo o el piso de la boca es un problema de sala de emergencias, no dental',
                'Un diente permanente que se sali&oacute; muchas veces se puede reimplantar &mdash; pero la ventana se mide en horas',
                'Los analg&eacute;sicos y antibi&oacute;ticos manejan s&iacute;ntomas; solo tratar la causa lo termina']),
-    dict(img=OPERATORY, alt='Un consultorio de AIDM con un paciente siendo atendido',
+    dict(img=OPERATORY, alt='Un consultorio de AIDM® con un paciente siendo atendido',
       cap='Salas de cirug&iacute;a dental, en el mismo edificio',
       k='Por qu&eacute; aqu&iacute;', h2='Todo bajo <em>un mismo techo.</em>',
       p='La mayor&iacute;a de las cl&iacute;nicas que lo atienden de urgencia luego lo refieren a otro lado para lo que '
-        'realmente necesita. AIDM tiene endodoncia, cirug&iacute;a oral, periodoncia y prostodoncia en el mismo '
+        'realmente necesita. AIDM® tiene endodoncia, cirug&iacute;a oral, periodoncia y prostodoncia en el mismo '
         'edificio, seis d&iacute;as a la semana, as&iacute; que el tratamiento que sigue al diagn&oacute;stico se '
         'suele agendar de inmediato.',
       bullets=['Salas de cirug&iacute;a dental en las instalaciones para extracciones urgentes',
@@ -408,7 +408,7 @@ ES_EMERGENCIA = dict(
           'Retenci&oacute;n &oacute;sea completa &mdash; $450 por diente'],
       fine='El paquete cubre &uacute;nicamente las extracciones. La sedaci&oacute;n y la anestesia se cobran por separado.',
       cta='Ver precios de extracci&oacute;n')],
-  alsoh='Tambi&eacute;n &uacute;til si es nuevo en AIDM',
+  alsoh='Tambi&eacute;n &uacute;til si es nuevo en AIDM®',
   also=[('Especial para Pacientes Nuevos','Examen dental completo y radiograf&iacute;as seg&uacute;n sea necesario, una vez sin dolor','$100'),
         ('Comodidad y sedaci&oacute;n','Sedaci&oacute;n y manejo de la ansiedad para quien los necesite, cotizados por separado','En evaluaci&oacute;n')],
   faq=[('Tengo dolor ahora mismo. &iquest;Qu&eacute; hago?',
@@ -423,14 +423,14 @@ ES_EMERGENCIA = dict(
         'diagnosticarlo, y el costo de cualquier tratamiento se le presenta antes de iniciarlo. Los tres desenlaces '
         'm&aacute;s comunes tienen precios publicados &mdash; endodoncia desde $995, extracci&oacute;n desde $200 por diente.'),
        ('&iquest;De verdad lo pueden tratar el mismo d&iacute;a?',
-        'Todo lo que se pueda hacer con seguridad el mismo d&iacute;a se hace el mismo d&iacute;a. AIDM tiene salas de '
+        'Todo lo que se pueda hacer con seguridad el mismo d&iacute;a se hace el mismo d&iacute;a. AIDM® tiene salas de '
         'cirug&iacute;a dental en las instalaciones, as&iacute; que una extracci&oacute;n urgente no se convierte en una '
         'referencia a otro lugar, y endodoncia, periodoncia y prostodoncia est&aacute;n en el mismo edificio.'),
        ('&iquest;Atienden en espa&ntilde;ol?',
         'S&iacute;. Puede llamar y agendar en espa&ntilde;ol, y d&iacute;galo al llamar para que le asignemos personal '
         'que hable espa&ntilde;ol en su cita.'),
        ('No tengo seguro dental. &iquest;Me pueden atender?',
-        'S&iacute;. AIDM atiende pacientes de pago directo y publica precios por paquete precisamente para que quien no '
+        'S&iacute;. AIDM® atiende pacientes de pago directo y publica precios por paquete precisamente para que quien no '
         'tiene seguro pueda ver la cifra antes de comprometerse. Si s&iacute; tiene un plan, se aceptan muchos PPO.'),
        ('Se me sali&oacute; un diente. &iquest;Qu&eacute; hago ahora?',
         'T&oacute;melo por la corona, nunca por la ra&iacute;z. Si est&aacute; limpio, intente colocarlo de vuelta en su '
@@ -439,7 +439,7 @@ ES_EMERGENCIA = dict(
         'cada hora que pasa.'),
        ('Tengo mucha ansiedad al dentista.',
         'D&iacute;galo al llamar. La comodidad, la sedaci&oacute;n y el manejo de la ansiedad son una de las fortalezas '
-        'reconocidas de AIDM y se pueden coordinar tambi&eacute;n para tratamiento de emergencia. La sedaci&oacute;n y '
+        'reconocidas de AIDM® y se pueden coordinar tambi&eacute;n para tratamiento de emergencia. La sedaci&oacute;n y '
         'la anestesia se cobran por separado del tratamiento.'),
        ('&iquest;Necesito referencia y d&oacute;nde puedo parquear?',
         'No se necesita referencia. Hay parqueo gratuito en el garaje justo al lado, en 1401 Philomena Street, Mueller '

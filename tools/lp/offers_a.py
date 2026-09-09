@@ -10,19 +10,19 @@ EXAM        = U + '2026/07/dentist-examining-a-patient-during-a-dental-1024x683.
 OPERATORY   = U + '2026/07/a-dentist-examines-a-patient-using-advanced-1024x684.jpeg'
 PROCEDURE   = OPERATORY
 PAIN        = U + '2026/02/iStock-2-1024x732.jpg'
-# AIDM's own emergency-page photography — a patient in the chair holding her jaw,
+# AIDM®'s own emergency-page photography — a patient in the chair holding her jaw,
 # and the chairside close-up. Both landscape, both already on aidm.org.
 TOOTHACHE   = U + '2025/10/a-dentist-examining-a-young-woman-with-toothache-in-a-dental-clinic.-4971505-1024x683.jpg'
 CHAIRSIDE   = U + '2025/09/close-up-of-a-dentist-examining-a-patients-teeth-using-dental-tools.-4269694-1024x683.jpg'
-# Card-top portraits, in the spirit of AIDM's printed flyers: a face on every
+# Card-top portraits, in the spirit of AIDM®'s printed flyers: a face on every
 # package rather than three identical slabs of navy.
 SMILE_M     = U + '2026/02/iStock-45-1024x683.jpg'
 SMILE_Y     = U + '2026/05/iStock-65-1024x683.jpg'
 SMILE_W     = U + '2026/02/iStock-60-1024x683.jpg'
 CHAIR_SMILE = U + '2026/04/Pexels-5-1024x683.jpg'
 # Treatment photographs the offer itself is about, served from this repo:
-# the two clear-aligner shots are AIDM's own orthodontics-page images, and the
-# early-treatment boy is lifted from AIDM's Early Orthodontic Treatment flyer.
+# the two clear-aligner shots are AIDM®'s own orthodontics-page images, and the
+# early-treatment boy is lifted from AIDM®'s Early Orthodontic Treatment flyer.
 ALIGNER_IN  = '../aidm-lp-assets/promo/clear-aligner.jpg'
 ALIGNER_FIT = '../aidm-lp-assets/promo/clear-aligner-wide.jpg'
 ORTHO_PIC = {
@@ -36,7 +36,7 @@ OG_OP       = U + '2026/07/16-AIDM-Operatory-01--1536x1024.jpg'
 
 
 # ── card photography ───────────────────────────────────────────────────────
-# All from AIDM's own WordPress library, so nothing here needs a licence we do
+# All from AIDM®'s own WordPress library, so nothing here needs a licence we do
 # not already have. The card for a page's own offer reuses that page's "why it
 # matters" photograph, so the card and the row above describe one offer; the
 # rest carry the closest thing the library has to their procedure.
@@ -127,9 +127,9 @@ LEGAL_ALIGN = ' Invisalign&reg; is a registered trademark of Align Technology, I
 EMERGENCY = dict(
   cta='Book Appointment',
   slug='emergency', id='emergency-dental-same-day', banner='EMERGENCY DENTAL',
-  title='Emergency Dental Care — 7am to 7pm, Monday to Saturday | AIDM Austin',
+  title='Emergency Dental Care — 7am to 7pm, Monday to Saturday | AIDM® Austin',
   desc='Same-day emergency dental appointments at the Austin Institute of Dental Medicine in Mueller. Open Monday to Saturday, 7:00 a.m. to 7:00 p.m., with dedicated dental surgery rooms onsite for urgent extractions.',
-  ogtitle='Emergency Dental Care — 7am to 7pm, Mon–Sat | AIDM Austin',
+  ogtitle='Emergency Dental Care — 7am to 7pm, Mon–Sat | AIDM® Austin',
   ogdesc='Same-day appointments available. Problem-focused emergency evaluation, X-rays as needed, dedicated dental surgery rooms onsite. Mueller, Austin.',
   ogimg=OG_OP,
   nav=NAV_STD, navcta='Same-Day Availability', mcall='Call now',
@@ -137,7 +137,7 @@ EMERGENCY = dict(
    words need to wrap and to sit a size down from the single-word prices. */
 .card-price .v.w-tight{font-size:clamp(1.5rem,3.4vw,2.15rem);line-height:1.12;
   max-width:11ch;margin-inline:auto}
-/* AIDM's own seven-item list of what counts as an emergency, two-up so it
+/* AIDM®'s own seven-item list of what counts as an emergency, two-up so it
    does not run the copy column twice the height of the photo beside it. */
 .fcopy ul.g2{display:grid;grid-template-columns:1fr 1fr;gap:.55rem 1.4rem}
 .fcopy ul.g2 li{font-size:.95rem}
@@ -189,13 +189,13 @@ EMERGENCY = dict(
     'bleeding, treat it as a medical emergency and go to an emergency room.',
   staffsub='Board-certified faculty, specialists and residents working side by side &mdash; with dedicated dental surgery '
     'rooms onsite, so an urgent extraction does not become a referral to somewhere else.',
-  films=[('NtubApnQFt0','Emergency dental at AIDM &mdash; what happens when you walk in','Start here'),
+  films=[('NtubApnQFt0','Emergency dental at AIDM® &mdash; what happens when you walk in','Start here'),
          ('DV9t9dZJauA','Finding us &amp; where to park'),
          ('k9PavRdjiyc','Comfort, sedation &amp; anxiety care'),
-         ('QNsMOG1B6G8','Welcome to AIDM'),('f7HHTbB-qe8','Comprehensive dental care'),
+         ('QNsMOG1B6G8','Welcome to AIDM®'),('f7HHTbB-qe8','Comprehensive dental care'),
          ('2ooc1MlkmNM','What to expect at your first visit'),('CEgwotre0h8','Orthodontics'),
          ('7Ci0z84BpDI','Dental implants'),('cCUQyiHkJxg','Prosthodontics')],
-  filmlane='More about AIDM', filmsub='The building, the clinicians and the treatments &mdash; in their own words.',
+  filmlane='More about AIDM®', filmsub='The building, the clinicians and the treatments &mdash; in their own words.',
   frows=[dict(img=TOOTHACHE, alt='A patient in the dental chair holding her jaw in pain, with a clinician beside her',
       cap='If it causes pain or interrupts your day, call us',
       k='Why it matters', h2='What counts as <em>a dental emergency.</em>',
@@ -204,10 +204,10 @@ EMERGENCY = dict(
       two_up=True,
       bullets=['Severe toothache or dental pain','Knocked-out or loosened tooth','Cracked or fractured tooth',
                'Lost filling or crown','Abscess or swelling','Bleeding from the mouth','Trauma to the mouth or jaw']),
-    dict(img=CHAIRSIDE, alt='A close-up of an AIDM clinician examining a patient&rsquo;s teeth chairside',
+    dict(img=CHAIRSIDE, alt='A close-up of an AIDM® clinician examining a patient&rsquo;s teeth chairside',
       cap='Dedicated dental surgery rooms, in the same building',
       k='Why here', h2='Everything under <em>one roof.</em>',
-      p='Most practices that see you urgently then refer you on for whatever you actually need. AIDM has '
+      p='Most practices that see you urgently then refer you on for whatever you actually need. AIDM® has '
         'endodontics, oral surgery, periodontics and prosthodontics in the same building, six days a week, so the '
         'treatment that follows the diagnosis can usually be booked immediately rather than chased.',
       bullets=['Dedicated dental surgery rooms for urgent extractions',
@@ -242,7 +242,7 @@ EMERGENCY = dict(
           'Complete-bony impacted &mdash; $450 per tooth'],
       fine='The package covers extractions only. Sedation and anaesthesia are billed separately.',
       cta='See extraction pricing')],
-  alsoh='Also useful if you are new to AIDM',
+  alsoh='Also useful if you are new to AIDM®',
   also=[('New Patient Special','Comprehensive examination and X-rays as needed &mdash; once you are out of pain','$100'),
         ('Comfort &amp; sedation','Sedation and anxiety care for patients who need it, priced separately','On evaluation')],
   faq=[('I am in pain right now. What do I do?',
@@ -256,18 +256,18 @@ EMERGENCY = dict(
         'is presented to you before that treatment starts. The three commonest outcomes have published package prices &mdash; '
         'a root canal from $995, an extraction from $200 per tooth &mdash; so you are rarely in unmapped territory.'),
        ('Can you actually treat it the same day, or just look at it?',
-        'Whatever can be done safely on the day is done on the day. AIDM has dedicated dental surgery rooms onsite, so an urgent '
+        'Whatever can be done safely on the day is done on the day. AIDM® has dedicated dental surgery rooms onsite, so an urgent '
         'extraction does not become a referral somewhere else, and endodontics, periodontics and prosthodontics are in the '
         'same building for whatever follows.'),
        ('I do not have insurance. Can I still be seen?',
-        'Yes. AIDM is self-pay friendly and publishes package pricing precisely so that uninsured patients can see the '
+        'Yes. AIDM® is self-pay friendly and publishes package pricing precisely so that uninsured patients can see the '
         'number before they commit. If you do have a plan, many PPOs are accepted.'),
        ('I knocked a tooth out. What do I do right now?',
         'Handle it by the crown, not the root. If it is clean, try to place it back in the socket and bite gently on a '
         'clean cloth; if you cannot, keep it in milk or in your own saliva &mdash; never in water. Then call us immediately. '
         'The chance of saving a replanted tooth falls sharply with every hour.'),
        ('I am extremely anxious about the dentist.',
-        'Say so when you call. Comfort, sedation and anxiety care is one of AIDM&rsquo;s named strengths and can be arranged '
+        'Say so when you call. Comfort, sedation and anxiety care is one of AIDM®&rsquo;s named strengths and can be arranged '
         'for emergency treatment as well as planned treatment. Sedation and anaesthesia are billed separately from the '
         'treatment itself.'),
        ('Do you see children for emergencies?',
@@ -293,9 +293,9 @@ EMERGENCY = dict(
 INVISALIGN = dict(
   cta='Book Free Consult',
   slug='invisalign', id='invisalign-3900', banner='INVISALIGN',
-  title='Clear Aligners. Confident Smile. — Invisalign® $3,900 | AIDM Austin',
+  title='Clear Aligners. Confident Smile. — Invisalign® $3,900 | AIDM® Austin',
   desc='Invisalign clear aligner treatment for $3,900 at the Austin Institute of Dental Medicine in Mueller, Austin. Complimentary orthodontic evaluation, no referral needed.',
-  ogtitle='Clear Aligners. Confident Smile. — Invisalign® $3,900 | AIDM Austin',
+  ogtitle='Clear Aligners. Confident Smile. — Invisalign® $3,900 | AIDM® Austin',
   ogdesc='Personalised clear-aligner treatment, routine orthodontic visits and standard retention, $3,900.',
   ogimg=OG_OP,
   nav=NAV_ORTHO, navcta='Book Free Eval',
@@ -312,7 +312,7 @@ INVISALIGN = dict(
          'talk through whether aligners or braces suit your bite better.',
   promok='Invisalign clear aligners', promoh2='What $3,900 <em>actually covers.</em>',
   video='CEgwotre0h8', videoalt='Orthodontics at the Austin Institute of Dental Medicine',
-  videoled='Orthodontics at AIDM', badge=('$3,900', 'Clear aligners'),
+  videoled='Orthodontics at AIDM®', badge=('$3,900', 'Clear aligners'),
   promoimg=ALIGNER_IN, promoalt='A patient seating a clear aligner over the upper teeth',
   promofine='Advertised price of $3,900 applies to Invisalign&reg; clear aligner cases. Complex cases, retainers, or '
     'phase-one interceptive orthodontics may incur additional fees. A complete clinical evaluation is required to '
@@ -322,12 +322,12 @@ INVISALIGN = dict(
   cases='Orthodontic treatment', caseh2='Actual cases. <em>Actual bites.</em>',
   casesub='Intraoral records from orthodontic cases completed at the Austin Institute of Dental Medicine.',
   staffsub='Board-certified faculty, specialists and residents working side by side &mdash; every orthodontic '
-    'plan at AIDM is reviewed and signed off by faculty.',
-  films=[('CEgwotre0h8','Orthodontics at AIDM &mdash; how cases are planned and treated','Start here'),
-         ('QNsMOG1B6G8','Welcome to AIDM'),('2ooc1MlkmNM','What to expect at your first visit'),
+    'plan at AIDM® is reviewed and signed off by faculty.',
+  films=[('CEgwotre0h8','Orthodontics at AIDM® &mdash; how cases are planned and treated','Start here'),
+         ('QNsMOG1B6G8','Welcome to AIDM®'),('2ooc1MlkmNM','What to expect at your first visit'),
          ('f7HHTbB-qe8','Comprehensive dental care'),('k9PavRdjiyc','Comfort, sedation &amp; anxiety care'),
          ('DV9t9dZJauA','Finding us &amp; where to park')],
-  filmlane='More about AIDM', filmsub='The building, the clinicians and the treatments &mdash; in their own words.',
+  filmlane='More about AIDM®', filmsub='The building, the clinicians and the treatments &mdash; in their own words.',
   frows=[dict(img=ALIGNER_FIT, alt='A clear aligner tray held over the teeth, all but invisible in place',
       cap='Removable, and nearly invisible in ordinary conversation',
       k='Why it matters', h2='Straight teeth are the <em>visible part.</em>',
@@ -337,10 +337,10 @@ INVISALIGN = dict(
       bullets=['Removable for eating, brushing and the photograph you cannot avoid',
                'No brackets, no wires, no emergency visits for a poking archwire',
                'Success depends on wear time &mdash; roughly 20 to 22 hours a day, every day']),
-    dict(img=ORTHO_TEAM, alt='The AIDM orthodontic team photographed together in the treatment bay',
+    dict(img=ORTHO_TEAM, alt='The AIDM® orthodontic team photographed together in the treatment bay',
       cap='The orthodontic team, in the bay they work in',
       k='Who treats you', h2='Two clinicians. <em>One fee.</em>',
-      p='AIDM is a teaching institute. Orthodontic residents &mdash; already qualified dentists in advanced '
+      p='AIDM® is a teaching institute. Orthodontic residents &mdash; already qualified dentists in advanced '
         'postgraduate training &mdash; treat under the direct supervision of board-certified faculty. You get more '
         'clinical attention, not less, and the economics reflect the teaching mission.',
       bullets=['A second, board-certified opinion built into the plan',
@@ -355,7 +355,7 @@ INVISALIGN = dict(
         'severe rotations, large vertical movements and some bite corrections are still more predictable with fixed '
         'brackets. You will be told honestly which one suits your case &mdash; including when the answer is the cheaper one.'),
        ('Why is Invisalign $3,900 here?',
-        '$3,900 is AIDM&rsquo;s published package fee for Invisalign&reg; clear aligner cases, and it reflects the '
+        '$3,900 is AIDM®&rsquo;s published package fee for Invisalign&reg; clear aligner cases, and it reflects the '
         'teaching model &mdash; residents in advanced postgraduate training treating under board-certified faculty '
         'supervision. It applies to the services listed and cannot be combined with insurance benefits, membership '
         'pricing or other discounts unless expressly stated.'),
@@ -373,7 +373,7 @@ INVISALIGN = dict(
         'Standard orthodontic retention is included in the package, as is treatment completion and appliance removal. '
         'A <em>replacement</em> retainer &mdash; if one is lost or broken &mdash; is charged separately.'),
        ('Can I use insurance or a payment plan?',
-        'AIDM accepts many PPO plans, and financing may be available subject to approval. They cannot be stacked on '
+        'AIDM® accepts many PPO plans, and financing may be available subject to approval. They cannot be stacked on '
         'top of package pricing. At the evaluation the team will show you both routes side by side so you can pick '
         'whichever leaves you better off.'),
        ('Am I too old for aligners?',
@@ -399,9 +399,9 @@ INVISALIGN = dict(
 EARLY = dict(
   cta='Book Free Consult',
   slug='early-orthodontics', id='early-orthodontic-treatment-2500', banner='EARLY ORTHODONTICS',
-  title='The Right Care at the Right Time — Early Orthodontic Treatment $2,500 | AIDM Austin',
+  title='The Right Care at the Right Time — Early Orthodontic Treatment $2,500 | AIDM® Austin',
   desc='Early orthodontic treatment for growing children, $2,500, at the Austin Institute of Dental Medicine in Mueller, Austin. Complimentary evaluation, no referral needed.',
-  ogtitle='The Right Care at the Right Time — Early Orthodontic Treatment $2,500 | AIDM',
+  ogtitle='The Right Care at the Right Time — Early Orthodontic Treatment $2,500 | AIDM®',
   ogdesc='Limited early orthodontic treatment, growth-appropriate planning and retention where the plan includes it, $2,500.',
   ogimg=OG_OP,
   nav=NAV_ORTHO, navcta='Book Free Eval',
@@ -419,7 +419,7 @@ EARLY = dict(
          'you know what to bring for your child.',
   promok='Early orthodontic treatment', promoh2='What $2,500 <em>actually covers.</em>',
   video='CEgwotre0h8', videoalt='Orthodontics at the Austin Institute of Dental Medicine',
-  videoled='Orthodontics at AIDM', badge=('$2,500', 'Early treatment'),
+  videoled='Orthodontics at AIDM®', badge=('$2,500', 'Early treatment'),
   promoimg=EARLY_BOY, promoalt='A smiling boy with a gap where a baby tooth has come out',
   promofine='Standalone appliances and services outside the approved early-treatment plan are priced separately. '
     'Eligibility, clinical recommendations and the final fee are confirmed after an appropriate evaluation, and '
@@ -429,13 +429,13 @@ EARLY = dict(
   cases='Orthodontic treatment', caseh2='Actual cases. <em>Actual bites.</em>',
   casesub='Intraoral records from orthodontic cases completed at the Austin Institute of Dental Medicine.',
   staffsub='Board-certified faculty, specialists and residents working side by side &mdash; every orthodontic '
-    'plan at AIDM is reviewed and signed off by faculty before a single appliance is fitted.',
-  films=[('CEgwotre0h8','Orthodontics at AIDM &mdash; how cases are planned and treated','Start here'),
-         ('2ooc1MlkmNM','What to expect at your first visit'),('QNsMOG1B6G8','Welcome to AIDM'),
+    'plan at AIDM® is reviewed and signed off by faculty before a single appliance is fitted.',
+  films=[('CEgwotre0h8','Orthodontics at AIDM® &mdash; how cases are planned and treated','Start here'),
+         ('2ooc1MlkmNM','What to expect at your first visit'),('QNsMOG1B6G8','Welcome to AIDM®'),
          ('f7HHTbB-qe8','Comprehensive dental care'),('k9PavRdjiyc','Comfort, sedation &amp; anxiety care'),
          ('DV9t9dZJauA','Finding us &amp; where to park')],
-  filmlane='More about AIDM', filmsub='The building, the clinicians and the treatments &mdash; in their own words.',
-  frows=[dict(img=ORTHO_CHAIR, alt='An AIDM clinician reviewing a young patient&rsquo;s digital records chairside',
+  filmlane='More about AIDM®', filmsub='The building, the clinicians and the treatments &mdash; in their own words.',
+  frows=[dict(img=ORTHO_CHAIR, alt='An AIDM® clinician reviewing a young patient&rsquo;s digital records chairside',
       cap='Growth is the one thing you cannot go back for',
       k='Why it matters', h2='Some problems are <em>easier while they grow.</em>',
       p='Early treatment is not braces brought forward. It is a short, limited intervention that uses a child&rsquo;s '
@@ -445,10 +445,10 @@ EARLY = dict(
       bullets=['The American Association of Orthodontists suggests a first orthodontic check at around age seven',
                'Crossbites and narrow arches respond to growth in ways they will not later',
                'Protruding upper front teeth are considerably more prone to trauma']),
-    dict(img=ORTHO_TEAM, alt='The AIDM orthodontic team photographed together in the treatment bay',
+    dict(img=ORTHO_TEAM, alt='The AIDM® orthodontic team photographed together in the treatment bay',
       cap='The orthodontic team, in the bay they work in',
       k='Who treats your child', h2='Two clinicians. <em>One fee.</em>',
-      p='AIDM is a teaching institute. Orthodontic residents &mdash; already qualified dentists in advanced '
+      p='AIDM® is a teaching institute. Orthodontic residents &mdash; already qualified dentists in advanced '
         'postgraduate training &mdash; treat under the direct supervision of board-certified faculty, and paediatric '
         'dentistry sits in the same building. Every early-treatment plan is reviewed by faculty before it starts.',
       bullets=['A second, board-certified opinion built into your child&rsquo;s plan',
@@ -457,7 +457,7 @@ EARLY = dict(
   optsk='Orthodontic options for every stage', optsh2='Early treatment is one of <em>three routes.</em>',
   optssub='Which one is appropriate depends on your child&rsquo;s bite and stage of development, not on your budget '
     '&mdash; including when the answer is to wait and watch.',
-  opts=ortho_cards('early', ORTHO_CHAIR, 'An AIDM clinician reviewing a young patient&rsquo;s records chairside'),
+  opts=ortho_cards('early', ORTHO_CHAIR, 'An AIDM® clinician reviewing a young patient&rsquo;s records chairside'),
   faq=[('How young is too young for a first visit?',
         'The usual guidance is a first orthodontic check at around age seven, when enough permanent teeth are through '
         'to see how the bite is developing. That check is not a commitment to treatment &mdash; in a lot of cases the '
@@ -471,7 +471,7 @@ EARLY = dict(
         'make the later phase shorter, simpler or less likely to need extractions or surgery. Any clinician who promises '
         'you it will remove the need for braces entirely is promising something they cannot know.'),
        ('Why is early treatment $2,500?',
-        '$2,500 is AIDM&rsquo;s published package fee for limited early orthodontic treatment, and it reflects the '
+        '$2,500 is AIDM®&rsquo;s published package fee for limited early orthodontic treatment, and it reflects the '
         'teaching model &mdash; residents in advanced postgraduate training treating under board-certified faculty '
         'supervision. Standalone appliances and services outside the approved early-treatment plan are priced separately.'),
        ('What is included, and what is not?',
@@ -483,7 +483,7 @@ EARLY = dict(
         'cephalometric imaging and analysis, clinical photographs and a digital 3D intraoral scan. There is no charge and '
         'no referral is required.'),
        ('My child is anxious about the dentist.',
-        'Say so when you book. Comfort and anxiety care is one of AIDM&rsquo;s named strengths, and paediatric dentistry '
+        'Say so when you book. Comfort and anxiety care is one of AIDM®&rsquo;s named strengths, and paediatric dentistry '
         'is part of the same building. The first visit is a look and a conversation &mdash; nothing is fitted on the day.'),
        ('Do I need a referral, and where do I park?',
         'No referral is needed. There is a garage immediately next door at 1401 Philomena Street and parking is free. '
@@ -507,9 +507,9 @@ EARLY = dict(
 WISDOM = dict(
   cta='Book Appointment',
   slug='wisdom-teeth', id='wisdom-teeth-removal-from-200', banner='WISDOM TEETH',
-  title='Comfort-Focused Care with Clear Pricing — Wisdom Teeth from $200 a Tooth | AIDM Austin',
+  title='Comfort-Focused Care with Clear Pricing — Wisdom Teeth from $200 a Tooth | AIDM® Austin',
   desc='Wisdom teeth removal from $200 per tooth at the Austin Institute of Dental Medicine in Mueller, Austin. Published price per surgical complexity; four teeth $800 to $1,800.',
-  ogtitle='Wisdom Teeth Removal from $200 a Tooth | AIDM Austin',
+  ogtitle='Wisdom Teeth Removal from $200 a Tooth | AIDM® Austin',
   ogdesc='Straightforward wisdom tooth pricing based on the position and surgical complexity of each tooth. Dedicated dental surgery rooms onsite.',
   ogimg=OG_OP,
   nav=NAV_STD, navcta='Book a Consult',
@@ -551,11 +551,11 @@ WISDOM = dict(
   staffsub='Board-certified faculty, specialists and residents working side by side, with dedicated dental surgery rooms '
     'and sedation available &mdash; oral surgery does not become a referral somewhere else.',
   films=[('k9PavRdjiyc','Comfort, sedation and anxiety care &mdash; what is available and how it works','Start here'),
-         ('QNsMOG1B6G8','Welcome to AIDM'),('2ooc1MlkmNM','What to expect at your first visit'),
+         ('QNsMOG1B6G8','Welcome to AIDM®'),('2ooc1MlkmNM','What to expect at your first visit'),
          ('NtubApnQFt0','Emergency dental &mdash; same-day care'),('f7HHTbB-qe8','Comprehensive dental care'),
          ('DV9t9dZJauA','Finding us &amp; where to park')],
-  filmlane='More about AIDM', filmsub='The building, the clinicians and the treatments &mdash; in their own words.',
-  frows=[dict(img=OPERATORY, alt='An AIDM operatory with a patient being examined using advanced imaging',
+  filmlane='More about AIDM®', filmsub='The building, the clinicians and the treatments &mdash; in their own words.',
+  frows=[dict(img=OPERATORY, alt='An AIDM® operatory with a patient being examined using advanced imaging',
       cap='The X-ray decides the price, not the appointment',
       k='Why it matters', h2='An impacted tooth <em>does not stay quiet.</em>',
       p='A wisdom tooth that is only partly through leaves a flap of gum that cannot be cleaned, and the tissue under '
@@ -567,7 +567,7 @@ WISDOM = dict(
     dict(img=SMILE_M, alt='A man smiling confidently outdoors',
       cap='Local anaesthetic as standard, sedation if you want it',
       k='Comfort', h2='The part people <em>actually dread.</em>',
-      p='Comfort, sedation and anxiety care is one of the things AIDM is known for, and it applies to oral surgery as '
+      p='Comfort, sedation and anxiety care is one of the things AIDM® is known for, and it applies to oral surgery as '
         'much as to anything else. Sedation is priced separately from the extraction itself, so you can see both '
         'numbers and decide &mdash; rather than having one folded invisibly into the other.',
       bullets=['Local anaesthetic is included in the extraction fee',
@@ -607,7 +607,7 @@ WISDOM = dict(
   also=[('All four wisdom teeth','Depending on the mix of positions across the four','$800&ndash;$1,800'),
         ('Sedation &amp; anaesthesia','Available for patients who want it, quoted separately from the extraction','On consult'),
         ('Emergency dental care','If a wisdom tooth has already flared up &mdash; same-day care, Mon&ndash;Sat 7am&ndash;7pm','Same-day'),
-        ('New Patient Special','Comprehensive examination and X-rays as needed, if you are new to AIDM','$100')],
+        ('New Patient Special','Comprehensive examination and X-rays as needed, if you are new to AIDM®','$100')],
   faq=[('How much will all four cost me?',
         'Between $800 and $1,800, depending on how the four are sitting. Each tooth is priced on its own position &mdash; '
         '$200 simple erupted, $275 surgical erupted, $300 soft-tissue impacted, $375 partial-bony, $450 complete-bony '
@@ -629,15 +629,15 @@ WISDOM = dict(
         'or three. You will be given written aftercare and someone to call. Plan the appointment before a couple of '
         'clear days rather than before something you cannot move.'),
        ('Will I be treated by a student?',
-        'You will be treated by a licensed dentist. AIDM is a teaching institute, so residents &mdash; already qualified '
+        'You will be treated by a licensed dentist. AIDM® is a teaching institute, so residents &mdash; already qualified '
         'dentists in advanced postgraduate training &mdash; treat under the direct supervision of licensed clinical '
         'faculty. That two-clinician model is why the published fees are what they are.'),
        ('Can I use insurance?',
-        'AIDM accepts many PPO plans. Package pricing applies only to the services listed and cannot be combined with '
+        'AIDM® accepts many PPO plans. Package pricing applies only to the services listed and cannot be combined with '
         'insurance benefits, membership pricing or other discounts unless expressly stated &mdash; at your consult the '
         'team will show you both routes so you can pick whichever leaves you better off.'),
        ('What if one flares up before my appointment?',
-        'Call <a href="tel:+17374342436">(737) 434-2436</a> and ask for an emergency slot. AIDM keeps same-day emergency '
+        'Call <a href="tel:+17374342436">(737) 434-2436</a> and ask for an emergency slot. AIDM® keeps same-day emergency '
         'appointments, Monday to Saturday, 7:00 a.m. to 7:00 p.m.')],
   ctk='Published pricing, confirmed from your X-ray',
   cth2='Find out which band <em>your teeth are in.</em>',

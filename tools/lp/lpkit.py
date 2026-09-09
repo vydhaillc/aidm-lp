@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Builds an AIDM offer landing page by transforming braces/index.html.
+"""Builds an AIDM® offer landing page by transforming braces/index.html.
 
 Every page in the family is the same document with its offer-specific blocks
 swapped out, so the theme cannot drift between pages: fix the theme once in
@@ -78,8 +78,8 @@ def build(o):
         '<meta property="og:image" content="' + o['ogimg'] + '">', 'head')
     sub('<link rel="preload" as="image" href="https://aidm.org/wp-content/uploads/2026/07/16-AIDM-Operatory-01--1536x1024.jpg" fetchpriority="high">',
         '<link rel="preload" as="image" href="' + o['ogimg'] + '" fetchpriority="high">', 'preload')
-    sub('   AIDM — ORTHODONTICS LP  ·  V3 "dark blue, picture-led"',
-        '   AIDM — ' + o['banner'] + ' LP  ·  on the V3 "dark blue, picture-led" theme', 'banner')
+    sub('   AIDM® — ORTHODONTICS LP  ·  V3 "dark blue, picture-led"',
+        '   AIDM® — ' + o['banner'] + ' LP  ·  on the V3 "dark blue, picture-led" theme', 'banner')
     sub('</style>', EXTRA_CSS.replace('NEW-PATIENT PAGE ADDITIONS', 'OFFER-PAGE ADDITIONS') + '</style>', 'css')
     if o.get('css'):
         sub('</style>', o['css'] + '</style>', 'css2')
@@ -255,12 +255,12 @@ def build(o):
 
     # ── staff ───────────────────────────────────────────────────────────────
     sub('''      <p>Board-certified faculty, specialists and residents working side by side &mdash; every orthodontic
-        plan at AIDM is reviewed and signed off by faculty.</p>''',
+        plan at AIDM® is reviewed and signed off by faculty.</p>''',
         '      <p>' + o['staffsub'] + '</p>', 'staffsub')
     sub('<figcaption><em>Orthodontics</em>The team in the bay</figcaption>',
         '<figcaption><em>Clinical team</em>The team in the bay</figcaption>', 'staffcap')
-    sub('alt="The AIDM orthodontic residents and clinical team in the treatment bay"',
-        'alt="AIDM residents and the clinical team in the treatment bay"', 'staffalt')
+    sub('alt="The AIDM® orthodontic residents and clinical team in the treatment bay"',
+        'alt="AIDM® residents and the clinical team in the treatment bay"', 'staffalt')
 
     # ── film wall ───────────────────────────────────────────────────────────
     cut('    <div class="fstage rv">', '''    </div>
@@ -427,18 +427,18 @@ def build(o):
         cannot be combined with insurance benefits, membership pricing, financing promotions or other discounts
         unless expressly stated. Additional treatment, diagnostic procedures, specialty services, laboratory fees,
         sedation or other clinically necessary procedures may result in additional charges. Final treatment
-        recommendations, eligibility and fees are determined following a comprehensive clinical evaluation. AIDM
+        recommendations, eligibility and fees are determined following a comprehensive clinical evaluation. AIDM®
         reserves the right to modify pricing, eligibility requirements, package contents, promotional periods and
         terms and conditions at any time without notice.</p>
       <p><b>Your right to cancel (Texas).</b> The patient and any other person responsible for payment has a right
         to refuse to pay, cancel payment, or be reimbursed for payment for any other service, examination, or
         treatment that is performed as a result of and within 72 hours of responding to the advertisement for the
         free, discounted fee, or reduced fee service, examination, or treatment.</p>
-      <p><b>Who treats you.</b> AIDM is a premier educational institute. Treatment under these promotional offers
+      <p><b>Who treats you.</b> AIDM® is a premier educational institute. Treatment under these promotional offers
         may be provided by dental residents participating in advanced training programmes under the direct
         supervision of our licensed clinical faculty. All promotional pricing is subject to clinical qualification
         and medical clearance as determined by the attending doctor.</p>
-      <p><b>Provider.</b> Dental services are provided by Philomena Street PLLC, supported by AIDM. Services at the
+      <p><b>Provider.</b> Dental services are provided by Philomena Street PLLC, supported by AIDM®. Services at the
         Austin Institute of Dental Medicine are provided by General Dentists, Residents and Faculty Members.
         Terms such as &ldquo;Advanced,&rdquo; &ldquo;Complex&rdquo; or &ldquo;Institute&rdquo; refer to the scope of
         training and services offered and do not imply a specific specialisation unless the provider is explicitly
@@ -447,10 +447,10 @@ def build(o):
       <p style="color:#4a6d87">© 2026 Austin Institute of Dental Medicine. All rights reserved.</p>''', 'legal')
 
     # ── JS ──────────────────────────────────────────────────────────────────
-    sub("""    data._subject     = 'AIDM braces LP — new enquiry from ' +""",
-        "    data._subject     = 'AIDM " + o['slug'] + " LP — new enquiry from ' +", 'subject')
+    sub("""    data._subject     = 'AIDM® braces LP — new enquiry from ' +""",
+        "    data._subject     = 'AIDM® " + o['slug'] + " LP — new enquiry from ' +", 'subject')
     # (the template lost its countdown on 2026-08-19 — nothing to strip here)
-    sub("""        'title="Orthodontics at AIDM" allow="accelerometer; autoplay; encrypted-media; ' +""",
+    sub("""        'title="Orthodontics at AIDM®" allow="accelerometer; autoplay; encrypted-media; ' +""",
         "        'title=\"" + o['videoled'].replace('&mdash;', '-') + "\" allow=\"accelerometer; autoplay; encrypted-media; ' +", 'promotitle')
 
     if o.get('lang'):
