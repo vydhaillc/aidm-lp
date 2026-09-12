@@ -6,6 +6,7 @@ price sits in a red badge as the first thing the eye lands on; copy is cut
 to a headline, one tagline and the hours line.
 """
 import base64, os, sys
+import html as html_mod
 from playwright.sync_api import sync_playwright
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -99,10 +100,10 @@ SPECS = {
     'c1': dict(
         photo=os.path.join(ROOT, 'aidm-lp-assets/staff/resident-patient.jpg'),
         pos='50% 35%', badge_style='--s:420px;top:396px;right:76px', shift=36,
-        badge='circle', price='$100', badge_top='PACIENTE NUEVO', badge_bottom='ESPECIAL',
+        badge='circle', price='$100', badge_top='PACIENTE NUEVO', badge_bottom='PROMOCI&Oacute;N',
         badge_note='Examen + radiografías',
         script='Ahora aceptamos', caps='Pacientes Nuevos',
-        tagline='',
+        tagline='', note='Hablamos español',
         hours='Lun&ndash;S&aacute;b 7am&ndash;7pm &nbsp;&middot;&nbsp; Estacionamiento gratis &nbsp;&middot;&nbsp; Mueller, Austin',
     ),
     'c2': dict(
@@ -110,7 +111,7 @@ SPECS = {
         photo=os.path.join(PROJ, 'vydhai/aidm-creative/assets/a1_front_desk.jpg'),
         pos='50% 60%',
         circles=[os.path.join(PROJ, 'vydhai/aidm-creative/assets/a1_exterior.jpg'), os.path.join(PROJ, 'vydhai/aidm-creative/assets/a1_waiting.jpg'), os.path.join(PROJ, 'vydhai/aidm-creative/assets/a1_treatment.jpg')],
-        head='El nuevo hogar dental<br>de su familia.', head_size=86,
+        head='El nuevo hogar dental<br>de tu familia.', head_size=86, note='Hablamos español',
         hours='Lun&ndash;S&aacute;b 7am&ndash;7pm &nbsp;&middot;&nbsp; Estacionamiento gratis &nbsp;&middot;&nbsp; Mueller, Austin',
     ),
 }
@@ -130,6 +131,8 @@ body{width:1080px;height:1350px;overflow:hidden;background:#0b1727;font-family:'
 .caps{position:absolute;left:0;right:0;top:calc(1036px + var(--y));text-align:center;font-weight:600;font-size:84px;line-height:1;letter-spacing:.06em;text-transform:uppercase}
 .rule{position:absolute;left:50%;top:1150px;transform:translateX(-50%);width:300px;height:2px;background:linear-gradient(90deg,transparent,#3fa9e6,transparent)}
 .tag{position:absolute;left:0;right:0;top:1170px;text-align:center;font-style:italic;font-weight:500;font-size:40px;color:#9fd8f7}
+.note{position:absolute;left:0;right:0;top:calc(1168px + var(--y));text-align:center;font-style:italic;font-weight:500;font-size:34px;color:#9fd8f7}
+.a1 .note{top:1214px;font-size:32px}
 .hours{position:absolute;left:0;right:0;top:1268px;text-align:center;font-family:Montserrat,sans-serif;font-weight:600;font-size:19px;letter-spacing:.24em;color:#8fb6d3;text-transform:uppercase}
 
 
@@ -189,7 +192,7 @@ def circle_svg(label):
 <polygon points="310,246 294,232 294,246" fill="#0f6f93"/>
 <rect x="30" y="232" width="280" height="64" fill="url(#rb)"/>
 <rect x="30" y="232" width="280" height="64" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.5"/>
-<text x="170" y="278" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="700" font-size="{50 if len(label) <= 7 else 44}" letter-spacing="{5 if len(label) <= 7 else 3}" fill="#0b1727">{label}</text>
+<text x="170" y="278" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="700" font-size="{50 if len(html_mod.unescape(label)) <= 7 else 42}" letter-spacing="{5 if len(html_mod.unescape(label)) <= 7 else 3}" fill="#0b1727">{label}</text>
 </svg>'''
 
 def rosette_svg():
@@ -226,7 +229,7 @@ def html_a1(s):
 <img class="logo" src="{LOGO}">
 <div class="head" style="font-size:{s.get('head_size', 92)}px">{s['head']}</div>
 <div class="rule"></div>
-<div class="dia"><i></i>&#9670;<i class="r"></i></div>
+{'<div class="note">' + s['note'] + '</div>' if s.get('note') else '<div class="dia"><i></i>&#9670;<i class="r"></i></div>'}
 <div class="hours">{s.get('hours', 'Mon&ndash;Sat 7am&ndash;7pm &nbsp;&middot;&nbsp; Free parking &nbsp;&middot;&nbsp; Mueller, Austin')}</div>
 </body></html>'''
 
@@ -270,6 +273,7 @@ def html(s):
 <div class="script">{s['script']}</div>
 <div class="caps" style="font-size:{84 if len(s['caps']) <= 16 else 66}px">{s['caps']}</div>
 {tag}
+{'<div class="note">' + s['note'] + '</div>' if s.get('note') else ''}
 <div class="hours">{s.get('hours', 'Mon&ndash;Sat 7am&ndash;7pm &nbsp;&middot;&nbsp; Free parking &nbsp;&middot;&nbsp; Mueller, Austin')}</div>
 <div class="badge {s['badge']}{' long' if len(s['price']) > 4 else ''}{' xlong' if len(s['price']) > 6 else ''}{' widelabel' if len(s['badge_top']) > 12 else ''}" style="{s.get('badge_style','')}">{badge_svg}<div class="txt">
 {'' if s['badge'] == 'circle' else '<div class="t">' + s['badge_top'] + '</div>'}{'<div class="pre">' + s['pre'] + '</div>' if s.get('pre') else ''}<div class="p">{s['price']}</div>{'<div class="t">' + s['badge_top'] + '</div>' if s['badge'] == 'circle' else '<div class="b">' + s['badge_bottom'] + '</div>'}<div class="n">{s['badge_note']}</div>
