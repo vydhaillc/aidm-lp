@@ -103,7 +103,7 @@ SPECS = {
         badge='circle', price='$100', badge_top='PACIENTE NUEVO', badge_bottom='PROMOCI&Oacute;N',
         badge_note='Examen + radiografías',
         script='Ahora aceptamos', caps='Pacientes Nuevos',
-        tagline='', note='Hablamos español',
+        tagline='', note='Hablamos español', fine='*Aplican ciertas restricciones.',
         hours='Lun&ndash;S&aacute;b 7am&ndash;7pm &nbsp;&middot;&nbsp; Estacionamiento gratis &nbsp;&middot;&nbsp; Mueller, Austin',
     ),
     'c2': dict(
@@ -133,6 +133,8 @@ body{width:1080px;height:1350px;overflow:hidden;background:#0b1727;font-family:'
 .tag{position:absolute;left:0;right:0;top:1170px;text-align:center;font-style:italic;font-weight:500;font-size:40px;color:#9fd8f7}
 .note{position:absolute;left:0;right:0;top:calc(1168px + var(--y));text-align:center;font-style:italic;font-weight:500;font-size:34px;color:#9fd8f7}
 .a1 .note{top:1214px;font-size:32px}
+.badge .p sup{font-size:.34em;vertical-align:baseline;position:relative;top:-1.3em;margin-left:.03em;font-weight:800}
+.fine{position:absolute;left:0;right:0;top:1310px;text-align:center;font-family:Montserrat,sans-serif;font-weight:500;font-size:15px;letter-spacing:.06em;color:#6f8aa6}
 .hours{position:absolute;left:0;right:0;top:1268px;text-align:center;font-family:Montserrat,sans-serif;font-weight:600;font-size:19px;letter-spacing:.24em;color:#8fb6d3;text-transform:uppercase}
 
 
@@ -171,7 +173,7 @@ body{width:1080px;height:1350px;overflow:hidden;background:#0b1727;font-family:'
 .circle .n{margin-top:calc(var(--s) * .02)}
 .circle.long .txt{padding-bottom:calc(var(--s) * .24)}
 .badge .pre{font-weight:700;font-size:calc(var(--s) * .055);letter-spacing:.3em;color:#ffd9d9;margin-bottom:calc(var(--s) * -.01)}
-.circle.xlong .p{font-size:calc(var(--s) * .195);letter-spacing:-.04em}
+.circle.xlong .p{font-size:calc(var(--s) * .18);letter-spacing:-.04em}
 .circle.widelabel .t{font-size:calc(var(--s) * .062);letter-spacing:.16em}
 .circle.long .p{font-size:calc(var(--s) * .23);letter-spacing:-.04em}
 .circle.long .n{margin-top:calc(var(--s) * .01)}
@@ -275,8 +277,9 @@ def html(s):
 {tag}
 {'<div class="note">' + s['note'] + '</div>' if s.get('note') else ''}
 <div class="hours">{s.get('hours', 'Mon&ndash;Sat 7am&ndash;7pm &nbsp;&middot;&nbsp; Free parking &nbsp;&middot;&nbsp; Mueller, Austin')}</div>
+<div class="fine">{s.get('fine', '*Certain restrictions apply.')}</div>
 <div class="badge {s['badge']}{' long' if len(s['price']) > 4 else ''}{' xlong' if len(s['price']) > 6 else ''}{' widelabel' if len(s['badge_top']) > 12 else ''}" style="{s.get('badge_style','')}">{badge_svg}<div class="txt">
-{'' if s['badge'] == 'circle' else '<div class="t">' + s['badge_top'] + '</div>'}{'<div class="pre">' + s['pre'] + '</div>' if s.get('pre') else ''}<div class="p">{s['price']}</div>{'<div class="t">' + s['badge_top'] + '</div>' if s['badge'] == 'circle' else '<div class="b">' + s['badge_bottom'] + '</div>'}<div class="n">{s['badge_note']}</div>
+{'' if s['badge'] == 'circle' else '<div class="t">' + s['badge_top'] + '</div>'}{'<div class="pre">' + s['pre'] + '</div>' if s.get('pre') else ''}<div class="p">{s['price']}<sup>*</sup></div>{'<div class="t">' + s['badge_top'] + '</div>' if s['badge'] == 'circle' else '<div class="b">' + s['badge_bottom'] + '</div>'}<div class="n">{s['badge_note']}</div>
 </div></div>
 </body></html>'''
 
