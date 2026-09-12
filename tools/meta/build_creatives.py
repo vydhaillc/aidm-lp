@@ -105,6 +105,14 @@ SPECS = {
         tagline='',
         hours='Lun&ndash;S&aacute;b 7am&ndash;7pm &nbsp;&middot;&nbsp; Estacionamiento gratis &nbsp;&middot;&nbsp; Mueller, Austin',
     ),
+    'c2': dict(
+        layout='a1',
+        photo=os.path.join(PROJ, 'vydhai/aidm-creative/assets/a1_front_desk.jpg'),
+        pos='50% 60%',
+        circles=[os.path.join(PROJ, 'vydhai/aidm-creative/assets/a1_exterior.jpg'), os.path.join(PROJ, 'vydhai/aidm-creative/assets/a1_waiting.jpg'), os.path.join(PROJ, 'vydhai/aidm-creative/assets/a1_treatment.jpg')],
+        head='El nuevo hogar dental<br>de su familia.', head_size=86,
+        hours='Lun&ndash;S&aacute;b 7am&ndash;7pm &nbsp;&middot;&nbsp; Estacionamiento gratis &nbsp;&middot;&nbsp; Mueller, Austin',
+    ),
 }
 
 CSS = '''
@@ -216,10 +224,10 @@ def html_a1(s):
 <img class="mark" src="{MARK}">
 {circ}
 <img class="logo" src="{LOGO}">
-<div class="head">{s['head']}</div>
+<div class="head" style="font-size:{s.get('head_size', 92)}px">{s['head']}</div>
 <div class="rule"></div>
 <div class="dia"><i></i>&#9670;<i class="r"></i></div>
-<div class="hours">Mon&ndash;Sat 7am&ndash;7pm &nbsp;&middot;&nbsp; Free parking &nbsp;&middot;&nbsp; Mueller, Austin</div>
+<div class="hours">{s.get('hours', 'Mon&ndash;Sat 7am&ndash;7pm &nbsp;&middot;&nbsp; Free parking &nbsp;&middot;&nbsp; Mueller, Austin')}</div>
 </body></html>'''
 
 
