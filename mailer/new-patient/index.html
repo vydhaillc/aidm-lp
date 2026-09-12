@@ -2108,6 +2108,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           form_location: where,
           offer_path:    location.pathname
         });
+
+        /* Meta (pixel 1733193964651493), same confirmed-submission signal.
+           Deliberately bare: no name, phone, email or treatment goes to
+           Meta. Health data stays off a platform that signs no BAA. */
+        if (window.fbq) fbq('track', 'Lead');
       }
       done(r.ok);
     })
@@ -2120,6 +2125,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     err.innerHTML = 'That did not go through. Please call ' +
       '<a href="tel:+17373454188">(737) 345-4188</a> and we will book you in.';
   }
+
+  /* Meta Contact event on a tap of any phone link. Delegated on the
+     document, so it also sees tel: links Patient Prism swaps in later. */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+    if (a && window.fbq) fbq('track', 'Contact');
+  });
 
   /* ── sticky nav ─────────────────────────────────────────────────────── */
   var nav = document.getElementById('nav');
