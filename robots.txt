@@ -1,14 +1,9 @@
-# Paid landing pages for aidm.dental — kept out of organic search (see the
-# per-page noindex meta tag), but ad crawlers must be explicitly allowed
-# through or campaigns get disapproved for "destination not reachable".
-User-agent: AdsBot-Google
-Allow: /
-
-User-agent: AdsBot-Google-Mobile
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# aidm.dental — current offers from the Austin Institute of Dental Medicine (AIDM®).
+# Open to every search engine and AI crawler. Written by tools/seo/apply_seo.py.
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /tools/
+Disallow: /sheet-assets/
+
+Sitemap: https://aidm.dental/sitemap.xml
